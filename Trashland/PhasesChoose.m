@@ -51,7 +51,7 @@
     }
     #
     if (self.player.fase4) {
-        [self.fase4 setBackgroundImage:[UIImage imageNamed:@"atividades-casa-color"] forState:UIControlStateNormal];
+        [self.fase4 setBackgroundImage:[UIImage imageNamed:@"atividades-prefeitura-color"] forState:UIControlStateNormal];
     }
     
     if (self.player.medalha1fase4) {
