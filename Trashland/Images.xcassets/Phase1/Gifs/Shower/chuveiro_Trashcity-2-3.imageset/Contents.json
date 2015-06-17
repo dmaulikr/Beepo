@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "chuveiro_Trashcity-2-3 (arrastado).png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "chuveiro_Trashcity-2-3 (arrastado).png"
     },
     {
       "idiom" : "universal",
