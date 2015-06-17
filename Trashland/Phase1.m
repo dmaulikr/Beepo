@@ -215,6 +215,7 @@ SystemSoundID sound1;
 }
 #pragma mark - gravidade e colisoes
 - (void)dealWithMovement{
+    [_collision removeAllBoundaries];
     [_animator removeAllBehaviors];
 
     
@@ -326,16 +327,16 @@ SystemSoundID sound1;
     [_collision addBoundaryWithIdentifier:@"barrier9"
                                 fromPoint:barrier9.frame.origin
                                   toPoint:rightEdgeAux];
-//    //(Mesa TV)
-//    UIView* barrier5 = [[UIView alloc] initWithFrame:CGRectMake(670, 550, 320, 10)];
-//    barrier5.backgroundColor = [UIColor redColor];
-//    [self.auxView addSubview:barrier5];
-//    
-//    rightEdgeAux = CGPointMake(barrier5.frame.origin.x +
-//                                     barrier5.frame.size.width, barrier5.frame.origin.y);
-//    [_collision addBoundaryWithIdentifier:@"barrier5"
-//                                fromPoint:barrier5.frame.origin
-//                                  toPoint:rightEdgeAux];
+    //(Mesa TV)
+    UIView* barrier10 = [[UIView alloc] initWithFrame:CGRectMake(1820 , 479 + 46, 145, 10)];
+//    barrier10.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier10];
+    
+    rightEdgeAux = CGPointMake(barrier10.frame.origin.x +
+                                     barrier10.frame.size.width, barrier10.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"barrier10"
+                                fromPoint:barrier10.frame.origin
+                                  toPoint:rightEdgeAux];
 //    //(Mesa TV)
 //    UIView* barrier5 = [[UIView alloc] initWithFrame:CGRectMake(670, 550, 320, 10)];
 //    barrier5.backgroundColor = [UIColor redColor];
