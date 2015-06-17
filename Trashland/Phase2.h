@@ -14,6 +14,14 @@
 
 
 @property (nonatomic) Player* player;
+@property (weak, nonatomic) IBOutlet UIScrollView *phaseScrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *phaseBG;
 
+//Arvores
+@property (weak, nonatomic) IBOutlet UIImageView *arvore1;
+@property (weak, nonatomic) IBOutlet UIImageView *arvore2;
+@property (weak, nonatomic) IBOutlet UIImageView *arvore3;
+@property (weak, nonatomic) IBOutlet UIImageView *arvore4;
+@property (weak, nonatomic) IBOutlet UIImageView *arvore5;
 
 @end
