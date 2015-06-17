@@ -26,6 +26,8 @@
     BOOL pontoAgua1;
     BOOL pontoAgua2;
     
+    BOOL TVLigada;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -98,10 +100,12 @@ SystemSoundID sound1;
     pontoLuz4 = false;
     pontoTV = false;
     
+    TVLigada = true;
+    
     pontoAgua1 = false;
     pontoAgua2 = false;
     
-    tempo = 15;
+    tempo = 25;
     
     [self partiu];
     
@@ -117,6 +121,8 @@ SystemSoundID sound1;
     _showerGIF.image = [UIImage animatedImageNamed:@"chuveiro_Trashcity-2-" duration:0.5f];
     _torneiraGIF.image = [UIImage animatedImageNamed:@"aguatorneira_Trashcity-" duration:0.8f];
     _tvGIF.image = [UIImage animatedImageNamed:@"chuvisco_tv-" duration:0.8f];
+    
+    [self tocaTV];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -350,7 +356,7 @@ SystemSoundID sound1;
     _showerGIF.hidden = !_showerGIF.hidden;
     pontoAgua2 = !pontoAgua2;
     AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"shower" withExtension:@"mp3"];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"closeTap" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     AudioServicesPlaySystemSound(sound1);
  //   AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
@@ -360,7 +366,7 @@ SystemSoundID sound1;
     _torneiraGIF.hidden = !_torneiraGIF.hidden;
     pontoAgua1 = !pontoAgua1;
     AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"drop" withExtension:@"wav"];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"closeTap" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     AudioServicesPlaySystemSound(sound1);
   //  AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
@@ -369,12 +375,8 @@ SystemSoundID sound1;
 - (IBAction)didClickTv {
     _tvGIF.hidden = !_tvGIF.hidden;
     pontoTV = !pontoTV;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"TV" withExtension:@"aiff"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
-    //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-}
+    TVLigada = !TVLigada;
+   }
 
 - (IBAction)didClickFirstCloud {
     _nuvem1Acesa.hidden = !_nuvem1Acesa.hidden;
@@ -453,6 +455,23 @@ SystemSoundID sound1;
 
 -(IBAction)voltar:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)tocaTV{
+    AudioServicesDisposeSystemSoundID (sound1);
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"tv1s" withExtension:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+    AudioServicesPlaySystemSound(sound1);
+    //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    if (!TVLigada) {
+        AudioServicesDisposeSystemSoundID(sound1);
+    }
+    else{
+      //  [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(tocaMais) userInfo:nil repeats:YES];
+    }
+}
+-(void)tocaMais{
+    //[self tocaTV];
 }
 
 @end

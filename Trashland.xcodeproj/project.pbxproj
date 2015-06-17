@@ -16,6 +16,8 @@
 		021F562E1B2F210E007886D6 /* Story3.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F562D1B2F210E007886D6 /* Story3.m */; };
 		021F56311B2F2119007886D6 /* Phase3.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F56301B2F2119007886D6 /* Phase3.m */; };
 		021F56341B2F24B0007886D6 /* Skin.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F56331B2F24B0007886D6 /* Skin.m */; };
+		02278E491B31D38700064B9A /* closeTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02278E481B31D38700064B9A /* closeTap.wav */; };
+		02278E4B1B31D63900064B9A /* tv1s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02278E4A1B31D63900064B9A /* tv1s.wav */; };
 		0264DE651B2F155F007A18A7 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE641B2F155F007A18A7 /* click.wav */; };
 		0264DE6A1B2F1573007A18A7 /* shower.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE661B2F1573007A18A7 /* shower.mp3 */; };
 		0264DE6B1B2F1573007A18A7 /* TV.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE671B2F1573007A18A7 /* TV.aiff */; };
@@ -72,6 +74,8 @@
 		021F56301B2F2119007886D6 /* Phase3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase3.m; sourceTree = "<group>"; };
 		021F56321B2F24B0007886D6 /* Skin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skin.h; sourceTree = "<group>"; };
 		021F56331B2F24B0007886D6 /* Skin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skin.m; sourceTree = "<group>"; };
+		02278E481B31D38700064B9A /* closeTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = closeTap.wav; sourceTree = "<group>"; };
+		02278E4A1B31D63900064B9A /* tv1s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tv1s.wav; sourceTree = "<group>"; };
 		0264DE641B2F155F007A18A7 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		0264DE661B2F1573007A18A7 /* shower.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shower.mp3; sourceTree = "<group>"; };
 		0264DE671B2F1573007A18A7 /* TV.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = TV.aiff; sourceTree = "<group>"; };
@@ -179,10 +183,12 @@
 		0264DE611B2F14FE007A18A7 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				02278E481B31D38700064B9A /* closeTap.wav */,
 				02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */,
 				02B3B5401B309E5C00143CC1 /* carefree.mp3 */,
 				02B3B54F1B30DB1B00143CC1 /* carefreewav.wav */,
 				02B3B5411B309E5C00143CC1 /* hackbeat.mp3 */,
+				02278E4A1B31D63900064B9A /* tv1s.wav */,
 				0264DE641B2F155F007A18A7 /* click.wav */,
 				0264DE661B2F1573007A18A7 /* shower.mp3 */,
 				0264DE671B2F1573007A18A7 /* TV.aiff */,
@@ -429,11 +435,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02278E491B31D38700064B9A /* closeTap.wav in Resources */,
 				0264DE741B2F1610007A18A7 /* Ventura_Edding.otf in Resources */,
 				0264DE6D1B2F1573007A18A7 /* bird.wav in Resources */,
 				0264DE6A1B2F1573007A18A7 /* shower.mp3 in Resources */,
 				0264DE731B2F1610007A18A7 /* Ventura_Edding_Bold.otf in Resources */,
 				0264DE6C1B2F1573007A18A7 /* drop.wav in Resources */,
+				02278E4B1B31D63900064B9A /* tv1s.wav in Resources */,
 				02B3B5431B309E5C00143CC1 /* hackbeat.mp3 in Resources */,
 				0264DE721B2F1610007A18A7 /* actionj.ttf in Resources */,
 				02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */,
