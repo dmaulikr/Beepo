@@ -1,0 +1,2082 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Ventura_Edding.otf">
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+            <string>VenturaEdding-Medium</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Start-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="StartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="Start" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="predio" id="gun-1V-ido">
+                                <rect key="frame" x="131" y="427" width="762" height="341"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="vLT-8I-pTA">
+                                <rect key="frame" x="176" y="73" width="672" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="jdM-Sf-th9">
+                                <rect key="frame" x="644" y="191" width="197" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="DqM-wA-NGo">
+                                <rect key="frame" x="182" y="185" width="197" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="g7t-6y-sHm">
+                                <rect key="frame" x="358" y="310" width="197" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jYU-Bn-jnM">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86477366855796178" green="0.95188680709374884" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" id="egb-OB-o89">
+                                <rect key="frame" x="454" y="230" width="107" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uT0-ix-F1H">
+                                <rect key="frame" x="454" y="230" width="107" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tf3-kX-2e3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="cloud1" destination="g7t-6y-sHm" id="a4l-mp-YTA"/>
+                        <outlet property="cloud2" destination="DqM-wA-NGo" id="YRE-fs-POb"/>
+                        <outlet property="cloud3" destination="jdM-Sf-th9" id="6Ao-F7-nuI"/>
+                        <outlet property="fundo" destination="jYU-Bn-jnM" id="awM-8s-Zqm"/>
+                        <outlet property="logo" destination="vLT-8I-pTA" id="JKB-TU-vow"/>
+                        <outlet property="play" destination="uT0-ix-F1H" id="JNf-R3-7eK"/>
+                        <outlet property="playImage" destination="egb-OB-o89" id="w1I-vP-KDq"/>
+                        <outlet property="predios" destination="gun-1V-ido" id="2Yw-Uy-No5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-208" y="398"/>
+        </scene>
+        <!--Phases Choose-->
+        <scene sceneID="bWp-Bc-xXA">
+            <objects>
+                <viewController storyboardIdentifier="PhasesChooseVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lvN-mZ-9Y3" customClass="PhasesChoose" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RAl-QH-oQU">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="I9u-R9-CC8">
+                                <rect key="frame" x="48" y="288" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="atividades-casa">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicouCasa:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="gNG-Mi-Oqy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P1w-ah-I3A">
+                                <rect key="frame" x="294" y="288" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="atividades-praca">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicouParque:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="9d2-9q-JVv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CqU-HV-xsr">
+                                <rect key="frame" x="535" y="288" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="atividades-hospital">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicouHospital:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="xDB-bc-sAc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="57M-VS-qQj">
+                                <rect key="frame" x="781" y="288" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="atividades-hospital">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicouPrefeitura:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="uWg-Ka-RPg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G4Z-7S-l5I">
+                                <rect key="frame" x="935" y="30" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oau-oD-LtJ">
+                                <rect key="frame" x="26" y="30" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao-voltar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="voltar:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="D32-ON-47v"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-luz" id="2uR-Lg-bIf">
+                                <rect key="frame" x="95" y="515" width="40" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-agua" id="fRu-t6-W82">
+                                <rect key="frame" x="162" y="515" width="40" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-lixo" id="E2p-qm-9Iy">
+                                <rect key="frame" x="341" y="515" width="40" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-natureza" id="CUR-l6-vDr">
+                                <rect key="frame" x="406" y="515" width="40" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-idoso" id="mcv-iS-SrP">
+                                <rect key="frame" x="581" y="515" width="40" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-transito" id="W7d-lC-1Dt">
+                                <rect key="frame" x="650" y="515" width="40" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-agua" id="UYo-aP-35i">
+                                <rect key="frame" x="822" y="515" width="40" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-agua" id="sEs-qe-AYS">
+                                <rect key="frame" x="896" y="515" width="40" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="atividades-02" id="lXO-bW-B4Q">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CASA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vio-yU-en6">
+                                <rect key="frame" x="109" y="594" width="78" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.57254901960000004" green="0.44705882349999998" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PARQUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3WX-5M-RTB">
+                                <rect key="frame" x="343" y="596" width="103" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.57254901960000004" green="0.44705882349999998" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOSPITAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cf3-Ph-XDv">
+                                <rect key="frame" x="573" y="597" width="124" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.57254901960000004" green="0.44705882349999998" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREFEITURA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nmT-BB-pzd">
+                                <rect key="frame" x="803" y="597" width="157" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.57254901960000004" green="0.44705882349999998" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="backButton" destination="Oau-oD-LtJ" id="tmd-eM-TJC"/>
+                        <outlet property="fase1" destination="I9u-R9-CC8" id="baY-El-tgX"/>
+                        <outlet property="fase2" destination="P1w-ah-I3A" id="Lc1-OO-xy0"/>
+                        <outlet property="fase3" destination="CqU-HV-xsr" id="plS-g6-nWL"/>
+                        <outlet property="fase4" destination="57M-VS-qQj" id="frr-m7-dsv"/>
+                        <outlet property="fundo" destination="lXO-bW-B4Q" id="25i-Es-gkk"/>
+                        <outlet property="labelCasa" destination="Vio-yU-en6" id="jQa-wd-IML"/>
+                        <outlet property="labelHospital" destination="cf3-Ph-XDv" id="qMa-Id-TQm"/>
+                        <outlet property="labelParque" destination="3WX-5M-RTB" id="ASR-yN-VXc"/>
+                        <outlet property="labelPrefeitura" destination="nmT-BB-pzd" id="8YF-8Y-Jz5"/>
+                        <outlet property="medalha1fase1" destination="2uR-Lg-bIf" id="SgN-fC-zDW"/>
+                        <outlet property="medalha1fase2" destination="E2p-qm-9Iy" id="Yno-vD-d8D"/>
+                        <outlet property="medalha1fase3" destination="mcv-iS-SrP" id="cLx-Yj-IAy"/>
+                        <outlet property="medalha1fase4" destination="UYo-aP-35i" id="rxj-zw-uu7"/>
+                        <outlet property="medalha2fase1" destination="fRu-t6-W82" id="iFZ-By-47m"/>
+                        <outlet property="medalha2fase2" destination="CUR-l6-vDr" id="PJ1-gg-O2X"/>
+                        <outlet property="medalha2fase3" destination="W7d-lC-1Dt" id="z8C-MH-2bW"/>
+                        <outlet property="medalha2fase4" destination="sEs-qe-AYS" id="YFh-Y6-aeO"/>
+                        <outlet property="playSoundButton" destination="G4Z-7S-l5I" id="Q6D-VD-Q0i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3g-v5-2FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827" y="398"/>
+        </scene>
+        <!--Skin-->
+        <scene sceneID="39e-je-EeJ">
+            <objects>
+                <viewController storyboardIdentifier="SkinVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HMU-LK-3EX" customClass="Skin" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vkt-6d-Ppi">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom-bg" id="jXt-cc-lz8">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom14" id="txl-EY-7Km">
+                                <rect key="frame" x="0.0" y="587" width="1024" height="181"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom01" id="JyX-am-A99">
+                                <rect key="frame" x="214" y="603" width="170" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom02" id="CW4-bv-1Dq">
+                                <rect key="frame" x="427" y="603" width="170" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom03" id="b6Y-dU-3rN">
+                                <rect key="frame" x="640" y="603" width="170" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cwQ-XA-9I9">
+                                <rect key="frame" x="853" y="654" width="35" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="custom11">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="change:" destination="HMU-LK-3EX" eventType="touchUpInside" id="W5B-3G-z8K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8WU-CK-nU0">
+                                <rect key="frame" x="136" y="654" width="35" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="custom10">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="change:" destination="HMU-LK-3EX" eventType="touchUpInside" id="4NV-Xo-GHy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Kb-Zh-YKr">
+                                <rect key="frame" x="214" y="603" width="170" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="    ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="choosedFirst:" destination="HMU-LK-3EX" eventType="touchUpInside" id="MMX-Pq-ttP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uc5-U2-lZW">
+                                <rect key="frame" x="427" y="603" width="170" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="  ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosedSecond:" destination="HMU-LK-3EX" eventType="touchUpInside" id="bYb-uN-2i5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pg8-pJ-06W">
+                                <rect key="frame" x="640" y="603" width="170" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="  ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosedThird:" destination="HMU-LK-3EX" eventType="touchUpInside" id="aZ4-H4-jhV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nek-fb-khK">
+                                <rect key="frame" x="849" y="439" width="129" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GO!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="HMU-LK-3EX" eventType="touchUpInside" id="P6r-Jl-6VL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="uLs-7o-UBu">
+                                <rect key="frame" x="352" y="211" width="320" height="336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fantasminha" id="Gpx-Sk-AV4">
+                                        <rect key="frame" x="70" y="88" width="180" height="211"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sombra_fantasminha" id="RAy-yE-SHv">
+                                        <rect key="frame" x="86" y="316" width="148" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oCx-Fp-rt2">
+                                <rect key="frame" x="26" y="30" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao-voltar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="voltar:" destination="HMU-LK-3EX" eventType="touchUpInside" id="Lur-YY-R4B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jw1-NS-YK9">
+                                <rect key="frame" x="935" y="30" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="botaoSom" destination="Jw1-NS-YK9" id="P22-Qo-8iM"/>
+                        <outlet property="botaoVoltar" destination="oCx-Fp-rt2" id="T1C-hh-Yqe"/>
+                        <outlet property="changeLeft" destination="8WU-CK-nU0" id="JJm-ct-aoE"/>
+                        <outlet property="changeRight" destination="cwQ-XA-9I9" id="bd7-CI-Avm"/>
+                        <outlet property="chooseBar" destination="txl-EY-7Km" id="9F9-v2-QeA"/>
+                        <outlet property="firstChoice" destination="3Kb-Zh-YKr" id="Jy6-CN-BvY"/>
+                        <outlet property="gasper" destination="Gpx-Sk-AV4" id="PvI-vQ-3kE"/>
+                        <outlet property="item1" destination="JyX-am-A99" id="51E-Rr-UZQ"/>
+                        <outlet property="item2" destination="CW4-bv-1Dq" id="m1a-vz-osS"/>
+                        <outlet property="item3" destination="b6Y-dU-3rN" id="82k-X1-jAg"/>
+                        <outlet property="secondChoice" destination="uc5-U2-lZW" id="I8a-VI-NxR"/>
+                        <outlet property="sombra" destination="RAy-yE-SHv" id="z66-9l-A7C"/>
+                        <outlet property="thirdChoice" destination="pg8-pJ-06W" id="3mV-9b-RWY"/>
+                        <outlet property="viewGasper" destination="uLs-7o-UBu" id="2GG-i2-1n3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcO-QT-6DB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877" y="398"/>
+        </scene>
+        <!--Phase2-->
+        <scene sceneID="a9j-6D-qAZ">
+            <objects>
+                <viewController storyboardIdentifier="Phase2VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2hj-BG-SHn" customClass="Phase2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u6A-mY-eko">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6J-Y3-2kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827" y="2042"/>
+        </scene>
+        <!--Phase3-->
+        <scene sceneID="gUy-tt-cug">
+            <objects>
+                <viewController storyboardIdentifier="Phase3VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R9V-nN-E2m" customClass="Phase3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mbx-oG-hfX">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L4H-pg-h7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877" y="2042"/>
+        </scene>
+        <!--Story1-->
+        <scene sceneID="8CA-TY-44F">
+            <objects>
+                <viewController storyboardIdentifier="Story1VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4p4-wJ-H5U" customClass="Story1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="utE-ar-ILq">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="t95-8B-SPQ">
+                                <rect key="frame" x="477" y="720" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.52203677400000004" green="0.52203677400000004" blue="0.52203677400000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" id="nnQ-7u-K2N">
+                                <rect key="frame" x="342" y="296" width="320" height="427"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fantasminha" id="ZB7-J6-HQJ">
+                                        <rect key="frame" x="24" y="71" width="283" height="289"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sombra_fantasminha" id="jHU-3V-GdW">
+                                        <rect key="frame" x="38" y="400" width="255" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balaochuveiro1" id="IqG-wL-Lr3">
+                                <rect key="frame" x="236" y="281" width="33" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balaochuveiro2" id="yNR-tf-co3">
+                                <rect key="frame" x="267" y="231" width="53" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balaochuveiro3" id="FZh-C3-yN1">
+                                <rect key="frame" x="304" y="35" width="250" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balaopia1" id="iiX-F0-Pyo">
+                                <rect key="frame" x="315" y="414" width="30" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balaopia2" id="76e-EP-Qd7">
+                                <rect key="frame" x="353" y="431" width="61" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balaopia3" id="o81-4Q-rHr">
+                                <rect key="frame" x="415" y="429" width="255" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TUDO COMEÇOU EM UMA MANHÃ QUALQUER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ndo-7o-kdX">
+                                <rect key="frame" x="349" y="281" width="568" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUANDO PERCEBEU EM SUA CASA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OZs-yL-Hry">
+                                <rect key="frame" x="376" y="327" width="562" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAS GASPER POSSUIA UMA GRANDE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pZQ-ah-aaV">
+                                <rect key="frame" x="22" y="77" width="992" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Era uma vez, um fantasminha chamado Gasper, não tão diferente dos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cWa-wx-q8c">
+                                <rect key="frame" x="16" y="116" width="992" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUTROS HABITANTES DA SUA CIDADE, TRASHLAND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ces-Qm-RTc">
+                                <rect key="frame" x="16" y="171" width="992" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ONDE TUDO PARECIA ESTAR FORA DO LUGAR!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2GQ-Gk-oZt">
+                                <rect key="frame" x="16" y="218" width="992" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interrogação_01" id="MgA-qR-CQT">
+                                <rect key="frame" x="101" y="461" width="33" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interrogação_02" id="6i0-u8-cul">
+                                <rect key="frame" x="147" y="482" width="34" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interrogação_03" id="HVI-Vb-e8g">
+                                <rect key="frame" x="189" y="471" width="35" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O TANTO DE COISA ERRADA!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eT5-sF-MxU">
+                                <rect key="frame" x="383" y="375" width="562" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telainicial1_semtexto" id="QTR-oc-lEu">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ydi-y0-YaE">
+                                <rect key="frame" x="935" y="30" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lrx-Lw-eTZ">
+                                <rect key="frame" x="26" y="30" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao-voltar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="voltar:" destination="4p4-wJ-H5U" eventType="touchUpInside" id="6UM-4h-max"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="background" destination="QTR-oc-lEu" id="zvP-cQ-tYR"/>
+                        <outlet property="balao1" destination="IqG-wL-Lr3" id="h9T-70-IlI"/>
+                        <outlet property="balao2" destination="yNR-tf-co3" id="Mlh-P1-cHr"/>
+                        <outlet property="balao3" destination="FZh-C3-yN1" id="TPP-XP-v4e"/>
+                        <outlet property="balao4" destination="iiX-F0-Pyo" id="u8o-ck-zuS"/>
+                        <outlet property="balao5" destination="76e-EP-Qd7" id="Ips-bv-ir5"/>
+                        <outlet property="balao6" destination="o81-4Q-rHr" id="GqB-PU-ZqX"/>
+                        <outlet property="botaoPlay" destination="ydi-y0-YaE" id="TUy-gP-n9z"/>
+                        <outlet property="botaoVoltar" destination="Lrx-Lw-eTZ" id="0tD-pS-b8O"/>
+                        <outlet property="controle" destination="t95-8B-SPQ" id="PjD-wv-iRF"/>
+                        <outlet property="frase1" destination="cWa-wx-q8c" id="yDa-OK-Jml"/>
+                        <outlet property="frase2" destination="ces-Qm-RTc" id="9Z4-mY-7Df"/>
+                        <outlet property="frase3" destination="pZQ-ah-aaV" id="3hV-oW-2lY"/>
+                        <outlet property="frase4" destination="2GQ-Gk-oZt" id="oMv-w2-Rxx"/>
+                        <outlet property="frase5" destination="ndo-7o-kdX" id="0rP-XB-GJA"/>
+                        <outlet property="frase6" destination="OZs-yL-Hry" id="TOK-1L-VUM"/>
+                        <outlet property="frase7" destination="eT5-sF-MxU" id="Qqj-9n-6sb"/>
+                        <outlet property="gasper" destination="ZB7-J6-HQJ" id="RGj-yW-bEv"/>
+                        <outlet property="interrogacao1" destination="MgA-qR-CQT" id="cMD-Jy-evO"/>
+                        <outlet property="interrogacao2" destination="6i0-u8-cul" id="cBn-rj-GwC"/>
+                        <outlet property="interrogacao3" destination="HVI-Vb-e8g" id="yYW-Q0-amQ"/>
+                        <outlet property="sombra" destination="jHU-3V-GdW" id="CNG-YU-1r7"/>
+                        <outlet property="viewGasper" destination="nnQ-7u-K2N" id="sND-wM-RXh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNM-Ib-lal" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-208" y="1215"/>
+        </scene>
+        <!--Phase1-->
+        <scene sceneID="3O1-ND-yRu">
+            <objects>
+                <viewController storyboardIdentifier="Phase1VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EN8-Ni-7aZ" customClass="Phase1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="woh-IM-Qbx">
+                        <rect key="frame" x="0.0" y="0.0" width="2486" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" id="78L-Pm-Cad">
+                                <rect key="frame" x="0.0" y="0.0" width="1029" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="luy-EL-vtB" customClass="DraggableImageView">
+                                        <rect key="frame" x="108" y="246" width="61" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" id="6FL-f6-VTa">
+                                        <rect key="frame" x="0.0" y="0.0" width="2486" height="768"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SgX-7P-Lfv">
+                                                <rect key="frame" x="2360" y="328" width="102" height="252"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="F509E630-DE52-4785-BC18-4BD4BE2F172B" id="qsX-3z-46L">
+                                                <rect key="frame" x="2360" y="468" width="42" height="112"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OrZ-cS-ZQz">
+                                                <rect key="frame" x="1872" y="490" width="16" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qWv-Bb-oLd">
+                                                <rect key="frame" x="1865" y="460" width="90" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didClickTap" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="v4Q-wL-m1p"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3Tl-Pg-ZWP">
+                                                <rect key="frame" x="863" y="442" width="96" height="78"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7S3-lm-G2K">
+                                                <rect key="frame" x="863" y="442" width="96" height="78"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didClickTv" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="URl-wD-ve5"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luz1-com-nuvem" id="YZL-XN-Zhg">
+                                                <rect key="frame" x="203" y="82" width="418" height="659"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luz2-com-nuvem" id="1iQ-ds-cZZ">
+                                                <rect key="frame" x="509" y="193" width="397" height="545"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="him-c6-6CW">
+                                                <rect key="frame" x="112" y="252" width="48" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="bird">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didClickBird:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="oOH-1d-Qge"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.74999999999999978" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fR0-LO-eek">
+                                                <rect key="frame" x="320" y="227" width="169" height="111"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didClickFirstCloud" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="Vbt-g1-rv9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t1K-n6-UWB">
+                                                <rect key="frame" x="613" y="265" width="189" height="131"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="     ">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didClickSecondCloud" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="Fja-bB-ZRm"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" id="BUh-JP-Wlf" customClass="DraggableView">
+                                                <rect key="frame" x="328" y="532" width="130" height="143"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sombra_fantasminha" id="oyO-Ot-X2M">
+                                                        <rect key="frame" x="0.0" y="128" width="130" height="15"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fantasminha" id="nwV-pO-aBS">
+                                                        <rect key="frame" x="3" y="0.0" width="125" height="120"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ctS-Iy-bUQ">
+                                                <rect key="frame" x="26" y="30" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="botao-voltar">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="voltar:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="69r-GM-Pbr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oYm-DP-27o">
+                                                <rect key="frame" x="935" y="30" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="botao-som">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-luz" id="DNE-un-zea">
+                                                <rect key="frame" x="120" y="30" width="52" height="67"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-agua" id="NuH-Qq-HxI">
+                                                <rect key="frame" x="180" y="30" width="52" height="67"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Base_Casa_TrashCity" id="zIj-zB-0Yx">
+                                                <rect key="frame" x="0.0" y="0.0" width="2486" height="768"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cKp-Vy-WKw">
+                                                <rect key="frame" x="917" y="110" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luz-banheiro-acesa" id="x0S-Aj-XiN">
+                                                <rect key="frame" x="1362" y="0.0" width="741" height="741"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luz-banheiro-acesa" id="IUq-ER-1ds">
+                                                <rect key="frame" x="1715" y="0.0" width="741" height="741"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kjh-6n-EZo">
+                                                <rect key="frame" x="1683" y="110" width="84" height="95.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didClickFirstBathLamp:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="jKf-s5-YvU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ecG-xY-Otu">
+                                                <rect key="frame" x="2029" y="110" width="93" height="92.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didClickSecondBathLamp:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="DZY-kW-11n"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="2486" height="768"/>
+                    <connections>
+                        <outlet property="auxView" destination="6FL-f6-VTa" id="crW-tF-vao"/>
+                        <outlet property="bird" destination="him-c6-6CW" id="Xyj-E9-DnH"/>
+                        <outlet property="birdImageView" destination="luy-EL-vtB" id="8df-dK-ON8"/>
+                        <outlet property="botaoPlay" destination="oYm-DP-27o" id="oQP-hM-Dl1"/>
+                        <outlet property="botaoVoltar" destination="ctS-Iy-bUQ" id="L9l-mm-kLC"/>
+                        <outlet property="charImgView" destination="nwV-pO-aBS" id="fQo-qd-7WK"/>
+                        <outlet property="contador" destination="cKp-Vy-WKw" id="llc-W7-3hD"/>
+                        <outlet property="contentBG" destination="zIj-zB-0Yx" id="tzz-m3-BU7"/>
+                        <outlet property="luz3" destination="x0S-Aj-XiN" id="9JB-K0-46Y"/>
+                        <outlet property="luz4" destination="IUq-ER-1ds" id="dXB-2Y-gF9"/>
+                        <outlet property="medalha1fase1" destination="DNE-un-zea" id="EoY-Mc-xYi"/>
+                        <outlet property="medalha2fase1" destination="NuH-Qq-HxI" id="Xuu-5l-DN1"/>
+                        <outlet property="nuvem1Acesa" destination="YZL-XN-Zhg" id="t5Z-Wx-cFm"/>
+                        <outlet property="nuvem2Acesa" destination="1iQ-ds-cZZ" id="Tk1-5c-Aju"/>
+                        <outlet property="scrollView" destination="78L-Pm-Cad" id="Bzv-ct-o6i"/>
+                        <outlet property="shadowImgView" destination="oyO-Ot-X2M" id="NFA-8f-DcL"/>
+                        <outlet property="showerGIF" destination="qsX-3z-46L" id="n3B-Vg-mSh"/>
+                        <outlet property="torneiraGIF" destination="OrZ-cS-ZQz" id="dfz-uN-hGx"/>
+                        <outlet property="tvGIF" destination="3Tl-Pg-ZWP" id="q8Y-gr-75V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEr-UK-xnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="1215"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Base_Casa_TrashCity" width="4972" height="1536"/>
+        <image name="F509E630-DE52-4785-BC18-4BD4BE2F172B" width="194" height="90">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1l7MTk0LCA5MH3SFQoWGFpOUy5vYmplY3RzoReABIAK0hUKGh2i
+GxyABYAGgAkQANIgCiEiXxAUTlNUSUZGUmVwcmVzZW50YXRpb26AB4AITxIAARk+TU0AKgABENgAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAADBQUFDxMVFRgfIiImMDU1OUlQUEZYYGBTanJyWnR9fVpzfX1ac319
+WnR9fUpfZ2c/UVdXKjM5ORkgIyMNERMTAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAkNDQ0kLjMzRVlhYVt1fn5mgoyMb46ZmXORnp5xkZyccZCbm3CQm5twj5qacI+amnCPmppwj5qa
+cZCbm3GRnJxykp2db4+ZmWSAi4tVbXd3Pk5VVR8nKioGCAoKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEUFxc+TlVV
+YXyFhXKSnZ1zkp6ecpCdnXCQm5tvjZqab46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZcZCbm3KSnZ1zkp6ecI+aml95g4M8TVNTERYZGQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkMDAw5SVBQaYSQkHOUn59xkZyc
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcZGcnHOSn59ohZGRQlNbWxAUFhYAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgKi4uXXeBgXOSn59xkJubb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXCQm5tzlJ+fZYGNjTE+Q0MBAQMDAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAREVFxceKCwsLzxBQTxNU1NGWWBgSV5mZkldZWVAUVlZ
+NERJSScyNjYbIiUlDxMVFQEBAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAACAwUFOEdOTm6NmJhykp2db46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlxkJubcpKdnUleZmYJCw0NAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAFBggIHCQnJz5QVlZYcHp6aISOjnKSnZ1zlJ+fc5KennOSnp5zkZ6ec5GennOSnp5zkp6e
+c5Sfn2+OmZlmgoyMWnR9fUldZWUvPEBAGB4hIQQGBgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAACAkLC0peZmZykp2dcI+amm+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5Sfn1lye3sRFRgYAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARFRcX
+N0ZNTVx1f39vjpmZc5Kfn3KSnZ1wkJubb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+cI+amnGQm5tykJ2dc5GennOUn59ti5aWXXWAgD5RV1ccIycnAQMDAwAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAoPDw9TaXJyc5Sfn2+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5Kenl54goIRFRcXAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATGBsbQVRcXGeDj49zkp+f
+cZGcnHCPmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmXCPmppxkZycc5Sfn2+OmJhYcHh4LTo+PgcJCwsAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKDA4O
+V3F5eXOSnp5vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5KenlhveXkICgwMAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDxERPlBWVmmHkZFzkp+fcJCbm2+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcI+amnKSnZ1zkp6eXniBgSo2OzsCBAQEAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAoMDFNqcnJzkp6e
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5Sfn0pfZ2cBAwMDAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAACAgQELTk+PmJ9hoZzlJ+fcI6bm2+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlykZyccpKdnVJpcnIUGh0dAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMEBgZMYmlpc5Kfn2+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcpKdnS8+Q0MAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAERcZGVBmbm5ykJ2dcZGcnG+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5KenmiEjo4nMzc3AAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBP1BWVnOSnp5vjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlwkJubZ4OPjxEUFxcAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAACo3Oztngo6Oc5Kenm+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcY+cnG+NmpoyQkdHAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACs3PDxxkJubcI+amm+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlzkp+fRltiYgABAAEAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYJCQlBVVxc
+cJCbm3GRnJxvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcI6bm3GRnJwzQUZGAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAWHB8faYeRkXGQm5tvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXCPmppsipWVFh0gIAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARFRcXVGx1dXOSn59wj5qa
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcJCbm2+OmJgiLC8vAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAABgcJCVhweHhzkZ6eb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXOSn59HXGNjAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGiEkJGN+iIhzkp6eb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcZGcnGN/iYkNEhUVAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAA8TVNTc5Kenm+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcI+ammmHkZEQExYWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMuMjJphpCQcpGcnG+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5Sfn0RZX18AAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+HCQnJ22MlpZwj5qab46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcpKenjRCSUkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAApNTk5bouXl3GRnJxvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlwj5qabIqVlRYdHx8AAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGBgZXcHl5
+cpKdnW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlykp2dWHB4eAIEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAM0FGRm6NmJhwkJubb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlzlJ+fRlhgYAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM0FGRnKSnZ1vjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmXCPmppriJSUEBYYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAADVESUlxkJubcJCbm2+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXGQm5tjf4mJCw4QEAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAUFhZmgoyMcZCbm2+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmXKSnZ0vPEFBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxP0RE
+cY+cnHCPmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXKQnZ0pNTo6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARFZeXnOUn59vjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZc5Sfn0ZZYWEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKjY7O26NmJhwkJub
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcZCbm1JpcnIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgfISFti5aWcI+amm+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlykZycWnR9fQQGBgYAAAAAAAAAAAAAAAAAAAAAAAAAACQuMjJujZiYcZCbm2+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZbo2YmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAABAQMDTmRsbHOSnp5vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmXCPmppphZGRCw4QEAAAAAAAAAAAAAAAAAAAAAAcIycnaYaSknGQm5tvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAACApLCxvj5qacI+amm+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW6NmJgbIiUlAAAAAAAAAAAAAAAAExgbG2SBi4txkZycb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAACAgQEUWhxcXORnp5vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+cI+amicyNjYAAAAAAAAAAAoMDg5bdH5+c5KdnW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAgEBAwMDAwMD
+BQcHBwUGCAgFCAgIAwUFBQICAgICAgICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAB8pLS1vj5qacI2ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlykp2d
+Mz9FRQAAAAACBAQETGJqanOSn59vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAABQcHBw0QEhIcIycnKjc7OzdGTEw/UVdXR1xjY0tfZ2dTanNzVGt0dFZtdnZeeYKC
+X3mDg196hIRac3x8U2tzc1Nqc3NKXmZmRFdfXzdGTU0oMzc3FhwfHwcJCwsAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAwMD
+UWhxcXORnp5vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXOUn587TFFR
+AAAAADlIT09ykp6eb42amm+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgKDAwfJyoq
+OEdOTkxiaWldd4GBa4mTk26NmJhxkJubc5KennWVoKBzlJ+fc5KennKSnZ1ykp2dcpKdnXGPnJxxj5yc
+cZCbm3GRnJxykp2dcpKdnXOSnp50k6Cgc5Kfn3COm5ttjJeXZICLi01kbW01Q0hIFBocHAEBAQEAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsiJiZujJiY
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZdJWgoD5OVVUdJikp
+b46ZmXCPmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA4RES06Pz9LX2hoY3+JiW+PmZlzkp6e
+c5KennGRnJxwj5qab4+amm+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+PmppwkJubc5KennOSnp5riJSUUWdwcCMtMTEBAQMD
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBS2FoaHOSn59vjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlzkp2dUGdvb154gYFykZyc
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAABAwMDHSQoKEdaY2NmgoyMcpCdnXOSn59wkJubb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXCPmppzkZ6ecJCbm1JpcnIVGx4e
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMZHBxriJSUcI+amm+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcI+amm+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZkAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAADAwMDJzI2NlVsdHRujZiYc5Sfn3CQm5tvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5KenmmFkZEnMjc3
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQVJaWnOSn59vjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZbYyXlwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+HygrK1RrdHRykZyccpKdnW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcY+cnG6Nl5cpNDg4
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsOEBBmgoyMcZCbm2+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXCQm5tUa3R0AAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQ8SEkRXX19ujZiY
+cpGenm+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcZGcnGqHk5MYHiIi
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM0FGRnOSnp5vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcpKenjBARUUAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMtMTFhfIaGc5Kfn3CPmppvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5KenlNrc3MBAwMD
+AAAAAAAAAAAAAAAAAAAAAAQFBwdac319cpCdnW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXCPmppti5eXFRseHgAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEDAwM5SVBQbo2YmHKRnJxvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcJCbmyIqLi4AAAAA
+AAAAAAAAAAAAAAAAICouLnGQm5tvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcpGcnF11gIAGBwkJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAGCAoKSl5nZ3OSnZ1wj5qab46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlzkp+fR1xjYwAAAAAAAAAA
+AAAAAAAAAABKX2dnc5Kenm+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlzkp6eRFdfXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAADA8REVNqc3Nzkp+fb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXGQm5tjfomJBgcJCQAAAAAAAAAA
+DxQWFmmFkZFwj5qab46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmXOSnp4lMDU1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAoNDw9YcHh4c5Sfn2+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcI+ammuKlJQWHSAgAAAAAAAAAAA3Rk1N
+c5Kfn2+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlxkJubZICLiwwPEREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCAgI
+UGZubnOUn59vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcpCdnSUwNDQAAAAABQYICFx2f39xkZyc
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmXOSnp5KXmZmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAkZZYGBzlJ+f
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZl1laGhLzxBQQAAAAAkLzQ0cY+cnG+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+cpGcnCMsMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxP0REcpCdnW+NmppvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXOUn584SE9PAAAAAE5kbGxzkp6eb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXKRnJxeeIKC
+BgcJCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGB8iImqHk5NxkJubb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5KenkFUXFwXHiEhbIuWlnCPmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5KfnzdITU0AAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGCAhXcHl5c5Genm+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlxkJubXHV/f1NpcnJykp2db46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXCQm5tphJCQEBQWFgAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANERJSXOSnp5vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlwjpubcZCbm2+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5Sfn0RWXl4AAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAA8TFRVmg42NcZCbm2+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXCPmppriJSUFRweHgAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAQFNZWXOUn59vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5Kfn0ZZYWEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAABIWGBhphpCQcJCbm2+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmXCPmppriJSUFRseHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+O0xSUnOUn59vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZc5Sfn0JUW1sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkLDQ1hfIaG
+cZGcnG+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmXCQm5tngo6OEBMWFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJTA0NHKSnZ1vjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+c5KenjRESUkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABKYGZmc5Kenm+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXKSnZ1bdH5+
+BgkJCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw4QEGN/iYlxj5ycb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlwj5qab46ZmSAqLS0AAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgKCwscpKdnW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXOSnp5BVFxcAQEBAQAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADtKUVFzkp6eb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlykJ2dX3mDgwoNDw8AAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUmhwcHORnp5vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcI+amm6Ll5cfKS0tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAcICwtfeYODcpGcnG+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlzkp6eOUtQUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAEBYYGGeEkJBwkJubb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZc5Kfn09lbW0EBgYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAZICMjcZCbm2+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmXKRnp5eeIKCDhETEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAACQuMjJzkp6eb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlykp2d
+ZoGNjRYdICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Mj5ERHKQnZ1vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcZCbm2qIkpIgKCws
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxPkND
+cpCdnW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXCPmppujZmZKTU6OgAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADE+Q0NykJ2d
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlwj5qac5KdnTZGTEwAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMT5DQ3KQnZ1vjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXOUn59FWWFhAAACAgAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhKS0tc5Kenm+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlzkp6eVm12dgcJCwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcdICBujZiYb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZcpGcnGSAiooQFRgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADhEUFGWBjIxxkJubb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmXCPmppti5aWISktLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAQEWHB7e3KQnZ1vjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvj5qa
+cpKdnTZGS0sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBVFxcc5Kenm+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXOUn59JXWVl
+AQMDAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMtMTFykZycb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlykp2dXXeBgQoMDg4AAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgkJCV54goJykZycb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcZCbm2qHk5MaISUlAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALDk9PXKSnZ1vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXCPmppxkZycLTo/PwAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAADBQUFUWdvb3OSn59vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5Sfn0RYYGAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAQExYWZICKinKRnJxvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmXOSnZ1Zc3x8CAsLCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAhKy4ubYuWlnCOm5tvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlxkJubaIWRkRYdHx8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAvPUFBcZGcnHCPmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+cI+amnCQm5spNTk5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAA6S1FRc5Kfn2+PmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlzkp6e
+P09XVwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAICBARBU1lZc5Genm+PmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZc5KenlJqc3MFBQcH
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAMDAwNGWGBgc5Sfn2+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmXKSnZ1ifYaGDhIUFAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAUGCAhLX2hoc5Kfn2+NmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlxkJuba4iUlBsiJiYAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAUGCAhJXWVlc5KennCPmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZcI+amnCPmporOD09AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAIEBARAUFhYc5GennCPmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlykp2dOUlQUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAEBAwM+UFZWcpKdnXCPmppvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZc5Kfn0RWXl4CAgICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAICAgI1RElJcZCbm3GQm5tvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmXOUn59IW2RkBAYGBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAuPUJCbIuWlnGRnJxvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlzkp6e
+TmNsbAYJCQkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAmMjY2aYeRkXKSnZ1vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlwkJubc5KenkRXX18EBQcH
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAdJCgoY36JiXOSnp5vjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZ
+b46ZmW+OmZlvjpmZb46ZmW+OmZlvjpmZb46ZmW+OmZlwj5qac5Kenm2Ml5c3Rk1NAwMDAwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAASGBsbWnN9fXWVoKBzkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6e
+c5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6e
+c5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6e
+c5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6e
+c5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6e
+c5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6e
+c5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6e
+c5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6e
+c5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6ec5KennOSnp5zkp6e
+c5KennOSnp5zkp6ec5KennOSnp5zkp6ec5Sfn26NmJhUbHV1HSUoKAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAALDQ8PKzY7Oyw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09
+LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09
+LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09
+LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09
+LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09
+LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09
+LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09
+LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09
+LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09LDg9PSw4PT0sOD09
+LDg9PSw4PT0sOD09LDg9PSw4PT0rNzw8GB8jIwMDAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgEA
+AAMAAAABAMIAAAEBAAMAAAABAFoAAAECAAMAAAAEAAERhgEDAAMAAAABAAEAAAEGAAMAAAABAAIAAAER
+AAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMAAAABAAQAAAEWAAMAAAABAFoAAAEXAAQAAAABAAEQ0AEc
+AAMAAAABAAEAAAFSAAMAAAABAAEAAAFTAAMAAAAEAAERjodzAAcAAAeoAAERlgAAAAAACAAIAAgACAAB
+AAEAAQABAAAHqGFwcGwCIAAAbW50clJHQiBYWVogB9kAAgAZAAsAGgALYWNzcEFQUEwAAAAAYXBwbAAA
+AAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAALZGVzYwAAAQgAAABvZHNjbQAAAXgAAAVsY3BydAAABuQAAAA4d3RwdAAA
+BxwAAAAUclhZWgAABzAAAAAUZ1hZWgAAB0QAAAAUYlhZWgAAB1gAAAAUclRSQwAAB2wAAAAOY2hhZAAA
+B3wAAAAsYlRSQwAAB2wAAAAOZ1RSQwAAB2wAAAAOZGVzYwAAAAAAAAAUR2VuZXJpYyBSR0IgUHJvZmls
+ZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFByb2ZpbGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMAAAAAAAAAHgAAAAxza1NLAAAAKAAAAXhockhSAAAAKAAA
+AaBjYUVTAAAAJAAAAchwdEJSAAAAJgAAAex1a1VBAAAAKgAAAhJmckZVAAAAKAAAAjx6aFRXAAAAFgAA
+AmRpdElUAAAAKAAAAnpuYk5PAAAAJgAAAqJrb0tSAAAAFgAAAshjc0NaAAAAIgAAAt5oZUlMAAAAHgAA
+AwBkZURFAAAALAAAAx5odUhVAAAAKAAAA0pzdlNFAAAAJgAAAqJ6aENOAAAAFgAAA3JqYUpQAAAAGgAA
+A4hyb1JPAAAAJAAAA6JlbEdSAAAAIgAAA8ZwdFBPAAAAJgAAA+hubE5MAAAAKAAABA5lc0VTAAAAJgAA
+A+h0aFRIAAAAJAAABDZ0clRSAAAAIgAABFpmaUZJAAAAKAAABHxwbFBMAAAALAAABKRydVJVAAAAIgAA
+BNBhckVHAAAAJgAABPJlblVTAAAAJgAABRhkYURLAAAALgAABT4AVgFhAGUAbwBiAGUAYwBuAP0AIABS
+AEcAQgAgAHAAcgBvAGYAaQBsAEcAZQBuAGUAcgBpAQ0AawBpACAAUgBHAEIAIABwAHIAbwBmAGkAbABQ
+AGUAcgBmAGkAbAAgAFIARwBCACAAZwBlAG4A6AByAGkAYwBQAGUAcgBmAGkAbAAgAFIARwBCACAARwBl
+AG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0EOAQ5ACAEPwRABD4ERAQwBDkEOwAgAFIARwBCAFAAcgBv
+AGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUAIABSAFYAQpAadSgAIABSAEcAQgAggnJfaWPPj/AAUABy
+AG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4AZQByAGkAYwBvAEcAZQBuAGUAcgBpAHMAawAgAFIARwBC
+AC0AcAByAG8AZgBpAGzHfLwYACAAUgBHAEIAINUEuFzTDMd8AE8AYgBlAGMAbgD9ACAAUgBHAEIAIABw
+AHIAbwBmAGkAbAXkBegF1QXkBdkF3AAgAFIARwBCACAF2wXcBdwF2QBBAGwAbABnAGUAbQBlAGkAbgBl
+AHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsAMEAbAB0AGEAbADhAG4AbwBzACAAUgBHAEIAIABwAHIAbwBm
+AGkAbGZukBoAIABSAEcAQgAgY8+P8GWHTvZOAIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wBQAHIAbwBm
+AGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkAYwOTA7UDvQO5A7oDzAAgA8ADwQO/A8YDrwO7ACAAUgBH
+AEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcAZQBuAOkAcgBpAGMAbwBBAGwAZwBlAG0AZQBlAG4AIABS
+AEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMORA4fDiUOTAAgAFIARwBCACAOFw4xDkgOJw5EDhsARwBl
+AG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkAbABpAFkAbABlAGkAbgBlAG4AIABSAEcAQgAtAHAAcgBv
+AGYAaQBpAGwAaQBVAG4AaQB3AGUAcgBzAGEAbABuAHkAIABwAHIAbwBmAGkAbAAgAFIARwBCBB4EMQRJ
+BDgEOQAgBD8EQAQ+BEQEOAQ7BEwAIABSAEcAQgZFBkQGQQAgBioGOQYxBkoGQQAgAFIARwBCACAGJwZE
+BjkGJwZFAEcAZQBuAGUAcgBpAGMAIABSAEcAQgAgAFAAcgBvAGYAaQBsAGUARwBlAG4AZQByAGUAbAAg
+AFIARwBCAC0AYgBlAHMAawByAGkAdgBlAGwAcwBldGV4dAAAAABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJ
+bmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBYWVogAAAAAAAA81IAAQAAAAEWz1hZWiAAAAAAAAB0TQAA
+Pe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRYWVogAAAAAAAAKBoAABWfAAC4NmN1cnYAAAAAAAAAAQHN
+AABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IAAP2R///7ov///aMAAAPcAADAbNIlJicoWiRjbGFzc25h
+bWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdlUmVwoykqK18QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFn
+ZVJlcFhOU09iamVjdNIlJi0uV05TQXJyYXmiLSvSJSYwMV5OU011dGFibGVBcnJheaMwLSvTMzQKNTY3
+V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQA4AM0iUmOTpXTlNDb2xvcqI5K9IlJjw9V05TSW1hZ2Wi
+PCtfEA9OU0tleWVkQXJjaGl2ZXLRQEFUcm9vdIABAAAACAAAABEAAAAaAAAAIwAAAC0AAAAyAAAANwAA
+AEYAAABMAAAAVwAAAF4AAABlAAAAcgAAAHkAAACBAAAAgwAAAIUAAACKAAAAjAAAAI4AAACYAAAAnQAA
+AKgAAACqAAAArAAAAK4AAACzAAAAtgAAALgAAAC6AAAAvAAAAL4AAADDAAAA2gAAANwAAADeAAEaIgAB
+GicAARoyAAEaOwABGk4AARpSAAEaZQABGnAAARp5AAEafgABGoYAARqJAAEajgABGp0AARqhAAEaqAAB
+GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
+BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
+</mutableData>
+        </image>
+        <image name="atividades-02" width="1024" height="768"/>
+        <image name="atividades-casa" width="406" height="406"/>
+        <image name="atividades-hospital" width="406" height="406"/>
+        <image name="atividades-praca" width="406" height="406"/>
+        <image name="badge-agua" width="53" height="72"/>
+        <image name="badge-idoso" width="52" height="72"/>
+        <image name="badge-lixo" width="53" height="72"/>
+        <image name="badge-luz" width="53" height="72"/>
+        <image name="badge-natureza" width="53" height="72"/>
+        <image name="badge-transito" width="52" height="72"/>
+        <image name="balaochuveiro1" width="53" height="44"/>
+        <image name="balaochuveiro2" width="95" height="86"/>
+        <image name="balaochuveiro3" width="594" height="513"/>
+        <image name="balaopia1" width="53" height="44"/>
+        <image name="balaopia2" width="95" height="86"/>
+        <image name="balaopia3" width="698" height="444"/>
+        <image name="bird" width="61" height="56"/>
+        <image name="botao-som" width="108" height="108"/>
+        <image name="botao-voltar" width="108" height="108"/>
+        <image name="custom-bg" width="1024" height="768"/>
+        <image name="custom01" width="170" height="150"/>
+        <image name="custom02" width="170" height="150"/>
+        <image name="custom03" width="170" height="150"/>
+        <image name="custom10" width="34" height="48"/>
+        <image name="custom11" width="34" height="48"/>
+        <image name="custom14" width="1024" height="206"/>
+        <image name="fantasminha" width="255" height="300"/>
+        <image name="interrogação_01" width="51" height="76"/>
+        <image name="interrogação_02" width="36" height="57"/>
+        <image name="interrogação_03" width="82" height="124"/>
+        <image name="logo" width="1116" height="165"/>
+        <image name="luz-banheiro-acesa" width="758" height="741"/>
+        <image name="luz1-com-nuvem" width="836" height="1318"/>
+        <image name="luz2-com-nuvem" width="647" height="1096"/>
+        <image name="nuvem-05" width="390" height="177"/>
+        <image name="play" width="217" height="217"/>
+        <image name="predio" width="1232" height="677"/>
+        <image name="sombra_fantasminha" width="261" height="31"/>
+        <image name="telainicial1_semtexto" width="2048" height="1536"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
