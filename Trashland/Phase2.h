@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "Player.h"
+#import "DraggableImageView.h"
 
 @interface Phase2 : UIViewController
 
@@ -23,5 +24,15 @@
 @property (weak, nonatomic) IBOutlet UIImageView *arvore3;
 @property (weak, nonatomic) IBOutlet UIImageView *arvore4;
 @property (weak, nonatomic) IBOutlet UIImageView *arvore5;
+
+
+//lixo
+@property (weak, nonatomic) IBOutlet DraggableImageView *garrafaPet1;
+@property (weak, nonatomic) IBOutlet DraggableImageView *lata;
+@property (weak, nonatomic) IBOutlet DraggableImageView *garrafaVidro;
+@property (weak, nonatomic) IBOutlet DraggableImageView *papel;
+@property (weak, nonatomic) IBOutlet DraggableImageView *garrafaPet2;
+@property (weak, nonatomic) IBOutlet UIImageView *cascaBanana;
+
 
 @end
