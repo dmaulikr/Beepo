@@ -782,7 +782,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="694F08C9-A414-4AF8-855A-B752D164C2EB" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DE9208E5-02EE-4C2E-9F72-E1CE6164B908" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -932,6 +932,34 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12_Trashcity" id="57J-Ug-Rtq" customClass="DraggableImageView">
+                                                <rect key="frame" x="1458" y="436" width="27" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14_Trashcity" id="EGg-LA-m0r" customClass="DraggableImageView">
+                                                <rect key="frame" x="1381" y="345" width="37" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="13_Trashcity" id="LD8-QG-LXe" customClass="DraggableImageView">
+                                                <rect key="frame" x="1407" y="435" width="34" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="08_Trashcity" id="AgA-ml-JGO" customClass="DraggableImageView">
+                                                <rect key="frame" x="1438" y="512" width="47" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="09_Trashcity" id="WM0-lL-D1i" customClass="DraggableImageView">
+                                                <rect key="frame" x="1387" y="506" width="24" height="62"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10_Trashcity" id="It6-ui-7yM" customClass="DraggableImageView">
+                                                <rect key="frame" x="1381" y="598" width="59" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11_Trashcity" id="hLo-bL-71b" customClass="DraggableImageView">
+                                                <rect key="frame" x="1929" y="479" width="33" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -957,20 +985,35 @@
                         <outlet property="medalha2fase1" destination="NuH-Qq-HxI" id="Xuu-5l-DN1"/>
                         <outlet property="nuvem1Acesa" destination="YZL-XN-Zhg" id="t5Z-Wx-cFm"/>
                         <outlet property="nuvem2Acesa" destination="1iQ-ds-cZZ" id="Tk1-5c-Aju"/>
+                        <outlet property="pinkishVase" destination="EGg-LA-m0r" id="RVE-Wh-KSv"/>
+                        <outlet property="purpleVase" destination="57J-Ug-Rtq" id="aZ3-6m-102"/>
+                        <outlet property="redWhiteVase" destination="WM0-lL-D1i" id="sfI-8b-4nu"/>
+                        <outlet property="rubberDuck" destination="It6-ui-7yM" id="U9c-4J-poI"/>
                         <outlet property="scrollView" destination="78L-Pm-Cad" id="Bzv-ct-o6i"/>
                         <outlet property="shadowImgView" destination="oyO-Ot-X2M" id="NFA-8f-DcL"/>
                         <outlet property="showerGIF" destination="qsX-3z-46L" id="n3B-Vg-mSh"/>
+                        <outlet property="soap" destination="hLo-bL-71b" id="Ck2-0X-lRn"/>
+                        <outlet property="toiletStuff" destination="LD8-QG-LXe" id="op1-XU-5xv"/>
                         <outlet property="torneiraGIF" destination="OrZ-cS-ZQz" id="dfz-uN-hGx"/>
                         <outlet property="tvGIF" destination="3Tl-Pg-ZWP" id="q8Y-gr-75V"/>
+                        <outlet property="weirdVase" destination="AgA-ml-JGO" id="Yak-hI-yqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEr-UK-xnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="1215"/>
+            <point key="canvasLocation" x="1894" y="1215"/>
         </scene>
     </scenes>
     <resources>
-        <image name="694F08C9-A414-4AF8-855A-B752D164C2EB" width="194" height="90">
+        <image name="08_Trashcity" width="47" height="56"/>
+        <image name="09_Trashcity" width="24" height="62"/>
+        <image name="10_Trashcity" width="59" height="51"/>
+        <image name="11_Trashcity" width="33" height="46"/>
+        <image name="12_Trashcity" width="27" height="50"/>
+        <image name="13_Trashcity" width="34" height="51"/>
+        <image name="14_Trashcity" width="33" height="60"/>
+        <image name="Base_Casa_TrashCity" width="2486" height="768"/>
+        <image name="DE9208E5-02EE-4C2E-9F72-E1CE6164B908" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2187,7 +2230,6 @@ GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
 BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
 </mutableData>
         </image>
-        <image name="Base_Casa_TrashCity" width="2486" height="768"/>
         <image name="atividades-02" width="1024" height="768"/>
         <image name="atividades-casa" width="203" height="203"/>
         <image name="atividades-hospital" width="203" height="203"/>

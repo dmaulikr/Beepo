@@ -26,6 +26,13 @@
 @property (nonatomic)  DraggableImageView* plate;
 @property (nonatomic)  DraggableImageView* vase2;
 //@property (nonatomic)  DraggableImageView* vaseFlower;
+@property (weak, nonatomic) IBOutlet DraggableImageView *soap;
+@property (weak, nonatomic) IBOutlet DraggableImageView *rubberDuck;
+@property (weak, nonatomic) IBOutlet DraggableImageView *redWhiteVase;
+@property (weak, nonatomic) IBOutlet DraggableImageView *weirdVase;
+@property (weak, nonatomic) IBOutlet DraggableImageView *toiletStuff;
+@property (weak, nonatomic) IBOutlet DraggableImageView *pinkishVase;
+@property (weak, nonatomic) IBOutlet DraggableImageView *purpleVase;
 
 
 @property (nonatomic) IBOutlet UIImageView* medalha1fase1;

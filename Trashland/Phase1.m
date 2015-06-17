@@ -178,6 +178,14 @@ SystemSoundID sound1;
     self.vase2.delegate = self;
     [self.auxView addSubview:self.vase2];
     
+    self.soap.delegate=self;
+    self.rubberDuck.delegate=self;
+    self.redWhiteVase.delegate=self;
+    self.weirdVase.delegate=self;
+    self.toiletStuff.delegate=self;
+    self.pinkishVase.delegate=self;
+    self.purpleVase.delegate=self;
+    
     [self.scrollView addSubview:self.tvGIF];
     [self.scrollView addSubview:self.torneiraGIF];
     [self.scrollView addSubview:self.showerGIF];
@@ -199,18 +207,18 @@ SystemSoundID sound1;
     [self.view addSubview:self.medalha2fase1];
     [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];
 }
-
 #pragma mark - gravidade e colisoes
 - (void)dealWithMovement{
     [_animator removeAllBehaviors];
+
     
     
     //UIDynamics
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.auxView];
-    _gravity = [[UIGravityBehavior alloc] initWithItems:@[self.books, self.flower, self.vase2, self.vase, self.plate]];
+    _gravity = [[UIGravityBehavior alloc] initWithItems:@[self.books, self.flower, self.vase2, self.vase, self.plate, self.soap, self.rubberDuck, self.redWhiteVase, self.weirdVase, self.toiletStuff, self.pinkishVase, self.purpleVase]];
     [_animator addBehavior:_gravity];
     
-    _collision = [[UICollisionBehavior alloc] initWithItems:@[self.books, self.flower, self.vase, self.vase2, self.plate]];
+    _collision = [[UICollisionBehavior alloc] initWithItems:@[self.books, self.flower, self.vase, self.vase2, self.plate, self.soap, self.rubberDuck, self.redWhiteVase, self.weirdVase, self.toiletStuff, self.pinkishVase, self.purpleVase]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
     [_animator addBehavior:_collision];
     
@@ -271,6 +279,67 @@ SystemSoundID sound1;
     [_collision addBoundaryWithIdentifier:@"barrier5"
                                 fromPoint:barrier5.frame.origin
                                   toPoint:rightEdge5];
+    
+    //(Estante banheiro)
+    UIView* barrier6 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50+ 6, 405, 179, 10)];
+//    barrier6.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier6];
+    
+    CGPoint rightEdgeAux = CGPointMake(barrier6.frame.origin.x +
+                                     barrier6.frame.size.width, barrier6.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"barrier6"
+                                fromPoint:barrier6.frame.origin
+                                  toPoint:rightEdgeAux];
+    
+    UIView* barrier7 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50+ 6, 486, 179, 10)];
+//    barrier7.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier7];
+    
+    rightEdgeAux = CGPointMake(barrier7.frame.origin.x +
+                                     barrier7.frame.size.width, barrier7.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"barrier7"
+                                fromPoint:barrier7.frame.origin
+                                  toPoint:rightEdgeAux];
+    //(Mesa TV)
+    UIView* barrier8 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50+ 6, 435 + 51 + 81, 179, 10)];
+//    barrier8.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier8];
+    
+    rightEdgeAux = CGPointMake(barrier8.frame.origin.x +
+                                     barrier8.frame.size.width, barrier8.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"barrier8"
+                                fromPoint:barrier8.frame.origin
+                                  toPoint:rightEdgeAux];
+    //(Mesa TV)
+    UIView* barrier9 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50 + 6, 435 + 51 + 81 + 81, 179, 10)];
+//    barrier9.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier9];
+    
+    rightEdgeAux = CGPointMake(barrier9.frame.origin.x +
+                                     barrier9.frame.size.width, barrier9.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"barrier9"
+                                fromPoint:barrier9.frame.origin
+                                  toPoint:rightEdgeAux];
+//    //(Mesa TV)
+//    UIView* barrier5 = [[UIView alloc] initWithFrame:CGRectMake(670, 550, 320, 10)];
+//    barrier5.backgroundColor = [UIColor redColor];
+//    [self.auxView addSubview:barrier5];
+//    
+//    rightEdgeAux = CGPointMake(barrier5.frame.origin.x +
+//                                     barrier5.frame.size.width, barrier5.frame.origin.y);
+//    [_collision addBoundaryWithIdentifier:@"barrier5"
+//                                fromPoint:barrier5.frame.origin
+//                                  toPoint:rightEdgeAux];
+//    //(Mesa TV)
+//    UIView* barrier5 = [[UIView alloc] initWithFrame:CGRectMake(670, 550, 320, 10)];
+//    barrier5.backgroundColor = [UIColor redColor];
+//    [self.auxView addSubview:barrier5];
+//    
+//    rightEdgeAux = CGPointMake(barrier5.frame.origin.x +
+//                                     barrier5.frame.size.width, barrier5.frame.origin.y);
+//    [_collision addBoundaryWithIdentifier:@"barrier5"
+//                                fromPoint:barrier5.frame.origin
+//                                  toPoint:rightEdgeAux];
     
     
     

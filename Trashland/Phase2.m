@@ -19,7 +19,12 @@
 #pragma mark - Tree Buttons
 - (IBAction)didClickTree1:(UIButton *)sender {
     _arvore1.image = [UIImage imageNamed:@"parque-03"];
-    _arvore1.frame = CGRectMake(_arvore1.frame.origin.x - (888/2 - _arvore1.frame.size.width), _arvore1.frame.origin.y - (1070/2 - _arvore1.frame.size.width), 888/2, 1070/2);
+    float xDiff = (888/2 - _arvore1.frame.size.width);
+    float yDiff = (1070/2 - _arvore1.frame.size.height);
+    NSLog(@"Original x: %f y: %f wid: %f hei: %f difX: %f difY: %f",_arvore1.frame.origin.x,_arvore1.frame.origin.y,_arvore1.frame.size.width,_arvore1.frame.size.height,xDiff,yDiff);
+    _arvore1.frame = CGRectMake(_arvore1.frame.origin.x - xDiff, _arvore1.frame.origin.y - yDiff, 888/2, 1070/2);
+    
+    sender.userInteractionEnabled = NO;
     
 }
 - (IBAction)didClickTree2:(UIButton *)sender {
