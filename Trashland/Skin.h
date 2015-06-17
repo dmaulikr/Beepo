@@ -34,4 +34,6 @@
 @property (nonatomic) Player* player;
 @property (nonatomic) NSString* faseClicada;
 
+@property (nonatomic) NSString* gasperEscolhido;
+
 @end

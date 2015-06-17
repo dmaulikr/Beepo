@@ -29,6 +29,7 @@
         Story1 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story1VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
         game.player = self.player;
+        game.gasperEscolhido = self.gasperEscolhido;
         [self presentViewController:game animated:YES completion:nil];
     }
     if ([self.faseClicada isEqualToString:@"parque"]) {
@@ -90,19 +91,23 @@
 -(IBAction)choosedFirst:(id)sender{
     if (primeira == true) {
         self.gasper.image = [UIImage imageNamed:@"custom15"];
+        self.gasperEscolhido = @"gravata";
     }
     else{
         self.gasper.image = [UIImage imageNamed:@"custom18"];
+        self.gasperEscolhido = @"chapeu";
     }
 }
 
 -(IBAction)choosedSecond:(id)sender{
     if (primeira == true) {
         self.gasper.image = [UIImage imageNamed:@"custom16"];
+         self.gasperEscolhido = @"oculos";
     }
     else{
         
         self.gasper.image = [UIImage imageNamed:@"custom19"];
+         self.gasperEscolhido = @"bolsa";
     }
 }
 
@@ -110,9 +115,10 @@
     if (primeira == true) {
         
         self.gasper.image = [UIImage imageNamed:@"custom17"];
+         self.gasperEscolhido = @"tapaolho";
     }
     else{
-        
+         self.gasperEscolhido = @"vibe";
         self.gasper.image = [UIImage imageNamed:@"custom20"];
     }
     

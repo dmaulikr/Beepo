@@ -48,4 +48,6 @@
 
 @property (nonatomic) Player* player;
 
+@property (nonatomic) NSString* gasperEscolhido;
+
 @end

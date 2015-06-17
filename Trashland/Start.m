@@ -33,7 +33,7 @@ SystemSoundID sound2;
     [self.fundo addSubview:self.playImage];
     
     
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"hackbeatwav" withExtension:@"wav"];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"carefreewav" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound2);
     AudioServicesPlaySystemSound(sound2);
     

@@ -17,6 +17,9 @@
 @property (nonatomic) IBOutlet UIImageView* luz3;
 @property (nonatomic) IBOutlet UIImageView* luz4;
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *charImgView;
+
 @property (nonatomic)  DraggableImageView* books;
 @property (nonatomic)  DraggableImageView* flower;
 @property (nonatomic)  DraggableImageView* vase;
@@ -35,6 +38,8 @@
 @property (nonatomic) IBOutlet UILabel* contador;
 
 @property (nonatomic) Player* player;
+
+@property (nonatomic) NSString* gasperEscolhido;
 
 
 - (void)dealWithMovement;

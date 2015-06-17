@@ -31,7 +31,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *contentBG;
 @property (weak, nonatomic) IBOutlet DraggableImageView *birdImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *charImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowImgView;
 
 @property (strong, nonatomic) UIGravityBehavior *grav;
@@ -55,6 +54,35 @@ SystemSoundID sound1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if ([self.gasperEscolhido isEqualToString:@"gravata"]) {
+        
+        self.charImgView.image = [UIImage imageNamed:@"custom15"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
+        
+        self.charImgView.image = [UIImage imageNamed:@"custom19"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
+        
+        self.charImgView.image = [UIImage imageNamed:@"custom16"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
+        
+        self.charImgView.image = [UIImage imageNamed:@"custom18"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
+        
+        self.charImgView.image = [UIImage imageNamed:@"custom20"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
+        
+        self.charImgView.image = [UIImage imageNamed:@"custom17"];
+    }
+    else{
+        self.charImgView.image = [UIImage imageNamed:@"fantasminha"];
+    }
+
     
     if(self.player.medalha1fase1){
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
@@ -112,6 +140,7 @@ SystemSoundID sound1;
     //    self.charImgView.alpha = 0.50;
     //    self.shadowImgView.alpha = 0.50;
     [UIView commitAnimations];
+    
 }
 
 - (void)montarTela{
@@ -152,6 +181,10 @@ SystemSoundID sound1;
     [self.scrollView addSubview:self.tvGIF];
     [self.scrollView addSubview:self.torneiraGIF];
     [self.scrollView addSubview:self.showerGIF];
+//    
+//    [self.auxView addSubview:self.viewFantasminha];
+//    [self.viewFantasminha addSubview:self.charImgView];
+//    [self.viewFantasminha addSubview:self.shadowImgView];
     
     [self.scrollView addSubview:self.nuvem1Acesa];
     [self.scrollView addSubview:self.nuvem2Acesa];
@@ -164,6 +197,7 @@ SystemSoundID sound1;
     [self.view addSubview:self.botaoPlay];
     [self.view addSubview:self.medalha1fase1];
     [self.view addSubview:self.medalha2fase1];
+    [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];
 }
 
 #pragma mark - gravidade e colisoes
