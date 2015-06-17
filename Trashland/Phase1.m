@@ -123,6 +123,8 @@ SystemSoundID sound1;
     _tvGIF.image = [UIImage animatedImageNamed:@"chuvisco_tv-" duration:0.8f];
     
     [self tocaTV];
+    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkTV) userInfo:nil repeats:YES];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -464,15 +466,15 @@ SystemSoundID sound1;
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     AudioServicesPlaySystemSound(sound1);
     //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    if (!TVLigada) {
-        AudioServicesDisposeSystemSoundID(sound1);
+}
+
+-(void)checkTV{
+    if (TVLigada) {
+        [self tocaTV];
     }
     else{
-      //  [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(tocaMais) userInfo:nil repeats:YES];
+        AudioServicesDisposeSystemSoundID(sound1);
     }
-}
--(void)tocaMais{
-    //[self tocaTV];
 }
 
 @end

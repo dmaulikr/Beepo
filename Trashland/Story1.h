@@ -19,6 +19,11 @@
 @property (nonatomic) IBOutlet UIImageView* sombra;
 @property (nonatomic) IBOutlet UIImageView* gasper;
 
+@property (nonatomic) IBOutlet UIView* viewGasperTriste;
+@property (nonatomic) IBOutlet UIImageView* gasperTriste;
+@property (nonatomic) IBOutlet UIImageView* gaspersombraTriste;
+
+
 @property (nonatomic) IBOutlet UILabel* frase1;
 @property (nonatomic) IBOutlet UILabel* frase2;
 

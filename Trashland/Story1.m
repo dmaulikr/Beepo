@@ -42,6 +42,7 @@
     else{
         self.gasper.image = [UIImage imageNamed:@"fantasminha"];
     }
+    self.gasperTriste.image = [UIImage imageNamed:@"fantasma-triste"];
     
     [self.view addSubview:self.background];
     [self.background addSubview:self.viewGasper];
@@ -56,12 +57,10 @@
     [self.background addSubview:self.interrogacao2];
     [self.background addSubview:self.interrogacao3];
     [self.background addSubview:self.controle];
-    [self.background addSubview:self.balao1];
-    [self.background addSubview:self.balao2];
-    [self.background addSubview:self.balao3];
-    [self.background addSubview:self.balao4];
-    [self.background addSubview:self.balao5];
-    [self.background addSubview:self.balao6];
+    [self.background addSubview:self.viewGasperTriste];
+    [self.viewGasperTriste addSubview:self.gasperTriste];
+    [self.viewGasperTriste addSubview:self.gaspersombraTriste];
+    
     
   //  [self.background addSubview:self.botaoPlay];
  //   [self.background addSubview:self.botaoVoltar];
@@ -74,13 +73,7 @@
     [self.frase5 setAlpha:0.0f];
     [self.frase6 setAlpha:0.0f];
     [self.frase7 setAlpha:0.0f];
-    [self.balao1 setAlpha:0.0f];
-    [self.balao2 setAlpha:0.0f];
-    [self.balao3 setAlpha:0.0f];
-    [self.balao4 setAlpha:0.0f];
-    [self.balao5 setAlpha:0.0f];
-    [self.balao6 setAlpha:0.0f];
-    
+    [self.viewGasperTriste setAlpha:0.0f];
     
     
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
@@ -143,6 +136,15 @@
     shadowFrame.size.width = shadowFrame.size.width/2.0;
     shadowFrame.origin.x = shadowFrame.origin.x + shadowFrame.size.width/2;
     
+    CGRect charFrame2 = self.gasperTriste.frame;
+    charFrame2.origin.y = charFrame2.origin.y - 45.0;
+    charFrame2.size.height = charFrame2.size.height + 15.0;
+    
+    
+    CGRect shadowFrame2 = self.gaspersombraTriste.frame;
+    shadowFrame2.size.width = shadowFrame2.size.width/2.0;
+    shadowFrame2.origin.x = shadowFrame2.origin.x + shadowFrame2.size.width/2;
+    
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.6];//0.05
     [UIView setAnimationDelay:0.2];
@@ -152,6 +154,10 @@
     
     self.gasper.frame = charFrame;
     self.sombra.frame = shadowFrame;
+    
+    self.gasperTriste.frame = charFrame2;
+    self.gaspersombraTriste.frame = shadowFrame2;
+    
     [UIView commitAnimations];
 }
 
@@ -175,7 +181,6 @@
     [self.frase1 setAlpha:1.0f];
     [self.frase2 setAlpha:1.0f];
     [self.viewGasper setAlpha:1.0f];
-    
     self.frase1.text = @"Era uma vez um fantasminha chamado gasper, nao tao diferente";
     self.frase2.text = @"dos outros habitantes da sua cidade, trashland.";
     
@@ -204,36 +209,16 @@
     self.frase1.text = @"curiosidade com tudo ao seu redor,";
     self.frase2.text = @"ainda mais na sua cidade trashland";
     self.frase4.text = @"onde tudo parecia estar fora do lugar!";
-    
-    
     self.background.image = [UIImage imageNamed:@"telainicial2_semtexto"];
 }
 
 -(void)out2{
-    [self.frase5 setAlpha:0.0f];
-    [self.frase6 setAlpha:0.0f];
-    [self.frase7 setAlpha:0.0f];
-    [self.balao1 setAlpha:0.0f];
-    [self.balao2 setAlpha:0.0f];
-    [self.balao3 setAlpha:0.0f];
-    [self.balao4 setAlpha:0.0f];
-    [self.balao5 setAlpha:0.0f];
-    [self.balao6 setAlpha:0.0f];
+    [self.viewGasperTriste setAlpha:0.0f];
 }
 
 -(void)in2{
-    [self.frase5 setAlpha:1.0f];
-    [self.frase6 setAlpha:1.0f];
-    [self.frase7 setAlpha:1.0f];
-    [self.balao1 setAlpha:1.0f];
-    [self.balao2 setAlpha:1.0f];
-    [self.balao3 setAlpha:1.0f];
-    [self.balao4 setAlpha:1.0f];
-    [self.balao5 setAlpha:1.0f];
-    [self.balao6 setAlpha:1.0f];
-    
-    
-    self.background.image = [UIImage imageNamed:@"telainicial3-3"];
+    [self.viewGasperTriste setAlpha:1.0f];
+    self.background.image = [UIImage imageNamed:@"telainicial3-1"];
 }
 
 -(IBAction)voltar:(id)sender{
