@@ -215,6 +215,7 @@ SystemSoundID sound1;
     [self.view addSubview:self.medalha2fase1];
     [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];
 }
+
 #pragma mark - gravidade e colisoes
 - (void)dealWithMovement{
     [_collision removeAllBoundaries];

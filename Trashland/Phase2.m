@@ -8,12 +8,56 @@
 
 #import "Phase2.h"
 
+@interface Phase2(){
+    UIDynamicAnimator* _animator;
+    UIGravityBehavior* _gravity;
+    UICollisionBehavior* _collision;
+
+}
+@property (weak, nonatomic) IBOutlet UIView *auxView;
+
+
+@end
+
 @implementation Phase2
+
+
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     _phaseScrollView.contentSize = CGSizeMake(_phaseBG.frame.size.width, _phaseBG.frame.size.height);
+    
+    
+    [self prepareForMovement];
+    [self dealWithMovement];
+    
 }
 
+
+#pragma mark - Gavidade e Colisões
+- (void)prepareForMovement{
+    self.garrafaPet1.delegate = self;
+    self.garrafaPet2.delegate = self;
+    self.garrafaVidro.delegate = self;
+    self.lata.delegate = self;
+    self.papel.delegate = self;
+    //    self.cascaBanana.delegate = self;
+}
+
+- (void)dealWithMovement{
+    [_collision removeAllBoundaries];
+    [_animator removeAllBehaviors];
+    
+    //UIDynamics
+    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.auxView];
+    _gravity = [[UIGravityBehavior alloc] initWithItems:@[self.garrafaPet1, self.garrafaPet2, self.garrafaVidro, self.lata, self.papel, self.cascaBanana]];
+    [_animator addBehavior:_gravity];
+    
+    _collision = [[UICollisionBehavior alloc] initWithItems:@[self.garrafaPet1, self.garrafaPet2, self.garrafaVidro, self.lata, self.papel, self.cascaBanana]];
+    _collision.translatesReferenceBoundsIntoBoundary = YES;
+    [_animator addBehavior:_collision];
+    
+}
 
 
 #pragma mark - Tree Buttons
