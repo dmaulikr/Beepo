@@ -28,8 +28,8 @@
                                 <rect key="frame" x="131" y="427" width="762" height="341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="vLT-8I-pTA">
-                                <rect key="frame" x="176" y="73" width="672" height="104"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beepo" id="vLT-8I-pTA">
+                                <rect key="frame" x="273" y="44" width="499" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="jdM-Sf-th9">
@@ -600,14 +600,14 @@
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="0.52203677400000004" green="0.52203677400000004" blue="0.52203677400000004" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAS GASPER POSSUIA UMA GRANDE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pZQ-ah-aaV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAS BEEPO POSSUIA UMA GRANDE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pZQ-ah-aaV">
                                 <rect key="frame" x="22" y="77" width="992" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Era uma vez, um fantasminha chamado Gasper, não tão diferente dos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cWa-wx-q8c">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Era uma vez, um fantasminha chamado Beepo, não tão diferente dos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cWa-wx-q8c">
                                 <rect key="frame" x="16" y="116" width="992" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
@@ -733,7 +733,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14015E3E-1B1D-4FAC-8B44-628C716561B1" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="58A43037-C5AB-4891-9880-D70C1726CA08" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -962,7 +962,8 @@
         <image name="11_Trashcity" width="33" height="46"/>
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
-        <image name="14015E3E-1B1D-4FAC-8B44-628C716561B1" width="194" height="90">
+        <image name="14_Trashcity" width="33" height="60"/>
+        <image name="58A43037-C5AB-4891-9880-D70C1726CA08" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2179,7 +2180,6 @@ GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
 BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
 </mutableData>
         </image>
-        <image name="14_Trashcity" width="33" height="60"/>
         <image name="Base_Casa_TrashCity-1" width="2486" height="768"/>
         <image name="atividades-02" width="1024" height="768"/>
         <image name="atividades-casa" width="203" height="203"/>
@@ -2193,6 +2193,7 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="badge-luz" width="53" height="72"/>
         <image name="badge-natureza" width="53" height="72"/>
         <image name="badge-transito" width="52" height="72"/>
+        <image name="beepo" width="925" height="311"/>
         <image name="bird" width="61" height="56"/>
         <image name="botao-som" width="54" height="54"/>
         <image name="botao-voltar" width="54" height="54"/>
@@ -2204,7 +2205,6 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="custom11" width="34" height="48"/>
         <image name="custom14" width="1024" height="206"/>
         <image name="fantasminha" width="255" height="300"/>
-        <image name="logo" width="558" height="82"/>
         <image name="luz-banheiro-acesa" width="758" height="741"/>
         <image name="luz1-com-nuvem" width="418" height="659"/>
         <image name="luz2-com-nuvem" width="323" height="548"/>

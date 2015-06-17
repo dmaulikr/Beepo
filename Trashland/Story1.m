@@ -181,7 +181,7 @@
     [self.frase1 setAlpha:1.0f];
     [self.frase2 setAlpha:1.0f];
     [self.viewGasper setAlpha:1.0f];
-    self.frase1.text = @"Era uma vez um fantasminha chamado gasper, nao tao diferente";
+    self.frase1.text = @"Era uma vez um fantasminha chamado Beepo, nao tao diferente";
     self.frase2.text = @"dos outros habitantes da sua cidade, trashland.";
     
     self.background.image = [UIImage imageNamed:@"telainicial1_semtexto"];
@@ -205,7 +205,7 @@
     [self.frase4 setAlpha:1.0f];
     [self.frase1 setAlpha:1.0f];
     [self.frase2 setAlpha:1.0f];
-    self.frase3.text = @"Mas gasper possuia uma grande";
+    self.frase3.text = @"Mas Beepo possuia uma grande";
     self.frase1.text = @"curiosidade com tudo ao seu redor,";
     self.frase2.text = @"ainda mais na sua cidade trashland";
     self.frase4.text = @"onde tudo parecia estar fora do lugar!";
