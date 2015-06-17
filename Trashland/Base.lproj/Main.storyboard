@@ -124,7 +124,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="57M-VS-qQj">
                                 <rect key="frame" x="781" y="288" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="atividades-hospital">
+                                <state key="normal" backgroundImage="atividades-prefeitura">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -733,7 +733,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="525B33E3-4EC8-48A7-91BF-BF21994693B8" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14015E3E-1B1D-4FAC-8B44-628C716561B1" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -962,8 +962,7 @@
         <image name="11_Trashcity" width="33" height="46"/>
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
-        <image name="14_Trashcity" width="33" height="60"/>
-        <image name="525B33E3-4EC8-48A7-91BF-BF21994693B8" width="194" height="90">
+        <image name="14015E3E-1B1D-4FAC-8B44-628C716561B1" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2180,11 +2179,13 @@ GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
 BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
 </mutableData>
         </image>
+        <image name="14_Trashcity" width="33" height="60"/>
         <image name="Base_Casa_TrashCity-1" width="2486" height="768"/>
         <image name="atividades-02" width="1024" height="768"/>
         <image name="atividades-casa" width="203" height="203"/>
         <image name="atividades-hospital" width="203" height="203"/>
         <image name="atividades-praca" width="203" height="203"/>
+        <image name="atividades-prefeitura" width="202" height="203"/>
         <image name="background" width="3531" height="768"/>
         <image name="badge-agua" width="53" height="72"/>
         <image name="badge-idoso" width="52" height="72"/>
