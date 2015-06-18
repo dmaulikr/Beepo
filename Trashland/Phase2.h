@@ -18,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *phaseScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *phaseBG;
 
+//gifs
+@property (weak, nonatomic) IBOutlet UIImageView *balao;
+@property (weak, nonatomic) IBOutlet UIImageView *bolinhaVermelha;
+@property (weak, nonatomic) IBOutlet UIImageView *bolinhaVerde;
+
 //Arvores
 @property (weak, nonatomic) IBOutlet UIImageView *arvore1;
 @property (weak, nonatomic) IBOutlet UIImageView *arvore2;
@@ -25,14 +30,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *arvore4;
 @property (weak, nonatomic) IBOutlet UIImageView *arvore5;
 
-
 //lixo
 @property (weak, nonatomic) IBOutlet DraggableImageView *garrafaPet1;
 @property (weak, nonatomic) IBOutlet DraggableImageView *lata;
 @property (weak, nonatomic) IBOutlet DraggableImageView *garrafaVidro;
 @property (weak, nonatomic) IBOutlet DraggableImageView *papel;
 @property (weak, nonatomic) IBOutlet DraggableImageView *garrafaPet2;
-@property (weak, nonatomic) IBOutlet UIImageView *cascaBanana;
+@property (weak, nonatomic) IBOutlet DraggableImageView *cascaBanana;
 
 
 @end

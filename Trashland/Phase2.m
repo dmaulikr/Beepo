@@ -8,7 +8,7 @@
 
 #import "Phase2.h"
 
-@interface Phase2(){
+@interface Phase2()<UICollisionBehaviorDelegate>{
     UIDynamicAnimator* _animator;
     UIGravityBehavior* _gravity;
     UICollisionBehavior* _collision;
@@ -31,6 +31,11 @@
     [self prepareForMovement];
     [self dealWithMovement];
     
+    self.balao.image = [UIImage animatedImageNamed:@"balao-" duration:1.2f];
+    self.bolinhaVermelha.image = [UIImage animatedImageNamed:@"bolinhavermelha_piscando-" duration:1.6f];//bolinhaverde_piscando-
+    self.bolinhaVerde.image = [UIImage animatedImageNamed:@"bolinhaverde_piscando-" duration:1.2f];//bolinhavermelha_piscando-
+    self.bolinhaVermelha.hidden = YES;
+    self.bolinhaVerde.hidden = YES;
 }
 
 
@@ -41,7 +46,7 @@
     self.garrafaVidro.delegate = self;
     self.lata.delegate = self;
     self.papel.delegate = self;
-    //    self.cascaBanana.delegate = self;
+    self.cascaBanana.delegate = self;
 }
 
 - (void)dealWithMovement{
@@ -56,10 +61,96 @@
     _collision = [[UICollisionBehavior alloc] initWithItems:@[self.garrafaPet1, self.garrafaPet2, self.garrafaVidro, self.lata, self.papel, self.cascaBanana]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
     [_animator addBehavior:_collision];
+    _collision.collisionDelegate = self;
+    //UIDynamics (Barreiras)
+    
+    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(1977, 636, 120, 120)];
+//    barrier.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier];
+    
+    CGPoint rightEdge = CGPointMake(barrier.frame.origin.x +
+                                    barrier.frame.size.width, barrier.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoPapel"
+                                fromPoint:barrier.frame.origin
+                                  toPoint:rightEdge];
+    
+    barrier = [[UIView alloc] initWithFrame:CGRectMake(2100, 636, 120, 120)];
+//    barrier.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier];
+    
+    rightEdge = CGPointMake(barrier.frame.origin.x +
+                                    barrier.frame.size.width, barrier.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoPlastico"
+                                fromPoint:barrier.frame.origin
+                                  toPoint:rightEdge];
+
+    barrier = [[UIView alloc] initWithFrame:CGRectMake(2223, 636, 120, 120)];
+//    barrier.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier];
+    
+    rightEdge = CGPointMake(barrier.frame.origin.x +
+                                    barrier.frame.size.width, barrier.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoMetal"
+                                fromPoint:barrier.frame.origin
+                                  toPoint:rightEdge];
+    
+    barrier = [[UIView alloc] initWithFrame:CGRectMake(2346, 636, 120, 120)];
+//    barrier.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier];
+    
+    rightEdge = CGPointMake(barrier.frame.origin.x +
+                                    barrier.frame.size.width, barrier.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoVidro"
+                                fromPoint:barrier.frame.origin
+                                  toPoint:rightEdge];
+    
+    barrier = [[UIView alloc] initWithFrame:CGRectMake(2469, 636, 120, 120)];
+//    barrier.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier];
+    
+    rightEdge = CGPointMake(barrier.frame.origin.x +
+                                    barrier.frame.size.width, barrier.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoOrganico"
+                                fromPoint:barrier.frame.origin
+                                  toPoint:rightEdge];
+    
+    barrier = [[UIView alloc] initWithFrame:CGRectMake(0, self.auxView.frame.size.height - 26.0, self.auxView.frame.size.width, 10)];
+//    barrier.backgroundColor = [UIColor redColor];
+    [self.auxView addSubview:barrier];
+    
+    rightEdge = CGPointMake(barrier.frame.origin.x +
+                            barrier.frame.size.width, barrier.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"piso"
+                                fromPoint:barrier.frame.origin
+                                  toPoint:rightEdge];
     
 }
 
-
+-(void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier atPoint:(CGPoint)p{
+    if (identifier &&  ![[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"piso"]) {
+        if (((UIImageView *)item).tag == 1 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPlastico"]) {
+            ((UIImageView *)item).userInteractionEnabled = NO;
+            ((UIImageView *)item).hidden = YES;
+            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+        } else if (((UIImageView *)item).tag == 2 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPapel"]) {
+            ((UIImageView *)item).userInteractionEnabled = NO;
+            ((UIImageView *)item).hidden = YES;
+            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+        } else if (((UIImageView *)item).tag == 3 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoVidro"]) {
+            ((UIImageView *)item).userInteractionEnabled = NO;
+            ((UIImageView *)item).hidden = YES;
+            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+        } else if (((UIImageView *)item).tag == 4 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoMetal"]) {
+            ((UIImageView *)item).userInteractionEnabled = NO;
+            ((UIImageView *)item).hidden = YES;
+            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+        } else if (((UIImageView *)item).tag == 5 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoOrganico"]) {
+            ((UIImageView *)item).userInteractionEnabled = NO;
+            ((UIImageView *)item).hidden = YES;
+            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+        }// else NSLog(@"error");
+    }
+}
 #pragma mark - Tree Buttons
 - (IBAction)didClickTree1:(UIButton *)sender {
     
@@ -109,7 +200,10 @@
     float xFinal = xInicial - (874/2 - wInicial)/2;
     _arvore4.frame = CGRectMake(xFinal-8, yFinal, 874/2
                                 , 1068/2);
+    NSLog(@"%f %f",xFinal-11,yFinal);
     sender.userInteractionEnabled = NO;
+    self.bolinhaVermelha.hidden = NO;
+    self.bolinhaVerde.hidden = NO;
 }
 - (IBAction)didClickTree5:(UIButton *)sender {
     _arvore5.image = [UIImage imageNamed:@"parque-07"];
