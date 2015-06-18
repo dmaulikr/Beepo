@@ -447,7 +447,7 @@ SystemSoundID sound1;
         if (pontoAgua1 && pontoAgua2) {
             self.player.medalha2fase1 = true;
         }
-        if (self.player.medalha1fase1 && self.player.medalha2fase1) {
+        if (self.player.medalha1fase1 || self.player.medalha2fase1) {
             self.player.fase2 = true;
         }
         PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
