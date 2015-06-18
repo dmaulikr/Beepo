@@ -29,10 +29,22 @@ CGPoint startLocation;
 }
 - (void) touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event {
     // Move relative to the original touch point
+    
     CGPoint pt = [[touches anyObject] locationInView:self];
+    
+//    if (pt.x - startLocation.x > 0) {
+//        if ([self.delegate respondsToSelector:@selector(setLookingBackTo:)]) {
+//            [self.delegate performSelector:@selector(setLookingBackTo:)withObject:NO];
+//        }
+//        self.charImgView.image
+//    }else{
+//        if ([self.delegate respondsToSelector:@selector(setLookingBackTo:)]) {
+//            [self.delegate performSelector:@selector(setLookingBackTo:)withObject:YES];
+//        }
+//    }
     CGRect frame = [self frame];
     frame.origin.x += pt.x - startLocation.x;
-    frame.origin.y += pt.y - startLocation.y;
+//    frame.origin.y += pt.y - startLocation.y;
     [self setFrame:frame];
 }
 

@@ -105,7 +105,7 @@ SystemSoundID sound1;
     pontoAgua1 = false;
     pontoAgua2 = false;
     
-    tempo = 25;
+    tempo =25;//25;
     
     [self partiu];
     
@@ -128,6 +128,7 @@ SystemSoundID sound1;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     CGRect charFrame = self.charImgView.frame;
     charFrame.origin.y = charFrame.origin.y - 45.0;
     charFrame.size.height = charFrame.size.height + 15.0;
@@ -140,7 +141,7 @@ SystemSoundID sound1;
     [UIView setAnimationDuration:0.6];//0.05
     [UIView setAnimationDelay:0.2];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationRepeatCount:9999.0];
+    [UIView setAnimationRepeatCount:NSUIntegerMax];
     [UIView setAnimationRepeatAutoreverses:YES];
     
     self.charImgView.frame = charFrame;

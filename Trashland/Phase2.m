@@ -8,7 +8,7 @@
 
 #import "Phase2.h"
 
-@interface Phase2()<UICollisionBehaviorDelegate>{
+@interface Phase2()<UICollisionBehaviorDelegate, UIScrollViewDelegate>{
     UIDynamicAnimator* _animator;
     UIGravityBehavior* _gravity;
     UICollisionBehavior* _collision;
@@ -20,13 +20,15 @@
 @end
 
 @implementation Phase2
-
+float deslocIni;
 
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     _phaseScrollView.contentSize = CGSizeMake(_phaseBG.frame.size.width, _phaseBG.frame.size.height);
+    _phaseScrollView.delegate = self;
     
+    [self beepoCustomizado];
     
     [self prepareForMovement];
     [self dealWithMovement];
@@ -36,9 +38,129 @@
     self.bolinhaVerde.image = [UIImage animatedImageNamed:@"bolinhaverde_piscando-" duration:1.2f];//bolinhavermelha_piscando-
     self.bolinhaVermelha.hidden = YES;
     self.bolinhaVerde.hidden = YES;
+    
+    
+    _lookingBack = NO;
+    _fantasminhaView.charImgView  = _charImageView;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self beepoAnimado];
+}
 
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    deslocIni = scrollView.contentOffset.x;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    UIImage *beepoImage = [self getBeepoImage];
+    float diff =scrollView.contentOffset.x - deslocIni;
+    if (diff > 0 && _lookingBack) {
+        self.charImageView.image = beepoImage;
+        _lookingBack = NO;
+    } else if (diff < 0 && _lookingBack){
+        
+    } else if (diff > 0 && !_lookingBack){
+        
+    } else{
+        self.charImageView.image = [UIImage imageWithCGImage:beepoImage.CGImage
+                                                       scale:beepoImage.scale
+                                                 orientation:UIImageOrientationUpMirrored];
+        _lookingBack = YES;
+    }
+    
+    CGRect oldframe = self.fantasminhaView.frame;
+    oldframe.origin.x = oldframe.origin.x + diff;
+    deslocIni = scrollView.contentOffset.x;
+    self.fantasminhaView.frame = oldframe;
+}
+
+#pragma mark - customização e animação de Beepo
+- (void)beepoAnimado{
+    CGRect charFrame = self.charImageView.frame;
+    charFrame.origin.y = charFrame.origin.y - 45.0;
+    charFrame.size.height = charFrame.size.height + 15.0;
+    
+    CGRect shadowFrame = self.shadowImageView.frame;
+    shadowFrame.size.width = shadowFrame.size.width/2.0;
+    shadowFrame.origin.x = shadowFrame.origin.x + shadowFrame.size.width/2;
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.6];//0.05
+    [UIView setAnimationDelay:0.2];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationRepeatCount:NSUIntegerMax];
+    [UIView setAnimationRepeatAutoreverses:YES];
+    
+    self.charImageView.frame = charFrame;
+    self.shadowImageView.frame = shadowFrame;
+    
+    [UIView commitAnimations];
+}
+
+- (UIImage*)getBeepoImage{
+    UIImage *aux;
+    if ([self.gasperEscolhido isEqualToString:@"gravata"]) {
+        
+        aux = [UIImage imageNamed:@"custom15"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
+        
+        aux = [UIImage imageNamed:@"custom19"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
+        
+        aux = [UIImage imageNamed:@"custom16"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
+        
+        aux = [UIImage imageNamed:@"custom18"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
+        
+        aux = [UIImage imageNamed:@"custom20"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
+        
+        aux = [UIImage imageNamed:@"custom17"];
+    }
+    else{
+        aux = [UIImage imageNamed:@"fantasminha"];
+    }
+    
+    return aux;
+}
+
+- (void)beepoCustomizado{
+    if ([self.gasperEscolhido isEqualToString:@"gravata"]) {
+        
+        self.charImageView.image = [UIImage imageNamed:@"custom15"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
+        
+        self.charImageView.image = [UIImage imageNamed:@"custom19"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
+        
+        self.charImageView.image = [UIImage imageNamed:@"custom16"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
+        
+        self.charImageView.image = [UIImage imageNamed:@"custom18"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
+        
+        self.charImageView.image = [UIImage imageNamed:@"custom20"];
+    }
+    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
+        
+        self.charImageView.image = [UIImage imageNamed:@"custom17"];
+    }
+    else{
+        self.charImageView.image = [UIImage imageNamed:@"fantasminha"];
+    }
+}
 #pragma mark - Gavidade e Colisões
 - (void)prepareForMovement{
     self.garrafaPet1.delegate = self;
@@ -151,7 +273,8 @@
         }// else NSLog(@"error");
     }
 }
-#pragma mark - Tree Buttons
+#pragma mark - Button Actions
+//Trees
 - (IBAction)didClickTree1:(UIButton *)sender {
     
     _arvore1.image = [UIImage imageNamed:@"parque-03"];
@@ -217,4 +340,37 @@
                                 , 1298/2);
     sender.userInteractionEnabled = NO;
 }
+
+//Bolotas
+- (IBAction)didClickDormidor:(UIButton *)sender {
+    [CATransaction begin];
+    self.zzzImage.hidden = NO;
+    sender.userInteractionEnabled = NO;
+    CABasicAnimation* anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    [anim setToValue:[NSNumber numberWithFloat:0.0f]];
+    [anim setFromValue:[NSNumber numberWithDouble:M_PI/16]]; // rotation angle
+    [anim setDuration:0.1];
+    [anim setRepeatCount:5.0];
+    [anim setAutoreverses:YES];
+    [CATransaction setCompletionBlock:^{
+        self.zzzImage.hidden = YES;
+        sender.userInteractionEnabled = YES;
+    }];
+    [[self.zzzImage layer] addAnimation:anim forKey:@"iconShake"];
+    [CATransaction commit];
+    
+
+//    
+//    self.zzzImage.hidden = NO;
+//    CABasicAnimation* anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+//    [anim setToValue:[NSNumber numberWithFloat:0.0f]];
+//    [anim setFromValue:[NSNumber numberWithDouble:M_PI/16]]; // rotation angle
+//    [anim setDuration:0.1];
+//    [anim setRepeatCount:NSUIntegerMax];
+//    [anim setAutoreverses:YES];
+//    [[self.zzzImage layer] addAnimation:anim forKey:@"iconShake"];
+}
+- (IBAction)didClickPolice:(UIButton *)sender {
+}
+
 @end
