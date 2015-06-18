@@ -17,7 +17,6 @@
 
 @property (nonatomic) IBOutlet UIImageView* fundo;
 
-
 @property (nonatomic) IBOutlet UIView* viewBeepo;
 @property (nonatomic) IBOutlet UIImageView* imageBeepo;
 @property (nonatomic) IBOutlet UIImageView* imageSombraBeepo;

@@ -7,6 +7,7 @@
 //
 
 #import "Phase3.h"
+#import "Phase3Parte2.h"
 
 @interface Phase3()  <UICollisionBehaviorDelegate>
 
@@ -24,18 +25,6 @@ UICollisionBehavior* _collision2;
     [self moveBeepo:self.viewBeepo];
     [self moveCar1:self.carro1];
     [self moveCar2:self.carro2];
-//    [self.view addSubview:self.fundo];
-//    [self.fundo addSubview:self.viewBeepo];
-//    [self.fundo addSubview:self.viewVelha];
-//    [self.fundo addSubview:self.carro1];
-//    [self.fundo addSubview:self.carro2];
-    
-    _animator2 = [[UIDynamicAnimator alloc] initWithReferenceView:[self.viewVelha superview]];
-    _collision2 = [[UICollisionBehavior alloc] initWithItems:@[self.viewVelha]];
-    _collision2.collisionDelegate = self;
-    _collision2.translatesReferenceBoundsIntoBoundary = YES;
-    [_animator2 addBehavior:_collision2];
-    
     [self watchThisBitch];
 
 }
@@ -84,7 +73,7 @@ UICollisionBehavior* _collision2;
 }
 
 - (void)moveBeepo:(UIImageView *)imageView{
-    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
         imageView.frame = CGRectMake(150.f, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 
@@ -100,13 +89,16 @@ UICollisionBehavior* _collision2;
 
 -(void)watchThisBitch{
     if (self.viewVelha.center.y < 480) {
-        NSLog(@"PASSOY");
+        Phase3Parte2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3Parte2VC"];
+        [game setModalPresentationStyle:UIModalPresentationFullScreen];
+        self.player.medalha1fase3 = true;
+        self.player.fase4 = true;
+        game.player = self.player;
+        [self presentViewController:game animated:NO completion:nil];
     }
     else{
-        [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(watchThisBitch) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:0.2f target:self selector:@selector(watchThisBitch) userInfo:nil repeats:NO];
     }
 }
-
-
 
 @end

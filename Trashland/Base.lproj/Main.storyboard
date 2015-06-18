@@ -24,6 +24,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jYU-Bn-jnM">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86477366855796178" green="0.95188680709374884" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="predio" id="gun-1V-ido">
                                 <rect key="frame" x="131" y="427" width="762" height="341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,11 +48,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="g7t-6y-sHm">
                                 <rect key="frame" x="358" y="310" width="197" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jYU-Bn-jnM">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86477366855796178" green="0.95188680709374884" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" id="egb-OB-o89">
                                 <rect key="frame" x="454" y="230" width="107" height="107"/>
@@ -241,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3g-v5-2FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827" y="398"/>
+            <point key="canvasLocation" x="-208" y="1218"/>
         </scene>
         <!--Skin-->
         <scene sceneID="39e-je-EeJ">
@@ -251,10 +251,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom-bg" id="jXt-cc-lz8">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom14" id="txl-EY-7Km">
                                 <rect key="frame" x="0.0" y="587" width="1024" height="181"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -327,15 +323,15 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="uLs-7o-UBu">
-                                <rect key="frame" x="358" y="229" width="320" height="336"/>
+                                <rect key="frame" x="358" y="279" width="320" height="286"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fantasminha" id="Gpx-Sk-AV4">
-                                        <rect key="frame" x="79" y="117" width="156" height="184"/>
+                                        <rect key="frame" x="79" y="67" width="156" height="184"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sombra_fantasminha" id="RAy-yE-SHv">
-                                        <rect key="frame" x="100" y="319" width="114" height="9"/>
+                                        <rect key="frame" x="100" y="269" width="114" height="9"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -368,6 +364,10 @@
                                     <action selector="start:" destination="HMU-LK-3EX" eventType="touchUpInside" id="P6r-Jl-6VL"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom-bg" id="jXt-cc-lz8">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -392,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcO-QT-6DB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="398"/>
+            <point key="canvasLocation" x="-199" y="2050"/>
         </scene>
         <!--Phase2-->
         <scene sceneID="a9j-6D-qAZ">
@@ -641,7 +641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6J-Y3-2kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827" y="2042"/>
+            <point key="canvasLocation" x="847" y="2027"/>
         </scene>
         <!--Phase3-->
         <scene sceneID="gUy-tt-cug">
@@ -722,7 +722,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4H-pg-h7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876" y="2042"/>
+            <point key="canvasLocation" x="1889" y="1210"/>
+        </scene>
+        <!--Phase3 Parte2-->
+        <scene sceneID="Qm8-cj-Rlh">
+            <objects>
+                <viewController storyboardIdentifier="Phase3Parte2VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Ca-f3-yki" customClass="Phase3Parte2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g9B-F2-2eC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle-bg" id="wlB-Lq-UYu">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle-01" id="QVk-YB-i2B">
+                                <rect key="frame" x="22" y="103" width="965" height="562"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="iDz-bZ-9AP">
+                                <rect key="frame" x="252" y="297" width="251" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle-03" id="hi8-pQ-L2i">
+                                        <rect key="frame" x="41" y="0.0" width="210" height="132"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" id="ePo-Qv-4eA">
+                                <rect key="frame" x="754" y="336" width="246" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle-04" id="Bnw-5x-gQp">
+                                        <rect key="frame" x="38" y="0.0" width="208" height="132"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle-02" id="UsE-P7-Mx7">
+                                <rect key="frame" x="40" y="348" width="228" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="ambulancia" destination="UsE-P7-Mx7" id="feq-fF-c0a"/>
+                        <outlet property="fundo" destination="wlB-Lq-UYu" id="stm-zg-7rU"/>
+                        <outlet property="imageViewPuzzle" destination="QVk-YB-i2B" id="dQz-Xd-eK1"/>
+                        <outlet property="viewCarro1" destination="iDz-bZ-9AP" id="H34-2m-IQZ"/>
+                        <outlet property="viewCarro2" destination="ePo-Qv-4eA" id="89K-96-gI6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfy-Zc-tmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="2027"/>
         </scene>
         <!--Story1-->
         <scene sceneID="8CA-TY-44F">
@@ -839,14 +896,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNM-Ib-lal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-208" y="1215"/>
+            <point key="canvasLocation" x="842" y="398"/>
         </scene>
         <!--Phase1-->
         <scene sceneID="3O1-ND-yRu">
             <objects>
                 <viewController storyboardIdentifier="Phase1VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EN8-Ni-7aZ" customClass="Phase1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="woh-IM-Qbx">
-                        <rect key="frame" x="0.0" y="0.0" width="2486" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1029" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" id="78L-Pm-Cad">
@@ -871,7 +928,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="17D13E32-B726-4190-A383-B3D596BF659E" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="451343DC-DC8E-4B01-AE8B-2A9E24A2526C" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1058,7 +1115,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="2486" height="768"/>
+                    <size key="freeformSize" width="1029" height="768"/>
                     <connections>
                         <outlet property="auxView" destination="6FL-f6-VTa" id="crW-tF-vao"/>
                         <outlet property="bird" destination="him-c6-6CW" id="Xyj-E9-DnH"/>
@@ -1090,7 +1147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEr-UK-xnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895" y="1215"/>
+            <point key="canvasLocation" x="844.5" y="1210"/>
         </scene>
     </scenes>
     <resources>
@@ -1101,7 +1158,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="17D13E32-B726-4190-A383-B3D596BF659E" width="194" height="90">
+        <image name="451343DC-DC8E-4B01-AE8B-2A9E24A2526C" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2373,6 +2430,11 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="parque-33" width="116" height="116"/>
         <image name="play" width="108" height="108"/>
         <image name="predio" width="616" height="338"/>
+        <image name="puzzle-01" width="1835" height="926"/>
+        <image name="puzzle-02" width="351" height="171"/>
+        <image name="puzzle-03" width="351" height="166"/>
+        <image name="puzzle-04" width="351" height="166"/>
+        <image name="puzzle-bg" width="2048" height="1536"/>
         <image name="sombra_fantasminha" width="130" height="15"/>
         <image name="telainicial1_semtexto" width="1024" height="768"/>
         <image name="travessia-01" width="560" height="262"/>

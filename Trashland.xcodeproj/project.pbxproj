@@ -28,6 +28,7 @@
 		0264DE741B2F1610007A18A7 /* Ventura_Edding.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE711B2F1610007A18A7 /* Ventura_Edding.otf */; };
 		0264DE831B2F16CE007A18A7 /* UIView+Animation2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0264DE801B2F16CE007A18A7 /* UIView+Animation2.m */; };
 		0264DE841B2F16CE007A18A7 /* UIView+Blink2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0264DE821B2F16CE007A18A7 /* UIView+Blink2.m */; };
+		027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */ = {isa = PBXBuildFile; fileRef = 027C73781B334F2A00599E32 /* Phase3Parte2.m */; };
 		02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5401B309E5C00143CC1 /* carefree.mp3 */; };
 		02B3B5431B309E5C00143CC1 /* hackbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5411B309E5C00143CC1 /* hackbeat.mp3 */; };
 		02B3B54D1B30BA8A00143CC1 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B54C1B30BA8A00143CC1 /* Player.m */; };
@@ -88,6 +89,8 @@
 		0264DE801B2F16CE007A18A7 /* UIView+Animation2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Animation2.m"; path = "../UIView+Animation2.m"; sourceTree = "<group>"; };
 		0264DE811B2F16CE007A18A7 /* UIView+Blink2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Blink2.h"; path = "../UIView+Blink2.h"; sourceTree = "<group>"; };
 		0264DE821B2F16CE007A18A7 /* UIView+Blink2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Blink2.m"; path = "../UIView+Blink2.m"; sourceTree = "<group>"; };
+		027C73771B334F2A00599E32 /* Phase3Parte2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase3Parte2.h; sourceTree = "<group>"; };
+		027C73781B334F2A00599E32 /* Phase3Parte2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase3Parte2.m; sourceTree = "<group>"; };
 		02B3B5401B309E5C00143CC1 /* carefree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carefree.mp3; sourceTree = "<group>"; };
 		02B3B5411B309E5C00143CC1 /* hackbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hackbeat.mp3; sourceTree = "<group>"; };
 		02B3B54B1B30BA8A00143CC1 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				021F562D1B2F210E007886D6 /* Story3.m */,
 				021F562F1B2F2119007886D6 /* Phase3.h */,
 				021F56301B2F2119007886D6 /* Phase3.m */,
+				027C73771B334F2A00599E32 /* Phase3Parte2.h */,
+				027C73781B334F2A00599E32 /* Phase3Parte2.m */,
 			);
 			name = Phase3;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 				021F562B1B2F2104007886D6 /* Phase2.m in Sources */,
 				15C431641B289E500098C994 /* Start.m in Sources */,
 				0264DE841B2F16CE007A18A7 /* UIView+Blink2.m in Sources */,
+				027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */,
 				021F562E1B2F210E007886D6 /* Story3.m in Sources */,
 				15C431831B28A79A0098C994 /* Phase1.m in Sources */,
 				021F56281B2F20FA007886D6 /* Story2.m in Sources */,
