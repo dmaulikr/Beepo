@@ -14,5 +14,17 @@
 
 @property (nonatomic) Player* player;
 
+@property (nonatomic) IBOutlet UIImageView* fundo;
+
+@property (nonatomic) IBOutlet UIView* viewBeepo;
+@property (nonatomic) IBOutlet UIImageView* imageBeepo;
+@property (nonatomic) IBOutlet UIImageView* imageSombraBeepo;
+
+@property (nonatomic) IBOutlet UIView* viewVelha;
+@property (nonatomic) IBOutlet UIImageView* imageVelha;
+@property (nonatomic) IBOutlet UIImageView* imageSombraVelha;
+
+@property (nonatomic) IBOutlet UIView* carro1;
+@property (nonatomic) IBOutlet UIView* carro2;
 
 @end
