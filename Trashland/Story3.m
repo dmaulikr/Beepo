@@ -9,5 +9,4 @@
 #import "Story3.h"
 
 @implementation Story3
-
 @end

@@ -33,7 +33,7 @@
         [self presentViewController:game animated:YES completion:nil];
     }
     if ([self.faseClicada isEqualToString:@"parque"]) {
-        Phase2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase2VC"];
+        Phase2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story2VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
         game.player = self.player;
         game.gasperEscolhido = self.gasperEscolhido;
