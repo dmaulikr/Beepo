@@ -15,33 +15,9 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     
-    if ([self.gasperEscolhido isEqualToString:@"gravata"]) {
-        
-        self.gasper.image = [UIImage imageNamed:@"custom15"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
-        
-        self.gasper.image = [UIImage imageNamed:@"custom19"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
-        
-        self.gasper.image = [UIImage imageNamed:@"custom16"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
-        
-        self.gasper.image = [UIImage imageNamed:@"custom18"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
-        
-        self.gasper.image = [UIImage imageNamed:@"custom20"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
-        
-        self.gasper.image = [UIImage imageNamed:@"custom17"];
-    }
-    else{
-        self.gasper.image = [UIImage imageNamed:@"fantasminha"];
-    }
+    
+    self.gasper.image = self.player.gasperEscolhido;
+   
     self.gasperTriste.image = [UIImage imageNamed:@"fantasma-triste"];
     
     [self.view addSubview:self.background];
@@ -166,7 +142,6 @@
         Phase1 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase1VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
         game.player = self.player;
-        game.gasperEscolhido = self.gasperEscolhido;
         [self presentViewController:game animated:YES completion:nil];
     }
 }

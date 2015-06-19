@@ -35,6 +35,7 @@
 		02B3B5501B30DB1B00143CC1 /* carefreewav.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B54F1B30DB1B00143CC1 /* carefreewav.wav */; };
 		02B3B5521B30DFB400143CC1 /* hackbeatwav.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */; };
 		02B3B5551B3106E700143CC1 /* Phase4.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B5541B3106E700143CC1 /* Phase4.m */; };
+		02FCFC8C1B345AD000E762B8 /* Story4.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCFC8B1B345AD000E762B8 /* Story4.m */; };
 		150309331B33357C0056346D /* arvore_nascendo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 150309321B33357C0056346D /* arvore_nascendo.wav */; };
 		150309351B333A1F0056346D /* lixo.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 150309341B333A1F0056346D /* lixo.WAV */; };
 		15246F491B2F137A00EF006A /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15246F481B2F137A00EF006A /* DraggableView.m */; };
@@ -101,6 +102,8 @@
 		02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hackbeatwav.wav; sourceTree = "<group>"; };
 		02B3B5531B3106E700143CC1 /* Phase4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase4.h; sourceTree = "<group>"; };
 		02B3B5541B3106E700143CC1 /* Phase4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase4.m; sourceTree = "<group>"; };
+		02FCFC8A1B345AD000E762B8 /* Story4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story4.h; sourceTree = "<group>"; };
+		02FCFC8B1B345AD000E762B8 /* Story4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story4.m; sourceTree = "<group>"; };
 		150309321B33357C0056346D /* arvore_nascendo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = arvore_nascendo.wav; sourceTree = "<group>"; };
 		150309341B333A1F0056346D /* lixo.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lixo.WAV; sourceTree = "<group>"; };
 		15246F471B2F137A00EF006A /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
@@ -214,8 +217,8 @@
 			children = (
 				02B3B5471B30B71600143CC1 /* Structure */,
 				02B3B5441B30B6DA00143CC1 /* Start */,
-				02B3B5451B30B6E300143CC1 /* PhaseChoose */,
 				02B3B5461B30B6F900143CC1 /* Custom */,
+				02B3B5451B30B6E300143CC1 /* PhaseChoose */,
 				021F561F1B2F1E95007886D6 /* Phase1 */,
 				021F56201B2F1E9C007886D6 /* Phase2 */,
 				021F56211B2F1EBF007886D6 /* Phase3 */,
@@ -286,6 +289,8 @@
 		02B3B54E1B30D38500143CC1 /* Phase4 */ = {
 			isa = PBXGroup;
 			children = (
+				02FCFC8A1B345AD000E762B8 /* Story4.h */,
+				02FCFC8B1B345AD000E762B8 /* Story4.m */,
 				02B3B5531B3106E700143CC1 /* Phase4.h */,
 				02B3B5541B3106E700143CC1 /* Phase4.m */,
 			);
@@ -495,6 +500,7 @@
 				15C431831B28A79A0098C994 /* Phase1.m in Sources */,
 				021F56281B2F20FA007886D6 /* Story2.m in Sources */,
 				0264DE831B2F16CE007A18A7 /* UIView+Animation2.m in Sources */,
+				02FCFC8C1B345AD000E762B8 /* Story4.m in Sources */,
 				021F56341B2F24B0007886D6 /* Skin.m in Sources */,
 				02B3B5551B3106E700143CC1 /* Phase4.m in Sources */,
 				15C431611B289E500098C994 /* AppDelegate.m in Sources */,

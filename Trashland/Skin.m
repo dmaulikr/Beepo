@@ -7,10 +7,7 @@
 //
 
 #import "Skin.h"
-#import "Story1.h"
-#import "Phase2.h"
-#import "Phase3.h"
-#import "Phase4.h"
+#import "PhasesChoose.h"
 
 #import "AppDelegate.h"
 
@@ -21,36 +18,15 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     primeira = true;
+    self.player.gasperEscolhido = [[UIImageView alloc] init];
     
 }
 
 -(IBAction)start:(id)sender{
-    if ([self.faseClicada isEqualToString:@"casa"] && self.player.fase1) {
-        Story1 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story1VC"];
-        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.player = self.player;
-        game.gasperEscolhido = self.gasperEscolhido;
-        [self presentViewController:game animated:YES completion:nil];
-    }
-    if ([self.faseClicada isEqualToString:@"parque"]) {
-        Phase2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story2VC"];
-        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.player = self.player;
-        game.gasperEscolhido = self.gasperEscolhido;
-        [self presentViewController:game animated:YES completion:nil];
-    }
-    if ([self.faseClicada isEqualToString:@"hospital"]) {
-        Phase3 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3VC"];
+        PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
         game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
-    }
-    if ([self.faseClicada isEqualToString:@"prefeitura"]) {
-        Phase4 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase4VC"];
-        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.player = self.player;
-        [self presentViewController:game animated:YES completion:nil];
-    }
 }
 
 -(IBAction)change:(id)sender{
@@ -91,36 +67,41 @@
 
 -(IBAction)choosedFirst:(id)sender{
     if (primeira == true) {
+        self.player.gasperEscolhido = [UIImage imageNamed:@"custom15"];
         self.gasper.image = [UIImage imageNamed:@"custom15"];
-        self.gasperEscolhido = @"gravata";
+        
     }
     else{
+        self.player.gasperEscolhido = [UIImage imageNamed:@"custom18"];
         self.gasper.image = [UIImage imageNamed:@"custom18"];
-        self.gasperEscolhido = @"chapeu";
+        
     }
 }
 
 -(IBAction)choosedSecond:(id)sender{
     if (primeira == true) {
+        self.player.gasperEscolhido = [UIImage imageNamed:@"custom16"];
         self.gasper.image = [UIImage imageNamed:@"custom16"];
-         self.gasperEscolhido = @"oculos";
+        
     }
     else{
         
+        self.player.gasperEscolhido = [UIImage imageNamed:@"custom19"];
         self.gasper.image = [UIImage imageNamed:@"custom19"];
-         self.gasperEscolhido = @"bolsa";
+        
     }
 }
 
 -(IBAction)choosedThird:(id)sender{
     if (primeira == true) {
         
-        self.gasper.image = [UIImage imageNamed:@"custom17"];
-         self.gasperEscolhido = @"tapaolho";
+        self.player.gasperEscolhido = [UIImage imageNamed:@"custom17"];
     }
     else{
-         self.gasperEscolhido = @"vibe";
+        self.player.gasperEscolhido = [UIImage imageNamed:@"custom20"];
         self.gasper.image = [UIImage imageNamed:@"custom20"];
+        
+    
     }
     
 }

@@ -9,7 +9,7 @@
 #import "Start.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "Player.h"
-#import "PhasesChoose.h"
+#import "Skin.h"
 #import "AppDelegate.h"
 
 @interface Start ()
@@ -48,7 +48,7 @@ SystemSoundID sound2;
 }
 
 - (IBAction)start:(id)sender{
-    PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
+    Skin *game = [self.storyboard instantiateViewControllerWithIdentifier:@"SkinVC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
     Player* player = [[Player alloc] init];
     

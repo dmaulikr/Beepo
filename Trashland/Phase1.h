@@ -22,7 +22,6 @@
 
 @property (nonatomic)  DraggableImageView* books;
 @property (nonatomic)  DraggableImageView* flower;
-@property (nonatomic)  DraggableImageView* vase;
 @property (nonatomic)  DraggableImageView* plate;
 @property (nonatomic)  DraggableImageView* vase2;
 //@property (nonatomic)  DraggableImageView* vaseFlower;
@@ -41,12 +40,11 @@
 @property (nonatomic) IBOutlet UIButton* bird;
 @property (nonatomic) IBOutlet UIButton* botaoVoltar;
 @property (nonatomic) IBOutlet UIButton* botaoPlay;
+@property (nonatomic) IBOutlet UIButton* botaoProx;
 
 @property (nonatomic) IBOutlet UILabel* contador;
 
 @property (nonatomic) Player* player;
-
-@property (nonatomic) NSString* gasperEscolhido;
 
 
 - (void)dealWithMovement;

@@ -8,7 +8,10 @@
 
 #import "PhasesChoose.h"
 #import "Player.h"
-#import "Skin.h"
+#import "Story1.h"
+#import "Story2.h"
+#import "Story3.h"
+#import "Story4.h"
 #import "AppDelegate.h"
 
 @implementation PhasesChoose
@@ -17,6 +20,18 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.fundo];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     if (self.player.fase1) {
         [self.fase1 setBackgroundImage:[UIImage imageNamed:@"atividades-casa-color"] forState:UIControlStateNormal];
@@ -68,9 +83,9 @@
 
 -(IBAction)clicouCasa:(id)sender{
     if (self.player.fase1) {
-        Skin *game = [self.storyboard instantiateViewControllerWithIdentifier:@"SkinVC"];
+        Story1 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story1VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.faseClicada = @"casa";
+       // game.faseClicada = @"casa";
         game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
     }
@@ -78,9 +93,9 @@
 
 -(IBAction)clicouParque:(id)sender{
     if (self.player.fase2) {
-        Skin *game = [self.storyboard instantiateViewControllerWithIdentifier:@"SkinVC"];
+        Story2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story2VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.faseClicada = @"parque";
+      //  game.faseClicada = @"parque";
         game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
     }
@@ -88,9 +103,9 @@
 
 -(IBAction)clicouHospital:(id)sender{
     if (self.player.fase3) {
-        Skin *game = [self.storyboard instantiateViewControllerWithIdentifier:@"SkinVC"];
+        Story3 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story3VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.faseClicada = @"hospital";
+      //  game.faseClicada = @"hospital";
         game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
     }
@@ -98,9 +113,9 @@
 
 -(IBAction)clicouPrefeitura:(id)sender{
     if (self.player.fase4) {
-        Skin *game = [self.storyboard instantiateViewControllerWithIdentifier:@"SkinVC"];
+        Story4 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story4VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.faseClicada = @"prefeitura";
+       // game.faseClicada = @"prefeitura";
         game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
     }

@@ -28,6 +28,8 @@
     
     BOOL TVLigada;
     
+    BOOL podePassar;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -57,34 +59,9 @@ SystemSoundID sound1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if ([self.gasperEscolhido isEqualToString:@"gravata"]) {
-        
-        self.charImgView.image = [UIImage imageNamed:@"custom15"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
-        
-        self.charImgView.image = [UIImage imageNamed:@"custom19"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
-        
-        self.charImgView.image = [UIImage imageNamed:@"custom16"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
-        
-        self.charImgView.image = [UIImage imageNamed:@"custom18"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
-        
-        self.charImgView.image = [UIImage imageNamed:@"custom20"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
-        
-        self.charImgView.image = [UIImage imageNamed:@"custom17"];
-    }
-    else{
-        self.charImgView.image = [UIImage imageNamed:@"fantasminha"];
-    }
-
+    self.botaoProx.alpha = 0.5f;
+    
+    self.charImgView.image = self.player.gasperEscolhido;
     
     if(self.player.medalha1fase1){
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
@@ -105,9 +82,7 @@ SystemSoundID sound1;
     pontoAgua1 = false;
     pontoAgua2 = false;
     
-    tempo =25;//25;
-    
-    [self partiu];
+    podePassar = false;
     
     // Do any additional setup after loading the view.
     _scrollView.contentSize = CGSizeMake(_contentBG.frame.size.width, _contentBG.frame.size.height);
@@ -123,7 +98,8 @@ SystemSoundID sound1;
     _tvGIF.image = [UIImage animatedImageNamed:@"chuvisco_tv-" duration:0.8f];
     
     [self tocaTV];
-    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkTV) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkTV) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkBadges) userInfo:nil repeats:YES];
     
 }
 
@@ -169,11 +145,11 @@ SystemSoundID sound1;
     self.flower.delegate = self;
     [self.auxView addSubview:self.flower];
     
-    self.vase = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"vase"]];
-    self.vase.frame = CGRectMake(300, 10, 63, 44);
-    self.vase.userInteractionEnabled = YES;
-    self.vase.delegate = self;
-    [self.auxView addSubview:self.vase];
+//    self.vase = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"vase"]];
+//    self.vase.frame = CGRectMake(300, 10, 63, 44);
+//    self.vase.userInteractionEnabled = YES;
+//    self.vase.delegate = self;
+//    [self.auxView addSubview:self.vase];
     
     self.plate = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"plate"]];
     self.plate.frame = CGRectMake(695, 500, 70, 36);
@@ -212,6 +188,7 @@ SystemSoundID sound1;
     [self.view addSubview:self.contador];
     [self.view addSubview:self.botaoVoltar];
     [self.view addSubview:self.botaoPlay];
+    [self.view addSubview:self.botaoProx];
     [self.view addSubview:self.medalha1fase1];
     [self.view addSubview:self.medalha2fase1];
     [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];
@@ -226,28 +203,28 @@ SystemSoundID sound1;
     
     //UIDynamics
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.auxView];
-    _gravity = [[UIGravityBehavior alloc] initWithItems:@[self.books, self.flower, self.vase2, self.vase, self.plate, self.soap, self.rubberDuck, self.redWhiteVase, self.weirdVase, self.toiletStuff, self.pinkishVase, self.purpleVase]];
+    _gravity = [[UIGravityBehavior alloc] initWithItems:@[self.books, self.flower, self.vase2, self.plate, self.soap, self.rubberDuck, self.redWhiteVase, self.weirdVase, self.toiletStuff, self.pinkishVase, self.purpleVase]];
     [_animator addBehavior:_gravity];
     
-    _collision = [[UICollisionBehavior alloc] initWithItems:@[self.books, self.flower, self.vase, self.vase2, self.plate, self.soap, self.rubberDuck, self.redWhiteVase, self.weirdVase, self.toiletStuff, self.pinkishVase, self.purpleVase]];
+    _collision = [[UICollisionBehavior alloc] initWithItems:@[self.books, self.flower, self.vase2, self.plate, self.soap, self.rubberDuck, self.redWhiteVase, self.weirdVase, self.toiletStuff, self.pinkishVase, self.purpleVase]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
     [_animator addBehavior:_collision];
     
     //UIDynamics (Barreiras)
     //Gaiola do pássaro
-    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(111, 300, 50, 10)];
+    //UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(111, 300, 50, 10)];
     //barrier.backgroundColor = [UIColor redColor];
-    [self.auxView addSubview:barrier];
+  //  [self.auxView addSubview:barrier];
     
-    CGPoint rightEdge = CGPointMake(barrier.frame.origin.x +
-                                    barrier.frame.size.width, barrier.frame.origin.y);
-    [_collision addBoundaryWithIdentifier:@"barrier"
-                                fromPoint:barrier.frame.origin
-                                  toPoint:rightEdge];
+   // CGPoint rightEdge = CGPointMake(barrier.frame.origin.x +
+   //                                 barrier.frame.size.width, barrier.frame.origin.y);
+  //  [_collision addBoundaryWithIdentifier:@"barrier"
+   //                             fromPoint:barrier.frame.origin
+  //                                toPoint:rightEdge];
     
     //(Prateleira meio)
-    UIView* barrier2 = [[UIView alloc] initWithFrame:CGRectMake(580, 185, 260, 10)];
-    //barrier2.backgroundColor = [UIColor redColor];
+    UIView* barrier2 = [[UIView alloc] initWithFrame:CGRectMake(580, 180, 260, 10)];
+   // barrier2.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier2];
     
     CGPoint rightEdge2 = CGPointMake(barrier2.frame.origin.x +
@@ -257,19 +234,19 @@ SystemSoundID sound1;
                                   toPoint:rightEdge2];
     
     
-    //(Prateleira direita)
-    UIView* barrier3 = [[UIView alloc] initWithFrame:CGRectMake(870, 275, 270, 10)];
-    //barrier3.backgroundColor = [UIColor redColor];
+    //(chao)
+    UIView* barrier3 = [[UIView alloc] initWithFrame:CGRectMake(0, 742, _contentBG.frame.size.width, 10)];
+   // barrier3.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier3];
     
     CGPoint rightEdge3 = CGPointMake(barrier3.frame.origin.x +
-                                     barrier3.frame.size.width, barrier3.frame.origin.y);
+                                    barrier3.frame.size.width, barrier3.frame.origin.y);
     [_collision addBoundaryWithIdentifier:@"barrier3"
                                 fromPoint:barrier3.frame.origin
                                   toPoint:rightEdge3];
     
     //(Mesa esquerda sofá)
-    UIView* barrier4 = [[UIView alloc] initWithFrame:CGRectMake(70, 628, 100, 10)];
+    UIView* barrier4 = [[UIView alloc] initWithFrame:CGRectMake(70, 626, 100, 10)];
     //barrier4.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier4];
     
@@ -281,7 +258,7 @@ SystemSoundID sound1;
     
     
     //(Mesa TV)
-    UIView* barrier5 = [[UIView alloc] initWithFrame:CGRectMake(670, 550, 320, 10)];
+    UIView* barrier5 = [[UIView alloc] initWithFrame:CGRectMake(670, 544, 320, 10)];
     //barrier5.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier5];
     
@@ -311,7 +288,7 @@ SystemSoundID sound1;
     [_collision addBoundaryWithIdentifier:@"barrier7"
                                 fromPoint:barrier7.frame.origin
                                   toPoint:rightEdgeAux];
-    //(Mesa TV)
+   
     UIView* barrier8 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50+ 6, 435 + 51 + 81, 179, 10)];
 //    barrier8.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier8];
@@ -321,7 +298,7 @@ SystemSoundID sound1;
     [_collision addBoundaryWithIdentifier:@"barrier8"
                                 fromPoint:barrier8.frame.origin
                                   toPoint:rightEdgeAux];
-    //(Mesa TV)
+    
     UIView* barrier9 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50 + 6, 435 + 51 + 81 + 81, 179, 10)];
 //    barrier9.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier9];
@@ -458,6 +435,16 @@ SystemSoundID sound1;
     tempo--;
 }
 
+-(IBAction)proxima:(id)sender{
+    if (self.player.medalha1fase1 || self.player.medalha2fase1) {
+        PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
+        [game setModalPresentationStyle:UIModalPresentationFullScreen];
+        self.player.fase2 = true;
+        game.player = self.player;
+        [self presentViewController:game animated:YES completion:nil];
+    }
+}
+
 -(IBAction)voltar:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -476,6 +463,19 @@ SystemSoundID sound1;
     }
     else{
         AudioServicesDisposeSystemSoundID(sound1);
+    }
+}
+
+-(void)checkBadges{
+    if (pontoAgua1 && pontoAgua2) {
+        self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
+        self.player.medalha1fase1 = true;
+        self.botaoProx.alpha = 1.0f;
+    }
+    if (pontoLuz1 && pontoLuz2 && pontoLuz3 && pontoLuz4 && pontoTV) {
+        self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
+        self.player.medalha2fase1 = true;
+        self.botaoProx.alpha = 1.0f;
     }
 }
 

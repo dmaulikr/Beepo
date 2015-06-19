@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIKit/UIKit.h"
 
 @interface Player : NSObject
 
@@ -25,5 +26,7 @@
 @property (nonatomic) BOOL fase4;
 @property (nonatomic) BOOL medalha1fase4;
 @property (nonatomic) BOOL medalha2fase4;
+
+@property (nonatomic) UIImage* gasperEscolhido;
 
 @end

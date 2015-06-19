@@ -1,15 +1,15 @@
 //
-//  Story3.h
+//  Story4.h
 //  Trashland
 //
-//  Created by Bruno Muniz Azevedo Filho on 6/15/15.
+//  Created by Bruno Muniz Azevedo Filho on 6/19/15.
 //  Copyright (c) 2015 Thiago Borges Jordani. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "Player.h"
 
-@interface Story3 : UIViewController
+@interface Story4 : UIViewController
 
 @property (nonatomic) Player* player;
 @end
