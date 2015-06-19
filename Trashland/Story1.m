@@ -15,7 +15,6 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     
-    
     self.gasper.image = self.player.gasperEscolhido;
    
     self.gasperTriste.image = [UIImage imageNamed:@"fantasma-triste"];
@@ -147,12 +146,15 @@
 }
 
 -(void)out0{
+      [UIView animateWithDuration:.6f animations:^{
     [self.frase1 setAlpha:0.0f];
     [self.frase2 setAlpha:0.0f];
     [self.viewGasper setAlpha:0.0f];
+    } completion:^(BOOL finished) {}];
 }
 
 -(void)in0{
+          [UIView animateWithDuration:.6f animations:^{
     [self.frase1 setAlpha:1.0f];
     [self.frase2 setAlpha:1.0f];
     [self.viewGasper setAlpha:1.0f];
@@ -160,9 +162,11 @@
     self.frase2.text = @"dos outros habitantes da sua cidade, trashland.";
     
     self.background.image = [UIImage imageNamed:@"telainicial1_semtexto"];
+                  } completion:^(BOOL finished) {}];
 }
 
 -(void)out1{
+              [UIView animateWithDuration:.6f animations:^{
     [self.interrogacao3 setAlpha:0.0f];
     [self.interrogacao2 setAlpha:0.0f];
     [self.interrogacao1 setAlpha:0.0f];
@@ -170,30 +174,52 @@
     [self.frase2 setAlpha:0.0f];
     [self.frase3 setAlpha:0.0f];
     [self.frase4 setAlpha:0.0f];
+                      } completion:^(BOOL finished) {}];
 }
 
 -(void)in1{
-    [self.interrogacao3 setAlpha:1.0f];
-    [self.interrogacao2 setAlpha:1.0f];
-    [self.interrogacao1 setAlpha:1.0f];
-    [self.frase3 setAlpha:1.0f];
-    [self.frase4 setAlpha:1.0f];
-    [self.frase1 setAlpha:1.0f];
-    [self.frase2 setAlpha:1.0f];
-    self.frase3.text = @"Mas Beepo possuia uma grande";
-    self.frase1.text = @"curiosidade com tudo ao seu redor,";
-    self.frase2.text = @"ainda mais na sua cidade trashland";
-    self.frase4.text = @"onde tudo parecia estar fora do lugar!";
-    self.background.image = [UIImage imageNamed:@"telainicial2_semtexto"];
+    [UIView animateWithDuration:.6f animations:^{
+       
+        [UIView animateWithDuration:.6f animations:^{
+            [self.interrogacao3 setAlpha:1.0f];
+            
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:.6f animations:^{
+                [self.interrogacao1 setAlpha:1.0f];
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:.6f animations:^{
+                    [self.interrogacao2 setAlpha:1.0f];
+                } completion:^(BOOL finished) {}];
+            }];
+        }];
+        
+        
+        
+        [self.frase3 setAlpha:1.0f];
+        [self.frase4 setAlpha:1.0f];
+        [self.frase1 setAlpha:1.0f];
+        [self.frase2 setAlpha:1.0f];
+        self.frase3.text = @"Mas Beepo possuía uma grande";
+        self.frase1.text = @"curiosidade com tudo ao seu redor,";
+        self.frase2.text = @"ainda mais na sua cidade trashland";
+        self.frase4.text = @"onde tudo parecia estar fora do lugar!";
+        self.background.image = [UIImage imageNamed:@"historinha2_"];
+
+    } completion:^(BOOL finished) {}];
+    
 }
 
 -(void)out2{
+     [UIView animateWithDuration:.6f animations:^{
     [self.viewGasperTriste setAlpha:0.0f];
+    } completion:^(BOOL finished) {}];
 }
 
 -(void)in2{
+       [UIView animateWithDuration:.6f animations:^{
     [self.viewGasperTriste setAlpha:1.0f];
     self.background.image = [UIImage imageNamed:@"telainicial3-1"];
+               } completion:^(BOOL finished) {}];
 }
 
 -(IBAction)voltar:(id)sender{

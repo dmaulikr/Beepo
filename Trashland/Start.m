@@ -20,14 +20,21 @@ SystemSoundID sound2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self moveClouds: _cloud1];
-    [self moveClouds: _cloud2];
-    [self moveClouds: _cloud3];
+    [self moveCloudsEvenFar: _cloud1];
+    [self moveCloudsEvenFar: _cloud2];
+    [self moveCloudsEvenFar: _cloud3];
+    [self moveCloudsEvenFar: _cloud4];
+    [self moveCloudsEvenFar: _cloud5];
+    [self moveCloudsEvenFar: _cloud6];
+    [self moveCloudsEvenFar: _cloud7];
     
-    [self moveCloudsFar: _cloud4];
-    [self moveCloudsFar: _cloud5];
-    [self moveCloudsFar: _cloud6];
-    [self moveCloudsFar: _cloud7];
+    [self moveCloudsFar: _cloud8];
+    [self moveCloudsFar: _cloud9];
+    [self moveClouds: _cloud10];
+    [self moveClouds: _cloud11];
+    [self moveCloudsFar: _cloud12];
+    [self moveClouds: _cloud13];
+    [self moveClouds: _cloud14];
     
     [self.view addSubview:self.fundo];
     [self.fundo addSubview:self.logo];
@@ -35,11 +42,17 @@ SystemSoundID sound2;
     [self.fundo addSubview:self.cloud1];
     [self.fundo addSubview:self.cloud2];
     [self.fundo addSubview:self.cloud3];
-    
     [self.fundo addSubview:self.cloud4];
     [self.fundo addSubview:self.cloud5];
     [self.fundo addSubview:self.cloud6];
     [self.fundo addSubview:self.cloud7];
+    [self.fundo addSubview:self.cloud8];
+    [self.fundo addSubview:self.cloud9];
+    [self.fundo addSubview:self.cloud10];
+    [self.fundo addSubview:self.cloud11];
+    [self.fundo addSubview:self.cloud12];
+    [self.fundo addSubview:self.cloud13];
+    [self.fundo addSubview:self.cloud14];
     
     [self.fundo addSubview:self.playImage];
     
@@ -53,12 +66,18 @@ SystemSoundID sound2;
     
 }
 
-- (void)moveClouds:(UIImageView *)imageView{
-    [UIView animateWithDuration:20.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+- (void)moveCloudsEvenFar:(UIImageView *)imageView{
+    [UIView animateWithDuration:50.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
         imageView.frame = CGRectMake(-self.view.frame.size.width + 100.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
+
+- (void)moveClouds:(UIImageView *)imageView{
+    [UIView animateWithDuration:30.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        imageView.frame = CGRectMake(-self.view.frame.size.width + 100.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
+}
+
 - (void)moveCloudsFar:(UIImageView *)imageView{
-    [UIView animateWithDuration:25.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:40.f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
         imageView.frame = CGRectMake(-self.view.frame.size.width + 100.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 

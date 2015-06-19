@@ -13,11 +13,18 @@
 @property (weak, nonatomic) IBOutlet UIImageView *cloud1;
 @property (weak, nonatomic) IBOutlet UIImageView *cloud2;
 @property (weak, nonatomic) IBOutlet UIImageView *cloud3;
-
 @property (weak, nonatomic) IBOutlet UIImageView *cloud4;
 @property (weak, nonatomic) IBOutlet UIImageView *cloud5;
 @property (weak, nonatomic) IBOutlet UIImageView *cloud6;
 @property (weak, nonatomic) IBOutlet UIImageView *cloud7;
+
+@property (weak, nonatomic) IBOutlet UIImageView *cloud8;
+@property (weak, nonatomic) IBOutlet UIImageView *cloud9;
+@property (weak, nonatomic) IBOutlet UIImageView *cloud10;
+@property (weak, nonatomic) IBOutlet UIImageView *cloud11;
+@property (weak, nonatomic) IBOutlet UIImageView *cloud12;
+@property (weak, nonatomic) IBOutlet UIImageView *cloud13;
+@property (weak, nonatomic) IBOutlet UIImageView *cloud14;
 
 
 

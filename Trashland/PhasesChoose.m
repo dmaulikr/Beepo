@@ -21,18 +21,6 @@
     
     [self.view addSubview:self.fundo];
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     if (self.player.fase1) {
         [self.fase1 setBackgroundImage:[UIImage imageNamed:@"atividades-casa-color"] forState:UIControlStateNormal];
     }
@@ -85,7 +73,6 @@
     if (self.player.fase1) {
         Story1 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story1VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-       // game.faseClicada = @"casa";
         game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
     }
@@ -95,7 +82,6 @@
     if (self.player.fase2) {
         Story2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story2VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-      //  game.faseClicada = @"parque";
         game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
     }
@@ -105,7 +91,6 @@
     if (self.player.fase3) {
         Story3 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story3VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-      //  game.faseClicada = @"hospital";
         game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
     }
@@ -115,7 +100,6 @@
     if (self.player.fase4) {
         Story4 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Story4VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-       // game.faseClicada = @"prefeitura";
         game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
     }

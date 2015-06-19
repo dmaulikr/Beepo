@@ -43,8 +43,12 @@ CGPoint startLocation;
 //        }
 //    }
     CGRect frame = [self frame];
-//    frame.origin.x += pt.x - startLocation.x;
-    frame.origin.y += pt.y - startLocation.y;
+    if (self.podeX) {
+        frame.origin.x += pt.x - startLocation.x;
+    }
+    if (self.podeY) {
+        frame.origin.y += pt.y - startLocation.y;
+    }
     [self setFrame:frame];
 }
 

@@ -19,6 +19,7 @@
     [super viewDidLoad];
     primeira = true;
     self.player.gasperEscolhido = [[UIImageView alloc] init];
+    self.player.gasperEscolhido = [UIImage imageNamed:@"fantasminha"];
     
 }
 
@@ -94,7 +95,7 @@
 
 -(IBAction)choosedThird:(id)sender{
     if (primeira == true) {
-        
+        self.gasper.image = [UIImage imageNamed:@"custom17"];
         self.player.gasperEscolhido = [UIImage imageNamed:@"custom17"];
     }
     else{

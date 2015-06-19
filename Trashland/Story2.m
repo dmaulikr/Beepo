@@ -26,10 +26,12 @@
          fazer a transição
          */
 }
+
 - (void)moveBeepo:(UIImageView *)imageView{
     [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
         imageView.frame = CGRectMake(337.f, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     CGRect charFrame = self.imgFantasminha.frame;
@@ -53,4 +55,5 @@
     
     [UIView commitAnimations];
 }
+
 @end

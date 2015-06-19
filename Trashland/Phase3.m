@@ -19,6 +19,15 @@ UICollisionBehavior* _collision2;
 
 -(void) viewDidLoad{
     [super viewDidLoad];
+
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    
+    [super viewDidAppear:animated];
+    
     self.viewVelha.userInteractionEnabled = YES;
     self.viewVelha.delegate = self;
     self.viewVelha.charImgView = self.imageVelha;
@@ -26,11 +35,7 @@ UICollisionBehavior* _collision2;
     [self moveCar1:self.carro1];
     [self moveCar2:self.carro2];
     [self watchThisBitch];
-
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    
     CGRect charFrame = self.imageBeepo.frame;
     charFrame.origin.y = charFrame.origin.y - 25.0;
     charFrame.size.height = charFrame.size.height + 15.0;

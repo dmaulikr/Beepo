@@ -59,6 +59,8 @@ SystemSoundID sound1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
+    
     self.botaoProx.alpha = 0.5f;
     
     self.charImgView.image = self.player.gasperEscolhido;
@@ -152,6 +154,7 @@ SystemSoundID sound1;
 //    [self.auxView addSubview:self.vase];
     
     self.plate = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"plate"]];
+    
     self.plate.frame = CGRectMake(695, 500, 70, 36);
     self.plate.userInteractionEnabled = YES;
     self.plate.delegate = self;
@@ -192,6 +195,32 @@ SystemSoundID sound1;
     [self.view addSubview:self.medalha1fase1];
     [self.view addSubview:self.medalha2fase1];
     [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];
+    
+    
+    
+    self.books.podeY = YES;
+    self.vase2.podeY = YES;
+    self.weirdVase.podeY = YES;
+    self.flower.podeY = YES;
+    self.pinkishVase.podeY = YES;
+    self.plate.podeY = YES;
+    self.purpleVase.podeY = YES;
+    self.redWhiteVase.podeY = YES;
+    self.rubberDuck.podeY = YES;
+    self.soap.podeY = YES;
+    self.toiletStuff.podeY = YES;
+    
+    self.books.podeX = YES;
+    self.vase2.podeX = YES;
+    self.weirdVase.podeX = YES;
+    self.flower.podeX = YES;
+    self.pinkishVase.podeX = YES;
+    self.plate.podeX = YES;
+    self.purpleVase.podeX = YES;
+    self.redWhiteVase.podeX = YES;
+    self.rubberDuck.podeX = YES;
+    self.soap.podeX = YES;
+    self.toiletStuff.podeX = YES;
 }
 
 #pragma mark - gravidade e colisoes

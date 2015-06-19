@@ -10,5 +10,8 @@
 
 @interface DraggableView : UIView
 @property (weak, nonatomic) UIImageView* charImgView;
-@property   (weak,nonatomic) UIViewController* delegate;
+@property (weak,nonatomic) UIViewController* delegate;
+@property (nonatomic) BOOL podeX;
+@property (nonatomic) BOOL podeY;
+
 @end
