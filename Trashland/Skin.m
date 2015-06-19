@@ -18,7 +18,7 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     primeira = true;
-    self.player.gasperEscolhido = [[UIImageView alloc] init];
+    self.player = [[Player alloc]init];
     self.player.gasperEscolhido = [UIImage imageNamed:@"fantasminha"];
     
 }

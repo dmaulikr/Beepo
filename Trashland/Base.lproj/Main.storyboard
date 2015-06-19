@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4p4-wJ-H5U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HMU-LK-3EX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -690,6 +690,36 @@
                                     </view>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wdd-D3-gXh" userLabel="Button_back">
+                                <rect key="frame" x="29" y="33" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-voltar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickBackButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="gyl-zO-rhj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qhO-xT-eet" userLabel="Button_read">
+                                <rect key="frame" x="938" y="33" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickReadButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="dol-Ms-HpA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wXb-Bj-SRU" userLabel="Button_next">
+                                <rect key="frame" x="905" y="669" width="125" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-continuar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickNextButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="iLB-BC-937"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -705,6 +735,7 @@
                         <outlet property="balao" destination="aHe-Oq-lzv" id="FPt-gb-Xd6"/>
                         <outlet property="bolinhaVerde" destination="RgU-lw-Xbu" id="DhS-ob-rGQ"/>
                         <outlet property="bolinhaVermelha" destination="Kd1-1c-vi8" id="I3E-Bh-dO9"/>
+                        <outlet property="botaoProximo" destination="wXb-Bj-SRU" id="Hiy-8w-iRW"/>
                         <outlet property="cascaBanana" destination="zPE-mN-Gyr" id="19c-J2-Yyx"/>
                         <outlet property="charImageView" destination="DnC-Vn-tWm" id="MSM-6w-rMb"/>
                         <outlet property="fantasminhaView" destination="Mal-4Z-TBy" id="wVm-Ra-FsD"/>
@@ -1061,7 +1092,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="40321913-0695-4B93-B31E-54F7B5174930" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07FC721A-02D7-428A-9B09-C48D6E5231FF" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1132,7 +1163,7 @@
                                                     <action selector="didClickSecondCloud" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="Fja-bB-ZRm"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ctS-Iy-bUQ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ctS-Iy-bUQ" userLabel="Button_back">
                                                 <rect key="frame" x="26" y="30" width="60" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" backgroundImage="botao-voltar">
@@ -1142,14 +1173,14 @@
                                                     <action selector="voltar:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="69r-GM-Pbr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oYm-DP-27o">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oYm-DP-27o" userLabel="Button_read">
                                                 <rect key="frame" x="935" y="30" width="60" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" backgroundImage="botao-som">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3xp-ms-gup">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3xp-ms-gup" userLabel="Button_next">
                                                 <rect key="frame" x="905" y="644" width="125" height="125"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" backgroundImage="botao-continuar">
@@ -1200,7 +1231,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" id="BUh-JP-Wlf" customClass="DraggableView">
-                                                <rect key="frame" x="328" y="532" width="130" height="143"/>
+                                                <rect key="frame" x="328" y="610" width="130" height="143"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sombra_fantasminha" id="oyO-Ot-X2M">
@@ -1260,6 +1291,7 @@
                         <outlet property="botaoVoltar" destination="ctS-Iy-bUQ" id="L9l-mm-kLC"/>
                         <outlet property="charImgView" destination="nwV-pO-aBS" id="DSD-u3-DZS"/>
                         <outlet property="contentBG" destination="zIj-zB-0Yx" id="tzz-m3-BU7"/>
+                        <outlet property="fantasmaView" destination="BUh-JP-Wlf" id="A8A-83-sKY"/>
                         <outlet property="luz3" destination="x0S-Aj-XiN" id="9JB-K0-46Y"/>
                         <outlet property="luz4" destination="IUq-ER-1ds" id="dXB-2Y-gF9"/>
                         <outlet property="medalha1fase1" destination="DNE-un-zea" id="EoY-Mc-xYi"/>
@@ -1286,14 +1318,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="08_Trashcity" width="47" height="56"/>
-        <image name="09_Trashcity" width="24" height="62"/>
-        <image name="10_Trashcity" width="59" height="51"/>
-        <image name="11_Trashcity" width="33" height="46"/>
-        <image name="12_Trashcity" width="27" height="50"/>
-        <image name="13_Trashcity" width="34" height="51"/>
-        <image name="14_Trashcity" width="33" height="60"/>
-        <image name="40321913-0695-4B93-B31E-54F7B5174930" width="194" height="90">
+        <image name="07FC721A-02D7-428A-9B09-C48D6E5231FF" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2510,6 +2535,13 @@ GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
 BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
 </mutableData>
         </image>
+        <image name="08_Trashcity" width="47" height="56"/>
+        <image name="09_Trashcity" width="24" height="62"/>
+        <image name="10_Trashcity" width="59" height="51"/>
+        <image name="11_Trashcity" width="33" height="46"/>
+        <image name="12_Trashcity" width="27" height="50"/>
+        <image name="13_Trashcity" width="34" height="51"/>
+        <image name="14_Trashcity" width="33" height="60"/>
         <image name="atividades-02" width="1024" height="768"/>
         <image name="atividades-casa" width="203" height="203"/>
         <image name="atividades-hospital" width="203" height="203"/>

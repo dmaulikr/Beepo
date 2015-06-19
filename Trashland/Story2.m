@@ -7,6 +7,7 @@
 //
 
 #import "Story2.h"
+#import "Phase2.h"
 
 @implementation Story2
 
@@ -15,20 +16,21 @@
     [super viewDidLoad];
     [self moveBeepo:self.moveBeepoView];
     
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swipeRight];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeft];
 }
 
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
-        /*
-         fazer a transição
-         */
+    Phase2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase2VC"];
+    [game setModalPresentationStyle:UIModalPresentationFullScreen];
+    game.player = self.player;
+    [self presentViewController:game animated:YES completion:nil];
 }
 
-- (void)moveBeepo:(UIImageView *)imageView{
-    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+- (void)moveBeepo:(UIView *)imageView{
+    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         imageView.frame = CGRectMake(337.f, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 

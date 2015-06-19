@@ -46,4 +46,7 @@
 @property (weak, nonatomic) IBOutlet DraggableView *fantasminhaView;
 @property (nonatomic) NSString* gasperEscolhido;
 @property (nonatomic) BOOL lookingBack;
+
+@property (weak, nonatomic) IBOutlet UIButton *botaoProximo;
+
 @end

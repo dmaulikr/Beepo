@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DraggableImageView.h"
+#import "DraggableView.h"
 #import "Player.h"
 
 @interface Phase1 : UIViewController
@@ -32,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet DraggableImageView *toiletStuff;
 @property (weak, nonatomic) IBOutlet DraggableImageView *pinkishVase;
 @property (weak, nonatomic) IBOutlet DraggableImageView *purpleVase;
+@property (weak, nonatomic) IBOutlet DraggableView *fantasmaView;
 
 
 @property (nonatomic) IBOutlet UIImageView* medalha1fase1;

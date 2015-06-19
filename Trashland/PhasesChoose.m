@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.fundo];
-    
+    self.player.fase1 = YES;
     if (self.player.fase1) {
         [self.fase1 setBackgroundImage:[UIImage imageNamed:@"atividades-casa-color"] forState:UIControlStateNormal];
     }

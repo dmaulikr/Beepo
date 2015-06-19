@@ -445,19 +445,16 @@ float deslocIni;
     }];
     [[self.zzzImage layer] addAnimation:anim forKey:@"iconShake"];
     [CATransaction commit];
-    
-
-//    
-//    self.zzzImage.hidden = NO;
-//    CABasicAnimation* anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-//    [anim setToValue:[NSNumber numberWithFloat:0.0f]];
-//    [anim setFromValue:[NSNumber numberWithDouble:M_PI/16]]; // rotation angle
-//    [anim setDuration:0.1];
-//    [anim setRepeatCount:NSUIntegerMax];
-//    [anim setAutoreverses:YES];
-//    [[self.zzzImage layer] addAnimation:anim forKey:@"iconShake"];
 }
 - (IBAction)didClickPolice:(UIButton *)sender {
+}
+
+//Controle
+- (IBAction)didClickBackButton:(id)sender {
+}
+- (IBAction)didClickReadButton:(id)sender {
+}
+- (IBAction)didClickNextButton:(id)sender {
 }
 
 @end

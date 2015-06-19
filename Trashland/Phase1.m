@@ -67,10 +67,12 @@ SystemSoundID sound1;
     
     if(self.player.medalha1fase1){
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
+        self.botaoProx.enabled = YES;
     }
     
     if(self.player.medalha2fase1){
         self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
+        self.botaoProx.enabled = YES;
     }
     
     pontoLuz1 = false;
@@ -107,6 +109,8 @@ SystemSoundID sound1;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    self.fantasmaView.podeX = YES;
+    
     CGRect charFrame = self.charImgView.frame;
     charFrame.origin.y = charFrame.origin.y - 45.0;
     charFrame.size.height = charFrame.size.height + 15.0;
