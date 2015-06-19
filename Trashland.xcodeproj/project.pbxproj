@@ -35,6 +35,8 @@
 		02B3B5501B30DB1B00143CC1 /* carefreewav.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B54F1B30DB1B00143CC1 /* carefreewav.wav */; };
 		02B3B5521B30DFB400143CC1 /* hackbeatwav.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */; };
 		02B3B5551B3106E700143CC1 /* Phase4.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B5541B3106E700143CC1 /* Phase4.m */; };
+		150309331B33357C0056346D /* arvore_nascendo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 150309321B33357C0056346D /* arvore_nascendo.wav */; };
+		150309351B333A1F0056346D /* lixo.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 150309341B333A1F0056346D /* lixo.WAV */; };
 		15246F491B2F137A00EF006A /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15246F481B2F137A00EF006A /* DraggableView.m */; };
 		15C4315E1B289E500098C994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C4315D1B289E500098C994 /* main.m */; };
 		15C431611B289E500098C994 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431601B289E500098C994 /* AppDelegate.m */; };
@@ -99,6 +101,8 @@
 		02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hackbeatwav.wav; sourceTree = "<group>"; };
 		02B3B5531B3106E700143CC1 /* Phase4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase4.h; sourceTree = "<group>"; };
 		02B3B5541B3106E700143CC1 /* Phase4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase4.m; sourceTree = "<group>"; };
+		150309321B33357C0056346D /* arvore_nascendo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = arvore_nascendo.wav; sourceTree = "<group>"; };
+		150309341B333A1F0056346D /* lixo.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lixo.WAV; sourceTree = "<group>"; };
 		15246F471B2F137A00EF006A /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
 		15246F481B2F137A00EF006A /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
 		15C431581B289E500098C994 /* Trashland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trashland.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +192,8 @@
 		0264DE611B2F14FE007A18A7 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				150309341B333A1F0056346D /* lixo.WAV */,
+				150309321B33357C0056346D /* arvore_nascendo.wav */,
 				02278E481B31D38700064B9A /* closeTap.wav */,
 				02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */,
 				02B3B5401B309E5C00143CC1 /* carefree.mp3 */,
@@ -440,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150309331B33357C0056346D /* arvore_nascendo.wav in Resources */,
 				02278E491B31D38700064B9A /* closeTap.wav in Resources */,
 				0264DE741B2F1610007A18A7 /* Ventura_Edding.otf in Resources */,
 				0264DE6D1B2F1573007A18A7 /* bird.wav in Resources */,
@@ -451,6 +458,7 @@
 				0264DE721B2F1610007A18A7 /* actionj.ttf in Resources */,
 				02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */,
 				15C431671B289E500098C994 /* Main.storyboard in Resources */,
+				150309351B333A1F0056346D /* lixo.WAV in Resources */,
 				15C4316C1B289E500098C994 /* LaunchScreen.xib in Resources */,
 				0264DE6B1B2F1573007A18A7 /* TV.aiff in Resources */,
 				0264DE651B2F155F007A18A7 /* click.wav in Resources */,

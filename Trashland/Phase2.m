@@ -7,12 +7,13 @@
 //
 
 #import "Phase2.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface Phase2()<UICollisionBehaviorDelegate, UIScrollViewDelegate>{
     UIDynamicAnimator* _animator;
     UIGravityBehavior* _gravity;
     UICollisionBehavior* _collision;
-
+    SystemSoundID sound1;
 }
 @property (weak, nonatomic) IBOutlet UIView *auxView;
 
@@ -251,31 +252,86 @@ float deslocIni;
 -(void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier atPoint:(CGPoint)p{
     if (identifier &&  ![[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"piso"]) {
         if (((UIImageView *)item).tag == 1 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPlastico"]) {
+            
+            
+            AudioServicesDisposeSystemSoundID (sound1);
+            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"wav"];
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+            AudioServicesPlaySystemSound(sound1);
+            
+            
+            
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
         } else if (((UIImageView *)item).tag == 2 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPapel"]) {
+            
+            
+            AudioServicesDisposeSystemSoundID (sound1);
+            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"wav"];
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+            AudioServicesPlaySystemSound(sound1);
+            
+            
+            
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
         } else if (((UIImageView *)item).tag == 3 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoVidro"]) {
+            
+            
+            AudioServicesDisposeSystemSoundID (sound1);
+            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"wav"];
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+            AudioServicesPlaySystemSound(sound1);
+            
+            
+            
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
         } else if (((UIImageView *)item).tag == 4 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoMetal"]) {
+            
+            
+            AudioServicesDisposeSystemSoundID (sound1);
+            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"wav"];
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+            AudioServicesPlaySystemSound(sound1);
+            
+            
+            
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
         } else if (((UIImageView *)item).tag == 5 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoOrganico"]) {
+            
+            
+            AudioServicesDisposeSystemSoundID (sound1);
+            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"wav"];
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+            AudioServicesPlaySystemSound(sound1);
+            
+            
+            
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
-        }// else NSLog(@"error");
+        } else {
+//            ((DraggableImageView *)item).frame = ((DraggableImageView *)item).starterFrame;
+        }
     }
 }
 #pragma mark - Button Actions
 //Trees
 - (IBAction)didClickTree1:(UIButton *)sender {
+    
+    
+    AudioServicesDisposeSystemSoundID (sound1);
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+    AudioServicesPlaySystemSound(sound1);
+    
+    
     
     _arvore1.image = [UIImage imageNamed:@"parque-03"];
     float yInicial = _arvore1.frame.origin.y;
@@ -290,6 +346,14 @@ float deslocIni;
     
 }
 - (IBAction)didClickTree2:(UIButton *)sender {
+    
+    
+    AudioServicesDisposeSystemSoundID (sound1);
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+    AudioServicesPlaySystemSound(sound1);
+    
+    
     _arvore2.image = [UIImage imageNamed:@"parque-04"];
     float yInicial = _arvore2.frame.origin.y;
     float hInicial = _arvore2.frame.size.height;
@@ -302,6 +366,14 @@ float deslocIni;
     sender.userInteractionEnabled = NO;
 }
 - (IBAction)didClickTree3:(UIButton *)sender {
+    
+    
+    AudioServicesDisposeSystemSoundID (sound1);
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+    AudioServicesPlaySystemSound(sound1);
+    
+    
     _arvore3.image = [UIImage imageNamed:@"parque-05"];
     float yInicial = _arvore3.frame.origin.y;
     float hInicial = _arvore3.frame.size.height;
@@ -314,6 +386,14 @@ float deslocIni;
     sender.userInteractionEnabled = NO;
 }
 - (IBAction)didClickTree4:(UIButton *)sender {
+    
+    
+    AudioServicesDisposeSystemSoundID (sound1);
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+    AudioServicesPlaySystemSound(sound1);
+    
+    
     _arvore4.image = [UIImage imageNamed:@"parque-06"];
     float yInicial = _arvore4.frame.origin.y;
     float hInicial = _arvore4.frame.size.height;
@@ -329,6 +409,13 @@ float deslocIni;
     self.bolinhaVerde.hidden = NO;
 }
 - (IBAction)didClickTree5:(UIButton *)sender {
+    
+    
+    AudioServicesDisposeSystemSoundID (sound1);
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+    AudioServicesPlaySystemSound(sound1);
+    
     _arvore5.image = [UIImage imageNamed:@"parque-07"];
     float yInicial = _arvore5.frame.origin.y;
     float hInicial = _arvore5.frame.size.height;
