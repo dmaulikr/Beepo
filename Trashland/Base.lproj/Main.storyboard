@@ -33,10 +33,6 @@
                                 <rect key="frame" x="131" y="427" width="762" height="341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beepo" id="vLT-8I-pTA">
-                                <rect key="frame" x="273" y="44" width="499" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="jdM-Sf-th9">
                                 <rect key="frame" x="644" y="191" width="197" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -63,6 +59,26 @@
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tf3-kX-2e3"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="Jbr-cD-peO">
+                                <rect key="frame" x="686" y="337" width="197" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="MaU-2V-ujj">
+                                <rect key="frame" x="891" y="117" width="197" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="eTD-B7-iys">
+                                <rect key="frame" x="63" y="342" width="197" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="ppV-NR-ijp">
+                                <rect key="frame" x="970" y="274" width="197" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beepo" id="vLT-8I-pTA">
+                                <rect key="frame" x="273" y="44" width="499" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -72,6 +88,10 @@
                         <outlet property="cloud1" destination="g7t-6y-sHm" id="a4l-mp-YTA"/>
                         <outlet property="cloud2" destination="DqM-wA-NGo" id="YRE-fs-POb"/>
                         <outlet property="cloud3" destination="jdM-Sf-th9" id="6Ao-F7-nuI"/>
+                        <outlet property="cloud4" destination="MaU-2V-ujj" id="yWj-hO-wFu"/>
+                        <outlet property="cloud5" destination="Jbr-cD-peO" id="g65-oE-y9b"/>
+                        <outlet property="cloud6" destination="eTD-B7-iys" id="Kz1-zH-EP3"/>
+                        <outlet property="cloud7" destination="ppV-NR-ijp" id="epT-La-VU7"/>
                         <outlet property="fundo" destination="jYU-Bn-jnM" id="awM-8s-Zqm"/>
                         <outlet property="logo" destination="vLT-8I-pTA" id="JKB-TU-vow"/>
                         <outlet property="play" destination="uT0-ix-F1H" id="JNf-R3-7eK"/>
@@ -966,7 +986,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="17FE2DF5-5AF4-4B4C-96F1-9592A6334E3A" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="31945BCF-730A-4A98-972A-BC47FABC22FC" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1198,7 +1218,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="17FE2DF5-5AF4-4B4C-96F1-9592A6334E3A" width="194" height="90">
+        <image name="31945BCF-730A-4A98-972A-BC47FABC22FC" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

@@ -24,12 +24,23 @@ SystemSoundID sound2;
     [self moveClouds: _cloud2];
     [self moveClouds: _cloud3];
     
+    [self moveCloudsFar: _cloud4];
+    [self moveCloudsFar: _cloud5];
+    [self moveCloudsFar: _cloud6];
+    [self moveCloudsFar: _cloud7];
+    
     [self.view addSubview:self.fundo];
     [self.fundo addSubview:self.logo];
     [self.fundo addSubview:self.predios];
     [self.fundo addSubview:self.cloud1];
     [self.fundo addSubview:self.cloud2];
     [self.fundo addSubview:self.cloud3];
+    
+    [self.fundo addSubview:self.cloud4];
+    [self.fundo addSubview:self.cloud5];
+    [self.fundo addSubview:self.cloud6];
+    [self.fundo addSubview:self.cloud7];
+    
     [self.fundo addSubview:self.playImage];
     
     
@@ -44,6 +55,10 @@ SystemSoundID sound2;
 
 - (void)moveClouds:(UIImageView *)imageView{
     [UIView animateWithDuration:20.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        imageView.frame = CGRectMake(-self.view.frame.size.width + 100.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
+}
+- (void)moveCloudsFar:(UIImageView *)imageView{
+    [UIView animateWithDuration:25.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
         imageView.frame = CGRectMake(-self.view.frame.size.width + 100.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 
