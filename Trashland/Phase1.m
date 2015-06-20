@@ -13,7 +13,7 @@
 #import "AppDelegate.h"
 #import "PhasesChoose.h"
 
-@interface Phase1 (){
+@interface Phase1 ()<UIScrollViewDelegate>{
     int tempo;
     
     BOOL pontoLuz1;
@@ -90,7 +90,7 @@ SystemSoundID sound1;
     
     // Do any additional setup after loading the view.
     _scrollView.contentSize = CGSizeMake(_contentBG.frame.size.width, _contentBG.frame.size.height);
-    
+    _scrollView.delegate = self;
     [self montarTela];
     
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.auxView];
@@ -511,5 +511,35 @@ SystemSoundID sound1;
         self.botaoProx.alpha = 1.0f;
     }
 }
+
+#pragma mark - scrollview delegate
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    _deslocIni = scrollView.contentOffset.x;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [[_fantasmaView superview]bringSubviewToFront:_fantasmaView];
+    UIImage *beepoImage = self.player.gasperEscolhido;
+    float diff =scrollView.contentOffset.x - _deslocIni;
+    if (diff > 0 && _lookingBack) {
+        self.charImgView.image = beepoImage;
+        _lookingBack = NO;
+    } else if (diff < 0 && _lookingBack){
+        
+    } else if (diff > 0 && !_lookingBack){
+        
+    } else{
+        self.charImgView.image = [UIImage imageWithCGImage:beepoImage.CGImage
+                                                       scale:beepoImage.scale
+                                                 orientation:UIImageOrientationUpMirrored];
+        _lookingBack = YES;
+    }
+    
+    CGRect oldframe = self.fantasmaView.frame;
+    oldframe.origin.x = oldframe.origin.x + diff;
+    _deslocIni = scrollView.contentOffset.x;
+    self.fantasmaView.frame = oldframe;
+}
+
 
 @end

@@ -18,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    _viewCarro1.podeY = YES;
+    _viewCarro2.podeY = YES;
     [self checkWayFree];
 }
 

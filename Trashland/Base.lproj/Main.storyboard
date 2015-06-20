@@ -1092,7 +1092,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07FC721A-02D7-428A-9B09-C48D6E5231FF" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="D0CB619F-B6F5-485B-91EF-29186D0A37E9" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1318,7 +1318,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="07FC721A-02D7-428A-9B09-C48D6E5231FF" width="194" height="90">
+        <image name="08_Trashcity" width="47" height="56"/>
+        <image name="09_Trashcity" width="24" height="62"/>
+        <image name="10_Trashcity" width="59" height="51"/>
+        <image name="11_Trashcity" width="33" height="46"/>
+        <image name="12_Trashcity" width="27" height="50"/>
+        <image name="13_Trashcity" width="34" height="51"/>
+        <image name="14_Trashcity" width="33" height="60"/>
+        <image name="D0CB619F-B6F5-485B-91EF-29186D0A37E9" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2535,13 +2542,6 @@ GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
 BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
 </mutableData>
         </image>
-        <image name="08_Trashcity" width="47" height="56"/>
-        <image name="09_Trashcity" width="24" height="62"/>
-        <image name="10_Trashcity" width="59" height="51"/>
-        <image name="11_Trashcity" width="33" height="46"/>
-        <image name="12_Trashcity" width="27" height="50"/>
-        <image name="13_Trashcity" width="34" height="51"/>
-        <image name="14_Trashcity" width="33" height="60"/>
         <image name="atividades-02" width="1024" height="768"/>
         <image name="atividades-casa" width="203" height="203"/>
         <image name="atividades-hospital" width="203" height="203"/>

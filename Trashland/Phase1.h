@@ -47,6 +47,8 @@
 @property (nonatomic) IBOutlet UILabel* contador;
 
 @property (nonatomic) Player* player;
+@property (nonatomic) float deslocIni;
+@property (nonatomic) BOOL lookingBack;
 
 
 - (void)dealWithMovement;

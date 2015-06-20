@@ -8,12 +8,16 @@
 
 #import "Phase2.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "PhasesChoose.h"
 
 @interface Phase2()<UICollisionBehaviorDelegate, UIScrollViewDelegate>{
     UIDynamicAnimator* _animator;
     UIGravityBehavior* _gravity;
     UICollisionBehavior* _collision;
     SystemSoundID sound1;
+    
+    int treesCounter;
+    int trashLeft;
 }
 @property (weak, nonatomic) IBOutlet UIView *auxView;
 
@@ -28,6 +32,8 @@ float deslocIni;
     [super viewDidLoad];
     _phaseScrollView.contentSize = CGSizeMake(_phaseBG.frame.size.width, _phaseBG.frame.size.height);
     _phaseScrollView.delegate = self;
+    treesCounter = 5;
+    trashLeft = 6;
     
     [self beepoCustomizado];
     
@@ -43,6 +49,7 @@ float deslocIni;
     
     _lookingBack = NO;
     _fantasminhaView.charImgView  = _charImageView;
+    _fantasminhaView.podeX=YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -50,6 +57,18 @@ float deslocIni;
     [self beepoAnimado];
 }
 
+-(void)checkObjectives{
+    if (treesCounter == 0) {
+        
+        self.botaoProximo.enabled = YES;
+    }
+    if (trashLeft == 0) {
+        
+        self.botaoProximo.enabled = YES;
+    }
+}
+
+#pragma mark - scrollview delegate
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     deslocIni = scrollView.contentOffset.x;
 }
@@ -260,7 +279,7 @@ float deslocIni;
             AudioServicesPlaySystemSound(sound1);
             
             
-            
+            trashLeft = trashLeft - 1;
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
@@ -273,7 +292,7 @@ float deslocIni;
             AudioServicesPlaySystemSound(sound1);
             
             
-            
+            trashLeft = trashLeft - 1;
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
@@ -286,7 +305,7 @@ float deslocIni;
             AudioServicesPlaySystemSound(sound1);
             
             
-            
+            trashLeft = trashLeft - 1;
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
@@ -299,7 +318,7 @@ float deslocIni;
             AudioServicesPlaySystemSound(sound1);
             
             
-            
+            trashLeft = trashLeft - 1;
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
@@ -312,20 +331,22 @@ float deslocIni;
             AudioServicesPlaySystemSound(sound1);
             
             
-            
+            trashLeft = trashLeft - 1;
             ((UIImageView *)item).userInteractionEnabled = NO;
             ((UIImageView *)item).hidden = YES;
             ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
         } else {
 //            ((DraggableImageView *)item).frame = ((DraggableImageView *)item).starterFrame;
         }
+        [self checkObjectives];
+
     }
 }
 #pragma mark - Button Actions
 //Trees
 - (IBAction)didClickTree1:(UIButton *)sender {
     
-    
+    treesCounter = treesCounter - 1;
     AudioServicesDisposeSystemSoundID (sound1);
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
@@ -344,10 +365,11 @@ float deslocIni;
                                 , 1070/2);
     sender.userInteractionEnabled = NO;
     
+    [self checkObjectives];
 }
 - (IBAction)didClickTree2:(UIButton *)sender {
     
-    
+    treesCounter = treesCounter - 1;
     AudioServicesDisposeSystemSoundID (sound1);
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
@@ -364,10 +386,11 @@ float deslocIni;
     _arvore2.frame = CGRectMake(xFinal-9, yFinal, 1064/2
                                 , 1298/2);
     sender.userInteractionEnabled = NO;
+    [self checkObjectives];
 }
 - (IBAction)didClickTree3:(UIButton *)sender {
     
-    
+    treesCounter = treesCounter - 1;
     AudioServicesDisposeSystemSoundID (sound1);
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
@@ -384,10 +407,11 @@ float deslocIni;
     _arvore3.frame = CGRectMake(xFinal-11, yFinal, 1080/2
                                 , 1300/2);
     sender.userInteractionEnabled = NO;
+    [self checkObjectives];
 }
 - (IBAction)didClickTree4:(UIButton *)sender {
     
-    
+    treesCounter = treesCounter - 1;
     AudioServicesDisposeSystemSoundID (sound1);
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
@@ -407,10 +431,11 @@ float deslocIni;
     sender.userInteractionEnabled = NO;
     self.bolinhaVermelha.hidden = NO;
     self.bolinhaVerde.hidden = NO;
+    [self checkObjectives];
 }
 - (IBAction)didClickTree5:(UIButton *)sender {
     
-    
+    treesCounter = treesCounter - 1;
     AudioServicesDisposeSystemSoundID (sound1);
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
@@ -426,6 +451,7 @@ float deslocIni;
     _arvore5.frame = CGRectMake(xFinal-9, yFinal, 1064/2
                                 , 1298/2);
     sender.userInteractionEnabled = NO;
+    [self checkObjectives];
 }
 
 //Bolotas
@@ -451,8 +477,14 @@ float deslocIni;
 
 //Controle
 - (IBAction)didClickBackButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)didClickReadButton:(id)sender {
+    PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
+    [game setModalPresentationStyle:UIModalPresentationFullScreen];
+    self.player.fase3 = true;
+    game.player = self.player;
+    [self presentViewController:game animated:YES completion:nil];
 }
 - (IBAction)didClickNextButton:(id)sender {
 }

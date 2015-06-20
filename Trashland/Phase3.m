@@ -31,6 +31,7 @@ UICollisionBehavior* _collision2;
     self.viewVelha.userInteractionEnabled = YES;
     self.viewVelha.delegate = self;
     self.viewVelha.charImgView = self.imageVelha;
+    _viewVelha.podeY = YES;
     [self moveBeepo:self.viewBeepo];
     [self moveCar1:self.carro1];
     [self moveCar2:self.carro2];
