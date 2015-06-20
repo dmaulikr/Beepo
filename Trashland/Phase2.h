@@ -49,4 +49,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *botaoProximo;
 
+@property (weak, nonatomic) IBOutlet UIImageView *badgeLixo;
+@property (weak, nonatomic) IBOutlet UIImageView *badgeNatureza;
+
+
 @end

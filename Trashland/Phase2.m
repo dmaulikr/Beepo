@@ -35,6 +35,16 @@ float deslocIni;
     treesCounter = 5;
     trashLeft = 6;
     
+    if(self.player.medalha1fase2){
+        self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
+        self.botaoProximo.enabled = YES;
+    }
+    
+    if(self.player.medalha2fase2){
+        self.badgeNatureza.image = [UIImage imageNamed:@"badge-natureza-color"];
+        self.botaoProximo.enabled = YES;
+    }
+    
     [self beepoCustomizado];
     
     [self prepareForMovement];
@@ -59,11 +69,13 @@ float deslocIni;
 
 -(void)checkObjectives{
     if (treesCounter == 0) {
-        
+        self.player.medalha2fase2 = YES;
+        self.badgeNatureza.image = [UIImage imageNamed:@"badge-natureza-color"];
         self.botaoProximo.enabled = YES;
     }
     if (trashLeft == 0) {
-        
+        self.player.medalha1fase2 = YES;
+        self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
         self.botaoProximo.enabled = YES;
     }
 }
@@ -206,7 +218,7 @@ float deslocIni;
     _collision.collisionDelegate = self;
     //UIDynamics (Barreiras)
     
-    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(1977, 636, 120, 120)];
+    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(1977, 636, 120, 10)];
 //    barrier.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier];
     
@@ -216,7 +228,7 @@ float deslocIni;
                                 fromPoint:barrier.frame.origin
                                   toPoint:rightEdge];
     
-    barrier = [[UIView alloc] initWithFrame:CGRectMake(2100, 636, 120, 120)];
+    barrier = [[UIView alloc] initWithFrame:CGRectMake(2100, 636, 120, 10)];
 //    barrier.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier];
     
@@ -226,7 +238,7 @@ float deslocIni;
                                 fromPoint:barrier.frame.origin
                                   toPoint:rightEdge];
 
-    barrier = [[UIView alloc] initWithFrame:CGRectMake(2223, 636, 120, 120)];
+    barrier = [[UIView alloc] initWithFrame:CGRectMake(2223, 636, 120, 10)];
 //    barrier.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier];
     
@@ -236,7 +248,7 @@ float deslocIni;
                                 fromPoint:barrier.frame.origin
                                   toPoint:rightEdge];
     
-    barrier = [[UIView alloc] initWithFrame:CGRectMake(2346, 636, 120, 120)];
+    barrier = [[UIView alloc] initWithFrame:CGRectMake(2346, 636, 120, 10)];
 //    barrier.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier];
     
@@ -246,7 +258,7 @@ float deslocIni;
                                 fromPoint:barrier.frame.origin
                                   toPoint:rightEdge];
     
-    barrier = [[UIView alloc] initWithFrame:CGRectMake(2469, 636, 120, 120)];
+    barrier = [[UIView alloc] initWithFrame:CGRectMake(2469, 636, 120, 10)];
 //    barrier.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier];
     
@@ -480,13 +492,13 @@ float deslocIni;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)didClickReadButton:(id)sender {
+}
+- (IBAction)didClickNextButton:(id)sender {
     PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
     self.player.fase3 = true;
     game.player = self.player;
     [self presentViewController:game animated:YES completion:nil];
-}
-- (IBAction)didClickNextButton:(id)sender {
 }
 
 @end
