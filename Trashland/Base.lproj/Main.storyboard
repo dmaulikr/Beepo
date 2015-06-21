@@ -818,6 +818,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="68u-zh-y0u" userLabel="Button_back">
+                                <rect key="frame" x="29" y="33" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-voltar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickBackButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="s3X-4I-oPM"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" id="Bpd-st-BTJ">
                                 <rect key="frame" x="-144" y="641" width="107" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -866,12 +876,34 @@
                                     </imageView>
                                 </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="El4-9k-wTz" userLabel="Button_read">
+                                <rect key="frame" x="938" y="33" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickReadButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="7Jm-6D-Inn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-idoso" id="ep0-hm-eyN" userLabel="badge lixo">
+                                <rect key="frame" x="120" y="20" width="53" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-transito" id="1AE-F0-4fa" userLabel="badge natureza">
+                                <rect key="frame" x="180" y="20" width="53" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
+                        <outlet property="badgeIdoso" destination="ep0-hm-eyN" id="nje-Oc-YhF"/>
+                        <outlet property="badgeTransito" destination="1AE-F0-4fa" id="pAm-Lc-LcL"/>
+                        <outlet property="botaoSom" destination="El4-9k-wTz" id="Svd-wA-Gos"/>
+                        <outlet property="botaoVoltar" destination="68u-zh-y0u" id="taQ-o4-09b"/>
                         <outlet property="carro1" destination="aUg-h6-3tQ" id="gi1-Lo-T69"/>
                         <outlet property="carro2" destination="8eD-h6-i1o" id="PdM-Yh-Qw7"/>
                         <outlet property="fundo" destination="l34-vp-vmV" id="1te-Zk-8pa"/>
@@ -927,6 +959,34 @@
                                 <rect key="frame" x="40" y="348" width="228" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bL8-V7-BEn" userLabel="Button_read">
+                                <rect key="frame" x="938" y="33" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickReadButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="y1k-yY-alE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-idoso" id="ajW-ch-eNC" userLabel="badge lixo">
+                                <rect key="frame" x="120" y="20" width="53" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-transito" id="6Ed-rg-aX5" userLabel="badge natureza">
+                                <rect key="frame" x="180" y="20" width="53" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="n8g-No-g0H" userLabel="Button_back">
+                                <rect key="frame" x="29" y="33" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-voltar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickBackButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="1xW-ct-lg2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -934,6 +994,10 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="ambulancia" destination="UsE-P7-Mx7" id="feq-fF-c0a"/>
+                        <outlet property="badgeIdoso" destination="ajW-ch-eNC" id="I0o-IQ-M4Z"/>
+                        <outlet property="badgeTransito" destination="6Ed-rg-aX5" id="dPu-Ql-JN3"/>
+                        <outlet property="botaoSom" destination="bL8-V7-BEn" id="Klg-4H-Eui"/>
+                        <outlet property="botaoVoltar" destination="n8g-No-g0H" id="DgN-HF-mFD"/>
                         <outlet property="fundo" destination="wlB-Lq-UYu" id="stm-zg-7rU"/>
                         <outlet property="imageViewPuzzle" destination="QVk-YB-i2B" id="dQz-Xd-eK1"/>
                         <outlet property="viewCarro1" destination="iDz-bZ-9AP" id="H34-2m-IQZ"/>
@@ -1102,7 +1166,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B15FECC4-172C-42AB-92E7-C9365E6E3CF9" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C72A8D2F-97A2-49C4-98B9-C8FC8E8C7405" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1335,7 +1399,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="B15FECC4-172C-42AB-92E7-C9365E6E3CF9" width="194" height="90">
+        <image name="C72A8D2F-97A2-49C4-98B9-C8FC8E8C7405" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

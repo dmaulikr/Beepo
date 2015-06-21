@@ -23,4 +23,9 @@
 
 @property (nonatomic) IBOutlet UIImageView* ambulancia;
 
+@property (nonatomic) IBOutlet UIImageView* badgeTransito;
+@property (nonatomic) IBOutlet UIImageView* badgeIdoso;
+@property (nonatomic) IBOutlet UIButton* botaoVoltar;
+@property (nonatomic) IBOutlet UIButton* botaoSom;
+
 @end

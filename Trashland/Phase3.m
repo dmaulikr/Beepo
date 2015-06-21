@@ -19,7 +19,7 @@ UICollisionBehavior* _collision2;
 
 -(void) viewDidLoad{
     [super viewDidLoad];
-
+    [self checkBadges];
 
 }
 
@@ -75,7 +75,23 @@ UICollisionBehavior* _collision2;
 
     [UIView commitAnimations];
     
-    
+    [self.fundo addSubview:self.botaoSom];
+    [self.fundo addSubview:self.botaoVoltar];
+    [self.fundo addSubview:self.badgeIdoso];
+    [self.fundo addSubview:self.badgeTransito];
+}
+
+-(void)checkBadges{
+    if (self.player.medalha2fase3) {
+        self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
+        self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
+    }
+    else if (self.player.medalha1fase3){
+        self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
+    }
+    else{
+        [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkBadges) userInfo:nil repeats:NO];
+    }
 }
 
 - (void)moveBeepo:(UIImageView *)imageView{

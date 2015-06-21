@@ -23,6 +23,17 @@
     _viewCarro2.podeY = YES;
     
     [self checkWayFree];
+    if (self.player.medalha1fase3) {
+        self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
+    }
+    if (self.player.medalha2fase3) {
+        self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
+    }
+    
+    [self.fundo addSubview:self.botaoSom];
+    [self.fundo addSubview:self.botaoVoltar];
+    [self.fundo addSubview:self.badgeIdoso];
+    [self.fundo addSubview:self.badgeTransito];
 }
 
 -(void)checkWayFree{

@@ -30,4 +30,10 @@
 
 @property (nonatomic) UIView* barrier;
 
+@property (nonatomic) IBOutlet UIButton* botaoVoltar;
+@property (nonatomic) IBOutlet UIButton* botaoSom;
+
+@property (nonatomic) IBOutlet UIImageView* badgeIdoso;
+@property (nonatomic) IBOutlet UIImageView* badgeTransito;
+
 @end
