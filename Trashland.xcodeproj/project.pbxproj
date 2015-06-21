@@ -18,6 +18,9 @@
 		021F56341B2F24B0007886D6 /* Skin.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F56331B2F24B0007886D6 /* Skin.m */; };
 		02278E491B31D38700064B9A /* closeTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02278E481B31D38700064B9A /* closeTap.wav */; };
 		02278E4B1B31D63900064B9A /* tv1s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02278E4A1B31D63900064B9A /* tv1s.wav */; };
+		023D17B11B3731020004DE32 /* maodir.gif in Resources */ = {isa = PBXBuildFile; fileRef = 023D17AF1B3731020004DE32 /* maodir.gif */; };
+		023D17B21B3731020004DE32 /* maoesq.gif in Resources */ = {isa = PBXBuildFile; fileRef = 023D17B01B3731020004DE32 /* maoesq.gif */; };
+		023D17B51B3731CB0004DE32 /* Puzzle4.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17B41B3731CB0004DE32 /* Puzzle4.m */; };
 		0264DE651B2F155F007A18A7 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE641B2F155F007A18A7 /* click.wav */; };
 		0264DE6A1B2F1573007A18A7 /* shower.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE661B2F1573007A18A7 /* shower.mp3 */; };
 		0264DE6B1B2F1573007A18A7 /* TV.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE671B2F1573007A18A7 /* TV.aiff */; };
@@ -81,6 +84,10 @@
 		021F56331B2F24B0007886D6 /* Skin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skin.m; sourceTree = "<group>"; };
 		02278E481B31D38700064B9A /* closeTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = closeTap.wav; sourceTree = "<group>"; };
 		02278E4A1B31D63900064B9A /* tv1s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tv1s.wav; sourceTree = "<group>"; };
+		023D17AF1B3731020004DE32 /* maodir.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = maodir.gif; sourceTree = "<group>"; };
+		023D17B01B3731020004DE32 /* maoesq.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = maoesq.gif; sourceTree = "<group>"; };
+		023D17B31B3731CB0004DE32 /* Puzzle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Puzzle4.h; sourceTree = "<group>"; };
+		023D17B41B3731CB0004DE32 /* Puzzle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Puzzle4.m; sourceTree = "<group>"; };
 		0264DE641B2F155F007A18A7 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		0264DE661B2F1573007A18A7 /* shower.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shower.mp3; sourceTree = "<group>"; };
 		0264DE671B2F1573007A18A7 /* TV.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = TV.aiff; sourceTree = "<group>"; };
@@ -297,6 +304,8 @@
 				02FCFC8B1B345AD000E762B8 /* Story4.m */,
 				02B3B5531B3106E700143CC1 /* Phase4.h */,
 				02B3B5541B3106E700143CC1 /* Phase4.m */,
+				023D17B31B3731CB0004DE32 /* Puzzle4.h */,
+				023D17B41B3731CB0004DE32 /* Puzzle4.m */,
 			);
 			name = Phase4;
 			sourceTree = "<group>";
@@ -331,6 +340,8 @@
 		15C4315A1B289E500098C994 /* Trashland */ = {
 			isa = PBXGroup;
 			children = (
+				023D17AF1B3731020004DE32 /* maodir.gif */,
+				023D17B01B3731020004DE32 /* maoesq.gif */,
 				0264DE631B2F1511007A18A7 /* Classes */,
 				0264DE751B2F1638007A18A7 /* Animation */,
 				0264DE6E1B2F15E1007A18A7 /* Fonts */,
@@ -484,6 +495,8 @@
 				15C431921B2A0A980098C994 /* chuveiro_Trashcity-2.gif in Resources */,
 				02B3B5501B30DB1B00143CC1 /* carefreewav.wav in Resources */,
 				15C431691B289E500098C994 /* Images.xcassets in Resources */,
+				023D17B21B3731020004DE32 /* maoesq.gif in Resources */,
+				023D17B11B3731020004DE32 /* maodir.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +525,7 @@
 				027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */,
 				021F562E1B2F210E007886D6 /* Story3.m in Sources */,
 				15C431831B28A79A0098C994 /* Phase1.m in Sources */,
+				023D17B51B3731CB0004DE32 /* Puzzle4.m in Sources */,
 				021F56281B2F20FA007886D6 /* Story2.m in Sources */,
 				0264DE831B2F16CE007A18A7 /* UIView+Animation2.m in Sources */,
 				02FCFC8C1B345AD000E762B8 /* Story4.m in Sources */,

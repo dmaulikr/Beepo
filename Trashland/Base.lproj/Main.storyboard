@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rBt-75-mUn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -321,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPw-HS-dSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840" y="2850"/>
+            <point key="canvasLocation" x="332" y="2842"/>
         </scene>
         <!--Skin-->
         <scene sceneID="39e-je-EeJ">
@@ -762,7 +762,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6J-Y3-2kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213" y="3667"/>
+            <point key="canvasLocation" x="-721" y="3659"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="m5H-Pz-f3l">
@@ -798,7 +798,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgA-Lo-Gpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213" y="4483"/>
+            <point key="canvasLocation" x="-721" y="4475"/>
         </scene>
         <!--Story2-->
         <scene sceneID="Fjp-ID-4Ky">
@@ -840,7 +840,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fL0-yK-Gvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-208" y="2850"/>
+            <point key="canvasLocation" x="-716" y="2842"/>
         </scene>
         <!--Phase3-->
         <scene sceneID="gUy-tt-cug">
@@ -953,7 +953,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4H-pg-h7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="3662"/>
+            <point key="canvasLocation" x="325" y="3654"/>
+        </scene>
+        <!--Phase4-->
+        <scene sceneID="vc6-MD-o0c">
+            <objects>
+                <viewController storyboardIdentifier="Phase4VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cyj-L1-dPl" customClass="Phase4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVY-1Z-tnu">
+                        <rect key="frame" x="0.0" y="0.0" width="3000" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rGH-r3-xCT">
+                                <rect key="frame" x="0.0" y="0.0" width="3000" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="3000" height="768"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTL-X8-qQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2371" y="3654"/>
+        </scene>
+        <!--Puzzle4-->
+        <scene sceneID="acQ-N4-PmO">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="fW6-E7-8pZ" customClass="Puzzle4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQf-gw-dR9">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YiW-Yd-ybD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1362" y="4475"/>
+        </scene>
+        <!--Story4-->
+        <scene sceneID="dth-A6-Ga2">
+            <objects>
+                <viewController storyboardIdentifier="Story4VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rBt-75-mUn" customClass="Story4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Y8-2t-jqF">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ewe-BZ-LdC">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="fundo" destination="ewe-BZ-LdC" id="Kk7-n9-A4T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Np-jm-hoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="2842"/>
         </scene>
         <!--Phase3 Parte2-->
         <scene sceneID="Qm8-cj-Rlh">
@@ -1042,7 +1105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfy-Zc-tmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="4483"/>
+            <point key="canvasLocation" x="325" y="4475"/>
         </scene>
         <!--Story1-->
         <scene sceneID="8CA-TY-44F">
@@ -1174,7 +1237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNM-Ib-lal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1262" y="2850"/>
+            <point key="canvasLocation" x="-1770" y="2842"/>
         </scene>
         <!--Phase1-->
         <scene sceneID="3O1-ND-yRu">
@@ -1202,7 +1265,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="117C482E-CFAC-46EF-A2A4-01AD92D4C17A" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="055C06DA-A58C-4DE5-8B90-F056A6389A85" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1424,14 +1487,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEr-UK-xnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1272.5" y="3674"/>
+            <point key="canvasLocation" x="-1780.5" y="3666"/>
         </scene>
     </scenes>
     <resources>
-        <image name="08_Trashcity" width="47" height="56"/>
-        <image name="09_Trashcity" width="24" height="62"/>
-        <image name="10_Trashcity" width="59" height="51"/>
-        <image name="117C482E-CFAC-46EF-A2A4-01AD92D4C17A" width="194" height="90">
+        <image name="055C06DA-A58C-4DE5-8B90-F056A6389A85" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2648,6 +2708,9 @@ GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
 BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
 </mutableData>
         </image>
+        <image name="08_Trashcity" width="47" height="56"/>
+        <image name="09_Trashcity" width="24" height="62"/>
+        <image name="10_Trashcity" width="59" height="51"/>
         <image name="11_Trashcity" width="33" height="46"/>
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
