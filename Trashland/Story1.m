@@ -60,6 +60,9 @@
     
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeRight];
+    
+    self.gifDedo.image = [UIImage animatedImageNamed:@"maoesq-" duration:1.f];
+    [self.background addSubview:self.gifDedo];
 }
 
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{

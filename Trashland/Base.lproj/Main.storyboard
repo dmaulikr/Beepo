@@ -1210,6 +1210,10 @@
                                     </imageView>
                                 </subviews>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Wec-Lp-V3q">
+                                <rect key="frame" x="385" y="325" width="253" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1227,6 +1231,7 @@
                         <outlet property="gasper" destination="ZB7-J6-HQJ" id="RGj-yW-bEv"/>
                         <outlet property="gasperTriste" destination="0Ok-QY-JcF" id="E5P-LD-Azo"/>
                         <outlet property="gaspersombraTriste" destination="Vnh-dU-EBD" id="1ly-eu-cGY"/>
+                        <outlet property="gifDedo" destination="Wec-Lp-V3q" id="Tdc-dR-uf8"/>
                         <outlet property="interrogacao1" destination="tRK-jk-V07" id="RHr-ti-kM8"/>
                         <outlet property="interrogacao2" destination="OOr-9K-ElO" id="Bae-x9-8rn"/>
                         <outlet property="interrogacao3" destination="MX3-O6-mZ3" id="F4v-hR-ePK"/>
@@ -1265,7 +1270,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A32E5C0A-0C30-4F8F-8216-25FC5254C87E" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3E0E76B3-3714-41CC-B4DE-454F72791689" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1498,7 +1503,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="A32E5C0A-0C30-4F8F-8216-25FC5254C87E" width="194" height="90">
+        <image name="3E0E76B3-3714-41CC-B4DE-454F72791689" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

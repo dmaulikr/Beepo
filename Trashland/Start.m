@@ -84,6 +84,7 @@ SystemSoundID sound2;
 - (IBAction)start:(id)sender{
     Skin *game = [self.storyboard instantiateViewControllerWithIdentifier:@"SkinVC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
+    [game setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     Player* player = [[Player alloc] init];
     
     player.fase1 = true;
@@ -105,6 +106,8 @@ SystemSoundID sound2;
     
     game.player = player;
     [self presentViewController:game animated:YES completion:nil];
+    
+    
 }
 
 -(void)trocarPredio{

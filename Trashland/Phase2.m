@@ -79,15 +79,6 @@ float deslocIni;
         self.badgeNatureza.image = [UIImage imageNamed:@"badge-natureza-color"];
         self.botaoProximo.enabled = YES;
     }
-    if (trashLeft == 0) {
-        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
-        [popUp setImageNamed: @"pop-up-lixo"];
-        self.popUpView = popUp;
-        [popUp showInView:self.view animated:YES];
-        self.player.medalha1fase2 = YES;
-        self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
-        self.botaoProximo.enabled = YES;
-    }
 }
 
 #pragma mark - scrollview delegate
@@ -369,7 +360,15 @@ float deslocIni;
                 ((UIImageView *)item).hidden = YES;
                 ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
             }
-            [self checkObjectives];
+            if (trashLeft == 0) {
+                PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+                [popUp setImageNamed: @"pop-up-lixo"];
+                self.popUpView = popUp;
+                [popUp showInView:self.view animated:YES];
+                self.player.medalha1fase2 = YES;
+                self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
+                self.botaoProximo.enabled = YES;
+            }
         }
     }
 }

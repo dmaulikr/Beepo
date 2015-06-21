@@ -52,6 +52,7 @@
 @property (nonatomic) IBOutlet UIButton* botaoPlay;
 
 @property (nonatomic) Player* player;
+@property (weak, nonatomic) IBOutlet UIImageView *gifDedo;
 
 
 @end
