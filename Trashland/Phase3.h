@@ -36,4 +36,6 @@
 @property (nonatomic) IBOutlet UIImageView* badgeIdoso;
 @property (nonatomic) IBOutlet UIImageView* badgeTransito;
 
+@property (strong, nonatomic) UIViewController *popUpView;
+
 @end

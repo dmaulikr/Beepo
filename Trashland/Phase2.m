@@ -9,6 +9,7 @@
 #import "Phase2.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "PhasesChoose.h"
+#import "PopUpViewController.h"
 
 @interface Phase2()<UICollisionBehaviorDelegate, UIScrollViewDelegate>{
     UIDynamicAnimator* _animator;
@@ -69,11 +70,19 @@ float deslocIni;
 
 -(void)checkObjectives{
     if (treesCounter == 0) {
+        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+        [popUp setImageNamed: @"pop-up-natureza"];
+        self.popUpView = popUp;
+        [popUp showInView:self.view animated:YES];
         self.player.medalha2fase2 = YES;
         self.badgeNatureza.image = [UIImage imageNamed:@"badge-natureza-color"];
         self.botaoProximo.enabled = YES;
     }
     if (trashLeft == 0) {
+        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+        [popUp setImageNamed: @"pop-up-lixo"];
+        self.popUpView = popUp;
+        [popUp showInView:self.view animated:YES];
         self.player.medalha1fase2 = YES;
         self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
         self.botaoProximo.enabled = YES;

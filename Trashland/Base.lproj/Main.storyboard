@@ -764,6 +764,42 @@
             </objects>
             <point key="canvasLocation" x="-213" y="3667"/>
         </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="m5H-Pz-f3l">
+            <objects>
+                <viewController storyboardIdentifier="PopUpVC" id="zjx-eV-96O" customClass="PopUpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BTk-sg-3O0">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qOQ-nx-seu">
+                                <rect key="frame" x="315" y="173" width="395" height="422"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sAq-74-vr9">
+                                <rect key="frame" x="651" y="308" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-fechar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closePopup:" destination="zjx-eV-96O" eventType="touchUpInside" id="u9K-Sh-10t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="badgeImageView" destination="qOQ-nx-seu" id="mKW-7C-43w"/>
+                        <outlet property="popUpView" destination="BTk-sg-3O0" id="Dxk-bQ-FWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RgA-Lo-Gpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213" y="4483"/>
+        </scene>
         <!--Story2-->
         <scene sceneID="Fjp-ID-4Ky">
             <objects>
@@ -1166,7 +1202,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C72A8D2F-97A2-49C4-98B9-C8FC8E8C7405" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="117C482E-CFAC-46EF-A2A4-01AD92D4C17A" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1395,11 +1431,7 @@
         <image name="08_Trashcity" width="47" height="56"/>
         <image name="09_Trashcity" width="24" height="62"/>
         <image name="10_Trashcity" width="59" height="51"/>
-        <image name="11_Trashcity" width="33" height="46"/>
-        <image name="12_Trashcity" width="27" height="50"/>
-        <image name="13_Trashcity" width="34" height="51"/>
-        <image name="14_Trashcity" width="33" height="60"/>
-        <image name="C72A8D2F-97A2-49C4-98B9-C8FC8E8C7405" width="194" height="90">
+        <image name="117C482E-CFAC-46EF-A2A4-01AD92D4C17A" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2616,6 +2648,10 @@ GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
 BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
 </mutableData>
         </image>
+        <image name="11_Trashcity" width="33" height="46"/>
+        <image name="12_Trashcity" width="27" height="50"/>
+        <image name="13_Trashcity" width="34" height="51"/>
+        <image name="14_Trashcity" width="33" height="60"/>
         <image name="atividades-02" width="1024" height="768"/>
         <image name="atividades-casa" width="203" height="203"/>
         <image name="atividades-hospital" width="203" height="203"/>
@@ -2632,6 +2668,7 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="beepo" width="925" height="311"/>
         <image name="bird" width="61" height="56"/>
         <image name="botao-continuar" width="125" height="114"/>
+        <image name="botao-fechar" width="45" height="45"/>
         <image name="botao-som" width="54" height="54"/>
         <image name="botao-voltar" width="54" height="54"/>
         <image name="custom-bg" width="1024" height="768"/>

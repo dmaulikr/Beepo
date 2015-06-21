@@ -12,6 +12,7 @@
 #import "Start.h"
 #import "AppDelegate.h"
 #import "PhasesChoose.h"
+#import "PopUpViewController.h"
 
 @interface Phase1 ()<UIScrollViewDelegate>{
     int tempo;
@@ -500,12 +501,21 @@ SystemSoundID sound1;
 }
 
 -(void)checkBadges{
-    if (pontoAgua1 && pontoAgua2) {
+    if (!self.player.medalha1fase1 && pontoAgua1 && pontoAgua2) {
+        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+        [popUp setImageNamed: @"pop-up-agua"];
+        self.popUpView = popUp;
+        [popUp showInView:self.view animated:YES];
         self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
         self.player.medalha1fase1 = true;
         self.botaoProx.alpha = 1.0f;
+        
     }
-    if (pontoLuz1 && pontoLuz2 && pontoLuz3 && pontoLuz4 && pontoTV) {
+    if (!self.player.medalha2fase1 && pontoLuz1 && pontoLuz2 && pontoLuz3 && pontoLuz4 && pontoTV) {
+        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+        [popUp setImageNamed: @"pop-up-energia"];
+        self.popUpView = popUp;
+        [popUp showInView:self.view animated:YES];
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
         self.player.medalha2fase1 = true;
         self.botaoProx.alpha = 1.0f;

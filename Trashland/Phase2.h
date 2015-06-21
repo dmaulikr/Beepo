@@ -52,5 +52,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *badgeLixo;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeNatureza;
 
-
+@property (strong,nonatomic) UIViewController *popUpView;
 @end

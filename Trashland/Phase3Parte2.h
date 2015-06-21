@@ -28,4 +28,5 @@
 @property (nonatomic) IBOutlet UIButton* botaoVoltar;
 @property (nonatomic) IBOutlet UIButton* botaoSom;
 
+@property (strong, nonatomic) UIViewController *popUpView;
 @end

@@ -8,6 +8,7 @@
 
 #import "Phase3.h"
 #import "Phase3Parte2.h"
+#import "PopUpViewController.h"
 
 @interface Phase3()  <UICollisionBehaviorDelegate>
 
@@ -111,6 +112,11 @@ UICollisionBehavior* _collision2;
 
 -(void)watchThisBitch{
     if (self.viewVelha.center.y < 480) {
+        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+        [popUp setImageNamed: @"pop-up-idoso"];
+        self.popUpView = popUp;
+        [popUp showInView:self.view animated:YES];
+        
         Phase3Parte2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3Parte2VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
         self.player.medalha1fase3 = true;

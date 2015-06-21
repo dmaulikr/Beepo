@@ -9,6 +9,7 @@
 #import "Phase3Parte2.h"
 #import "DraggableView.h"
 #import "PhasesChoose.h"
+#import "PopUpViewController.h"
 
 @interface Phase3Parte2 ()
 
@@ -44,10 +45,14 @@
         self.viewCarro2.podeY = false;
     }
     if (self.viewCarro1.center.y < 260 && self.viewCarro2.center.y > 540) {
-        
+        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+        [popUp setImageNamed: @"pop-up-transito"];
+        popUp.badgeImageView.image = [UIImage imageNamed:@"pop-up-transito"];
+        self.popUpView = popUp;
+        [popUp showInView:self.view animated:YES];
          [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(escolhaDeFases) userInfo:nil repeats:NO];
         
-        [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationCurveEaseIn animations:^{
+        [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
                 self.ambulancia.frame = CGRectMake(1200, self.ambulancia.frame.origin.y, self.ambulancia.frame.size.width, self.ambulancia.frame.size.height); } completion:nil];
     }
     else{

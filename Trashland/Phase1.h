@@ -49,6 +49,7 @@
 @property (nonatomic) Player* player;
 @property (nonatomic) float deslocIni;
 @property (nonatomic) BOOL lookingBack;
+@property (strong, nonatomic) UIViewController *popUpView;
 
 
 - (void)dealWithMovement;
