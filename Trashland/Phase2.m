@@ -35,6 +35,7 @@ float deslocIni;
     _phaseScrollView.delegate = self;
     treesCounter = 5;
     trashLeft = 6;
+    self.lixos = [@[@NO,@NO,@NO,@NO,@NO,@NO] mutableCopy];
     
     if(self.player.medalha1fase2){
         self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
@@ -291,76 +292,85 @@ float deslocIni;
 
 -(void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier atPoint:(CGPoint)p{
     if (identifier &&  ![[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"piso"]) {
-        if (((UIImageView *)item).tag == 1 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPlastico"]) {
-            
-            
-            AudioServicesDisposeSystemSoundID (sound1);
-            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
-            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-            AudioServicesPlaySystemSound(sound1);
-            
-            
-            trashLeft = trashLeft - 1;
-            ((UIImageView *)item).userInteractionEnabled = NO;
-            ((UIImageView *)item).hidden = YES;
-            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
-        } else if (((UIImageView *)item).tag == 2 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPapel"]) {
-            
-            
-            AudioServicesDisposeSystemSoundID (sound1);
-            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
-            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-            AudioServicesPlaySystemSound(sound1);
-            
-            
-            trashLeft = trashLeft - 1;
-            ((UIImageView *)item).userInteractionEnabled = NO;
-            ((UIImageView *)item).hidden = YES;
-            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
-        } else if (((UIImageView *)item).tag == 3 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoVidro"]) {
-            
-            
-            AudioServicesDisposeSystemSoundID (sound1);
-            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
-            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-            AudioServicesPlaySystemSound(sound1);
-            
-            
-            trashLeft = trashLeft - 1;
-            ((UIImageView *)item).userInteractionEnabled = NO;
-            ((UIImageView *)item).hidden = YES;
-            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
-        } else if (((UIImageView *)item).tag == 4 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoMetal"]) {
-            
-            
-            AudioServicesDisposeSystemSoundID (sound1);
-            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
-            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-            AudioServicesPlaySystemSound(sound1);
-            
-            
-            trashLeft = trashLeft - 1;
-            ((UIImageView *)item).userInteractionEnabled = NO;
-            ((UIImageView *)item).hidden = YES;
-            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
-        } else if (((UIImageView *)item).tag == 5 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoOrganico"]) {
-            
-            
-            AudioServicesDisposeSystemSoundID (sound1);
-            NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
-            AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-            AudioServicesPlaySystemSound(sound1);
-            
-            
-            trashLeft = trashLeft - 1;
-            ((UIImageView *)item).userInteractionEnabled = NO;
-            ((UIImageView *)item).hidden = YES;
-            ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
-        } else {
-//            ((DraggableImageView *)item).frame = ((DraggableImageView *)item).starterFrame;
+        if ([self.lixos[((UIImageView *)item).tag] isEqual:@0]) {
+            if ((((UIImageView *)item).tag == 0 || ((UIImageView *)item).tag == 4) && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPlastico"]) {
+                
+                self.lixos[((UIImageView *)item).tag] = @YES;
+                NSLog(@"%ld", (long)((UIImageView *)item).tag);
+                
+                AudioServicesDisposeSystemSoundID (sound1);
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+                AudioServicesPlaySystemSound(sound1);
+                
+                
+                trashLeft = trashLeft - 1;
+                ((UIImageView *)item).userInteractionEnabled = NO;
+                ((UIImageView *)item).hidden = YES;
+                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+            } else if (((UIImageView *)item).tag == 3 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPapel"]) {
+                
+                self.lixos[((UIImageView *)item).tag] = @YES;
+                NSLog(@"%ld", (long)((UIImageView *)item).tag);
+                
+                AudioServicesDisposeSystemSoundID (sound1);
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+                AudioServicesPlaySystemSound(sound1);
+                
+                
+                trashLeft = trashLeft - 1;
+                ((UIImageView *)item).userInteractionEnabled = NO;
+                ((UIImageView *)item).hidden = YES;
+                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+            } else if (((UIImageView *)item).tag == 2 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoVidro"]) {
+                
+                self.lixos[((UIImageView *)item).tag] = @YES;
+                NSLog(@"%ld", (long)((UIImageView *)item).tag);
+                
+                AudioServicesDisposeSystemSoundID (sound1);
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+                AudioServicesPlaySystemSound(sound1);
+                
+                
+                trashLeft = trashLeft - 1;
+                ((UIImageView *)item).userInteractionEnabled = NO;
+                ((UIImageView *)item).hidden = YES;
+                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+            } else if (((UIImageView *)item).tag == 1 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoMetal"]) {
+                
+                self.lixos[((UIImageView *)item).tag] = @YES;
+                NSLog(@"%ld", (long)((UIImageView *)item).tag);
+                
+                AudioServicesDisposeSystemSoundID (sound1);
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+                AudioServicesPlaySystemSound(sound1);
+                
+                
+                trashLeft = trashLeft - 1;
+                ((UIImageView *)item).userInteractionEnabled = NO;
+                ((UIImageView *)item).hidden = YES;
+                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+            } else if (((UIImageView *)item).tag == 5 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoOrganico"]) {
+                
+                self.lixos[((UIImageView *)item).tag] = @YES;
+                NSLog(@"%ld", (long)((UIImageView *)item).tag);
+                
+                AudioServicesDisposeSystemSoundID (sound1);
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+                AudioServicesPlaySystemSound(sound1);
+                
+                
+                trashLeft = trashLeft - 1;
+                ((UIImageView *)item).userInteractionEnabled = NO;
+                ((UIImageView *)item).hidden = YES;
+                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+            }
+            [self checkObjectives];
         }
-        [self checkObjectives];
-
     }
 }
 #pragma mark - Button Actions

@@ -9,13 +9,21 @@
 #import "Story2.h"
 #import "Phase2.h"
 
+@interface Story2()
+
+@property (nonatomic) CGRect ghostStarterFrame;
+@property (nonatomic) CGRect shadowStarterFrame;
+
+@end
+
 @implementation Story2
 
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self moveBeepo:self.moveBeepoView];
-    
+    _ghostStarterFrame = self.imgFantasminha.frame;
+    _shadowStarterFrame = self.imgSombra.frame;
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     
     swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -35,6 +43,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    self.imgFantasminha.frame = _ghostStarterFrame;
+    self.imgSombra.frame = _shadowStarterFrame;
     [super viewDidAppear:animated];
     CGRect charFrame = self.imgFantasminha.frame;
     charFrame.origin.y = charFrame.origin.y - 25.0;

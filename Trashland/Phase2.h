@@ -53,4 +53,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *badgeNatureza;
 
 @property (strong,nonatomic) UIViewController *popUpView;
+@property (strong,nonatomic) NSMutableArray *lixos;
 @end
