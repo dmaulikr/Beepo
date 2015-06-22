@@ -7,6 +7,7 @@
 //
 
 #import "Story4.h"
+#import "Phase4.h"
 
 @interface Story4 ()
 
@@ -17,7 +18,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.fundo];
-    self.fundo.image = [UIImage imageNamed:@"historia-prefeitura"];
+    
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeft];
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
+    
 }
+
+-(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
+    if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionLeft)
+    {
+        Phase4 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase4VC"];
+        [game setModalPresentationStyle:UIModalPresentationFullScreen];
+        game.player = self.player;
+        [self presentViewController:game animated:NO completion:nil];
+    }
+    else if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionRight)
+    {
+        
+    }
+}
+
 
 @end

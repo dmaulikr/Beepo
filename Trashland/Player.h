@@ -29,4 +29,6 @@
 
 @property (nonatomic) UIImage* gasperEscolhido;
 
+@property (nonatomic) NSString* nomeEscolhido;
+
 @end

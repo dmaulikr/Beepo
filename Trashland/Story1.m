@@ -15,8 +15,9 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     
-    self.gasper.image = self.player.gasperEscolhido;
-   
+   // self.gasper.image = self.player.gasperEscolhido;
+    self.gasper.image = [UIImage imageNamed:@"fantasminha"];
+    
     self.gasperTriste.image = [UIImage imageNamed:@"fantasma-triste"];
     
     [self.view addSubview:self.background];
