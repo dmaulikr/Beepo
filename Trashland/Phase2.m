@@ -70,7 +70,7 @@ float deslocIni;
 }
 
 -(void)checkObjectives{
-    if (treesCounter == 0) {
+    if (treesCounter == 0 && !self.player.medalha2fase2) {
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-natureza"];
         self.popUpView = popUp;

@@ -74,6 +74,7 @@
                 [self out0];
                 [self in1];
                 self.controle.currentPage +=1;
+                self.gifDedo.hidden = YES;
                 break;
             case 1:
                 [self out1];

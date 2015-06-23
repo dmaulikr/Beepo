@@ -37,7 +37,6 @@ SystemSoundID sound2;
     [self moveClouds: _cloud14];
     
     [self.view addSubview:self.fundo];
-    [self.fundo addSubview:self.logo];
     [self.fundo addSubview:self.predios];
     [self.fundo addSubview:self.cloud1];
     [self.fundo addSubview:self.cloud2];
@@ -53,6 +52,7 @@ SystemSoundID sound2;
     [self.fundo addSubview:self.cloud12];
     [self.fundo addSubview:self.cloud13];
     [self.fundo addSubview:self.cloud14];
+    [self.fundo addSubview:self.logo];
     
     [self.fundo addSubview:self.playImage];
     

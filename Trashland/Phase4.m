@@ -15,27 +15,28 @@
 -(void)viewDidLoad{
  [super viewDidLoad];
     self.scrollView.contentSize = CGSizeMake(self.fundo.frame.size.width, self.fundo.frame.size.height);
+    NSLog(@"%f %f", self.fundo.frame.size.width, self.fundo.frame.size.height);
     self.scrollView.delegate = self;
     self.scrollView.bounces = NO;
     
-    [self.view addSubview:self.fundo];
-    [self.fundo addSubview:self.madeiraDoacao];
-    [self.fundo addSubview:self.velhaDoacao];
-    [self.fundo addSubview:self.botaoDoacao];
-    [self.fundo addSubview:self.menino1];
-    [self.fundo addSubview:self.menino2];
-    [self.fundo addSubview:self.guarda];
-    [self.fundo addSubview:self.prefeito];
-    [self.fundo addSubview:self.bandeira];
-    [self.fundo addSubview:self.zzzVagabundo];
-    [self.fundo addSubview:self.vagabundo];
-    [self.fundo addSubview:self.nomeFaixa];
-    [self.fundo addSubview:self.botaoDoacao];
-    [self.fundo addSubview:self.botaoEleicao];
-    [self.fundo addSubview:self.botaoVoltar];
-    [self.fundo addSubview:self.botaoSom];
-    [self.fundo addSubview:self.badgeDoacao];
-    [self.fundo addSubview:self.badgeVoto];
+//    [self.view addSubview:self.fundo];
+//    [self.fundo addSubview:self.madeiraDoacao];
+//    [self.fundo addSubview:self.velhaDoacao];
+//    [self.fundo addSubview:self.botaoDoacao];
+//    [self.fundo addSubview:self.menino1];
+//    [self.fundo addSubview:self.menino2];
+//    [self.fundo addSubview:self.guarda];
+//    [self.fundo addSubview:self.prefeito];
+//    [self.fundo addSubview:self.bandeira];
+//    [self.fundo addSubview:self.zzzVagabundo];
+//    [self.fundo addSubview:self.vagabundo];
+//    [self.fundo addSubview:self.nomeFaixa];
+//    [self.fundo addSubview:self.botaoDoacao];
+//    [self.fundo addSubview:self.botaoEleicao];
+//    [self.fundo addSubview:self.botaoVoltar];
+//    [self.fundo addSubview:self.botaoSom];
+//    [self.fundo addSubview:self.badgeDoacao];
+//    [self.fundo addSubview:self.badgeVoto];
 }
 
 -(IBAction)votar:(id)sender{

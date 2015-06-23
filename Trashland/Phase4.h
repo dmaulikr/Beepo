@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Player.h"
 
-@interface Phase4 : UIViewController
+@interface Phase4 : UIViewController <UIScrollViewDelegate>
 
 @property (nonatomic) IBOutlet UIScrollView* scrollView;
 @property (nonatomic) IBOutlet UIImageView* fundo;

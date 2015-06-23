@@ -31,6 +31,7 @@
     
     BOOL podePassar;
     
+    SystemSoundID sound1;
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -54,7 +55,6 @@
 UIDynamicAnimator* _animator;
 UIGravityBehavior* _gravity;
 UICollisionBehavior* _collision;
-SystemSoundID sound1;
 
 
 - (void)viewDidLoad {

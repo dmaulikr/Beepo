@@ -27,6 +27,13 @@
     ponto3 = false;
     ponto4 = false;
     
+    [self.view addSubview:self.fundo];
+    [self.fundo addSubview:self.brinquedo1];
+    [self.fundo addSubview:self.brinquedo2];
+    [self.fundo addSubview:self.brinquedo3];
+    [self.fundo addSubview:self.brinquedo4];
+    [self.fundo addSubview:self.botaoVoltar];
+    
     [self checkToys];
 }
 
@@ -75,6 +82,8 @@
     }
 }
 
+- (IBAction)botaoVoltarClicked:(UIButton *)sender {
+}
 
 
 @end

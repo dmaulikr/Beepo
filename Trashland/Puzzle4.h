@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Player.h"
-#import "DraggableView.h"
+#import "DraggableImageView.h"
 
 
 @interface Puzzle4 : UIViewController
@@ -17,10 +17,10 @@
 @property (nonatomic) Player* player;
 
 //Draggable!!!!
-@property (nonatomic) IBOutlet UIImageView* brinquedo1;
-@property (nonatomic) IBOutlet UIImageView* brinquedo2;
-@property (nonatomic) IBOutlet UIImageView* brinquedo3;
-@property (nonatomic) IBOutlet UIImageView* brinquedo4;
+@property (nonatomic) IBOutlet DraggableImageView* brinquedo1;
+@property (nonatomic) IBOutlet DraggableImageView* brinquedo2;
+@property (nonatomic) IBOutlet DraggableImageView* brinquedo3;
+@property (nonatomic) IBOutlet DraggableImageView* brinquedo4;
 
 @property (nonatomic) IBOutlet UIButton* botaoVoltar;
 @property (nonatomic) IBOutlet UIButton* botaoSom;
