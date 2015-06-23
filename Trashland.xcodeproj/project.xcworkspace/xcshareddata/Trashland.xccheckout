@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>16A26A9F-FF6F-4E85-8193-7C7223E30A64</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Trashland</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9562194FC49C53D82C4832E058335385319DBB54</key>
 		<string>https://github.com/brunomunizaf/Trashland.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Trashland.xcodeproj/project.xcworkspace</string>
+	<string>Trashland.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9562194FC49C53D82C4832E058335385319DBB54</key>

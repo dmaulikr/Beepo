@@ -54,7 +54,7 @@ SystemSoundID sound2;
     [self.fundo addSubview:self.cloud14];
     [self.fundo addSubview:self.logo];
     
-    [self.fundo addSubview:self.playImage];
+    [self.fundo addSubview:self.play];
     
     
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"carefreewav" withExtension:@"wav"];

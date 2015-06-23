@@ -15,5 +15,4 @@
 
 @property (nonatomic) IBOutlet UIImageView* fundo;
 
-
 @end

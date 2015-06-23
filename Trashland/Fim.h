@@ -13,7 +13,7 @@
 @interface Fim : UIViewController
 
 @property (nonatomic) IBOutlet UIImageView* fundo;
-@property (nonatomic) Player* player;
 
+@property (nonatomic) Player* player;
 
 @end

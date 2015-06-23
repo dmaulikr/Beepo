@@ -35,10 +35,13 @@
     [self.fundo addSubview:self.botaoVoltar];
     [self.fundo addSubview:self.badgeIdoso];
     [self.fundo addSubview:self.badgeTransito];
+    
+    self.ambulancia.image = [UIImage animatedImageNamed:@"ambulancia-" duration:1.f];
+    [self.fundo addSubview:self.ambulancia];
 }
 
 -(void)checkWayFree{
-    if (self.viewCarro1.center.y < 260) {
+    if (self.viewCarro1.center.y < 240) {
         self.viewCarro1.podeY = false;
     }
     if (self.viewCarro2.center.y > 540) {
@@ -59,7 +62,6 @@
         [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(checkWayFree) userInfo:nil repeats:NO];
     }
 }
-
 
 -(void)escolhaDeFases{
                 PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];

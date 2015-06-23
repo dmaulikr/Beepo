@@ -33,7 +33,6 @@
 @property (nonatomic) IBOutlet UIImageView* predios;
 
 @property (nonatomic) IBOutlet UIButton* play;
-@property (nonatomic) IBOutlet UIImageView* playImage;
 
 @end
 

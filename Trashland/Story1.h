@@ -13,17 +13,15 @@
 
 @property (nonatomic) IBOutlet UIPageControl* controle;
 @property (nonatomic) IBOutlet UIImageView* background;
+@property (nonatomic) IBOutlet UIButton* botaoVoltar;
+@property (nonatomic) IBOutlet UIButton* botaoPlay;
+@property (nonatomic) Player* player;
+@property (weak, nonatomic) IBOutlet UIImageView *gifDedo;
 
 //Page 1
 @property (nonatomic) IBOutlet UIView* viewGasper;
 @property (nonatomic) IBOutlet UIImageView* sombra;
 @property (nonatomic) IBOutlet UIImageView* gasper;
-
-@property (nonatomic) IBOutlet UIView* viewGasperTriste;
-@property (nonatomic) IBOutlet UIImageView* gasperTriste;
-@property (nonatomic) IBOutlet UIImageView* gaspersombraTriste;
-
-
 @property (nonatomic) IBOutlet UILabel* frase1;
 @property (nonatomic) IBOutlet UILabel* frase2;
 
@@ -31,28 +29,12 @@
 @property (nonatomic) IBOutlet UIImageView* interrogacao1;
 @property (nonatomic) IBOutlet UIImageView* interrogacao2;
 @property (nonatomic) IBOutlet UIImageView* interrogacao3;
-
 @property (nonatomic) IBOutlet UILabel* frase3;
 @property (nonatomic) IBOutlet UILabel* frase4;
 
 //Page 3
-@property (nonatomic) IBOutlet UILabel* frase5;
-@property (nonatomic) IBOutlet UILabel* frase6;
-@property (nonatomic) IBOutlet UILabel* frase7;
-
-@property (nonatomic) IBOutlet UIImageView* balao1;
-@property (nonatomic) IBOutlet UIImageView* balao2;
-@property (nonatomic) IBOutlet UIImageView* balao3;
-
-@property (nonatomic) IBOutlet UIImageView* balao4;
-@property (nonatomic) IBOutlet UIImageView* balao5;
-@property (nonatomic) IBOutlet UIImageView* balao6;
-
-@property (nonatomic) IBOutlet UIButton* botaoVoltar;
-@property (nonatomic) IBOutlet UIButton* botaoPlay;
-
-@property (nonatomic) Player* player;
-@property (weak, nonatomic) IBOutlet UIImageView *gifDedo;
-
+@property (nonatomic) IBOutlet UIView* viewGasperTriste;
+@property (nonatomic) IBOutlet UIImageView* gasperTriste;
+@property (nonatomic) IBOutlet UIImageView* gaspersombraTriste;
 
 @end

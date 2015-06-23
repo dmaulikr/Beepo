@@ -21,8 +21,13 @@ UICollisionBehavior* _collision2;
 -(void) viewDidLoad{
     [super viewDidLoad];
     [self checkBadges];
+    [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(setGreen) userInfo:nil repeats:NO];
 
 }
+-(void)setGreen{
+    self.sinalVerde.hidden = NO;
+}
+
 
 - (void)viewDidAppear:(BOOL)animated {
     
@@ -80,6 +85,8 @@ UICollisionBehavior* _collision2;
     [self.fundo addSubview:self.botaoVoltar];
     [self.fundo addSubview:self.badgeIdoso];
     [self.fundo addSubview:self.badgeTransito];
+    [self.fundo addSubview:self.sinalVerde];
+    self.sinalVerde.hidden = YES;
 }
 
 -(void)checkBadges{

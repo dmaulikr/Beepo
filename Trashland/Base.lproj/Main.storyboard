@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="iyw-dH-wbs">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -16,128 +16,6 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Start-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="StartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="Start" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jYU-Bn-jnM">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86477366855796178" green="0.95188680709374884" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="predio" id="gun-1V-ido">
-                                <rect key="frame" x="131" y="427" width="762" height="341"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="jdM-Sf-th9">
-                                <rect key="frame" x="1733" y="191" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="GSG-2o-esl">
-                                <rect key="frame" x="757" y="214" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="DqM-wA-NGo">
-                                <rect key="frame" x="1182" y="185" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="ijb-ev-mkh">
-                                <rect key="frame" x="191" y="204" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="g7t-6y-sHm">
-                                <rect key="frame" x="1358" y="310" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="SU8-kj-JCs">
-                                <rect key="frame" x="376" y="342" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" id="egb-OB-o89">
-                                <rect key="frame" x="454" y="230" width="107" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uT0-ix-F1H">
-                                <rect key="frame" x="454" y="230" width="107" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tf3-kX-2e3"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="Jbr-cD-peO">
-                                <rect key="frame" x="1686" y="337" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="3tJ-6z-eOq">
-                                <rect key="frame" x="704" y="354" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="MaU-2V-ujj">
-                                <rect key="frame" x="1970" y="90" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="eTD-B7-iys">
-                                <rect key="frame" x="1063" y="342" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="1LS-gz-naK">
-                                <rect key="frame" x="81" y="362" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="ppV-NR-ijp">
-                                <rect key="frame" x="970" y="274" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="M7F-iH-F5d">
-                                <rect key="frame" x="980" y="284" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="fLt-e6-ycP">
-                                <rect key="frame" x="985" y="114" width="197" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beepo" id="vLT-8I-pTA">
-                                <rect key="frame" x="273" y="44" width="499" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="cloud1" destination="g7t-6y-sHm" id="a4l-mp-YTA"/>
-                        <outlet property="cloud10" destination="SU8-kj-JCs" id="iPc-pO-V9L"/>
-                        <outlet property="cloud11" destination="3tJ-6z-eOq" id="Dfi-WX-GnH"/>
-                        <outlet property="cloud12" destination="GSG-2o-esl" id="ASd-AP-aGH"/>
-                        <outlet property="cloud13" destination="M7F-iH-F5d" id="fTm-0j-vIa"/>
-                        <outlet property="cloud14" destination="fLt-e6-ycP" id="zXN-kK-7CJ"/>
-                        <outlet property="cloud2" destination="DqM-wA-NGo" id="YRE-fs-POb"/>
-                        <outlet property="cloud3" destination="jdM-Sf-th9" id="6Ao-F7-nuI"/>
-                        <outlet property="cloud4" destination="MaU-2V-ujj" id="yWj-hO-wFu"/>
-                        <outlet property="cloud5" destination="Jbr-cD-peO" id="g65-oE-y9b"/>
-                        <outlet property="cloud6" destination="eTD-B7-iys" id="Kz1-zH-EP3"/>
-                        <outlet property="cloud7" destination="ppV-NR-ijp" id="epT-La-VU7"/>
-                        <outlet property="cloud8" destination="ijb-ev-mkh" id="0ex-Vm-H0n"/>
-                        <outlet property="cloud9" destination="1LS-gz-naK" id="S24-PM-hdE"/>
-                        <outlet property="fundo" destination="jYU-Bn-jnM" id="awM-8s-Zqm"/>
-                        <outlet property="logo" destination="vLT-8I-pTA" id="JKB-TU-vow"/>
-                        <outlet property="play" destination="uT0-ix-F1H" id="JNf-R3-7eK"/>
-                        <outlet property="playImage" destination="egb-OB-o89" id="w1I-vP-KDq"/>
-                        <outlet property="predios" destination="gun-1V-ido" id="2Yw-Uy-No5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-208" y="476"/>
-        </scene>
         <!--Phases Choose-->
         <scene sceneID="bWp-Bc-xXA">
             <objects>
@@ -249,7 +127,7 @@
                                 <color key="textColor" red="0.45490196078431372" green="0.40000000000000002" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOSPITAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cf3-Ph-XDv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cf3-Ph-XDv">
                                 <rect key="frame" x="573" y="597" width="124" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="38"/>
@@ -297,6 +175,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3g-v5-2FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-208" y="2073"/>
+        </scene>
+        <!--Start-->
+        <scene sceneID="JTd-PV-Qyf">
+            <objects>
+                <viewController storyboardIdentifier="StartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iyw-dH-wbs" customClass="Start" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="36N-L8-h5g">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="80Z-gQ-4Ka">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.89632816179999997" green="0.95633445039999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beepo" id="1IO-Gp-J2G">
+                                <rect key="frame" x="225" y="39" width="575" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="predio" id="vxh-TL-C53">
+                                <rect key="frame" x="172" y="396" width="691" height="372"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MPv-Wd-rrn">
+                                <rect key="frame" x="481" y="284" width="73" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao-proximo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="iyw-dH-wbs" eventType="touchUpInside" id="DbB-M9-hIW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="fundo" destination="80Z-gQ-4Ka" id="ctV-7R-2Rg"/>
+                        <outlet property="logo" destination="1IO-Gp-J2G" id="6pE-IX-gpT"/>
+                        <outlet property="play" destination="MPv-Wd-rrn" id="0PF-nF-bYI"/>
+                        <outlet property="predios" destination="vxh-TL-C53" id="VjW-NA-nbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDb-I6-jaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-208" y="470"/>
         </scene>
         <!--Story3-->
         <scene sceneID="YU4-Pq-E5U">
@@ -850,7 +775,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travessia-bg" id="l34-vp-vmV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travessia-bg2" id="l34-vp-vmV">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -930,6 +855,10 @@
                                 <rect key="frame" x="180" y="20" width="53" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travessia-sinal-verde" id="k7p-zT-Tkp">
+                                <rect key="frame" x="258" y="305" width="107" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -947,6 +876,7 @@
                         <outlet property="imageSombraBeepo" destination="03R-xf-aN5" id="Pq5-Xb-egG"/>
                         <outlet property="imageSombraVelha" destination="h7G-mh-EDG" id="YdQ-jz-iY6"/>
                         <outlet property="imageVelha" destination="xJc-xN-JLa" id="cck-Uj-ClL"/>
+                        <outlet property="sinalVerde" destination="k7p-zT-Tkp" id="bJC-7y-uk0"/>
                         <outlet property="viewBeepo" destination="Bpd-st-BTJ" id="ovS-eX-bhF"/>
                         <outlet property="viewVelha" destination="DBN-29-53U" id="m7i-WN-gOt"/>
                     </connections>
@@ -1027,28 +957,6 @@
                                         <rect key="frame" x="2450" y="664" width="38" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-doacao2" id="nPc-K5-Jv4">
-                                        <rect key="frame" x="120" y="20" width="53" height="72"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="luB-8A-ImA">
-                                        <rect key="frame" x="29" y="33" width="54" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="botao-voltar">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hha-Hr-XWn">
-                                        <rect key="frame" x="938" y="33" width="54" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="botao-som">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-eleicao2" id="1tL-nQ-Duz">
-                                        <rect key="frame" x="180" y="20" width="53" height="72"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-03" id="6kQ-3j-tsi">
                                         <rect key="frame" x="1596" y="372" width="147" height="81"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1058,6 +966,28 @@
                                     <outlet property="delegate" destination="cyj-L1-dPl" id="FU0-Nn-Ign"/>
                                 </connections>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-doacao2" id="nPc-K5-Jv4">
+                                <rect key="frame" x="120" y="20" width="53" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-eleicao2" id="1tL-nQ-Duz">
+                                <rect key="frame" x="180" y="20" width="53" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="luB-8A-ImA">
+                                <rect key="frame" x="29" y="33" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao-voltar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hha-Hr-XWn">
+                                <rect key="frame" x="938" y="33" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1086,7 +1016,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTL-X8-qQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505.5" y="3675"/>
+            <point key="canvasLocation" x="1351" y="3675"/>
         </scene>
         <!--Puzzle4-->
         <scene sceneID="acQ-N4-PmO">
@@ -1112,6 +1042,10 @@
                                 <rect key="frame" x="641" y="182" width="162" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura_caixa_doacao" id="fyO-NO-jY0">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jpB-7j-b9D">
                                 <rect key="frame" x="938" y="33" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1136,10 +1070,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-eleicao2" id="k5Z-EW-SHi">
                                 <rect key="frame" x="180" y="20" width="53" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura_caixa_doacao" id="fyO-NO-jY0">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1274,7 +1204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtu-gS-0dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="5278"/>
+            <point key="canvasLocation" x="1351" y="5275"/>
         </scene>
         <!--Fim-->
         <scene sceneID="E9D-0D-xel">
@@ -1299,7 +1229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09o-JM-rAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="6082"/>
+            <point key="canvasLocation" x="1351" y="6075"/>
         </scene>
         <!--Story4-->
         <scene sceneID="dth-A6-Ga2">
@@ -1324,7 +1254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Np-jm-hoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="2874"/>
+            <point key="canvasLocation" x="1351" y="2874"/>
         </scene>
         <!--Phase3 Parte2-->
         <scene sceneID="Qm8-cj-Rlh">
@@ -1550,7 +1480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNM-Ib-lal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1686" y="2884"/>
+            <point key="canvasLocation" x="-1726" y="2874"/>
         </scene>
         <!--Phase1-->
         <scene sceneID="3O1-ND-yRu">
@@ -1578,7 +1508,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CECA432E-BF5F-46E0-8AC2-3542B36A77C8" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="D40781D8-2928-4713-AA50-F0BD97B0C9E7" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1811,7 +1741,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="CECA432E-BF5F-46E0-8AC2-3542B36A77C8" width="194" height="90">
+        <image name="D40781D8-2928-4713-AA50-F0BD97B0C9E7" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -3045,6 +2975,7 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="bird" width="61" height="56"/>
         <image name="botao-continuar" width="125" height="114"/>
         <image name="botao-fechar" width="45" height="45"/>
+        <image name="botao-proximo" width="53" height="53"/>
         <image name="botao-som" width="54" height="54"/>
         <image name="botao-voltar" width="54" height="54"/>
         <image name="bt-1-puzzle" width="353" height="124"/>
@@ -3075,7 +3006,6 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="luz1-com-nuvem" width="418" height="659"/>
         <image name="luz2-com-nuvem" width="323" height="548"/>
         <image name="novoBackgroundParque" width="3531" height="768"/>
-        <image name="nuvem-05" width="195" height="88"/>
         <image name="parque-08" width="176" height="189"/>
         <image name="parque-09" width="224" height="231"/>
         <image name="parque-10" width="184" height="190"/>
@@ -3124,7 +3054,8 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="travessia-01" width="560" height="262"/>
         <image name="travessia-02" width="567" height="259"/>
         <image name="travessia-03" width="229" height="230"/>
-        <image name="travessia-bg" width="2048" height="1536"/>
+        <image name="travessia-bg2" width="2048" height="1536"/>
+        <image name="travessia-sinal-verde" width="210" height="471"/>
         <image name="ultimacasa" width="2486" height="768"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

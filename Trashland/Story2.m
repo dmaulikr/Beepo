@@ -18,7 +18,6 @@
 
 @implementation Story2
 
-
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self moveBeepo:self.moveBeepoView];

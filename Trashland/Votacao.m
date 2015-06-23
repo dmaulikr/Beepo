@@ -58,8 +58,6 @@
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
     game.player = self.player;
     [self presentViewController:game animated:NO completion:nil];
-
-    
 }
 
 -(IBAction)cancelar:(id)sender{

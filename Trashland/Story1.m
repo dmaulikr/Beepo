@@ -8,6 +8,7 @@
 
 #import "Story1.h"
 #import "Phase1.h"
+#import "UIView+Animation2.h"
 #import "AppDelegate.h"
 
 @implementation Story1
@@ -26,9 +27,6 @@
     [self.background addSubview:self.frase2];
     [self.background addSubview:self.frase3];
     [self.background addSubview:self.frase4];
-    [self.background addSubview:self.frase5];
-    [self.background addSubview:self.frase6];
-    [self.background addSubview:self.frase7];
     [self.background addSubview:self.interrogacao1];
     [self.background addSubview:self.interrogacao2];
     [self.background addSubview:self.interrogacao3];
@@ -46,9 +44,6 @@
     [self.interrogacao1 setAlpha:0.0f];
     [self.frase3 setAlpha:0.0f];
     [self.frase4 setAlpha:0.0f];
-    [self.frase5 setAlpha:0.0f];
-    [self.frase6 setAlpha:0.0f];
-    [self.frase7 setAlpha:0.0f];
     [self.viewGasperTriste setAlpha:0.0f];
     
     
@@ -151,15 +146,15 @@
 }
 
 -(void)out0{
-      [UIView animateWithDuration:.6f animations:^{
+   //   [UIView animateWithDuration:.6f animations:^{
     [self.frase1 setAlpha:0.0f];
     [self.frase2 setAlpha:0.0f];
     [self.viewGasper setAlpha:0.0f];
-    } completion:^(BOOL finished) {}];
+  //  } completion:^(BOOL finished) {}];
 }
 
 -(void)in0{
-          [UIView animateWithDuration:.6f animations:^{
+   //       [UIView animateWithDuration:.6f animations:^{
     [self.frase1 setAlpha:1.0f];
     [self.frase2 setAlpha:1.0f];
     [self.viewGasper setAlpha:1.0f];
@@ -167,11 +162,11 @@
     self.frase2.text = @"dos outros habitantes da sua cidade, trashland.";
     
     self.background.image = [UIImage imageNamed:@"telainicial1_semtexto"];
-                  } completion:^(BOOL finished) {}];
+   //               } completion:^(BOOL finished) {}];
 }
 
 -(void)out1{
-              [UIView animateWithDuration:.6f animations:^{
+        //      [UIView animateWithDuration:.6f animations:^{
     [self.interrogacao3 setAlpha:0.0f];
     [self.interrogacao2 setAlpha:0.0f];
     [self.interrogacao1 setAlpha:0.0f];
@@ -179,25 +174,25 @@
     [self.frase2 setAlpha:0.0f];
     [self.frase3 setAlpha:0.0f];
     [self.frase4 setAlpha:0.0f];
-                      } completion:^(BOOL finished) {}];
+       //               } completion:^(BOOL finished) {}];
 }
 
 -(void)in1{
-    [UIView animateWithDuration:.6f animations:^{
+   // [UIView animateWithDuration:.6f animations:^{
        
-        [UIView animateWithDuration:.6f animations:^{
+     //   [UIView animateWithDuration:.6f animations:^{
             [self.interrogacao3 setAlpha:1.0f];
             
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:.6f animations:^{
+     //   } completion:^(BOOL finished) {
+      //      [UIView animateWithDuration:.6f animations:^{
                 [self.interrogacao1 setAlpha:1.0f];
-            } completion:^(BOOL finished) {
-                [UIView animateWithDuration:.6f animations:^{
-                    [self.interrogacao2 setAlpha:1.0f];
-                } completion:^(BOOL finished) {}];
-            }];
-        }];
-        
+      //      } completion:^(BOOL finished) {
+              //  [UIView animateWithDuration:.6f animations:^{
+                  [self.interrogacao2 setAlpha:1.0f];
+     //           } completion:^(BOOL finished) {}];
+     //       }];
+     //   }];
+     //
         
         
         [self.frase3 setAlpha:1.0f];
@@ -209,22 +204,27 @@
         self.frase2.text = @"ainda mais na sua cidade trashland";
         self.frase4.text = @"onde tudo parecia estar fora do lugar!";
         self.background.image = [UIImage imageNamed:@"historinha2_"];
+    
+    
+    [self.interrogacao1 bounce:NULL];
+    [self.interrogacao2 bounce:NULL];
+    [self.interrogacao3 bounce:NULL];
 
-    } completion:^(BOOL finished) {}];
+   // } completion:^(BOOL finished) {}];
     
 }
 
 -(void)out2{
-     [UIView animateWithDuration:.6f animations:^{
+  //   [UIView animateWithDuration:.6f animations:^{
     [self.viewGasperTriste setAlpha:0.0f];
-    } completion:^(BOOL finished) {}];
+  //  } completion:^(BOOL finished) {}];
 }
 
 -(void)in2{
-       [UIView animateWithDuration:.6f animations:^{
+  //     [UIView animateWithDuration:.6f animations:^{
     [self.viewGasperTriste setAlpha:1.0f];
     self.background.image = [UIImage imageNamed:@"telainicial3-1"];
-               } completion:^(BOOL finished) {}];
+  //             } completion:^(BOOL finished) {}];
 }
 
 -(IBAction)voltar:(id)sender{

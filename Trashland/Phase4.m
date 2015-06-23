@@ -45,6 +45,7 @@
     game.player = self.player;
     [self presentViewController:game animated:NO completion:nil];
 }
+
 -(IBAction)doar:(id)sender{
     Puzzle4 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Puzzle4VC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];

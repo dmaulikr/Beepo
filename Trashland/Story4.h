@@ -14,4 +14,5 @@
 @property (nonatomic) IBOutlet UIImageView* fundo;
 
 @property (nonatomic) Player* player;
+
 @end
