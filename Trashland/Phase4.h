@@ -11,42 +11,15 @@
 
 @interface Phase4 : UIViewController <UIScrollViewDelegate>
 
-@property (nonatomic) IBOutlet UIScrollView* scrollView;
-
-@property (nonatomic) IBOutlet UIImageView* fundo;
+@property (nonatomic) IBOutlet UIScrollView* phase4ScrollView;
 
 @property (nonatomic) Player* player;
 
-@property (nonatomic) IBOutlet UIButton* botaoVoltar;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
-@property (nonatomic) IBOutlet UIButton* botaoSom;
 
 @property (nonatomic) IBOutlet UIImageView* badgeDoacao;
 
 @property (nonatomic) IBOutlet UIImageView* badgeVoto;
-
-@property (nonatomic) IBOutlet UIButton* botaoDoacao;
-
-@property (nonatomic) IBOutlet UIButton* botaoEleicao;
-
-@property (nonatomic) IBOutlet UIImageView* madeiraDoacao;
-
-@property (nonatomic) IBOutlet UIImageView* velhaDoacao;
-
-@property (nonatomic) IBOutlet UIImageView* menino1;
-
-@property (nonatomic) IBOutlet UIImageView* menino2;
-
-@property (nonatomic) IBOutlet UIImageView* guarda;
-
-@property (nonatomic) IBOutlet UIImageView* prefeito;
-
-@property (nonatomic) IBOutlet UIImageView* nomeFaixa;
-
-@property (nonatomic) IBOutlet UIImageView* bandeira;
-
-@property (nonatomic) IBOutlet UIImageView* vagabundo;
-
-@property (nonatomic) IBOutlet UIImageView* zzzVagabundo;
 
 @end

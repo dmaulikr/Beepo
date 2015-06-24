@@ -48,19 +48,22 @@
         self.viewCarro2.podeY = false;
     }
     if (self.viewCarro1.center.y < 260 && self.viewCarro2.center.y > 540) {
-        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
-        [popUp setImageNamed: @"pop-up-transito"];
-        popUp.badgeImageView.image = [UIImage imageNamed:@"pop-up-transito"];
-        self.popUpView = popUp;
-        [popUp showInView:self.view animated:YES];
-         [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(escolhaDeFases) userInfo:nil repeats:NO];
-        
         [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
                 self.ambulancia.frame = CGRectMake(1200, self.ambulancia.frame.origin.y, self.ambulancia.frame.size.width, self.ambulancia.frame.size.height); } completion:nil];
+        [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(showBadgePopUp) userInfo:nil repeats:NO];
     }
     else{
         [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(checkWayFree) userInfo:nil repeats:NO];
     }
+}
+
+- (void)showBadgePopUp{
+    PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+    [popUp setImageNamed: @"pop-up-transito"];
+    popUp.badgeImageView.image = [UIImage imageNamed:@"pop-up-transito"];
+    self.popUpView = popUp;
+    [popUp showInView:self.view animated:YES];
+    [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(escolhaDeFases) userInfo:nil repeats:NO];
 }
 
 -(void)escolhaDeFases{

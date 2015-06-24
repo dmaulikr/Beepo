@@ -14,10 +14,9 @@
 
 -(void)viewDidLoad{
  [super viewDidLoad];
-    self.scrollView.contentSize = CGSizeMake(self.fundo.frame.size.width, self.fundo.frame.size.height);
-    NSLog(@"%f %f", self.fundo.frame.size.width, self.fundo.frame.size.height);
-    self.scrollView.delegate = self;
-    self.scrollView.bounces = NO;
+    _phase4ScrollView.contentSize = _contentView.frame.size;
+    NSLog(@"prefeitura: %f %f", self.contentView.frame.size.width, self.contentView.frame.size.height);
+    _phase4ScrollView.delegate = self;
     
 //    [self.view addSubview:self.fundo];
 //    [self.fundo addSubview:self.madeiraDoacao];
@@ -37,6 +36,11 @@
 //    [self.fundo addSubview:self.botaoSom];
 //    [self.fundo addSubview:self.badgeDoacao];
 //    [self.fundo addSubview:self.badgeVoto];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"meu deos");
+    
 }
 
 -(IBAction)votar:(id)sender{

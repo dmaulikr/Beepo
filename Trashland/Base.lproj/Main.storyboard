@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="7Ca-f3-yki">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="iyw-dH-wbs">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -913,83 +913,87 @@
         <!--Phase4-->
         <scene sceneID="vc6-MD-o0c">
             <objects>
-                <viewController storyboardIdentifier="Phase4VC" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cyj-L1-dPl" customClass="Phase4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Phase4VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cyj-L1-dPl" customClass="Phase4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rVY-1Z-tnu">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rGH-r3-xCT">
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" id="rGH-r3-xCT">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-01-2" id="Ja3-Ht-SOx">
+                                    <view autoresizesSubviews="NO" contentMode="scaleAspectFit" id="8IX-PN-AXF" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="2945" height="768"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-bancada" id="7Fi-7w-Mqi">
-                                        <rect key="frame" x="798" y="695" width="269" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-13" id="wPX-83-xv4">
-                                        <rect key="frame" x="656" y="659" width="98" height="92"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-08" id="2QV-nL-6b6">
-                                        <rect key="frame" x="1853" y="690" width="60" height="61"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-09" id="syK-Zx-kfI">
-                                        <rect key="frame" x="1921" y="680" width="68" height="71"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-07" id="E4U-cY-3RZ">
-                                        <rect key="frame" x="2242" y="598" width="120" height="153"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parque-19" id="pXy-UR-QRh">
-                                        <rect key="frame" x="1997" y="632" width="95" height="112"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-15" id="Pek-Xh-T2T">
-                                        <rect key="frame" x="2479" y="671" width="86" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cfI-SR-pff">
-                                        <rect key="frame" x="802" y="622" width="265" height="106"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="doar:" destination="cyj-L1-dPl" eventType="touchUpInside" id="fhL-ZN-ZOV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AzW-P5-wjL">
-                                        <rect key="frame" x="2136" y="664" width="83" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="prefeitura-urna">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="votar:" destination="cyj-L1-dPl" eventType="touchUpInside" id="vWE-wB-5F2"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-20" id="Klu-bj-bJB">
-                                        <rect key="frame" x="2053" y="530" width="304" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-14" id="xZK-gB-Twt">
-                                        <rect key="frame" x="2450" y="664" width="38" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-03" id="6kQ-3j-tsi">
-                                        <rect key="frame" x="1596" y="372" width="147" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-01-2" id="Ja3-Ht-SOx">
+                                                <rect key="frame" x="0.0" y="0.0" width="2945" height="768"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-bancada" id="7Fi-7w-Mqi">
+                                                <rect key="frame" x="798" y="695" width="269" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-13" id="wPX-83-xv4">
+                                                <rect key="frame" x="656" y="659" width="98" height="92"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-08" id="2QV-nL-6b6">
+                                                <rect key="frame" x="1853" y="690" width="60" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-09" id="syK-Zx-kfI">
+                                                <rect key="frame" x="1921" y="680" width="68" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-07" id="E4U-cY-3RZ">
+                                                <rect key="frame" x="2242" y="598" width="120" height="153"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parque-19" id="pXy-UR-QRh">
+                                                <rect key="frame" x="1997" y="632" width="95" height="112"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-15" id="Pek-Xh-T2T">
+                                                <rect key="frame" x="2479" y="671" width="86" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cfI-SR-pff">
+                                                <rect key="frame" x="802" y="622" width="265" height="106"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="doar:" destination="cyj-L1-dPl" eventType="touchUpInside" id="fhL-ZN-ZOV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AzW-P5-wjL">
+                                                <rect key="frame" x="2136" y="664" width="83" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="prefeitura-urna">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="votar:" destination="cyj-L1-dPl" eventType="touchUpInside" id="vWE-wB-5F2"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-20" id="Klu-bj-bJB">
+                                                <rect key="frame" x="2053" y="530" width="304" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-14" id="xZK-gB-Twt">
+                                                <rect key="frame" x="2450" y="664" width="38" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-03" id="6kQ-3j-tsi">
+                                                <rect key="frame" x="1596" y="372" width="147" height="81"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
-                                <connections>
-                                    <outlet property="delegate" destination="cyj-L1-dPl" id="FU0-Nn-Ign"/>
-                                </connections>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-doacao2" id="nPc-K5-Jv4">
                                 <rect key="frame" x="120" y="20" width="53" height="72"/>
@@ -1021,22 +1025,8 @@
                     <connections>
                         <outlet property="badgeDoacao" destination="nPc-K5-Jv4" id="OIA-nn-usl"/>
                         <outlet property="badgeVoto" destination="1tL-nQ-Duz" id="KHq-eq-2Sf"/>
-                        <outlet property="bandeira" destination="6kQ-3j-tsi" id="eQH-er-hIc"/>
-                        <outlet property="botaoDoacao" destination="cfI-SR-pff" id="hJ1-S6-hKB"/>
-                        <outlet property="botaoEleicao" destination="AzW-P5-wjL" id="5w1-EE-kZU"/>
-                        <outlet property="botaoSom" destination="Hha-Hr-XWn" id="66e-Rs-qen"/>
-                        <outlet property="botaoVoltar" destination="luB-8A-ImA" id="qPq-Sl-wp7"/>
-                        <outlet property="fundo" destination="Ja3-Ht-SOx" id="lKn-qk-kaP"/>
-                        <outlet property="guarda" destination="pXy-UR-QRh" id="jep-d7-x2y"/>
-                        <outlet property="madeiraDoacao" destination="7Fi-7w-Mqi" id="xft-Ge-44X"/>
-                        <outlet property="menino1" destination="2QV-nL-6b6" id="97F-T0-qpV"/>
-                        <outlet property="menino2" destination="syK-Zx-kfI" id="E4w-bt-hpR"/>
-                        <outlet property="nomeFaixa" destination="Klu-bj-bJB" id="j3p-YY-ron"/>
-                        <outlet property="prefeito" destination="E4U-cY-3RZ" id="6YZ-ZL-xB9"/>
-                        <outlet property="scrollView" destination="rGH-r3-xCT" id="saa-V1-cu5"/>
-                        <outlet property="vagabundo" destination="Pek-Xh-T2T" id="YVO-54-0Hb"/>
-                        <outlet property="velhaDoacao" destination="wPX-83-xv4" id="4Ed-Cr-YPa"/>
-                        <outlet property="zzzVagabundo" destination="xZK-gB-Twt" id="OTR-Ub-lEn"/>
+                        <outlet property="contentView" destination="8IX-PN-AXF" id="Xna-TG-z2I"/>
+                        <outlet property="phase4ScrollView" destination="rGH-r3-xCT" id="ASh-2B-Vir"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTL-X8-qQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1115,7 +1105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiW-Yd-ybD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="4475"/>
+            <point key="canvasLocation" x="1361" y="4511"/>
         </scene>
         <!--Votacao-->
         <scene sceneID="jUS-eM-peW">
@@ -1533,7 +1523,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B8FC3381-3FA6-4C14-9C3D-95426205B6D6" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5F7C2671-06C1-4AB6-91FA-2A82DB74662C" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1766,7 +1756,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="B8FC3381-3FA6-4C14-9C3D-95426205B6D6" width="194" height="90">
+        <image name="5F7C2671-06C1-4AB6-91FA-2A82DB74662C" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
