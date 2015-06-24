@@ -184,6 +184,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DOW-wS-mkT">
+                                <rect key="frame" x="490" y="291" width="56" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="iyw-dH-wbs" eventType="touchUpInside" id="pb1-aq-ZWo"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="80Z-gQ-4Ka">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,12 +217,27 @@
                                     <action selector="start:" destination="iyw-dH-wbs" eventType="touchUpInside" id="DbB-M9-hIW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-05" id="qsJ-aB-430">
+                                <rect key="frame" x="1096" y="291" width="175" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-07" id="PGD-TV-foJ">
+                                <rect key="frame" x="1442" y="360" width="175" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvem-06" id="eSJ-cU-rnF">
+                                <rect key="frame" x="1793" y="303" width="175" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
+                        <outlet property="cloud1" destination="qsJ-aB-430" id="lFZ-el-l1u"/>
+                        <outlet property="cloud2" destination="PGD-TV-foJ" id="Pwm-zt-ngS"/>
+                        <outlet property="cloud3" destination="eSJ-cU-rnF" id="TgJ-sj-QQy"/>
                         <outlet property="fundo" destination="80Z-gQ-4Ka" id="ctV-7R-2Rg"/>
                         <outlet property="logo" destination="1IO-Gp-J2G" id="6pE-IX-gpT"/>
                         <outlet property="play" destination="MPv-Wd-rrn" id="0PF-nF-bYI"/>
@@ -1508,7 +1533,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="D40781D8-2928-4713-AA50-F0BD97B0C9E7" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="D756366D-DFC2-45C8-A8D5-25DA5B24ECB8" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1741,7 +1766,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="D40781D8-2928-4713-AA50-F0BD97B0C9E7" width="194" height="90">
+        <image name="D756366D-DFC2-45C8-A8D5-25DA5B24ECB8" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -3006,6 +3031,9 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="luz1-com-nuvem" width="418" height="659"/>
         <image name="luz2-com-nuvem" width="323" height="548"/>
         <image name="novoBackgroundParque" width="3531" height="768"/>
+        <image name="nuvem-05" width="195" height="88"/>
+        <image name="nuvem-06" width="177" height="77"/>
+        <image name="nuvem-07" width="216" height="101"/>
         <image name="parque-08" width="176" height="189"/>
         <image name="parque-09" width="224" height="231"/>
         <image name="parque-10" width="184" height="190"/>

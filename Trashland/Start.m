@@ -10,6 +10,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "Player.h"
 #import "Skin.h"
+#import "UIView+Animation2.h"
 #import "AppDelegate.h"
 
 @interface Start ()
@@ -20,41 +21,22 @@ SystemSoundID sound2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self moveCloudsEvenFar: _cloud1];
-    [self moveCloudsEvenFar: _cloud2];
-    [self moveCloudsEvenFar: _cloud3];
-    [self moveCloudsEvenFar: _cloud4];
-    [self moveCloudsEvenFar: _cloud5];
-    [self moveCloudsEvenFar: _cloud6];
-    [self moveCloudsEvenFar: _cloud7];
-    
-    [self moveCloudsFar: _cloud8];
-    [self moveCloudsFar: _cloud9];
-    [self moveClouds: _cloud10];
-    [self moveClouds: _cloud11];
-    [self moveCloudsFar: _cloud12];
-    [self moveClouds: _cloud13];
-    [self moveClouds: _cloud14];
+    [self moveCloud1: self.cloud1];
+    [self moveCloud2: self.cloud2];
+    [self moveCloud3: self.cloud3];
     
     [self.view addSubview:self.fundo];
     [self.fundo addSubview:self.predios];
     [self.fundo addSubview:self.cloud1];
     [self.fundo addSubview:self.cloud2];
     [self.fundo addSubview:self.cloud3];
-    [self.fundo addSubview:self.cloud4];
-    [self.fundo addSubview:self.cloud5];
-    [self.fundo addSubview:self.cloud6];
-    [self.fundo addSubview:self.cloud7];
-    [self.fundo addSubview:self.cloud8];
-    [self.fundo addSubview:self.cloud9];
-    [self.fundo addSubview:self.cloud10];
-    [self.fundo addSubview:self.cloud11];
-    [self.fundo addSubview:self.cloud12];
-    [self.fundo addSubview:self.cloud13];
-    [self.fundo addSubview:self.cloud14];
     [self.fundo addSubview:self.logo];
     
     [self.fundo addSubview:self.play];
+    
+    [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(balancarLogo) userInfo:nil repeats:YES];
+    [self.play tada:NULL];
+    
     
     
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"carefreewav" withExtension:@"wav"];
@@ -66,19 +48,19 @@ SystemSoundID sound2;
     
 }
 
-- (void)moveCloudsEvenFar:(UIImageView *)imageView{
-    [UIView animateWithDuration:50.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
-        imageView.frame = CGRectMake(-self.view.frame.size.width + 100.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
+- (void)moveCloud1:(UIImageView *)imageView{
+    [UIView animateWithDuration:10.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        imageView.frame = CGRectMake(self.view.frame.size.width - 1000.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 
-- (void)moveClouds:(UIImageView *)imageView{
-    [UIView animateWithDuration:30.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
-        imageView.frame = CGRectMake(-self.view.frame.size.width + 100.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
+- (void)moveCloud2:(UIImageView *)imageView{
+    [UIView animateWithDuration:10.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        imageView.frame = CGRectMake(self.view.frame.size.width - 600.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 
-- (void)moveCloudsFar:(UIImageView *)imageView{
-    [UIView animateWithDuration:40.f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
-        imageView.frame = CGRectMake(-self.view.frame.size.width + 100.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
+- (void)moveCloud3:(UIImageView *)imageView{
+    [UIView animateWithDuration:10.0f delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        imageView.frame = CGRectMake(self.view.frame.size.width - 200.0, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 
 - (IBAction)start:(id)sender{
@@ -118,6 +100,9 @@ SystemSoundID sound2;
 -(void)trocarDeNovo{
     self.predios.image = [UIImage imageNamed:@"predio"];
         [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(trocarPredio) userInfo:nil repeats:NO];
+}
+-(void)balancarLogo{
+    [self.play bounce:NULL];
 }
 
 @end
