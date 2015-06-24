@@ -103,17 +103,17 @@ UICollisionBehavior* _collision2;
 }
 
 - (void)moveBeepo:(UIImageView *)imageView{
-    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         imageView.frame = CGRectMake(150.f, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 
 - (void)moveCar1:(UIImageView *)imageView{
-    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         imageView.frame = CGRectMake(543.f, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 
 - (void)moveCar2:(UIImageView *)imageView{
-    [UIView animateWithDuration:2 delay:0.0 options:UIViewAnimationCurveEaseOut animations:^{
+    [UIView animateWithDuration:2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         imageView.frame = CGRectMake(592.f, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 
@@ -123,17 +123,21 @@ UICollisionBehavior* _collision2;
         [popUp setImageNamed: @"pop-up-idoso"];
         self.popUpView = popUp;
         [popUp showInView:self.view animated:YES];
-        
-        Phase3Parte2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3Parte2VC"];
-        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        self.player.medalha1fase3 = true;
-        self.player.fase4 = true;
-        game.player = self.player;
-        [self presentViewController:game animated:NO completion:nil];
+        [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(startSecondPart) userInfo:nil repeats:NO];
     }
     else{
         [NSTimer scheduledTimerWithTimeInterval:0.2f target:self selector:@selector(watchThisBitch) userInfo:nil repeats:NO];
     }
+}
+
+- (void)startSecondPart{
+    
+    Phase3Parte2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3Parte2VC"];
+    [game setModalPresentationStyle:UIModalPresentationFullScreen];
+    self.player.medalha1fase3 = true;
+    self.player.fase4 = true;
+    game.player = self.player;
+    [self presentViewController:game animated:NO completion:nil];
 }
 
 @end

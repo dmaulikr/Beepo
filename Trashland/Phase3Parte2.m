@@ -36,8 +36,8 @@
     [self.fundo addSubview:self.badgeIdoso];
     [self.fundo addSubview:self.badgeTransito];
     
-    self.ambulancia.image = [UIImage animatedImageNamed:@"ambulancia-" duration:1.f];
-    [self.fundo addSubview:self.ambulancia];
+    self.ambulancia.image = [UIImage animatedImageNamed:@"ambulancia-" duration:.5f];
+//    [self.fundo addSubview:self.ambulancia];
 }
 
 -(void)checkWayFree{
