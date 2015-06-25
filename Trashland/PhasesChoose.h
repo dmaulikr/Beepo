@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Player.h"
+//#import "Player.h"
+
+@class Player;
 
 @interface PhasesChoose : UIViewController
 
@@ -37,6 +39,6 @@
 @property (nonatomic) IBOutlet UILabel* labelHospital;
 @property (nonatomic) IBOutlet UILabel* labelPrefeitura;
 
-@property (nonatomic) Player* player;
+@property (strong, nonatomic) Player* player;
 
 @end

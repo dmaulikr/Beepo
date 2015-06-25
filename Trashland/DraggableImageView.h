@@ -13,4 +13,5 @@
 @property   (weak,nonatomic) UIViewController* delegate;
 @property (nonatomic) BOOL podeX;
 @property (nonatomic) BOOL podeY;
+-(void) morre;
 @end

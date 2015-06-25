@@ -78,6 +78,7 @@ float deslocIni;
         self.player.medalha2fase2 = YES;
         self.badgeNatureza.image = [UIImage imageNamed:@"badge-natureza-color"];
         self.botaoProximo.enabled = YES;
+        self.player.fase3 = true;
     }
 }
 
@@ -366,6 +367,7 @@ float deslocIni;
                 self.popUpView = popUp;
                 [popUp showInView:self.view animated:YES];
                 self.player.medalha1fase2 = YES;
+                self.player.fase3 = true;
                 self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
                 self.botaoProximo.enabled = YES;
             }
@@ -507,16 +509,18 @@ float deslocIni;
 
 //Controle
 - (IBAction)didClickBackButton:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.player dismissToPhaseSelect];
 }
 - (IBAction)didClickReadButton:(id)sender {
 }
 - (IBAction)didClickNextButton:(id)sender {
-    PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
-    [game setModalPresentationStyle:UIModalPresentationFullScreen];
-    self.player.fase3 = true;
-    game.player = self.player;
-    [self presentViewController:game animated:YES completion:nil];
+//    PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
+//    [game setModalPresentationStyle:UIModalPresentationFullScreen];
+//    self.player.fase3 = true;
+//    game.player = self.player;
+//    [self presentViewController:game animated:YES completion:nil];
+    
+    [self.player dismissToPhaseSelect];
 }
 
 @end

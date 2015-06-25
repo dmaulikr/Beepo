@@ -10,4 +10,7 @@
 
 @implementation Player
 
+- (void)dismissToPhaseSelect{
+    [self.telaEscolha dismissViewControllerAnimated:YES completion:nil];
+}
 @end

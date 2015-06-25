@@ -18,6 +18,14 @@
 }
 */
 
+-(void)dealloc{
+    NSLog(@"removeu dragimageview");
+}
+
+-(void)morre{
+    _delegate = nil;
+}
+
 - (void)touchesMoved:(NSSet *)set withEvent:(UIEvent *)event {
     CGPoint p = [[set anyObject] locationInView:self.superview];
     self.center = p;

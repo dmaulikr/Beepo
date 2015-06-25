@@ -17,6 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet UIView *moveBeepoView;
 
-@property (nonatomic) Player* player;
+@property (retain,nonatomic) Player* player;
 
 @end

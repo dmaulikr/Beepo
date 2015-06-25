@@ -15,7 +15,7 @@
 @interface Phase2 : UIViewController
 
 
-@property (nonatomic) Player* player;
+@property (retain,nonatomic) Player* player;
 @property (weak, nonatomic) IBOutlet UIScrollView *phaseScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *phaseBG;
 
@@ -44,7 +44,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *charImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowImageView;
 @property (weak, nonatomic) IBOutlet DraggableView *fantasminhaView;
-@property (nonatomic) NSString* gasperEscolhido;
+@property (retain,nonatomic) NSString* gasperEscolhido;
 @property (nonatomic) BOOL lookingBack;
 
 @property (weak, nonatomic) IBOutlet UIButton *botaoProximo;
@@ -52,6 +52,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *badgeLixo;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeNatureza;
 
-@property (strong,nonatomic) UIViewController *popUpView;
-@property (strong,nonatomic) NSMutableArray *lixos;
+@property (retain,nonatomic) UIViewController *popUpView;
+@property (retain,nonatomic) NSMutableArray *lixos;
 @end

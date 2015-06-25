@@ -67,12 +67,15 @@
 }
 
 -(void)escolhaDeFases{
-                PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
-            [game setModalPresentationStyle:UIModalPresentationFullScreen];
-            self.player.medalha2fase3 = true;
-    
-            game.player = self.player;
-            [self presentViewController:game animated:YES completion:nil];
+//                PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
+//            [game setModalPresentationStyle:UIModalPresentationFullScreen];
+//            self.player.medalha2fase3 = true;
+//    
+//            game.player = self.player;
+//            [self presentViewController:game animated:YES completion:nil];
+//    [game dismissViewControllerAnimated:NO completion:nil];
+
+    [self.player dismissToPhaseSelect];
 }
 
 @end

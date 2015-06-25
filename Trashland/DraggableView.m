@@ -18,6 +18,15 @@ CGPoint startLocation;
     // Drawing code
 }
 */
+-(void)dealloc{
+    NSLog(@"removeu dragView");
+}
+
+-(void)morre{
+    _charImgView = nil;
+    _delegate = nil;
+}
+
 - (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
     // Retrieve the touch point
     CGPoint pt = [[touches anyObject] locationInView:self];

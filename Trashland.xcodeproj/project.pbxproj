@@ -39,11 +39,11 @@
 		02B3B54D1B30BA8A00143CC1 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B54C1B30BA8A00143CC1 /* Player.m */; };
 		02B3B5501B30DB1B00143CC1 /* carefreewav.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B54F1B30DB1B00143CC1 /* carefreewav.wav */; };
 		02B3B5521B30DFB400143CC1 /* hackbeatwav.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */; };
-		02B3B5551B3106E700143CC1 /* Phase4.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B3B5541B3106E700143CC1 /* Phase4.m */; };
 		02FCFC8C1B345AD000E762B8 /* Story4.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCFC8B1B345AD000E762B8 /* Story4.m */; };
 		150309331B33357C0056346D /* arvore_nascendo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 150309321B33357C0056346D /* arvore_nascendo.wav */; };
 		150309351B333A1F0056346D /* lixo.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 150309341B333A1F0056346D /* lixo.WAV */; };
 		15246F491B2F137A00EF006A /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15246F481B2F137A00EF006A /* DraggableView.m */; };
+		1541A1311B3C37A200D348B9 /* Phase4.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541A1301B3C37A200D348B9 /* Phase4.m */; };
 		15B467F01B36CF120059427C /* PopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B467EF1B36CF120059427C /* PopUpViewController.m */; };
 		15C4315E1B289E500098C994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C4315D1B289E500098C994 /* main.m */; };
 		15C431611B289E500098C994 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431601B289E500098C994 /* AppDelegate.m */; };
@@ -114,14 +114,14 @@
 		02B3B54C1B30BA8A00143CC1 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		02B3B54F1B30DB1B00143CC1 /* carefreewav.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = carefreewav.wav; sourceTree = "<group>"; };
 		02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hackbeatwav.wav; sourceTree = "<group>"; };
-		02B3B5531B3106E700143CC1 /* Phase4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase4.h; sourceTree = "<group>"; };
-		02B3B5541B3106E700143CC1 /* Phase4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase4.m; sourceTree = "<group>"; };
 		02FCFC8A1B345AD000E762B8 /* Story4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story4.h; sourceTree = "<group>"; };
 		02FCFC8B1B345AD000E762B8 /* Story4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story4.m; sourceTree = "<group>"; };
 		150309321B33357C0056346D /* arvore_nascendo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = arvore_nascendo.wav; sourceTree = "<group>"; };
 		150309341B333A1F0056346D /* lixo.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lixo.WAV; sourceTree = "<group>"; };
 		15246F471B2F137A00EF006A /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
 		15246F481B2F137A00EF006A /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
+		1541A12F1B3C37A200D348B9 /* Phase4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase4.h; sourceTree = "<group>"; };
+		1541A1301B3C37A200D348B9 /* Phase4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase4.m; sourceTree = "<group>"; };
 		15B467EE1B36CF120059427C /* PopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopUpViewController.h; path = PopVC/PopUpViewController.h; sourceTree = "<group>"; };
 		15B467EF1B36CF120059427C /* PopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopUpViewController.m; path = PopVC/PopUpViewController.m; sourceTree = "<group>"; };
 		15C431581B289E500098C994 /* Trashland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trashland.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,14 +308,14 @@
 			children = (
 				02FCFC8A1B345AD000E762B8 /* Story4.h */,
 				02FCFC8B1B345AD000E762B8 /* Story4.m */,
-				02B3B5531B3106E700143CC1 /* Phase4.h */,
-				02B3B5541B3106E700143CC1 /* Phase4.m */,
 				023D17B31B3731CB0004DE32 /* Puzzle4.h */,
 				023D17B41B3731CB0004DE32 /* Puzzle4.m */,
 				023D17B61B37B5E00004DE32 /* Votacao.h */,
 				023D17B71B37B5E00004DE32 /* Votacao.m */,
 				023D17B91B37BE0A0004DE32 /* Fim.h */,
 				023D17BA1B37BE0A0004DE32 /* Fim.m */,
+				1541A12F1B3C37A200D348B9 /* Phase4.h */,
+				1541A1301B3C37A200D348B9 /* Phase4.m */,
 			);
 			name = Phase4;
 			sourceTree = "<group>";
@@ -536,13 +536,13 @@
 				027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */,
 				023D17BB1B37BE0A0004DE32 /* Fim.m in Sources */,
 				021F562E1B2F210E007886D6 /* Story3.m in Sources */,
+				1541A1311B3C37A200D348B9 /* Phase4.m in Sources */,
 				15C431831B28A79A0098C994 /* Phase1.m in Sources */,
 				023D17B51B3731CB0004DE32 /* Puzzle4.m in Sources */,
 				021F56281B2F20FA007886D6 /* Story2.m in Sources */,
 				0264DE831B2F16CE007A18A7 /* UIView+Animation2.m in Sources */,
 				02FCFC8C1B345AD000E762B8 /* Story4.m in Sources */,
 				021F56341B2F24B0007886D6 /* Skin.m in Sources */,
-				02B3B5551B3106E700143CC1 /* Phase4.m in Sources */,
 				15C431611B289E500098C994 /* AppDelegate.m in Sources */,
 				15C4315E1B289E500098C994 /* main.m in Sources */,
 				15C431861B28A9650098C994 /* DraggableImageView.m in Sources */,

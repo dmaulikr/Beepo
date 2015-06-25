@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
+#import "PhasesChoose.h"
 
 @interface Player : NSObject
 
@@ -30,5 +31,6 @@
 @property (nonatomic) UIImage* gasperEscolhido;
 
 @property (nonatomic) NSString* nomeEscolhido;
-
+@property (strong, nonatomic)  PhasesChoose* telaEscolha;
+- (void)dismissToPhaseSelect;
 @end

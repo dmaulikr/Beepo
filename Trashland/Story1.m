@@ -61,6 +61,30 @@
     [self.background addSubview:self.gifDedo];
 }
 
+- (void)dealloc{
+    NSLog(@"desalocou essa caraia");
+    _player = nil;
+    _controle = nil;
+    _background = nil;
+    _botaoVoltar = nil;
+    _botaoPlay = nil;
+    _gifDedo = nil;
+    _viewGasper = nil;
+    _sombra = nil;
+    _gasper = nil;
+    _frase1 = nil;
+    _frase2 = nil;
+    _interrogacao1 = nil;
+    _interrogacao2 = nil;
+    _interrogacao3 = nil;
+    _frase3 = nil;
+    _frase4 = nil;
+    _viewGasperTriste = nil;
+    _gasperTriste = nil;
+    _gaspersombraTriste = nil;
+
+}
+
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
     if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionLeft)
     {

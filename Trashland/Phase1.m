@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "PhasesChoose.h"
 #import "PopUpViewController.h"
+#import "PhasesChoose.h"
 
 @interface Phase1 ()<UIScrollViewDelegate>{
     int tempo;
@@ -39,7 +40,7 @@
 @property (weak, nonatomic) IBOutlet DraggableImageView *birdImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowImgView;
 
-@property (strong, nonatomic) UIGravityBehavior *grav;
+@property (retain, nonatomic) UIGravityBehavior *grav;
 @property (weak, nonatomic) IBOutlet UIImageView *showerGIF;
 @property (weak, nonatomic) IBOutlet UIImageView *torneiraGIF;
 @property (weak, nonatomic) IBOutlet UIImageView *tvGIF;
@@ -106,6 +107,52 @@ UICollisionBehavior* _collision;
     [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkTV) userInfo:nil repeats:YES];
     [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkBadges) userInfo:nil repeats:YES];
     
+}
+
+-(void)dealloc{
+    
+    
+    NSLog(@"morreu fase 1");
+    
+    
+    _player = nil;
+    _popUpView = nil;
+    _books = nil;
+    _flower = nil;
+    _vase2 = nil;
+    _plate = nil;
+    _scrollView = nil;
+    _contentBG = nil;
+    _birdImageView = nil;
+    _shadowImgView = nil;
+    _grav = nil;
+    _showerGIF = nil;
+    _torneiraGIF = nil;
+    _tvGIF = nil;
+    _nuvem1Acesa = nil;
+    _nuvem2Acesa = nil;
+    _auxView = nil;
+    _viewFantasminha = nil;
+    _phase1 = nil;
+    _luz3 = nil;
+    _luz4 = nil;
+    _charImgView = nil;
+    _soap = nil;
+    _rubberDuck = nil;
+    _redWhiteVase = nil;
+    _weirdVase = nil;
+    _toiletStuff = nil;
+    _pinkishVase = nil;
+    _purpleVase = nil;
+    _fantasmaView = nil;
+    _medalha1fase1 = nil;
+    _medalha2fase1 = nil;
+    _bird = nil;
+    _botaoVoltar = nil;
+    _botaoPlay = nil;
+    _botaoProx = nil;
+    _contador = nil;
+    _popUpView = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -471,16 +518,84 @@ UICollisionBehavior* _collision;
 
 -(IBAction)proxima:(id)sender{
     if (self.player.medalha1fase1 || self.player.medalha2fase1) {
-        PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
-        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        self.player.fase2 = true;
-        game.player = self.player;
-        [self presentViewController:game animated:YES completion:nil];
+//        PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
+//        [game setModalPresentationStyle:UIModalPresentationFullScreen];
+//        self.player.fase2 = true;
+//        game.player = self.player;
+//        [self presentViewController:game animated:YES completion:nil];
+        
+        [_books morre];
+        [_flower morre];
+        [_plate morre];
+        [_vase2 morre];
+        [_soap morre];
+        [_rubberDuck morre];
+        [_redWhiteVase morre];
+        [_weirdVase morre];
+        [_toiletStuff morre];
+        [_pinkishVase morre];
+        [_purpleVase morre];
+        [_fantasmaView morre];
+        [self.player dismissToPhaseSelect];
     }
 }
 
 -(IBAction)voltar:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [_collision removeAllBoundaries];
+    [_animator removeAllBehaviors];
+    [_books morre];
+    [_flower morre];
+    [_plate morre];
+    [_vase2 morre];
+    [_soap morre];
+    [_rubberDuck morre];
+    [_redWhiteVase morre];
+    [_weirdVase morre];
+    [_toiletStuff morre];
+    [_pinkishVase morre];
+    [_purpleVase morre];
+    [_fantasmaView morre];
+    _popUpView = nil;
+    _books = nil;
+    _flower = nil;
+    _vase2 = nil;
+    _plate = nil;
+    _scrollView = nil;
+    _contentBG = nil;
+    _birdImageView = nil;
+    _shadowImgView = nil;
+    _grav = nil;
+    _showerGIF = nil;
+    _torneiraGIF = nil;
+    _tvGIF = nil;
+    _nuvem1Acesa = nil;
+    _nuvem2Acesa = nil;
+    _auxView = nil;
+    _viewFantasminha = nil;
+    _phase1 = nil;
+    _luz3 = nil;
+    _luz4 = nil;
+    _charImgView = nil;
+    _soap = nil;
+    _rubberDuck = nil;
+    _redWhiteVase = nil;
+    _weirdVase = nil;
+    _toiletStuff = nil;
+    _pinkishVase = nil;
+    _purpleVase = nil;
+    _fantasmaView = nil;
+    _medalha1fase1 = nil;
+    _medalha2fase1 = nil;
+    _bird = nil;
+    _botaoVoltar = nil;
+    _botaoPlay = nil;
+    _botaoProx = nil;
+    _contador = nil;
+    _popUpView = nil;
+    [self.player dismissToPhaseSelect];
+    _player = nil;
 }
 
 -(void)tocaTV{
@@ -505,6 +620,7 @@ UICollisionBehavior* _collision;
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-agua"];
         self.popUpView = popUp;
+        self.player.fase2 = true;
         [popUp showInView:self.view animated:YES];
         self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
         self.player.medalha1fase1 = true;
@@ -515,6 +631,7 @@ UICollisionBehavior* _collision;
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-energia"];
         self.popUpView = popUp;
+        self.player.fase2 = true;
         [popUp showInView:self.view animated:YES];
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
         self.player.medalha2fase1 = true;
