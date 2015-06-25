@@ -1439,7 +1439,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2E6CA6CD-DE68-45E0-8D40-A8C8A3143E47" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ACECCA25-81F2-4EAA-AA03-647868505F83" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1672,7 +1672,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="2E6CA6CD-DE68-45E0-8D40-A8C8A3143E47" width="194" height="90">
+        <image name="ACECCA25-81F2-4EAA-AA03-647868505F83" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
