@@ -8,7 +8,6 @@
 
 #import "Story1.h"
 #import "Phase1.h"
-#import "UIView+Animation2.h"
 #import "AppDelegate.h"
 
 @implementation Story1
@@ -16,10 +15,6 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     
-    
-    
-  //  [self.background addSubview:self.botaoPlay];
- //   [self.background addSubview:self.botaoVoltar];
     
     
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
@@ -37,13 +32,30 @@
 
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self.gifDedo removeFromSuperview];
+    [self.telaUm removeFromSuperview];
+    [self.telaDois removeFromSuperview];
+    [self.telaTres removeFromSuperview];
+    self.gifDedo = nil;
+    self.telaUm = nil;
+    self.telaDois = nil;
+    self.telaTres = nil;
+}
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.telaUm.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"historinha-01@2x" ofType:@"png"]];
+        self.telaDois.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"historinha-02@2x" ofType:@"png"]];
+        self.telaTres.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"historinha-03@2x" ofType:@"png"]];
+    });
     
     
-    self.gifDedo.image = [UIImage animatedImageNamed:@"maoesq-" duration:1.f];
-    self.gifDedo.alpha = 0.7;
-    [self.view addSubview:self.gifDedo];
+//    self.gifDedo.image = [UIImage animatedImageNamed:@"maoesq-" duration:1.f];
+//    self.gifDedo.alpha = 0.7;
+//    [self.view bringSubviewToFront:self.gifDedo];
 }
 
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{

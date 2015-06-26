@@ -29,11 +29,11 @@ SystemSoundID sound2;
     [self moveCloud2: self.cloud2];
     [self moveCloud3: self.cloud3];
     
-    [self.view addSubview:self.fundo];
-    [self.fundo addSubview:self.predios];
     [self.fundo addSubview:self.cloud1];
     [self.fundo addSubview:self.cloud2];
     [self.fundo addSubview:self.cloud3];
+    [self.view addSubview:self.fundo];
+    [self.fundo addSubview:self.predios];
     [self.fundo addSubview:self.logo];
     
     [self.fundo addSubview:self.play];

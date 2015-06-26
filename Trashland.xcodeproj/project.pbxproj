@@ -57,6 +57,9 @@
 		15C431831B28A79A0098C994 /* Phase1.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431821B28A79A0098C994 /* Phase1.m */; };
 		15C431861B28A9650098C994 /* DraggableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431851B28A9650098C994 /* DraggableImageView.m */; };
 		15C431921B2A0A980098C994 /* chuveiro_Trashcity-2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 15C431911B2A0A980098C994 /* chuveiro_Trashcity-2.gif */; };
+		15E450A01B3DC92700B715C8 /* historinha-01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E4509F1B3DC92700B715C8 /* historinha-01@2x.png */; };
+		15E450A21B3DC92D00B715C8 /* historinha-02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E450A11B3DC92D00B715C8 /* historinha-02@2x.png */; };
+		15E450A41B3DC93500B715C8 /* historinha-03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E450A31B3DC93500B715C8 /* historinha-03@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +153,9 @@
 		15C431841B28A9650098C994 /* DraggableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableImageView.h; sourceTree = "<group>"; };
 		15C431851B28A9650098C994 /* DraggableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableImageView.m; sourceTree = "<group>"; };
 		15C431911B2A0A980098C994 /* chuveiro_Trashcity-2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "chuveiro_Trashcity-2.gif"; sourceTree = "<group>"; };
+		15E4509F1B3DC92700B715C8 /* historinha-01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "historinha-01@2x.png"; path = "Images.xcassets/nova historia/historinha-01.imageset/historinha-01@2x.png"; sourceTree = "<group>"; };
+		15E450A11B3DC92D00B715C8 /* historinha-02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "historinha-02@2x.png"; path = "Images.xcassets/nova historia/historinha-02.imageset/historinha-02@2x.png"; sourceTree = "<group>"; };
+		15E450A31B3DC93500B715C8 /* historinha-03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "historinha-03@2x.png"; path = "Images.xcassets/nova historia/historinha-03.imageset/historinha-03@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +396,7 @@
 		15C4315B1B289E500098C994 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				15E4509E1B3DC8FD00B715C8 /* Images */,
 				15C4316A1B289E500098C994 /* LaunchScreen.xib */,
 				15C431911B2A0A980098C994 /* chuveiro_Trashcity-2.gif */,
 				15C4315C1B289E500098C994 /* Info.plist */,
@@ -424,6 +431,16 @@
 				15C431851B28A9650098C994 /* DraggableImageView.m */,
 			);
 			name = Draggable;
+			sourceTree = "<group>";
+		};
+		15E4509E1B3DC8FD00B715C8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				15E450A11B3DC92D00B715C8 /* historinha-02@2x.png */,
+				15E4509F1B3DC92700B715C8 /* historinha-01@2x.png */,
+				15E450A31B3DC93500B715C8 /* historinha-03@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,11 +535,14 @@
 				02B3B5431B309E5C00143CC1 /* hackbeat.mp3 in Resources */,
 				0264DE721B2F1610007A18A7 /* actionj.ttf in Resources */,
 				02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */,
+				15E450A01B3DC92700B715C8 /* historinha-01@2x.png in Resources */,
 				15C431671B289E500098C994 /* Main.storyboard in Resources */,
 				150309351B333A1F0056346D /* lixo.WAV in Resources */,
+				15E450A41B3DC93500B715C8 /* historinha-03@2x.png in Resources */,
 				15C4316C1B289E500098C994 /* LaunchScreen.xib in Resources */,
 				0264DE6B1B2F1573007A18A7 /* TV.aiff in Resources */,
 				0264DE651B2F155F007A18A7 /* click.wav in Resources */,
+				15E450A21B3DC92D00B715C8 /* historinha-02@2x.png in Resources */,
 				02B3B5521B30DFB400143CC1 /* hackbeatwav.wav in Resources */,
 				15C431921B2A0A980098C994 /* chuveiro_Trashcity-2.gif in Resources */,
 				02B3B5501B30DB1B00143CC1 /* carefreewav.wav in Resources */,
@@ -716,6 +736,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Trashland/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -727,6 +748,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Trashland/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

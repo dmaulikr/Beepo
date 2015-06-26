@@ -56,7 +56,8 @@
 UIDynamicAnimator* _animator;
 UIGravityBehavior* _gravity;
 UICollisionBehavior* _collision;
-
+NSTimer* badgeCheck;
+NSTimer* tvCheck;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -104,8 +105,8 @@ UICollisionBehavior* _collision;
     _tvGIF.image = [UIImage animatedImageNamed:@"chuvisco_tv-" duration:0.8f];
     
     [self tocaTV];
-    [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkTV) userInfo:nil repeats:YES];
-    [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkBadges) userInfo:nil repeats:YES];
+    tvCheck = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkTV) userInfo:nil repeats:YES];
+    badgeCheck = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkBadges) userInfo:nil repeats:YES];
     
 }
 
@@ -113,9 +114,34 @@ UICollisionBehavior* _collision;
     
     
     NSLog(@"desalocou Phase1");
-    
-    
-    _player = nil;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [tvCheck invalidate];
+    tvCheck = nil;
+    [badgeCheck invalidate];
+    badgeCheck = nil;
+    [_collision removeAllBoundaries];
+    [_animator removeAllBehaviors];
+    [_books removeFromSuperview];
+    [_flower removeFromSuperview];
+    [_plate removeFromSuperview];
+    [_vase2 removeFromSuperview];
+    [_books morre];
+    [_flower morre];
+    [_plate morre];
+    [_vase2 morre];
+    [_soap morre];
+    [_rubberDuck morre];
+    [_redWhiteVase morre];
+    [_weirdVase morre];
+    [_toiletStuff morre];
+    [_pinkishVase morre];
+    [_purpleVase morre];
+    [_fantasmaView morre];
+    _tvGIF.image = nil;
+    _collision=nil;
+    _animator=nil;
     _popUpView = nil;
     _books = nil;
     _flower = nil;
@@ -153,6 +179,7 @@ UICollisionBehavior* _collision;
     _botaoProx = nil;
     _contador = nil;
     _popUpView = nil;
+    _player = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -176,8 +203,6 @@ UICollisionBehavior* _collision;
     
     self.charImgView.frame = charFrame;
     self.shadowImgView.frame = shadowFrame;
-    //    self.charImgView.alpha = 0.50;
-    //    self.shadowImgView.alpha = 0.50;
     [UIView commitAnimations];
     
 }
@@ -190,7 +215,6 @@ UICollisionBehavior* _collision;
     self.books.userInteractionEnabled = YES;
     self.books.delegate = self;
     [self.auxView addSubview:self.books];
-    [self.auxView bringSubviewToFront:self.books];
     
     
     self.flower = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"plant"]];
@@ -226,26 +250,26 @@ UICollisionBehavior* _collision;
     self.pinkishVase.delegate=self;
     self.purpleVase.delegate=self;
     
-    [self.scrollView addSubview:self.tvGIF];
-    [self.scrollView addSubview:self.torneiraGIF];
-    [self.scrollView addSubview:self.showerGIF];
+    [self.auxView bringSubviewToFront:self.tvGIF];
+    [self.auxView bringSubviewToFront:self.torneiraGIF];
+    [self.auxView bringSubviewToFront:self.showerGIF];
 //    
 //    [self.auxView addSubview:self.viewFantasminha];
 //    [self.viewFantasminha addSubview:self.charImgView];
 //    [self.viewFantasminha addSubview:self.shadowImgView];
     
-    [self.scrollView addSubview:self.nuvem1Acesa];
-    [self.scrollView addSubview:self.nuvem2Acesa];
-    [self.scrollView addSubview:self.luz3];
-    [self.scrollView addSubview:self.luz4];
-    [self.scrollView addSubview:self.bird];
+    [self.auxView bringSubviewToFront:self.nuvem1Acesa];
+    [self.auxView bringSubviewToFront:self.nuvem2Acesa];
+    [self.auxView bringSubviewToFront:self.luz3];
+    [self.auxView bringSubviewToFront:self.luz4];
+    [self.auxView bringSubviewToFront:self.bird];
     
-    [self.view addSubview:self.contador];
-    [self.view addSubview:self.botaoVoltar];
-    [self.view addSubview:self.botaoPlay];
-    [self.view addSubview:self.botaoProx];
-    [self.view addSubview:self.medalha1fase1];
-    [self.view addSubview:self.medalha2fase1];
+//    [self.view bringSubviewToFront:self.contador];
+    [self.view bringSubviewToFront:self.botaoVoltar];
+    [self.view bringSubviewToFront:self.botaoPlay];
+    [self.view bringSubviewToFront:self.botaoProx];
+    [self.view bringSubviewToFront:self.medalha1fase1];
+    [self.view bringSubviewToFront:self.medalha2fase1];
     [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];
     
     
@@ -290,18 +314,6 @@ UICollisionBehavior* _collision;
     _collision = [[UICollisionBehavior alloc] initWithItems:@[self.books, self.flower, self.vase2, self.plate, self.soap, self.rubberDuck, self.redWhiteVase, self.weirdVase, self.toiletStuff, self.pinkishVase, self.purpleVase]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
     [_animator addBehavior:_collision];
-    
-    //UIDynamics (Barreiras)
-    //Gaiola do pássaro
-    //UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(111, 300, 50, 10)];
-    //barrier.backgroundColor = [UIColor redColor];
-  //  [self.auxView addSubview:barrier];
-    
-   // CGPoint rightEdge = CGPointMake(barrier.frame.origin.x +
-   //                                 barrier.frame.size.width, barrier.frame.origin.y);
-  //  [_collision addBoundaryWithIdentifier:@"barrier"
-   //                             fromPoint:barrier.frame.origin
-  //                                toPoint:rightEdge];
     
     //(Prateleira meio)
     UIView* barrier2 = [[UIView alloc] initWithFrame:CGRectMake(580, 180, 260, 10)];
@@ -399,17 +411,6 @@ UICollisionBehavior* _collision;
     [_collision addBoundaryWithIdentifier:@"barrier10"
                                 fromPoint:barrier10.frame.origin
                                   toPoint:rightEdgeAux];
-//    //(Mesa TV)
-//    UIView* barrier5 = [[UIView alloc] initWithFrame:CGRectMake(670, 550, 320, 10)];
-//    barrier5.backgroundColor = [UIColor redColor];
-//    [self.auxView addSubview:barrier5];
-//    
-//    rightEdgeAux = CGPointMake(barrier5.frame.origin.x +
-//                                     barrier5.frame.size.width, barrier5.frame.origin.y);
-//    [_collision addBoundaryWithIdentifier:@"barrier5"
-//                                fromPoint:barrier5.frame.origin
-//                                  toPoint:rightEdgeAux];
-    
     
     
 }
@@ -486,123 +487,23 @@ UICollisionBehavior* _collision;
     AudioServicesPlaySystemSound(sound1);
 }
 
--(void)partiu{
-    if (tempo >= 0){
-        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(partiu) userInfo:nil repeats:NO];
-        NSString* time = [[NSString alloc] initWithFormat:@"%i", tempo];
-        self.contador.text = time;
-        
-        if (tempo > 15){}
-        if (15 >= tempo && tempo > 10) {}
-        if (10 >= tempo && tempo > 5) {}
-        if (5 > tempo) {}
-        NSLog(@"%i", tempo);
-    }
-    else{
-        if (pontoLuz1 && pontoLuz2 && pontoLuz3 && pontoLuz4 && pontoTV) {
-            self.player.medalha1fase1 = true;
-        }
-        if (pontoAgua1 && pontoAgua2) {
-            self.player.medalha2fase1 = true;
-        }
-        if (self.player.medalha1fase1 || self.player.medalha2fase1) {
-            self.player.fase2 = true;
-        }
-        PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
-        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.player = self.player;
-        [self presentViewController:game animated:YES completion:nil];
-    }
-    tempo--;
-}
-
 -(IBAction)proxima:(id)sender{
     if (self.player.medalha1fase1 || self.player.medalha2fase1) {
-//        PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
-//        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-//        self.player.fase2 = true;
-//        game.player = self.player;
-//        [self presentViewController:game animated:YES completion:nil];
-        
-        [_books morre];
-        [_flower morre];
-        [_plate morre];
-        [_vase2 morre];
-        [_soap morre];
-        [_rubberDuck morre];
-        [_redWhiteVase morre];
-        [_weirdVase morre];
-        [_toiletStuff morre];
-        [_pinkishVase morre];
-        [_purpleVase morre];
-        [_fantasmaView morre];
         [self.player dismissToPhaseSelect];
     }
 }
 
 -(IBAction)voltar:(id)sender{
-//    [self dismissViewControllerAnimated:YES completion:nil];
     
-    [_collision removeAllBoundaries];
-    [_animator removeAllBehaviors];
-    [_books morre];
-    [_flower morre];
-    [_plate morre];
-    [_vase2 morre];
-    [_soap morre];
-    [_rubberDuck morre];
-    [_redWhiteVase morre];
-    [_weirdVase morre];
-    [_toiletStuff morre];
-    [_pinkishVase morre];
-    [_purpleVase morre];
-    [_fantasmaView morre];
-    _popUpView = nil;
-    _books = nil;
-    _flower = nil;
-    _vase2 = nil;
-    _plate = nil;
-    _scrollView = nil;
-    _contentBG = nil;
-    _birdImageView = nil;
-    _shadowImgView = nil;
-    _grav = nil;
-    _showerGIF = nil;
-    _torneiraGIF = nil;
-    _tvGIF = nil;
-    _nuvem1Acesa = nil;
-    _nuvem2Acesa = nil;
-    _auxView = nil;
-    _viewFantasminha = nil;
-    _phase1 = nil;
-    _luz3 = nil;
-    _luz4 = nil;
-    _charImgView = nil;
-    _soap = nil;
-    _rubberDuck = nil;
-    _redWhiteVase = nil;
-    _weirdVase = nil;
-    _toiletStuff = nil;
-    _pinkishVase = nil;
-    _purpleVase = nil;
-    _fantasmaView = nil;
-    _medalha1fase1 = nil;
-    _medalha2fase1 = nil;
-    _bird = nil;
-    _botaoVoltar = nil;
-    _botaoPlay = nil;
-    _botaoProx = nil;
-    _contador = nil;
-    _popUpView = nil;
     [self.player dismissToPhaseSelect];
     _player = nil;
 }
 
 -(void)tocaTV{
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"tv1s" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+//    AudioServicesDisposeSystemSoundID (sound1);
+//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"tv1s" withExtension:@"wav"];
+//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+//    AudioServicesPlaySystemSound(sound1);
     //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
