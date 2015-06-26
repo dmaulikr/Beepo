@@ -26,6 +26,7 @@ SystemSoundID sound2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self moveCloud1: self.cloud1];
     [self moveCloud2: self.cloud2];
     [self moveCloud3: self.cloud3];
