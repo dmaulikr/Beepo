@@ -33,6 +33,7 @@
 
 @property (nonatomic) IBOutlet UIButton* backButton;
 @property (nonatomic) IBOutlet UIButton* playSoundButton;
+@property (nonatomic) IBOutlet UIButton* infoButton;
 
 @property (nonatomic) IBOutlet UILabel* labelCasa;
 @property (nonatomic) IBOutlet UILabel* labelParque;

@@ -53,7 +53,7 @@
     }
 #
     if (self.player.fase3) {
-        [self.fase3 setBackgroundImage:[UIImage imageNamed:@"atividades-hospital-color"] forState:UIControlStateNormal];
+        [self.fase3 setBackgroundImage:[UIImage imageNamed:@"atividades-rua-color"] forState:UIControlStateNormal];
     }
     
     if (self.player.medalha1fase3) {

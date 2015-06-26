@@ -33,6 +33,8 @@
 		0264DE741B2F1610007A18A7 /* Ventura_Edding.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE711B2F1610007A18A7 /* Ventura_Edding.otf */; };
 		0264DE831B2F16CE007A18A7 /* UIView+Animation2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0264DE801B2F16CE007A18A7 /* UIView+Animation2.m */; };
 		0264DE841B2F16CE007A18A7 /* UIView+Blink2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0264DE821B2F16CE007A18A7 /* UIView+Blink2.m */; };
+		0270E8AF1B3D8E2D009A4B6D /* ParentsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270E8AE1B3D8E2D009A4B6D /* ParentsInfo.m */; };
+		0270E8B71B3D8E77009A4B6D /* Pais.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270E8B61B3D8E77009A4B6D /* Pais.m */; };
 		027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */ = {isa = PBXBuildFile; fileRef = 027C73781B334F2A00599E32 /* Phase3Parte2.m */; };
 		02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5401B309E5C00143CC1 /* carefree.mp3 */; };
 		02B3B5431B309E5C00143CC1 /* hackbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5411B309E5C00143CC1 /* hackbeat.mp3 */; };
@@ -106,6 +108,12 @@
 		0264DE801B2F16CE007A18A7 /* UIView+Animation2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Animation2.m"; path = "../UIView+Animation2.m"; sourceTree = "<group>"; };
 		0264DE811B2F16CE007A18A7 /* UIView+Blink2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Blink2.h"; path = "../UIView+Blink2.h"; sourceTree = "<group>"; };
 		0264DE821B2F16CE007A18A7 /* UIView+Blink2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Blink2.m"; path = "../UIView+Blink2.m"; sourceTree = "<group>"; };
+		0270E8AD1B3D8E2D009A4B6D /* ParentsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentsInfo.h; sourceTree = "<group>"; };
+		0270E8AE1B3D8E2D009A4B6D /* ParentsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentsInfo.m; sourceTree = "<group>"; };
+		0270E8B21B3D8E6A009A4B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base; path = Base.lproj/Creditos.h; sourceTree = "<group>"; };
+		0270E8B41B3D8E6A009A4B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/Creditos.m; sourceTree = "<group>"; };
+		0270E8B51B3D8E77009A4B6D /* Pais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pais.h; sourceTree = "<group>"; };
+		0270E8B61B3D8E77009A4B6D /* Pais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pais.m; sourceTree = "<group>"; };
 		027C73771B334F2A00599E32 /* Phase3Parte2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase3Parte2.h; sourceTree = "<group>"; };
 		027C73781B334F2A00599E32 /* Phase3Parte2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase3Parte2.m; sourceTree = "<group>"; };
 		02B3B5401B309E5C00143CC1 /* carefree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carefree.mp3; sourceTree = "<group>"; };
@@ -240,6 +248,7 @@
 				021F56201B2F1E9C007886D6 /* Phase2 */,
 				021F56211B2F1EBF007886D6 /* Phase3 */,
 				02B3B54E1B30D38500143CC1 /* Phase4 */,
+				0270E8B01B3D8E32009A4B6D /* ParentsInfo */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -263,6 +272,19 @@
 				0264DE821B2F16CE007A18A7 /* UIView+Blink2.m */,
 			);
 			name = Animation;
+			sourceTree = "<group>";
+		};
+		0270E8B01B3D8E32009A4B6D /* ParentsInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0270E8AD1B3D8E2D009A4B6D /* ParentsInfo.h */,
+				0270E8AE1B3D8E2D009A4B6D /* ParentsInfo.m */,
+				0270E8B11B3D8E6A009A4B6D /* Creditos.h */,
+				0270E8B31B3D8E6A009A4B6D /* Creditos.m */,
+				0270E8B51B3D8E77009A4B6D /* Pais.h */,
+				0270E8B61B3D8E77009A4B6D /* Pais.m */,
+			);
+			name = ParentsInfo;
 			sourceTree = "<group>";
 		};
 		02B3B5441B30B6DA00143CC1 /* Start */ = {
@@ -541,8 +563,10 @@
 				023D17B51B3731CB0004DE32 /* Puzzle4.m in Sources */,
 				021F56281B2F20FA007886D6 /* Story2.m in Sources */,
 				0264DE831B2F16CE007A18A7 /* UIView+Animation2.m in Sources */,
+				0270E8AF1B3D8E2D009A4B6D /* ParentsInfo.m in Sources */,
 				02FCFC8C1B345AD000E762B8 /* Story4.m in Sources */,
 				021F56341B2F24B0007886D6 /* Skin.m in Sources */,
+				0270E8B71B3D8E77009A4B6D /* Pais.m in Sources */,
 				15C431611B289E500098C994 /* AppDelegate.m in Sources */,
 				15C4315E1B289E500098C994 /* main.m in Sources */,
 				15C431861B28A9650098C994 /* DraggableImageView.m in Sources */,
@@ -569,6 +593,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0270E8B11B3D8E6A009A4B6D /* Creditos.h */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0270E8B21B3D8E6A009A4B6D /* Base */,
+			);
+			name = Creditos.h;
+			sourceTree = "<group>";
+		};
+		0270E8B31B3D8E6A009A4B6D /* Creditos.m */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0270E8B41B3D8E6A009A4B6D /* Base */,
+			);
+			name = Creditos.m;
+			sourceTree = "<group>";
+		};
 		15C431651B289E500098C994 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

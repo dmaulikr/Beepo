@@ -24,5 +24,7 @@
 
 @property (nonatomic) IBOutlet UIButton* play;
 
+@property (nonatomic) IBOutlet UIButton* buttonInfo;
+
 @end
 
