@@ -26,5 +26,7 @@
 
 @property (nonatomic) IBOutlet UIButton* buttonInfo;
 
+@property (nonatomic) IBOutlet UIImageView* infoImage;
+
 @end
 

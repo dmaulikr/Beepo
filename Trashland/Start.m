@@ -12,6 +12,7 @@
 #import "Skin.h"
 #import "UIView+Animation2.h"
 #import "AppDelegate.h"
+#import "ParentsInfo.h"
 
 @interface Start ()
 @end
@@ -37,6 +38,8 @@ SystemSoundID sound2;
     [self.fundo addSubview:self.logo];
     
     [self.fundo addSubview:self.play];
+    //[self.fundo addSubview:self.buttonInfo];
+    [self.fundo addSubview:self.infoImage];
     
     [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(balancarLogo) userInfo:nil repeats:YES];
     [self.play tada:NULL];
@@ -94,6 +97,13 @@ SystemSoundID sound2;
     [self presentViewController:game animated:YES completion:nil];
     
     
+}
+
+-(IBAction)info:(id)sender{
+    ParentsInfo *game = [self.storyboard instantiateViewControllerWithIdentifier:@"ParentsInfoVC"];
+    [game setModalPresentationStyle:UIModalPresentationFullScreen];
+    [game setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+     [self presentViewController:game animated:YES completion:nil];
 }
 
 -(void)trocarPredio{
