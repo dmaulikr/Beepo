@@ -28,6 +28,42 @@
 @implementation Phase2
 float deslocIni;
 
+-(void)dealloc{
+    
+    NSLog(@"desalocou Phase2");
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    _auxView = nil;
+    _player = nil;
+    _phaseScrollView = nil;
+    _phaseBG = nil;
+    _balao = nil;
+    _bolinhaVermelha = nil;
+    _bolinhaVerde = nil;
+    _arvore1 = nil;
+    _arvore2 = nil;
+    _arvore3 = nil;
+    _arvore4 = nil;
+    _arvore5 = nil;
+    _garrafaPet1 = nil;
+    _lata = nil;
+    _garrafaVidro = nil;
+    _papel = nil;
+    _garrafaPet2 = nil;
+    _cascaBanana = nil;
+    _zzzImage = nil;
+    _charImageView = nil;
+    _shadowImageView = nil;
+    _fantasminhaView = nil;
+    _gasperEscolhido = nil;
+    _botaoProximo = nil;
+    _badgeLixo = nil;
+    _badgeNatureza = nil;
+    _popUpView = nil;
+    _lixos = nil;
+}
 
 -(void)viewDidLoad{
     [super viewDidLoad];

@@ -19,6 +19,10 @@
 
 @implementation Puzzle4
 
+-(void)dealloc{
+    NSLog(@"desalocou puzzle4");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

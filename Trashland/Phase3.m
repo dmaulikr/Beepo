@@ -18,6 +18,10 @@
 UIDynamicAnimator* _animator2;
 UICollisionBehavior* _collision2;
 
+-(void)dealloc{
+    NSLog(@"desalocou phase3");
+}
+
 -(void) viewDidLoad{
     [super viewDidLoad];
     [self checkBadges];

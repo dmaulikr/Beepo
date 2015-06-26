@@ -15,6 +15,11 @@
 
 @implementation Story4
 
+
+-(void)dealloc{
+    NSLog(@"desalocou story4");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.fundo];

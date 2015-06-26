@@ -17,6 +17,10 @@
 
 @implementation Phase3Parte2
 
+-(void)dealloc{
+    NSLog(@"desalocou phase3parte2");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

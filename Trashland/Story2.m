@@ -18,6 +18,11 @@
 
 @implementation Story2
 
+-(void)dealloc{
+    
+    NSLog(@"desalocou Story2");
+}
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self moveBeepo:self.moveBeepoView];
@@ -42,6 +47,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     self.imgFantasminha.frame = _ghostStarterFrame;
     self.imgSombra.frame = _shadowStarterFrame;
     [super viewDidAppear:animated];

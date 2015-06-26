@@ -112,7 +112,7 @@ UICollisionBehavior* _collision;
 -(void)dealloc{
     
     
-    NSLog(@"morreu fase 1");
+    NSLog(@"desalocou Phase1");
     
     
     _player = nil;

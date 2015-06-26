@@ -19,6 +19,11 @@
 
 @implementation Votacao
 
+
+-(void)dealloc{
+    NSLog(@"desalocou votacao");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     opcao1 = false;

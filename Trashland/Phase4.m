@@ -14,6 +14,11 @@
 
 @implementation Phase4
 
+
+-(void)dealloc{
+    NSLog(@"desalocou phase4");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

@@ -13,7 +13,9 @@
 @end
 
 @implementation PopUpViewController
-
+-(void)dealloc{
+    NSLog(@"xau popup");
+}
 - (void)viewDidLoad {
     self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6];
     self.popUpView.layer.cornerRadius = 5;

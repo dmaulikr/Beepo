@@ -15,6 +15,10 @@
     BOOL primeira;
 }
 
+-(void)dealloc{
+    NSLog(@"desalocou customskins");
+}
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     primeira = true;
@@ -46,6 +50,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     CGRect charFrame = self.gasper.frame;
     charFrame.origin.y = charFrame.origin.y - 45.0;
     charFrame.size.height = charFrame.size.height + 15.0;

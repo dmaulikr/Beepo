@@ -16,35 +16,10 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     
-   // self.gasper.image = self.player.gasperEscolhido;
-    self.gasper.image = [UIImage imageNamed:@"fantasminha"];
-    
-    self.gasperTriste.image = [UIImage imageNamed:@"fantasma-triste"];
-    
-    [self.view addSubview:self.background];
-    [self.background addSubview:self.viewGasper];
-    [self.background addSubview:self.frase1];
-    [self.background addSubview:self.frase2];
-    [self.background addSubview:self.frase3];
-    [self.background addSubview:self.frase4];
-    [self.background addSubview:self.interrogacao1];
-    [self.background addSubview:self.interrogacao2];
-    [self.background addSubview:self.interrogacao3];
-    [self.background addSubview:self.controle];
-    [self.background addSubview:self.viewGasperTriste];
-    [self.viewGasperTriste addSubview:self.gasperTriste];
-    [self.viewGasperTriste addSubview:self.gaspersombraTriste];
     
     
   //  [self.background addSubview:self.botaoPlay];
  //   [self.background addSubview:self.botaoVoltar];
-    
-    [self.interrogacao3 setAlpha:0.0f];
-    [self.interrogacao2 setAlpha:0.0f];
-    [self.interrogacao1 setAlpha:0.0f];
-    [self.frase3 setAlpha:0.0f];
-    [self.frase4 setAlpha:0.0f];
-    [self.viewGasperTriste setAlpha:0.0f];
     
     
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
@@ -55,34 +30,20 @@
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swipeRight];
-    
-    self.gifDedo.image = [UIImage animatedImageNamed:@"maoesq-" duration:1.f];
-    [self.background addSubview:self.gifDedo];
-}
+    [self.view addGestureRecognizer:swipeRight];}
 
 - (void)dealloc{
-    NSLog(@"desalocou essa caraia");
-    _player = nil;
-    _controle = nil;
-    _background = nil;
-    _botaoVoltar = nil;
-    _botaoPlay = nil;
-    _gifDedo = nil;
-    _viewGasper = nil;
-    _sombra = nil;
-    _gasper = nil;
-    _frase1 = nil;
-    _frase2 = nil;
-    _interrogacao1 = nil;
-    _interrogacao2 = nil;
-    _interrogacao3 = nil;
-    _frase3 = nil;
-    _frase4 = nil;
-    _viewGasperTriste = nil;
-    _gasperTriste = nil;
-    _gaspersombraTriste = nil;
+    NSLog(@"desalocou Story1");
 
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    
+    self.gifDedo.image = [UIImage animatedImageNamed:@"maoesq-" duration:1.f];
+    self.gifDedo.alpha = 0.7;
+    [self.view addSubview:self.gifDedo];
 }
 
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
@@ -90,14 +51,17 @@
     {
         switch (self.controle.currentPage) {
             case 0:
-                [self out0];
-                [self in1];
+//                [self out0];
+//                [self in1];
+                [self moveLeft];
                 self.controle.currentPage +=1;
                 self.gifDedo.hidden = YES;
                 break;
             case 1:
-                [self out1];
-                [self in2];
+//                [self out1];
+//                [self in2];
+                
+                [self moveLeft];
                 self.controle.currentPage +=1;
                 break;
             case 2:
@@ -111,13 +75,16 @@
     {
         switch (self.controle.currentPage) {
             case 2:
-                [self out2];
-                [self in1];
+//                [self out2];
+//                [self in1];
+                
+                [self moveRight];
                 self.controle.currentPage -=1;
                 break;
             case 1:
-                [self out1];
-                [self in0];
+//                [self out1];
+//                [self in0];
+                [self moveRight];
                 self.controle.currentPage -=1;
                 break;
             default:
@@ -127,22 +94,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    CGRect charFrame = self.gasper.frame;
-    charFrame.origin.y = charFrame.origin.y - 45.0;
-    charFrame.size.height = charFrame.size.height + 15.0;
-    
-    CGRect shadowFrame = self.sombra.frame;
-    shadowFrame.size.width = shadowFrame.size.width/2.0;
-    shadowFrame.origin.x = shadowFrame.origin.x + shadowFrame.size.width/2;
-    
-    CGRect charFrame2 = self.gasperTriste.frame;
-    charFrame2.origin.y = charFrame2.origin.y - 45.0;
-    charFrame2.size.height = charFrame2.size.height + 15.0;
-    
-    
-    CGRect shadowFrame2 = self.gaspersombraTriste.frame;
-    shadowFrame2.size.width = shadowFrame2.size.width/2.0;
-    shadowFrame2.origin.x = shadowFrame2.origin.x + shadowFrame2.size.width/2;
+
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.6];//0.05
@@ -151,11 +103,7 @@
     [UIView setAnimationRepeatCount:9999.0];
     [UIView setAnimationRepeatAutoreverses:YES];
     
-    self.gasper.frame = charFrame;
-    self.sombra.frame = shadowFrame;
     
-    self.gasperTriste.frame = charFrame2;
-    self.gaspersombraTriste.frame = shadowFrame2;
     
     [UIView commitAnimations];
 }
@@ -169,87 +117,123 @@
     }
 }
 
--(void)out0{
-   //   [UIView animateWithDuration:.6f animations:^{
-    [self.frase1 setAlpha:0.0f];
-    [self.frase2 setAlpha:0.0f];
-    [self.viewGasper setAlpha:0.0f];
-  //  } completion:^(BOOL finished) {}];
-}
-
--(void)in0{
-   //       [UIView animateWithDuration:.6f animations:^{
-    [self.frase1 setAlpha:1.0f];
-    [self.frase2 setAlpha:1.0f];
-    [self.viewGasper setAlpha:1.0f];
-    self.frase1.text = @"Era uma vez um fantasminha chamado Beepo, nao tao diferente";
-    self.frase2.text = @"dos outros habitantes da sua cidade, trashland.";
-    
-    self.background.image = [UIImage imageNamed:@"telainicial1_semtexto"];
-   //               } completion:^(BOOL finished) {}];
-}
-
--(void)out1{
-        //      [UIView animateWithDuration:.6f animations:^{
-    [self.interrogacao3 setAlpha:0.0f];
-    [self.interrogacao2 setAlpha:0.0f];
-    [self.interrogacao1 setAlpha:0.0f];
-    [self.frase1 setAlpha:0.0f];
-    [self.frase2 setAlpha:0.0f];
-    [self.frase3 setAlpha:0.0f];
-    [self.frase4 setAlpha:0.0f];
-       //               } completion:^(BOOL finished) {}];
-}
-
--(void)in1{
-   // [UIView animateWithDuration:.6f animations:^{
-       
-     //   [UIView animateWithDuration:.6f animations:^{
-            [self.interrogacao3 setAlpha:1.0f];
-            
-     //   } completion:^(BOOL finished) {
-      //      [UIView animateWithDuration:.6f animations:^{
-                [self.interrogacao1 setAlpha:1.0f];
-      //      } completion:^(BOOL finished) {
-              //  [UIView animateWithDuration:.6f animations:^{
-                  [self.interrogacao2 setAlpha:1.0f];
-     //           } completion:^(BOOL finished) {}];
-     //       }];
-     //   }];
-     //
-        
-        
-        [self.frase3 setAlpha:1.0f];
-        [self.frase4 setAlpha:1.0f];
-        [self.frase1 setAlpha:1.0f];
-        [self.frase2 setAlpha:1.0f];
-        self.frase3.text = @"Mas Beepo possuía uma grande";
-        self.frase1.text = @"curiosidade com tudo ao seu redor,";
-        self.frase2.text = @"ainda mais na sua cidade trashland";
-        self.frase4.text = @"onde tudo parecia estar fora do lugar!";
-        self.background.image = [UIImage imageNamed:@"historinha2_"];
+- (void)moveLeft{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.6];//0.05
+    [UIView setAnimationDelay:0.02];
+    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+//    [UIView setAnimationRepeatCount:9999.0];
+    [UIView setAnimationRepeatAutoreverses:NO];
+    self.telaUm.frame = CGRectMake(self.telaUm.frame.origin.x -  self.telaUm.frame.size.width
+                                   , 0.0, self.telaUm.frame.size.width, self.telaUm.frame.size.height);
+    self.telaDois.frame = CGRectMake(self.telaDois.frame.origin.x -  self.telaUm.frame.size.width
+                                     , 0.0, self.telaDois.frame.size.width, self.telaDois.frame.size.height);
+    self.telaTres.frame = CGRectMake(self.telaTres.frame.origin.x -  self.telaUm.frame.size.width
+                                     , 0.0, self.telaTres.frame.size.width, self.telaTres.frame.size.height);
     
     
-    [self.interrogacao1 bounce:NULL];
-    [self.interrogacao2 bounce:NULL];
-    [self.interrogacao3 bounce:NULL];
+    [UIView commitAnimations];
+}
 
-   // } completion:^(BOOL finished) {}];
+- (void)moveRight{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.6];//0.05
+    [UIView setAnimationDelay:0.02];
+    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+    //    [UIView setAnimationRepeatCount:9999.0];
+    [UIView setAnimationRepeatAutoreverses:NO];
+    self.telaUm.frame = CGRectMake(self.telaUm.frame.origin.x +  self.telaUm.frame.size.width
+                                   , 0.0, self.telaUm.frame.size.width, self.telaUm.frame.size.height);
+    self.telaDois.frame = CGRectMake(self.telaDois.frame.origin.x +  self.telaUm.frame.size.width
+                                     , 0.0, self.telaDois.frame.size.width, self.telaDois.frame.size.height);
+    self.telaTres.frame = CGRectMake(self.telaTres.frame.origin.x +  self.telaUm.frame.size.width
+                                     , 0.0, self.telaTres.frame.size.width, self.telaTres.frame.size.height);
     
+    
+    [UIView commitAnimations];
 }
 
--(void)out2{
-  //   [UIView animateWithDuration:.6f animations:^{
-    [self.viewGasperTriste setAlpha:0.0f];
-  //  } completion:^(BOOL finished) {}];
-}
-
--(void)in2{
-  //     [UIView animateWithDuration:.6f animations:^{
-    [self.viewGasperTriste setAlpha:1.0f];
-    self.background.image = [UIImage imageNamed:@"telainicial3-1"];
-  //             } completion:^(BOOL finished) {}];
-}
+//-(void)out0{
+//   //   [UIView animateWithDuration:.6f animations:^{
+//    [self.frase1 setAlpha:0.0f];
+//    [self.frase2 setAlpha:0.0f];
+//    [self.viewGasper setAlpha:0.0f];
+//  //  } completion:^(BOOL finished) {}];
+//}
+//
+//-(void)in0{
+//   //       [UIView animateWithDuration:.6f animations:^{
+//    [self.frase1 setAlpha:1.0f];
+//    [self.frase2 setAlpha:1.0f];
+//    [self.viewGasper setAlpha:1.0f];
+//    self.frase1.text = @"Era uma vez um fantasminha chamado Beepo, nao tao diferente";
+//    self.frase2.text = @"dos outros habitantes da sua cidade, trashland.";
+//    
+//    self.background.image = [UIImage imageNamed:@"telainicial1_semtexto"];
+//   //               } completion:^(BOOL finished) {}];
+//}
+//
+//-(void)out1{
+//        //      [UIView animateWithDuration:.6f animations:^{
+//    [self.interrogacao3 setAlpha:0.0f];
+//    [self.interrogacao2 setAlpha:0.0f];
+//    [self.interrogacao1 setAlpha:0.0f];
+//    [self.frase1 setAlpha:0.0f];
+//    [self.frase2 setAlpha:0.0f];
+//    [self.frase3 setAlpha:0.0f];
+//    [self.frase4 setAlpha:0.0f];
+//       //               } completion:^(BOOL finished) {}];
+//}
+//
+//-(void)in1{
+//   // [UIView animateWithDuration:.6f animations:^{
+//       
+//     //   [UIView animateWithDuration:.6f animations:^{
+//            [self.interrogacao3 setAlpha:1.0f];
+//            
+//     //   } completion:^(BOOL finished) {
+//      //      [UIView animateWithDuration:.6f animations:^{
+//                [self.interrogacao1 setAlpha:1.0f];
+//      //      } completion:^(BOOL finished) {
+//              //  [UIView animateWithDuration:.6f animations:^{
+//                  [self.interrogacao2 setAlpha:1.0f];
+//     //           } completion:^(BOOL finished) {}];
+//     //       }];
+//     //   }];
+//     //
+//        
+//        
+//        [self.frase3 setAlpha:1.0f];
+//        [self.frase4 setAlpha:1.0f];
+//        [self.frase1 setAlpha:1.0f];
+//        [self.frase2 setAlpha:1.0f];
+//        self.frase3.text = @"Mas Beepo possuía uma grande";
+//        self.frase1.text = @"curiosidade com tudo ao seu redor,";
+//        self.frase2.text = @"ainda mais na sua cidade trashland";
+//        self.frase4.text = @"onde tudo parecia estar fora do lugar!";
+//        self.background.image = [UIImage imageNamed:@"historinha2_"];
+//    
+//    
+//    [self.interrogacao1 bounce:NULL];
+//    [self.interrogacao2 bounce:NULL];
+//    [self.interrogacao3 bounce:NULL];
+//
+//   // } completion:^(BOOL finished) {}];
+//    
+//}
+//
+//-(void)out2{
+//  //   [UIView animateWithDuration:.6f animations:^{
+//    [self.viewGasperTriste setAlpha:0.0f];
+//  //  } completion:^(BOOL finished) {}];
+//}
+//
+//-(void)in2{
+//  //     [UIView animateWithDuration:.6f animations:^{
+//    [self.viewGasperTriste setAlpha:1.0f];
+//    self.background.image = [UIImage imageNamed:@"telainicial3-1"];
+//  //             } completion:^(BOOL finished) {}];
+//}
 
 -(IBAction)voltar:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -19,6 +19,10 @@
 @implementation Start
 SystemSoundID sound2;
 
+-(void)dealloc{
+    NSLog(@"desalocou start");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self moveCloud1: self.cloud1];

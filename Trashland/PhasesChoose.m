@@ -16,6 +16,10 @@
 
 @implementation PhasesChoose
 
+-(void)dealloc{
+    NSLog(@"desalocou phaseschoose");
+}
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.player.telaEscolha = self;
