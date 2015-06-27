@@ -13,12 +13,14 @@
 #import "UIView+Animation2.h"
 #import "AppDelegate.h"
 #import "ParentsInfo.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface Start ()
 @end
 
 @implementation Start
 SystemSoundID sound2;
+AVAudioPlayer *_audioPlayer;
 
 -(void)dealloc{
     NSLog(@"desalocou start");
@@ -46,11 +48,22 @@ SystemSoundID sound2;
     [self.play tada:NULL];
     
     
+//    
+//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"carefreewav" withExtension:@"wav"];
+//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound2);
+//    AudioServicesPlaySystemSound(sound2);
+//
     
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"carefreewav" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound2);
-    AudioServicesPlaySystemSound(sound2);
-    
+        // Construct URL to sound file
+        NSString *path = [NSString stringWithFormat:@"%@/carefree.mp3", [[NSBundle mainBundle] resourcePath]];
+        NSURL *soundUrl = [NSURL fileURLWithPath:path];
+        
+        // Create audio player object and initialize with URL to sound
+        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+        
+        [_audioPlayer play];
+    [_audioPlayer setVolume:0.2];
+    _audioPlayer.numberOfLoops = -1;
     
     [NSTimer scheduledTimerWithTimeInterval:2.5f target:self selector:@selector(trocarPredio) userInfo:nil repeats:NO];
     

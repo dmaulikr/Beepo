@@ -25,6 +25,21 @@
 		023D17B51B3731CB0004DE32 /* Puzzle4.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17B41B3731CB0004DE32 /* Puzzle4.m */; };
 		023D17B81B37B5E00004DE32 /* Votacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17B71B37B5E00004DE32 /* Votacao.m */; };
 		023D17BB1B37BE0A0004DE32 /* Fim.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17BA1B37BE0A0004DE32 /* Fim.m */; };
+		024153671B3F5ADA00A02CE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024153661B3F5ADA00A02CE9 /* UIKit.framework */; };
+		024153691B3F5ADF00A02CE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024153681B3F5ADF00A02CE9 /* Foundation.framework */; };
+		024153781B3F601300A02CE9 /* 1_pre-sala01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0241536B1B3F601300A02CE9 /* 1_pre-sala01.mp3 */; };
+		024153791B3F601300A02CE9 /* 2_pre-sala02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0241536C1B3F601300A02CE9 /* 2_pre-sala02.mp3 */; };
+		0241537A1B3F601300A02CE9 /* 3_pre-sala03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0241536D1B3F601300A02CE9 /* 3_pre-sala03.mp3 */; };
+		0241537B1B3F601300A02CE9 /* 4_sala.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0241536E1B3F601300A02CE9 /* 4_sala.mp3 */; };
+		0241537C1B3F601300A02CE9 /* 5_pre-parque.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0241536F1B3F601300A02CE9 /* 5_pre-parque.mp3 */; };
+		0241537D1B3F601300A02CE9 /* 6_parque.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153701B3F601300A02CE9 /* 6_parque.mp3 */; };
+		0241537E1B3F601300A02CE9 /* 7_pre-rua.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153711B3F601300A02CE9 /* 7_pre-rua.mp3 */; };
+		0241537F1B3F601300A02CE9 /* 8_rua.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153721B3F601300A02CE9 /* 8_rua.mp3 */; };
+		024153801B3F601300A02CE9 /* 9_ruapuzzle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153731B3F601300A02CE9 /* 9_ruapuzzle.mp3 */; };
+		024153811B3F601300A02CE9 /* 10_pre-prefeitura.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153741B3F601300A02CE9 /* 10_pre-prefeitura.mp3 */; };
+		024153821B3F601300A02CE9 /* 11_prefeitura.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153751B3F601300A02CE9 /* 11_prefeitura.mp3 */; };
+		024153831B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153761B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 */; };
+		024153841B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153771B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 */; };
 		0264DE651B2F155F007A18A7 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE641B2F155F007A18A7 /* click.wav */; };
 		0264DE6A1B2F1573007A18A7 /* shower.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE661B2F1573007A18A7 /* shower.mp3 */; };
 		0264DE6B1B2F1573007A18A7 /* TV.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE671B2F1573007A18A7 /* TV.aiff */; };
@@ -104,6 +119,21 @@
 		023D17B71B37B5E00004DE32 /* Votacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Votacao.m; sourceTree = "<group>"; };
 		023D17B91B37BE0A0004DE32 /* Fim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fim.h; sourceTree = "<group>"; };
 		023D17BA1B37BE0A0004DE32 /* Fim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fim.m; sourceTree = "<group>"; };
+		024153661B3F5ADA00A02CE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		024153681B3F5ADF00A02CE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0241536B1B3F601300A02CE9 /* 1_pre-sala01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1_pre-sala01.mp3"; sourceTree = "<group>"; };
+		0241536C1B3F601300A02CE9 /* 2_pre-sala02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "2_pre-sala02.mp3"; sourceTree = "<group>"; };
+		0241536D1B3F601300A02CE9 /* 3_pre-sala03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "3_pre-sala03.mp3"; sourceTree = "<group>"; };
+		0241536E1B3F601300A02CE9 /* 4_sala.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4_sala.mp3; sourceTree = "<group>"; };
+		0241536F1B3F601300A02CE9 /* 5_pre-parque.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "5_pre-parque.mp3"; sourceTree = "<group>"; };
+		024153701B3F601300A02CE9 /* 6_parque.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 6_parque.mp3; sourceTree = "<group>"; };
+		024153711B3F601300A02CE9 /* 7_pre-rua.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "7_pre-rua.mp3"; sourceTree = "<group>"; };
+		024153721B3F601300A02CE9 /* 8_rua.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8_rua.mp3; sourceTree = "<group>"; };
+		024153731B3F601300A02CE9 /* 9_ruapuzzle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9_ruapuzzle.mp3; sourceTree = "<group>"; };
+		024153741B3F601300A02CE9 /* 10_pre-prefeitura.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "10_pre-prefeitura.mp3"; sourceTree = "<group>"; };
+		024153751B3F601300A02CE9 /* 11_prefeitura.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 11_prefeitura.mp3; sourceTree = "<group>"; };
+		024153761B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "12_prefeitura-puzzlecaixa.mp3"; sourceTree = "<group>"; };
+		024153771B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "13_prefeitura-puzzleeleicao.mp3"; sourceTree = "<group>"; };
 		0264DE641B2F155F007A18A7 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		0264DE661B2F1573007A18A7 /* shower.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shower.mp3; sourceTree = "<group>"; };
 		0264DE671B2F1573007A18A7 /* TV.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = TV.aiff; sourceTree = "<group>"; };
@@ -170,6 +200,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024153691B3F5ADF00A02CE9 /* Foundation.framework in Frameworks */,
+				024153671B3F5ADA00A02CE9 /* UIKit.framework in Frameworks */,
 				021F56251B2F1F03007886D6 /* AVFoundation.framework in Frameworks */,
 				021F56231B2F1EFC007886D6 /* AudioToolbox.framework in Frameworks */,
 			);
@@ -220,6 +252,26 @@
 			name = Phase3;
 			sourceTree = "<group>";
 		};
+		0241536A1B3F5FE000A02CE9 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				0241536B1B3F601300A02CE9 /* 1_pre-sala01.mp3 */,
+				0241536C1B3F601300A02CE9 /* 2_pre-sala02.mp3 */,
+				0241536D1B3F601300A02CE9 /* 3_pre-sala03.mp3 */,
+				0241536E1B3F601300A02CE9 /* 4_sala.mp3 */,
+				0241536F1B3F601300A02CE9 /* 5_pre-parque.mp3 */,
+				024153701B3F601300A02CE9 /* 6_parque.mp3 */,
+				024153711B3F601300A02CE9 /* 7_pre-rua.mp3 */,
+				024153721B3F601300A02CE9 /* 8_rua.mp3 */,
+				024153731B3F601300A02CE9 /* 9_ruapuzzle.mp3 */,
+				024153741B3F601300A02CE9 /* 10_pre-prefeitura.mp3 */,
+				024153751B3F601300A02CE9 /* 11_prefeitura.mp3 */,
+				024153761B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 */,
+				024153771B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 */,
+			);
+			name = Stories;
+			sourceTree = "<group>";
+		};
 		0264DE601B2F14F5007A18A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +284,7 @@
 		0264DE611B2F14FE007A18A7 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				0241536A1B3F5FE000A02CE9 /* Stories */,
 				150309341B333A1F0056346D /* lixo.WAV */,
 				150309321B33357C0056346D /* arvore_nascendo.wav */,
 				02278E481B31D38700064B9A /* closeTap.wav */,
@@ -369,6 +422,8 @@
 		15C4314F1B289E500098C994 = {
 			isa = PBXGroup;
 			children = (
+				024153681B3F5ADF00A02CE9 /* Foundation.framework */,
+				024153661B3F5ADA00A02CE9 /* UIKit.framework */,
 				15C4315A1B289E500098C994 /* Trashland */,
 				15C431741B289E500098C994 /* TrashlandTests */,
 				15C431591B289E500098C994 /* Products */,
@@ -537,18 +592,28 @@
 			files = (
 				150309331B33357C0056346D /* arvore_nascendo.wav in Resources */,
 				02278E491B31D38700064B9A /* closeTap.wav in Resources */,
+				0241537D1B3F601300A02CE9 /* 6_parque.mp3 in Resources */,
+				0241537A1B3F601300A02CE9 /* 3_pre-sala03.mp3 in Resources */,
 				0264DE741B2F1610007A18A7 /* Ventura_Edding.otf in Resources */,
+				0241537C1B3F601300A02CE9 /* 5_pre-parque.mp3 in Resources */,
 				0264DE6D1B2F1573007A18A7 /* bird.wav in Resources */,
+				024153781B3F601300A02CE9 /* 1_pre-sala01.mp3 in Resources */,
+				024153841B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 in Resources */,
+				024153791B3F601300A02CE9 /* 2_pre-sala02.mp3 in Resources */,
+				024153831B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 in Resources */,
 				0264DE6A1B2F1573007A18A7 /* shower.mp3 in Resources */,
 				0264DE731B2F1610007A18A7 /* Ventura_Edding_Bold.otf in Resources */,
 				0264DE6C1B2F1573007A18A7 /* drop.wav in Resources */,
 				02278E4B1B31D63900064B9A /* tv1s.wav in Resources */,
+				024153821B3F601300A02CE9 /* 11_prefeitura.mp3 in Resources */,
+				024153811B3F601300A02CE9 /* 10_pre-prefeitura.mp3 in Resources */,
 				02B3B5431B309E5C00143CC1 /* hackbeat.mp3 in Resources */,
 				0264DE721B2F1610007A18A7 /* actionj.ttf in Resources */,
 				0235564E1B3F1DC70085AC4F /* birdcut.wav in Resources */,
 				02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */,
 				15E450A01B3DC92700B715C8 /* historinha-01@2x.png in Resources */,
 				15C431671B289E500098C994 /* Main.storyboard in Resources */,
+				024153801B3F601300A02CE9 /* 9_ruapuzzle.mp3 in Resources */,
 				150309351B333A1F0056346D /* lixo.WAV in Resources */,
 				15E450A41B3DC93500B715C8 /* historinha-03@2x.png in Resources */,
 				15C4316C1B289E500098C994 /* LaunchScreen.xib in Resources */,
@@ -560,8 +625,11 @@
 				02B3B5501B30DB1B00143CC1 /* carefreewav.wav in Resources */,
 				15C431691B289E500098C994 /* Images.xcassets in Resources */,
 				023D17B21B3731020004DE32 /* maoesq.gif in Resources */,
+				0241537B1B3F601300A02CE9 /* 4_sala.mp3 in Resources */,
+				0241537E1B3F601300A02CE9 /* 7_pre-rua.mp3 in Resources */,
 				023556501B3F20640085AC4F /* clickcut.wav in Resources */,
 				023D17B11B3731020004DE32 /* maodir.gif in Resources */,
+				0241537F1B3F601300A02CE9 /* 8_rua.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
