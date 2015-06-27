@@ -37,6 +37,7 @@ UICollisionBehavior* _collision2;
     
     
     [super viewDidAppear:animated];
+    self.imageBeepo.image = self.player.gasperEscolhido;
     
     self.viewVelha.userInteractionEnabled = YES;
     self.viewVelha.delegate = self;

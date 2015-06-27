@@ -171,65 +171,67 @@ float deslocIni;
 
 - (UIImage*)getBeepoImage{
     UIImage *aux;
-    if ([self.gasperEscolhido isEqualToString:@"gravata"]) {
-        
-        aux = [UIImage imageNamed:@"custom15"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
-        
-        aux = [UIImage imageNamed:@"custom19"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
-        
-        aux = [UIImage imageNamed:@"custom16"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
-        
-        aux = [UIImage imageNamed:@"custom18"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
-        
-        aux = [UIImage imageNamed:@"custom20"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
-        
-        aux = [UIImage imageNamed:@"custom17"];
-    }
-    else{
-        aux = [UIImage imageNamed:@"fantasminha"];
-    }
+//    if ([self.player.gasperEscolhido isEqualToString:@"gravata"]) {
+//        
+//        aux = [UIImage imageNamed:@"custom15"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
+//        
+//        aux = [UIImage imageNamed:@"custom19"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
+//        
+//        aux = [UIImage imageNamed:@"custom16"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
+//        
+//        aux = [UIImage imageNamed:@"custom18"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
+//        
+//        aux = [UIImage imageNamed:@"custom20"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
+//        
+//        aux = [UIImage imageNamed:@"custom17"];
+//    }
+//    else{
+//        aux = [UIImage imageNamed:@"fantasminha"];
+//    }
+    aux = self.player.gasperEscolhido;
     
     return aux;
 }
 
 - (void)beepoCustomizado{
-    if ([self.gasperEscolhido isEqualToString:@"gravata"]) {
-        
-        self.charImageView.image = [UIImage imageNamed:@"custom15"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
-        
-        self.charImageView.image = [UIImage imageNamed:@"custom19"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
-        
-        self.charImageView.image = [UIImage imageNamed:@"custom16"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
-        
-        self.charImageView.image = [UIImage imageNamed:@"custom18"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
-        
-        self.charImageView.image = [UIImage imageNamed:@"custom20"];
-    }
-    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
-        
-        self.charImageView.image = [UIImage imageNamed:@"custom17"];
-    }
-    else{
-        self.charImageView.image = [UIImage imageNamed:@"fantasminha"];
-    }
+//    if ([self.gasperEscolhido isEqualToString:@"gravata"]) {
+//        
+//        self.charImageView.image = [UIImage imageNamed:@"custom15"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
+//        
+//        self.charImageView.image = [UIImage imageNamed:@"custom19"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
+//        
+//        self.charImageView.image = [UIImage imageNamed:@"custom16"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
+//        
+//        self.charImageView.image = [UIImage imageNamed:@"custom18"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
+//        
+//        self.charImageView.image = [UIImage imageNamed:@"custom20"];
+//    }
+//    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
+//        
+//        self.charImageView.image = [UIImage imageNamed:@"custom17"];
+//    }
+//    else{
+//        self.charImageView.image = [UIImage imageNamed:@"fantasminha"];
+//    }
+    self.charImageView.image = self.player.gasperEscolhido;
 }
 #pragma mark - Gavidade e Colisões
 - (void)prepareForMovement{

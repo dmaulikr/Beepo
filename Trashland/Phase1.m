@@ -104,8 +104,8 @@ NSTimer* tvCheck;
     _torneiraGIF.image = [UIImage animatedImageNamed:@"aguatorneira_Trashcity-" duration:0.8f];
     _tvGIF.image = [UIImage animatedImageNamed:@"chuvisco_tv-" duration:0.8f];
     
-    [self tocaTV];
-    tvCheck = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkTV) userInfo:nil repeats:YES];
+    //[self tocaTV];
+    //tvCheck = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkTV) userInfo:nil repeats:YES];
     badgeCheck = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkBadges) userInfo:nil repeats:YES];
     
 }
@@ -440,13 +440,18 @@ NSTimer* tvCheck;
     _tvGIF.hidden = !_tvGIF.hidden;
     pontoTV = !pontoTV;
     TVLigada = !TVLigada;
+    AudioServicesDisposeSystemSoundID (sound1);
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+    AudioServicesPlaySystemSound(sound1);
+
    }
 
 - (IBAction)didClickFirstCloud {
     _nuvem1Acesa.hidden = !_nuvem1Acesa.hidden;
     pontoLuz1 = !pontoLuz1;
     AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"click" withExtension:@"wav"];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     AudioServicesPlaySystemSound(sound1);
    // AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
@@ -456,7 +461,7 @@ NSTimer* tvCheck;
     _nuvem2Acesa.hidden = !_nuvem2Acesa.hidden;
     pontoLuz2 = !pontoLuz2;
     AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"click" withExtension:@"wav"];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     AudioServicesPlaySystemSound(sound1);
    // AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
@@ -466,7 +471,7 @@ NSTimer* tvCheck;
     self.luz3.hidden = !self.luz3.hidden;
     pontoLuz3 = !pontoLuz3;
     AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"click" withExtension:@"wav"];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     AudioServicesPlaySystemSound(sound1);
 }
@@ -475,14 +480,14 @@ NSTimer* tvCheck;
     self.luz4.hidden = !self.luz4.hidden;
     pontoLuz4 = !pontoLuz4;
     AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"click" withExtension:@"wav"];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     AudioServicesPlaySystemSound(sound1);
 }
 
 -(IBAction)didClickBird:(id)sender{
     AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"bird" withExtension:@"wav"];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"birdcut" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     AudioServicesPlaySystemSound(sound1);
 }

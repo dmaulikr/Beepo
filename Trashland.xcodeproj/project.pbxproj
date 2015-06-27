@@ -18,6 +18,8 @@
 		021F56341B2F24B0007886D6 /* Skin.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F56331B2F24B0007886D6 /* Skin.m */; };
 		02278E491B31D38700064B9A /* closeTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02278E481B31D38700064B9A /* closeTap.wav */; };
 		02278E4B1B31D63900064B9A /* tv1s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02278E4A1B31D63900064B9A /* tv1s.wav */; };
+		0235564E1B3F1DC70085AC4F /* birdcut.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0235564D1B3F1DC70085AC4F /* birdcut.wav */; };
+		023556501B3F20640085AC4F /* clickcut.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0235564F1B3F20640085AC4F /* clickcut.wav */; };
 		023D17B11B3731020004DE32 /* maodir.gif in Resources */ = {isa = PBXBuildFile; fileRef = 023D17AF1B3731020004DE32 /* maodir.gif */; };
 		023D17B21B3731020004DE32 /* maoesq.gif in Resources */ = {isa = PBXBuildFile; fileRef = 023D17B01B3731020004DE32 /* maoesq.gif */; };
 		023D17B51B3731CB0004DE32 /* Puzzle4.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17B41B3731CB0004DE32 /* Puzzle4.m */; };
@@ -92,6 +94,8 @@
 		021F56331B2F24B0007886D6 /* Skin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skin.m; sourceTree = "<group>"; };
 		02278E481B31D38700064B9A /* closeTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = closeTap.wav; sourceTree = "<group>"; };
 		02278E4A1B31D63900064B9A /* tv1s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tv1s.wav; sourceTree = "<group>"; };
+		0235564D1B3F1DC70085AC4F /* birdcut.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = birdcut.wav; sourceTree = "<group>"; };
+		0235564F1B3F20640085AC4F /* clickcut.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickcut.wav; sourceTree = "<group>"; };
 		023D17AF1B3731020004DE32 /* maodir.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = maodir.gif; sourceTree = "<group>"; };
 		023D17B01B3731020004DE32 /* maoesq.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = maoesq.gif; sourceTree = "<group>"; };
 		023D17B31B3731CB0004DE32 /* Puzzle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Puzzle4.h; sourceTree = "<group>"; };
@@ -232,7 +236,9 @@
 				150309321B33357C0056346D /* arvore_nascendo.wav */,
 				02278E481B31D38700064B9A /* closeTap.wav */,
 				02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */,
+				0235564F1B3F20640085AC4F /* clickcut.wav */,
 				02B3B5401B309E5C00143CC1 /* carefree.mp3 */,
+				0235564D1B3F1DC70085AC4F /* birdcut.wav */,
 				02B3B54F1B30DB1B00143CC1 /* carefreewav.wav */,
 				02B3B5411B309E5C00143CC1 /* hackbeat.mp3 */,
 				02278E4A1B31D63900064B9A /* tv1s.wav */,
@@ -539,6 +545,7 @@
 				02278E4B1B31D63900064B9A /* tv1s.wav in Resources */,
 				02B3B5431B309E5C00143CC1 /* hackbeat.mp3 in Resources */,
 				0264DE721B2F1610007A18A7 /* actionj.ttf in Resources */,
+				0235564E1B3F1DC70085AC4F /* birdcut.wav in Resources */,
 				02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */,
 				15E450A01B3DC92700B715C8 /* historinha-01@2x.png in Resources */,
 				15C431671B289E500098C994 /* Main.storyboard in Resources */,
@@ -553,6 +560,7 @@
 				02B3B5501B30DB1B00143CC1 /* carefreewav.wav in Resources */,
 				15C431691B289E500098C994 /* Images.xcassets in Resources */,
 				023D17B21B3731020004DE32 /* maoesq.gif in Resources */,
+				023556501B3F20640085AC4F /* clickcut.wav in Resources */,
 				023D17B11B3731020004DE32 /* maodir.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
