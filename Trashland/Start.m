@@ -48,7 +48,7 @@ AVAudioPlayer *_audioPlayer;
     [self.play tada:NULL];
     
     
-//    
+//    audio bosta curto lixo
 //    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"carefreewav" withExtension:@"wav"];
 //    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound2);
 //    AudioServicesPlaySystemSound(sound2);

@@ -128,7 +128,8 @@ UICollisionBehavior* _collision2;
         [popUp setImageNamed: @"pop-up-idoso"];
         self.popUpView = popUp;
         [popUp showInView:self.view animated:YES];
-        self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
+        self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
+        //self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
         [NSTimer scheduledTimerWithTimeInterval:2.5f target:self selector:@selector(startSecondPart) userInfo:nil repeats:NO];
     }
     else{
