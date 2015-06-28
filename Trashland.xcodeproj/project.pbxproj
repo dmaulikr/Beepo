@@ -53,6 +53,7 @@
 		0270E8AF1B3D8E2D009A4B6D /* ParentsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270E8AE1B3D8E2D009A4B6D /* ParentsInfo.m */; };
 		0270E8B71B3D8E77009A4B6D /* Pais.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270E8B61B3D8E77009A4B6D /* Pais.m */; };
 		02795C371B406DEE001E08B9 /* tvfinal.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02795C361B406DEE001E08B9 /* tvfinal.wav */; };
+		02795C391B4084AF001E08B9 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02795C381B4084AF001E08B9 /* coin.wav */; };
 		027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */ = {isa = PBXBuildFile; fileRef = 027C73781B334F2A00599E32 /* Phase3Parte2.m */; };
 		029CB3991B3DE1F60070D5C1 /* Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CB3981B3DE1F60070D5C1 /* Extras.m */; };
 		02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5401B309E5C00143CC1 /* carefree.mp3 */; };
@@ -154,6 +155,7 @@
 		0270E8B51B3D8E77009A4B6D /* Pais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pais.h; sourceTree = "<group>"; };
 		0270E8B61B3D8E77009A4B6D /* Pais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pais.m; sourceTree = "<group>"; };
 		02795C361B406DEE001E08B9 /* tvfinal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tvfinal.wav; sourceTree = "<group>"; };
+		02795C381B4084AF001E08B9 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin.wav; sourceTree = "<group>"; };
 		027C73771B334F2A00599E32 /* Phase3Parte2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase3Parte2.h; sourceTree = "<group>"; };
 		027C73781B334F2A00599E32 /* Phase3Parte2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase3Parte2.m; sourceTree = "<group>"; };
 		029CB3971B3DE1F60070D5C1 /* Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extras.h; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				02278E481B31D38700064B9A /* closeTap.wav */,
 				02795C361B406DEE001E08B9 /* tvfinal.wav */,
 				02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */,
+				02795C381B4084AF001E08B9 /* coin.wav */,
 				0235564F1B3F20640085AC4F /* clickcut.wav */,
 				02B3B5401B309E5C00143CC1 /* carefree.mp3 */,
 				0235564D1B3F1DC70085AC4F /* birdcut.wav */,
@@ -608,6 +611,7 @@
 				0264DE6A1B2F1573007A18A7 /* shower.mp3 in Resources */,
 				0264DE731B2F1610007A18A7 /* Ventura_Edding_Bold.otf in Resources */,
 				0264DE6C1B2F1573007A18A7 /* drop.wav in Resources */,
+				02795C391B4084AF001E08B9 /* coin.wav in Resources */,
 				02278E4B1B31D63900064B9A /* tv1s.wav in Resources */,
 				024153821B3F601300A02CE9 /* 11_prefeitura.mp3 in Resources */,
 				024153811B3F601300A02CE9 /* 10_pre-prefeitura.mp3 in Resources */,

@@ -335,7 +335,7 @@ NSString *path4;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
                 AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
                 AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
                 AudioServicesPlaySystemSound(sound1);
                 
@@ -350,7 +350,7 @@ NSString *path4;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
                 AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
                 AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
                 AudioServicesPlaySystemSound(sound1);
                 
@@ -365,7 +365,7 @@ NSString *path4;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
                 AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
                 AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
                 AudioServicesPlaySystemSound(sound1);
                 
@@ -380,7 +380,7 @@ NSString *path4;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
                 AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
                 AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
                 AudioServicesPlaySystemSound(sound1);
                 
@@ -395,7 +395,7 @@ NSString *path4;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
                 AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"lixo" withExtension:@"WAV"];
+                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
                 AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
                 AudioServicesPlaySystemSound(sound1);
                 
