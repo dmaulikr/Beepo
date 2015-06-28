@@ -57,9 +57,9 @@ NSString *path;
     });
     
     
-//    self.gifDedo.image = [UIImage animatedImageNamed:@"maoesq-" duration:1.f];
-//    self.gifDedo.alpha = 0.7;
-//    [self.view bringSubviewToFront:self.gifDedo];
+    self.gifDedo.image = [UIImage animatedImageNamed:@"maoesq-" duration:1.f];
+    self.gifDedo.alpha = 0.7;
+    [self.view bringSubviewToFront:self.gifDedo];
 }
 
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
