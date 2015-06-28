@@ -8,7 +8,7 @@
 
 #import "Skin.h"
 #import "PhasesChoose.h"
-
+#import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 
 @implementation Skin{
@@ -24,7 +24,15 @@
     primeira = true;
     self.player = [[Player alloc]init];
     self.player.gasperEscolhido = [UIImage imageNamed:@"fantasminha"];
-    
+    [[self.item1 layer] setBorderWidth:2.0f];
+    [[self.item2 layer] setBorderWidth:2.0f];
+    [[self.item3 layer] setBorderWidth:2.0f];
+    [[self.item1 layer] setBorderColor:[UIColor colorWithRed:236.f green:65.f blue:72.f alpha:1.f].CGColor];
+    [[self.item2 layer] setBorderColor:[UIColor colorWithRed:236.f green:65.f blue:72.f alpha:1.f].CGColor];
+    [[self.item3 layer] setBorderColor:[UIColor colorWithRed:236.f green:65 blue:72 alpha:1].CGColor];
+    [[self.item1 layer] setCornerRadius:5.0f];
+    [[self.item2 layer] setCornerRadius:5.0f];
+    [[self.item3 layer] setCornerRadius:5.0f];
 }
 
 -(IBAction)start:(id)sender{

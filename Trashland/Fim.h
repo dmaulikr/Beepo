@@ -11,6 +11,7 @@
 
 
 @interface Fim : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *flagImageView;
 
 @property (nonatomic) IBOutlet UIImageView* fundo;
 

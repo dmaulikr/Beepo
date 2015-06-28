@@ -7,6 +7,7 @@
 //
 
 #import "Phase4.h"
+#import "Votacao.h"
 
 @interface Phase4 ()
 
@@ -28,6 +29,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)didClickUrna:(id)sender {
+    Votacao *game = [self.storyboard instantiateViewControllerWithIdentifier:@"VotacaoVC"];
+    [game setModalPresentationStyle:UIModalPresentationFullScreen];
+    game.player = self.player;
+    [self presentViewController:game animated:NO completion:nil];
 }
 
 /*
