@@ -52,6 +52,7 @@
 		0264DE841B2F16CE007A18A7 /* UIView+Blink2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0264DE821B2F16CE007A18A7 /* UIView+Blink2.m */; };
 		0270E8AF1B3D8E2D009A4B6D /* ParentsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270E8AE1B3D8E2D009A4B6D /* ParentsInfo.m */; };
 		0270E8B71B3D8E77009A4B6D /* Pais.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270E8B61B3D8E77009A4B6D /* Pais.m */; };
+		02795C371B406DEE001E08B9 /* tvfinal.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02795C361B406DEE001E08B9 /* tvfinal.wav */; };
 		027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */ = {isa = PBXBuildFile; fileRef = 027C73781B334F2A00599E32 /* Phase3Parte2.m */; };
 		029CB3991B3DE1F60070D5C1 /* Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CB3981B3DE1F60070D5C1 /* Extras.m */; };
 		02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5401B309E5C00143CC1 /* carefree.mp3 */; };
@@ -152,6 +153,7 @@
 		0270E8B41B3D8E6A009A4B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/Creditos.m; sourceTree = "<group>"; };
 		0270E8B51B3D8E77009A4B6D /* Pais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pais.h; sourceTree = "<group>"; };
 		0270E8B61B3D8E77009A4B6D /* Pais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pais.m; sourceTree = "<group>"; };
+		02795C361B406DEE001E08B9 /* tvfinal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tvfinal.wav; sourceTree = "<group>"; };
 		027C73771B334F2A00599E32 /* Phase3Parte2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase3Parte2.h; sourceTree = "<group>"; };
 		027C73781B334F2A00599E32 /* Phase3Parte2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase3Parte2.m; sourceTree = "<group>"; };
 		029CB3971B3DE1F60070D5C1 /* Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extras.h; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				150309341B333A1F0056346D /* lixo.WAV */,
 				150309321B33357C0056346D /* arvore_nascendo.wav */,
 				02278E481B31D38700064B9A /* closeTap.wav */,
+				02795C361B406DEE001E08B9 /* tvfinal.wav */,
 				02B3B5511B30DFB400143CC1 /* hackbeatwav.wav */,
 				0235564F1B3F20640085AC4F /* clickcut.wav */,
 				02B3B5401B309E5C00143CC1 /* carefree.mp3 */,
@@ -600,6 +603,7 @@
 				024153781B3F601300A02CE9 /* 1_pre-sala01.mp3 in Resources */,
 				024153841B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 in Resources */,
 				024153791B3F601300A02CE9 /* 2_pre-sala02.mp3 in Resources */,
+				02795C371B406DEE001E08B9 /* tvfinal.wav in Resources */,
 				024153831B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 in Resources */,
 				0264DE6A1B2F1573007A18A7 /* shower.mp3 in Resources */,
 				0264DE731B2F1610007A18A7 /* Ventura_Edding_Bold.otf in Resources */,

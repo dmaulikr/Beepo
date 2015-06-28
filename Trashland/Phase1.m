@@ -445,7 +445,7 @@ NSString *path2;
     pontoTV = !pontoTV;
     TVLigada = !TVLigada;
     AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"tvfinal" withExtension:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     AudioServicesPlaySystemSound(sound1);
 
