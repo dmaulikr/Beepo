@@ -8,6 +8,7 @@
 
 #import "Phase4.h"
 #import "Votacao.h"
+#import "Puzzle4.h"
 
 @interface Phase4 ()
 
@@ -23,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.phase4ScrollView.contentSize = self.phase4ContentView.frame.size;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,14 +37,10 @@
     [self presentViewController:game animated:NO completion:nil];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)didClickBox:(id)sender {
+    Puzzle4 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Puzzle4VC"];
+    [game setModalPresentationStyle:UIModalPresentationFullScreen];
+    game.player = self.player;
+    [self presentViewController:game animated:NO completion:nil];
 }
-*/
-
 @end

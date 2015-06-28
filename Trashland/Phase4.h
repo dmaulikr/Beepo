@@ -10,7 +10,11 @@
 #import "Player.h"
 
 @interface Phase4 : UIViewController
-@property (weak, nonatomic) IBOutlet UIScrollView *phase4ScrollView;
-@property (weak, nonatomic) IBOutlet UIView *phase4ContentView;
+
 @property (nonatomic) Player* player;
+
+@property (nonatomic) IBOutlet UIButton* botaoDoacao;
+
+@property (nonatomic) IBOutlet UIButton* botaoEleicao;
+
 @end
