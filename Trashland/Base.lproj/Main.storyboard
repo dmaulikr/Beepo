@@ -72,13 +72,6 @@
                                     <action selector="clicouPrefeitura:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="uWg-Ka-RPg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G4Z-7S-l5I" userLabel="narrar">
-                                <rect key="frame" x="954" y="35" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="botao-som">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oau-oD-LtJ" userLabel="voltar">
                                 <rect key="frame" x="20" y="35" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -177,7 +170,6 @@
                         <outlet property="medalha2fase2" destination="CUR-l6-vDr" id="PJ1-gg-O2X"/>
                         <outlet property="medalha2fase3" destination="W7d-lC-1Dt" id="z8C-MH-2bW"/>
                         <outlet property="medalha2fase4" destination="sEs-qe-AYS" id="YFh-Y6-aeO"/>
-                        <outlet property="playSoundButton" destination="G4Z-7S-l5I" id="Q6D-VD-Q0i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3g-v5-2FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,6 +277,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kyt-Fe-sh2" userLabel="narrar">
+                                <rect key="frame" x="945" y="36" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickReadButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="igh-6v-CxS"/>
+                                    <action selector="falaQueEuTeEstupro:" destination="QL4-qb-Rpi" eventType="touchUpInside" id="GvQ-sD-mGc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -402,13 +405,6 @@
                                     <action selector="voltar:" destination="HMU-LK-3EX" eventType="touchUpInside" id="Lur-YY-R4B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jw1-NS-YK9" userLabel="narrar">
-                                <rect key="frame" x="954" y="35" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="botao-som">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nek-fb-khK" userLabel="iniciar">
                                 <rect key="frame" x="479" y="201" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -429,7 +425,6 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
-                        <outlet property="botaoSom" destination="Jw1-NS-YK9" id="P22-Qo-8iM"/>
                         <outlet property="botaoVoltar" destination="oCx-Fp-rt2" id="T1C-hh-Yqe"/>
                         <outlet property="changeLeft" destination="8WU-CK-nU0" id="JJm-ct-aoE"/>
                         <outlet property="changeRight" destination="cwQ-XA-9I9" id="bd7-CI-Avm"/>
@@ -683,6 +678,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didClickReadButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="dol-Ms-HpA"/>
+                                    <action selector="falaQueEuTeEstupro:" destination="2hj-BG-SHn" eventType="touchUpInside" id="IzC-3h-UUo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wXb-Bj-SRU" userLabel="concluir">
@@ -802,6 +798,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bqf-aE-MJD" userLabel="narrar">
+                                <rect key="frame" x="948" y="43" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickReadButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="YAJ-4j-KSe"/>
+                                    <action selector="falaQueEuTeEstupro:" destination="H6L-7N-37k" eventType="touchUpInside" id="Iqk-8q-aga"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -895,6 +902,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didClickReadButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="7Jm-6D-Inn"/>
+                                    <action selector="falaQueEuTeEstupro:" destination="R9V-nN-E2m" eventType="touchUpInside" id="ylc-Lk-w8f"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-idoso" id="ep0-hm-eyN" userLabel="badge lixo">
@@ -1373,7 +1381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yha-KQ-r75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1509" y="450"/>
+            <point key="canvasLocation" x="-1509" y="458"/>
         </scene>
         <!--Extras-->
         <scene sceneID="XbT-2Y-i9G">
@@ -1568,12 +1576,24 @@
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="0.52203677400000004" green="0.52203677400000004" blue="0.52203677400000004" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2gO-qj-pDL" userLabel="narrar">
+                                <rect key="frame" x="937" y="36" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botao-som">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickReadButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="Nnp-jK-cfQ"/>
+                                    <action selector="falaQueEuTeEstupro:" destination="4p4-wJ-H5U" eventType="touchUpInside" id="9J8-9p-5Mu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
+                        <outlet property="buttonNarrar" destination="2gO-qj-pDL" id="iVP-Cj-4W4"/>
                         <outlet property="controle" destination="t95-8B-SPQ" id="PjD-wv-iRF"/>
                         <outlet property="gifDedo" destination="7d1-YL-1s7" id="5IL-Vw-c1b"/>
                         <outlet property="telaDois" destination="skG-V1-4M8" id="0gC-X3-ekH"/>
@@ -1609,6 +1629,9 @@
                                 <state key="normal" backgroundImage="botao-som">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="falaQueEuTeEstupro:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="Wi9-mL-ezr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3xp-ms-gup" userLabel="continuar">
                                 <rect key="frame" x="905" y="644" width="125" height="125"/>
@@ -1646,7 +1669,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1C9BC5E9-C47C-4C61-A44F-379B459F5DCB" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3753A895-341C-4CE1-85E5-4CFBCDC14EC8" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1844,7 +1867,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="1C9BC5E9-C47C-4C61-A44F-379B459F5DCB" width="194" height="90">
+        <image name="3753A895-341C-4CE1-85E5-4CFBCDC14EC8" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

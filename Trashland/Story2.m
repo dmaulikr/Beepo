@@ -8,6 +8,7 @@
 
 #import "Story2.h"
 #import "Phase2.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface Story2()
 
@@ -17,6 +18,8 @@
 @end
 
 @implementation Story2
+AVAudioPlayer *_audioPlayer4;
+NSString *path3;
 
 -(void)dealloc{
     
@@ -25,6 +28,9 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    path3 = [NSString stringWithFormat:@"%@/5_pre-parque.mp3", [[NSBundle mainBundle] resourcePath]];
+    
+    
     [self moveBeepo:self.moveBeepoView];
     _ghostStarterFrame = self.imgFantasminha.frame;
     _shadowStarterFrame = self.imgSombra.frame;
@@ -71,6 +77,15 @@
     
     
     [UIView commitAnimations];
+}
+
+-(IBAction)falaQueEuTeEstupro:(id)sender{
+    NSURL *soundUrl = [NSURL fileURLWithPath:path3];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer4 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    [_audioPlayer4 play];
 }
 
 @end

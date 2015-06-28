@@ -9,6 +9,8 @@
 #import "Phase3.h"
 #import "Phase3Parte2.h"
 #import "PopUpViewController.h"
+#import <AVFoundation/AVFoundation.h>
+
 
 @interface Phase3()  <UICollisionBehaviorDelegate>
 
@@ -17,7 +19,8 @@
 @implementation Phase3
 UIDynamicAnimator* _animator2;
 UICollisionBehavior* _collision2;
-
+AVAudioPlayer* _audioPlayer7;
+NSString* path6;
 -(void)dealloc{
     NSLog(@"desalocou phase3");
 }
@@ -25,6 +28,8 @@ UICollisionBehavior* _collision2;
 -(void) viewDidLoad{
     [super viewDidLoad];
     [self checkBadges];
+    
+    
     [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(setGreen) userInfo:nil repeats:NO];
 
 }
@@ -34,6 +39,7 @@ UICollisionBehavior* _collision2;
 
 
 - (void)viewDidAppear:(BOOL)animated {
+    path6 = [NSString stringWithFormat:@"%@/8_rua.mp3", [[NSBundle mainBundle] resourcePath]];
     
     
     [super viewDidAppear:animated];
@@ -147,4 +153,12 @@ UICollisionBehavior* _collision2;
     [self presentViewController:game animated:NO completion:nil];
 }
 
+-(IBAction)falaQueEuTeEstupro:(id)sender{
+    NSURL *soundUrl = [NSURL fileURLWithPath:path6];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer7 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    [_audioPlayer7 play];
+}
 @end

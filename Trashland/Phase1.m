@@ -14,6 +14,7 @@
 #import "PhasesChoose.h"
 #import "PopUpViewController.h"
 #import "PhasesChoose.h"
+#import "UIView+Animation2.h"
 
 @interface Phase1 ()<UIScrollViewDelegate>{
     int tempo;
@@ -58,11 +59,14 @@ UIGravityBehavior* _gravity;
 UICollisionBehavior* _collision;
 NSTimer* badgeCheck;
 NSTimer* tvCheck;
+AVAudioPlayer *_audioPlayer3;
+NSString *path2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    path2 = [NSString stringWithFormat:@"%@/4_sala.mp3", [[NSBundle mainBundle] resourcePath]];
+    [self.botaoPlay tada:NULL];
     
     self.botaoProx.alpha = 0.5f;
     
@@ -574,5 +578,12 @@ NSTimer* tvCheck;
     self.fantasmaView.frame = oldframe;
 }
 
-
+-(IBAction)falaQueEuTeEstupro:(id)sender{
+    NSURL *soundUrl = [NSURL fileURLWithPath:path2];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer3 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    [_audioPlayer3 play];
+}
 @end

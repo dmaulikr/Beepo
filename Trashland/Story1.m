@@ -9,13 +9,16 @@
 #import "Story1.h"
 #import "Phase1.h"
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
+#import "UIView+Animation2.h"
 
 @implementation Story1
+AVAudioPlayer *_audioPlayer2;
+NSString *path;
 
 -(void) viewDidLoad{
     [super viewDidLoad];
-    
-    
+     path = [NSString stringWithFormat:@"%@/1_pre-sala01.mp3", [[NSBundle mainBundle] resourcePath]];
     
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     
@@ -65,6 +68,8 @@
             case 0:
 //                [self out0];
 //                [self in1];
+                 path = [NSString stringWithFormat:@"%@/2_pre-sala02.mp3", [[NSBundle mainBundle] resourcePath]];
+                [self.buttonNarrar tada:NULL];
                 [self moveLeft];
                 self.controle.currentPage +=1;
                 self.gifDedo.hidden = YES;
@@ -72,7 +77,9 @@
             case 1:
 //                [self out1];
 //                [self in2];
+                 path = [NSString stringWithFormat:@"%@/3_pre-sala03.mp3", [[NSBundle mainBundle] resourcePath]];
                 
+                [self.buttonNarrar tada:NULL];
                 [self moveLeft];
                 self.controle.currentPage +=1;
                 break;
@@ -89,13 +96,18 @@
             case 2:
 //                [self out2];
 //                [self in1];
+                 path = [NSString stringWithFormat:@"%@/2_pre-sala02.mp3", [[NSBundle mainBundle] resourcePath]];
                 
+                [self.buttonNarrar tada:NULL];
                 [self moveRight];
                 self.controle.currentPage -=1;
                 break;
             case 1:
 //                [self out1];
 //                [self in0];
+                  path = [NSString stringWithFormat:@"%@/1_pre-sala01.mp3", [[NSBundle mainBundle] resourcePath]];
+                
+                [self.buttonNarrar tada:NULL];
                 [self moveRight];
                 self.controle.currentPage -=1;
                 break;
@@ -114,9 +126,6 @@
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
     [UIView setAnimationRepeatCount:9999.0];
     [UIView setAnimationRepeatAutoreverses:YES];
-    
-    
-    
     [UIView commitAnimations];
 }
 
@@ -249,6 +258,15 @@
 
 -(IBAction)voltar:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)falaQueEuTeEstupro:(id)sender{
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    [_audioPlayer2 play];
 }
 
 @end

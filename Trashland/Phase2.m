@@ -10,6 +10,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "PhasesChoose.h"
 #import "PopUpViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface Phase2()<UICollisionBehaviorDelegate, UIScrollViewDelegate>{
     UIDynamicAnimator* _animator;
@@ -19,6 +20,7 @@
     
     int treesCounter;
     int trashLeft;
+
 }
 @property (weak, nonatomic) IBOutlet UIView *auxView;
 
@@ -27,6 +29,8 @@
 
 @implementation Phase2
 float deslocIni;
+AVAudioPlayer *_audioPlayer5;
+NSString *path4;
 
 -(void)dealloc{
     
@@ -103,6 +107,8 @@ float deslocIni;
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self beepoAnimado];
+    path4 = [NSString stringWithFormat:@"%@/6_parque.mp3", [[NSBundle mainBundle] resourcePath]];
+    
 }
 
 -(void)checkObjectives{
@@ -559,6 +565,15 @@ float deslocIni;
 //    [self presentViewController:game animated:YES completion:nil];
     
     [self.player dismissToPhaseSelect];
+}
+
+-(IBAction)falaQueEuTeEstupro:(id)sender{
+    NSURL *soundUrl = [NSURL fileURLWithPath:path4];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer5 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    [_audioPlayer5 play];
 }
 
 @end

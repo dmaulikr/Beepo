@@ -18,4 +18,6 @@
 @property (retain, nonatomic) Player* player;
 @property (weak, nonatomic) IBOutlet UIImageView *telaTres;
 
+@property (nonatomic) IBOutlet UIButton *buttonNarrar;
+
 @end
