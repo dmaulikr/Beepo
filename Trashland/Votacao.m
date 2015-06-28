@@ -26,6 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (!self.player) {
+        self.player = [[Player alloc]init];
+    }
     opcao1 = false;
     opcao2 = false;
     opcao3 = false;
@@ -38,6 +41,9 @@
     self.opcao1.selected = YES;
     self.opcao2.selected = NO;
     self.opcao3.selected = NO;
+    self.btn1SelectedBorder.hidden = YES;
+    self.btn2SelectedBorder.hidden = YES;
+    self.btn3SelectedBorder.hidden = NO;
 }
 
 -(IBAction)opcao2:(id)sender{
@@ -47,6 +53,9 @@
     self.opcao1.selected = NO;
     self.opcao2.selected = YES;
     self.opcao3.selected = NO;
+    self.btn1SelectedBorder.hidden = YES;
+    self.btn2SelectedBorder.hidden = NO;
+    self.btn3SelectedBorder.hidden = YES;
 }
 
 -(IBAction)opcao3:(id)sender{
@@ -56,6 +65,9 @@
     self.opcao1.selected = NO;
     self.opcao2.selected = NO;
     self.opcao3.selected = YES;
+    self.btn1SelectedBorder.hidden = NO;
+    self.btn2SelectedBorder.hidden = YES;
+    self.btn3SelectedBorder.hidden = YES;
 }
 
 -(IBAction)confirmar:(id)sender{

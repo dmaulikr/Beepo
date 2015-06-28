@@ -33,4 +33,5 @@
 
 @property (nonatomic) IBOutlet UIImageView* badgeVoto;
 
+@property (strong, nonatomic) UIViewController *popUpView;
 @end

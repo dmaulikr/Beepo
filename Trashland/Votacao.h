@@ -34,5 +34,8 @@
 @property (nonatomic) IBOutlet UIButton* botaoVoltar;
 
 @property (nonatomic) IBOutlet UIButton* botaoSom;
+@property (weak, nonatomic) IBOutlet UIImageView *btn1SelectedBorder;
+@property (weak, nonatomic) IBOutlet UIImageView *btn2SelectedBorder;
+@property (weak, nonatomic) IBOutlet UIImageView *btn3SelectedBorder;
 
 @end

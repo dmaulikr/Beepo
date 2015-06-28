@@ -7,12 +7,14 @@
 //
 
 #import "Puzzle4.h"
+#import "PopUpViewController.h"
 
 @interface Puzzle4 (){
     BOOL ponto1;
     BOOL ponto2;
     BOOL ponto3;
     BOOL ponto4;
+    NSTimer* badgeCheck;
 }
 
 @end
@@ -41,7 +43,7 @@
     [self.fundo addSubview:self.badgeBrinquedo];
     [self.fundo addSubview:self.badgeVoto];
     
-    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkToys) userInfo:nil repeats:YES];
+    badgeCheck = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkToys) userInfo:nil repeats:YES];
 
 }
 
@@ -62,10 +64,15 @@
                         if (self.brinquedo3.center.y < 630 && self.brinquedo3.center.y > 130) {
                             ponto3 = true;
                             if (self.brinquedo4.center.x < 580 && self.brinquedo4.center.x > 75) {
-                                if (self.brinquedo4.center.y < 630 && self.brinquedo4.center.y > 130) {
+                                if (self.brinquedo4.center.y < 630 && self.brinquedo4.center.y > 130 &&!self.player.medalha1fase4) {
+                                    [badgeCheck invalidate];
                                     ponto4 = true;
                                     self.player.medalha1fase4 = true;
                                     self.badgeBrinquedo.image = [UIImage imageNamed:@"badge-doacao-color"];
+                                    PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+                                    [popUp setImageNamed: @"pop-up-doacao"];
+                                    self.popUpView = popUp;
+                                    [popUp showInView:self.view animated:YES];
                                 }
                             }
                         }
