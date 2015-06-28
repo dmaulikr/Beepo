@@ -1232,6 +1232,30 @@
                                     <action selector="falaQueEuTeEstupro:" destination="N1a-mV-8XE" eventType="touchUpInside" id="oqR-yg-zmH"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-07" id="4xj-4T-9UW">
+                                <rect key="frame" x="794" y="602" width="109" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-08" id="t5A-Ba-NRx">
+                                <rect key="frame" x="346" y="641" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-09" id="Aia-oi-Zqr">
+                                <rect key="frame" x="268" y="637" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-13" id="ajC-fX-J16">
+                                <rect key="frame" x="165" y="623" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parque-19" id="7AY-4U-sXo">
+                                <rect key="frame" x="16" y="561" width="264" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fantasminha" id="5N6-BP-Ebg">
+                                <rect key="frame" x="481" y="601" width="194" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1821,7 +1845,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B36223EB-F634-45EA-9056-D358F8FAF01B" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="842D5C5D-04AE-4ACD-B977-0AF7677E0000" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -2019,7 +2043,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="B36223EB-F634-45EA-9056-D358F8FAF01B" width="194" height="90">
+        <image name="842D5C5D-04AE-4ACD-B977-0AF7677E0000" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -3313,6 +3337,10 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="play" width="108" height="108"/>
         <image name="pop-up-agua" width="395" height="422"/>
         <image name="predio" width="616" height="338"/>
+        <image name="prefeitura-07" width="109" height="145"/>
+        <image name="prefeitura-08" width="80" height="80"/>
+        <image name="prefeitura-09" width="79" height="88"/>
+        <image name="prefeitura-13" width="114" height="115"/>
         <image name="prefeitura-17" width="320" height="59"/>
         <image name="prefeitura-fim-bg" width="1029" height="768"/>
         <image name="prefeitura_caixa_doacao" width="1024" height="768"/>
