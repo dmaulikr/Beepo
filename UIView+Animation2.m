@@ -228,7 +228,7 @@ CGFloat degreesToRadians(CGFloat degrees)
 -(void)pulse:(DCAnimationFinished)finished
 {
     [UIView animateWithDuration:0.5 animations:^{
-        self.transform = CGAffineTransformMakeScale(1.1, 1.1);
+        self.transform = CGAffineTransformMakeScale(1.2, 1.2);
     } completion:^(BOOL f){
         [UIView animateWithDuration:0.5 delay:0.1 options:0 animations:^{
             self.transform = CGAffineTransformMakeScale(1, 1);

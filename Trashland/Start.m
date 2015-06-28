@@ -44,7 +44,7 @@ AVAudioPlayer *_audioPlayer;
     //[self.fundo addSubview:self.buttonInfo];
     [self.fundo addSubview:self.infoImage];
     
-    [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(balancarLogo) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:1.8f target:self selector:@selector(balancarLogo) userInfo:nil repeats:YES];
     [self.play tada:NULL];
     
     
@@ -130,7 +130,7 @@ AVAudioPlayer *_audioPlayer;
         [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(trocarPredio) userInfo:nil repeats:NO];
 }
 -(void)balancarLogo{
-    [self.play bounce:NULL];
+    [self.play pulse:NULL];
 }
 
 @end
