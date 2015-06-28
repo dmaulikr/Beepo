@@ -33,6 +33,17 @@
     [[self.item1 layer] setCornerRadius:5.0f];
     [[self.item2 layer] setCornerRadius:5.0f];
     [[self.item3 layer] setCornerRadius:5.0f];
+    
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeft];
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
+    
 }
 
 -(IBAction)start:(id)sender{
@@ -125,5 +136,42 @@
 -(IBAction)voltar:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+-(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
+    if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionLeft)
+    {
+        if (primeira == true) {
+            primeira = false;
+            self.item1.image = [UIImage imageNamed:@"custom05"];
+            self.item2.image = [UIImage imageNamed:@"custom06"];
+            self.item3.image = [UIImage imageNamed:@"custom04"];
+        }
+        else{
+            primeira = true;
+            self.item1.image = [UIImage imageNamed:@"custom01"];
+            self.item2.image = [UIImage imageNamed:@"custom02"];
+            self.item3.image = [UIImage imageNamed:@"custom03"];
+        }
+
+    }
+    else if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionRight)
+    {
+        if (primeira == true) {
+            primeira = false;
+            self.item1.image = [UIImage imageNamed:@"custom05"];
+            self.item2.image = [UIImage imageNamed:@"custom06"];
+            self.item3.image = [UIImage imageNamed:@"custom04"];
+        }
+        else{
+            primeira = true;
+            self.item1.image = [UIImage imageNamed:@"custom01"];
+            self.item2.image = [UIImage imageNamed:@"custom02"];
+            self.item3.image = [UIImage imageNamed:@"custom03"];
+        }
+
+    }
+}
+
+
 
 @end

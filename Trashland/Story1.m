@@ -28,7 +28,8 @@ NSString *path;
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swipeRight];}
+    [self.view addGestureRecognizer:swipeRight];
+}
 
 - (void)dealloc{
     NSLog(@"desalocou Story1");
