@@ -35,18 +35,27 @@
     opcao1 = true;
     opcao2 = false;
     opcao3 = false;
+    self.opcao1.selected = YES;
+    self.opcao2.selected = NO;
+    self.opcao3.selected = NO;
 }
 
 -(IBAction)opcao2:(id)sender{
     opcao1 = false;
     opcao2 = true;
     opcao3 = false;
+    self.opcao1.selected = NO;
+    self.opcao2.selected = YES;
+    self.opcao3.selected = NO;
 }
 
 -(IBAction)opcao3:(id)sender{
     opcao1 = false;
     opcao2 = false;
     opcao3 = true;
+    self.opcao1.selected = NO;
+    self.opcao2.selected = NO;
+    self.opcao3.selected = YES;
 }
 
 -(IBAction)confirmar:(id)sender{
