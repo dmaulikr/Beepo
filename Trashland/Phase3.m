@@ -152,6 +152,9 @@ NSString* path6;
     game.player = self.player;
     [self presentViewController:game animated:NO completion:nil];
 }
+- (IBAction)didClickVoltarButton:(id)sender {
+    [self.player dismissToPhaseSelect];
+}
 
 -(IBAction)falaQueEuTeEstupro:(id)sender{
     NSURL *soundUrl = [NSURL fileURLWithPath:path6];

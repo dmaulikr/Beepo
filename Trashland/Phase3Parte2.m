@@ -78,16 +78,11 @@ NSString* path7;
     [popUp showInView:self.view animated:YES];
     [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(escolhaDeFases) userInfo:nil repeats:NO];
 }
+- (IBAction)btnVoltarClicked:(id)sender {
+    [self.player dismissToPhaseSelect];
+}
 
 -(void)escolhaDeFases{
-//                PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
-//            [game setModalPresentationStyle:UIModalPresentationFullScreen];
-//            self.player.medalha2fase3 = true;
-//    
-//            game.player = self.player;
-//            [self presentViewController:game animated:YES completion:nil];
-//    [game dismissViewControllerAnimated:NO completion:nil];
-
     [self.player dismissToPhaseSelect];
 }
 

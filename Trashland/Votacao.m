@@ -91,7 +91,7 @@ NSString* path10;
 }
 
 -(IBAction)cancelar:(id)sender{
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)falaQueEuTeEstupro:(id)sender{

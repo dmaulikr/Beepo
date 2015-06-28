@@ -47,6 +47,7 @@ NSString* path9;
     [self.fundo addSubview:self.botaoSom];
     [self.fundo addSubview:self.badgeBrinquedo];
     [self.fundo addSubview:self.badgeVoto];
+    [self.fundo addSubview:self.txtLabel];
     
     badgeCheck = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkToys) userInfo:nil repeats:YES];
 

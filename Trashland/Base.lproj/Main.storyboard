@@ -880,7 +880,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="didClickBackButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="s3X-4I-oPM"/>
+                                    <action selector="didClickVoltarButton:" destination="R9V-nN-E2m" eventType="touchUpInside" id="qPN-ks-hPA"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="Bpd-st-BTJ">
@@ -1058,6 +1058,7 @@
                         <outlet property="brinquedo3" destination="zGW-bm-WmB" id="Y6n-ew-CeM"/>
                         <outlet property="brinquedo4" destination="AQB-pr-1bE" id="HF8-mb-25v"/>
                         <outlet property="fundo" destination="fyO-NO-jY0" id="MrT-fy-PoG"/>
+                        <outlet property="txtLabel" destination="Dwc-fY-hXp" id="fNR-Cy-fkf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiW-Yd-ybD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1140,6 +1141,9 @@
                                         <state key="normal" backgroundImage="botao-voltar">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelar:" destination="tEz-Tn-Gzt" eventType="touchUpInside" id="f13-LC-BZW"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-doacao2" id="fDw-9k-a4q">
                                         <rect key="frame" x="114" y="25" width="53" height="72"/>
@@ -1189,6 +1193,7 @@
                         <outlet property="opcao1" destination="ZYe-bg-04Y" id="wlX-ga-U8r"/>
                         <outlet property="opcao2" destination="vKD-jV-FxY" id="T6K-dm-eIf"/>
                         <outlet property="opcao3" destination="cDF-Rr-vvW" id="EqT-bi-1W4"/>
+                        <outlet property="txtLabel" destination="o8Z-Cs-8BF" id="Ahf-lM-6aF"/>
                         <outlet property="viewFundo" destination="O2L-Oq-mBA" id="c1U-XO-fus"/>
                     </connections>
                 </viewController>
@@ -1299,7 +1304,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura" id="edA-N1-cXX" userLabel="bgImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prefeitura" id="edA-N1-cXX" userLabel="bgImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -1339,6 +1344,9 @@
                                 <state key="normal" image="botao-voltar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="voltarBtnClicked:" destination="9wn-h0-xJT" eventType="touchUpInside" id="p0s-mm-DjP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1420,6 +1428,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnVoltarClicked:" destination="7Ca-f3-yki" eventType="touchUpInside" id="5bf-E1-3A5"/>
                                     <action selector="didClickBackButton:" destination="2hj-BG-SHn" eventType="touchUpInside" id="1xW-ct-lg2"/>
                                 </connections>
                             </button>
@@ -1812,7 +1821,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="939ABD46-1CE2-4B4A-8A2D-EE85EEE2500D" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B36223EB-F634-45EA-9056-D358F8FAF01B" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -2010,7 +2019,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="939ABD46-1CE2-4B4A-8A2D-EE85EEE2500D" width="194" height="90">
+        <image name="B36223EB-F634-45EA-9056-D358F8FAF01B" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -3227,6 +3236,7 @@ GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
 BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
 </mutableData>
         </image>
+        <image name="Prefeitura" width="2049" height="1537"/>
         <image name="atividades-02" width="1024" height="768"/>
         <image name="atividades-casa" width="203" height="203"/>
         <image name="atividades-praca" width="203" height="203"/>
@@ -3303,7 +3313,6 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="play" width="108" height="108"/>
         <image name="pop-up-agua" width="395" height="422"/>
         <image name="predio" width="616" height="338"/>
-        <image name="prefeitura" width="2049" height="1537"/>
         <image name="prefeitura-17" width="320" height="59"/>
         <image name="prefeitura-fim-bg" width="1029" height="768"/>
         <image name="prefeitura_caixa_doacao" width="1024" height="768"/>

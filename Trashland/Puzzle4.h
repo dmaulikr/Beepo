@@ -16,6 +16,7 @@
 @property (nonatomic) IBOutlet UIImageView* fundo;
 
 @property (nonatomic) Player* player;
+@property (weak, nonatomic) IBOutlet UILabel *txtLabel;
 
 @property (nonatomic) IBOutlet DraggableImageView* brinquedo1;
 

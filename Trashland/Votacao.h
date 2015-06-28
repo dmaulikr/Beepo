@@ -14,6 +14,7 @@
 @property (nonatomic) Player* player;
 
 @property (nonatomic) IBOutlet UIView* viewFundo;
+@property (weak, nonatomic) IBOutlet UILabel *txtLabel;
 
 @property (nonatomic) IBOutlet UIImageView* fundo;
 
