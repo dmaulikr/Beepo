@@ -54,6 +54,8 @@
 		0270E8B71B3D8E77009A4B6D /* Pais.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270E8B61B3D8E77009A4B6D /* Pais.m */; };
 		02795C371B406DEE001E08B9 /* tvfinal.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02795C361B406DEE001E08B9 /* tvfinal.wav */; };
 		02795C391B4084AF001E08B9 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02795C381B4084AF001E08B9 /* coin.wav */; };
+		02795C3B1B40982D001E08B9 /* hospital.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02795C3A1B40982D001E08B9 /* hospital.mp3 */; };
+		02795C3D1B409C26001E08B9 /* 14_fim_jogo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02795C3C1B409C26001E08B9 /* 14_fim_jogo.mp3 */; };
 		027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */ = {isa = PBXBuildFile; fileRef = 027C73781B334F2A00599E32 /* Phase3Parte2.m */; };
 		029CB3991B3DE1F60070D5C1 /* Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CB3981B3DE1F60070D5C1 /* Extras.m */; };
 		02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5401B309E5C00143CC1 /* carefree.mp3 */; };
@@ -156,6 +158,8 @@
 		0270E8B61B3D8E77009A4B6D /* Pais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pais.m; sourceTree = "<group>"; };
 		02795C361B406DEE001E08B9 /* tvfinal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tvfinal.wav; sourceTree = "<group>"; };
 		02795C381B4084AF001E08B9 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin.wav; sourceTree = "<group>"; };
+		02795C3A1B40982D001E08B9 /* hospital.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hospital.mp3; sourceTree = "<group>"; };
+		02795C3C1B409C26001E08B9 /* 14_fim_jogo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 14_fim_jogo.mp3; sourceTree = "<group>"; };
 		027C73771B334F2A00599E32 /* Phase3Parte2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase3Parte2.h; sourceTree = "<group>"; };
 		027C73781B334F2A00599E32 /* Phase3Parte2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase3Parte2.m; sourceTree = "<group>"; };
 		029CB3971B3DE1F60070D5C1 /* Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extras.h; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 				0241536B1B3F601300A02CE9 /* 1_pre-sala01.mp3 */,
 				0241536C1B3F601300A02CE9 /* 2_pre-sala02.mp3 */,
 				0241536D1B3F601300A02CE9 /* 3_pre-sala03.mp3 */,
+				02795C3A1B40982D001E08B9 /* hospital.mp3 */,
 				0241536E1B3F601300A02CE9 /* 4_sala.mp3 */,
 				0241536F1B3F601300A02CE9 /* 5_pre-parque.mp3 */,
 				024153701B3F601300A02CE9 /* 6_parque.mp3 */,
@@ -269,6 +274,7 @@
 				024153721B3F601300A02CE9 /* 8_rua.mp3 */,
 				024153731B3F601300A02CE9 /* 9_ruapuzzle.mp3 */,
 				024153741B3F601300A02CE9 /* 10_pre-prefeitura.mp3 */,
+				02795C3C1B409C26001E08B9 /* 14_fim_jogo.mp3 */,
 				024153751B3F601300A02CE9 /* 11_prefeitura.mp3 */,
 				024153761B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 */,
 				024153771B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 */,
@@ -616,6 +622,7 @@
 				024153821B3F601300A02CE9 /* 11_prefeitura.mp3 in Resources */,
 				024153811B3F601300A02CE9 /* 10_pre-prefeitura.mp3 in Resources */,
 				02B3B5431B309E5C00143CC1 /* hackbeat.mp3 in Resources */,
+				02795C3D1B409C26001E08B9 /* 14_fim_jogo.mp3 in Resources */,
 				0264DE721B2F1610007A18A7 /* actionj.ttf in Resources */,
 				0235564E1B3F1DC70085AC4F /* birdcut.wav in Resources */,
 				02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */,
@@ -627,6 +634,7 @@
 				15C4316C1B289E500098C994 /* LaunchScreen.xib in Resources */,
 				0264DE6B1B2F1573007A18A7 /* TV.aiff in Resources */,
 				0264DE651B2F155F007A18A7 /* click.wav in Resources */,
+				02795C3B1B40982D001E08B9 /* hospital.mp3 in Resources */,
 				15E450A21B3DC92D00B715C8 /* historinha-02@2x.png in Resources */,
 				02B3B5521B30DFB400143CC1 /* hackbeatwav.wav in Resources */,
 				15C431921B2A0A980098C994 /* chuveiro_Trashcity-2.gif in Resources */,

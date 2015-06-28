@@ -8,6 +8,7 @@
 
 #import "Puzzle4.h"
 #import "PopUpViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface Puzzle4 (){
     BOOL ponto1;
@@ -20,6 +21,8 @@
 @end
 
 @implementation Puzzle4
+AVAudioPlayer* _audioPlayer10;
+NSString* path9;
 
 -(void)dealloc{
     NSLog(@"desalocou puzzle4");
@@ -27,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    path9 = [NSString stringWithFormat:@"%@/13_prefeitura-puzzleeleicao.mp3", [[NSBundle mainBundle] resourcePath]];
     
     ponto1 = false;
     ponto2 = false;
@@ -85,6 +90,15 @@
 
 - (IBAction)botaoVoltarClicked:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)falaQueEuTeEstupro:(id)sender{
+    NSURL *soundUrl = [NSURL fileURLWithPath:path9];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer10 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    [_audioPlayer10 play];
 }
 
 @end

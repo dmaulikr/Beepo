@@ -39,7 +39,7 @@ NSString* path6;
 
 
 - (void)viewDidAppear:(BOOL)animated {
-    path6 = [NSString stringWithFormat:@"%@/8_rua.mp3", [[NSBundle mainBundle] resourcePath]];
+    path6 = [NSString stringWithFormat:@"%@/hospital.mp3", [[NSBundle mainBundle] resourcePath]];
     
     
     [super viewDidAppear:animated];

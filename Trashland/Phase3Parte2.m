@@ -10,6 +10,7 @@
 #import "DraggableView.h"
 #import "PhasesChoose.h"
 #import "PopUpViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface Phase3Parte2 ()
 
@@ -17,12 +18,18 @@
 
 @implementation Phase3Parte2
 
+AVAudioPlayer *_audioPlayer8;
+NSString* path7;
+
 -(void)dealloc{
     NSLog(@"desalocou phase3parte2");
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    path7 = [NSString stringWithFormat:@"%@/8_rua.mp3", [[NSBundle mainBundle] resourcePath]];
+
     
     _viewCarro1.podeY = YES;
     _viewCarro2.podeY = YES;
@@ -83,5 +90,15 @@
 
     [self.player dismissToPhaseSelect];
 }
+
+-(IBAction)falaQueEuTeEstupro:(id)sender{
+    NSURL *soundUrl = [NSURL fileURLWithPath:path7];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer8 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    [_audioPlayer8 play];
+}
+
 
 @end

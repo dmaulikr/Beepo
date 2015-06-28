@@ -8,6 +8,7 @@
 
 #import "Votacao.h"
 #import "Fim.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface Votacao (){
     BOOL opcao1;
@@ -18,7 +19,8 @@
 @end
 
 @implementation Votacao
-
+AVAudioPlayer* _audioPlayer11;
+NSString* path10;
 
 -(void)dealloc{
     NSLog(@"desalocou votacao");
@@ -32,6 +34,8 @@
     opcao1 = false;
     opcao2 = false;
     opcao3 = false;
+    
+    path10 = [NSString stringWithFormat:@"%@/12_prefeitura-puzzlecaixa.mp3", [[NSBundle mainBundle] resourcePath]];
 }
 
 -(IBAction)opcao1:(id)sender{
@@ -88,6 +92,15 @@
 
 -(IBAction)cancelar:(id)sender{
     [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+-(IBAction)falaQueEuTeEstupro:(id)sender{
+    NSURL *soundUrl = [NSURL fileURLWithPath:path10];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer11 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    [_audioPlayer11 play];
 }
 
 @end
