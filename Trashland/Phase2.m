@@ -39,6 +39,7 @@ NSString *path4;
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    [self.view.layer removeAllAnimations];
     _auxView = nil;
     _player = nil;
     _phaseScrollView = nil;

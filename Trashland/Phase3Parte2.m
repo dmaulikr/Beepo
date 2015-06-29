@@ -12,7 +12,10 @@
 #import "PopUpViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface Phase3Parte2 ()
+@interface Phase3Parte2 (){
+    
+    NSTimer *phase3Part2Timer;
+}
 
 @end
 
@@ -60,13 +63,19 @@ NSString* path7;
     }
     if (self.viewCarro1.center.y < 260 && self.viewCarro2.center.y > 540) {
         [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-                self.ambulancia.frame = CGRectMake(1200, self.ambulancia.frame.origin.y, self.ambulancia.frame.size.width, self.ambulancia.frame.size.height); } completion:nil];
-        [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(showBadgePopUp) userInfo:nil repeats:NO];
+            self.ambulancia.frame = CGRectMake(1200, self.ambulancia.frame.origin.y, self.ambulancia.frame.size.width, self.ambulancia.frame.size.height); } completion:nil];
+        if (phase3Part2Timer) {
+            [phase3Part2Timer invalidate];
+        }
+        phase3Part2Timer = [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(showBadgePopUp) userInfo:nil repeats:NO];
         self.player.medalha2fase3 = true;
         self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
     }
     else{
-        [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(checkWayFree) userInfo:nil repeats:NO];
+        if (phase3Part2Timer) {
+            [phase3Part2Timer invalidate];
+        }
+        phase3Part2Timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(checkWayFree) userInfo:nil repeats:NO];
     }
 }
 
@@ -76,7 +85,10 @@ NSString* path7;
     popUp.badgeImageView.image = [UIImage imageNamed:@"pop-up-transito"];
     self.popUpView = popUp;
     [popUp showInView:self.view animated:YES];
-    [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(escolhaDeFases) userInfo:nil repeats:NO];
+    if (phase3Part2Timer) {
+        [phase3Part2Timer invalidate];
+    }
+    phase3Part2Timer = [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(escolhaDeFases) userInfo:nil repeats:NO];
 }
 - (IBAction)btnVoltarClicked:(id)sender {
     [self.player dismissToPhaseSelect];

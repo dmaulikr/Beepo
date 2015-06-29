@@ -121,6 +121,8 @@ NSString *path2;
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.view.layer removeAllAnimations]; 
     [tvCheck invalidate];
     tvCheck = nil;
     [badgeCheck invalidate];

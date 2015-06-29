@@ -36,6 +36,15 @@ NSString* path10;
     opcao2 = false;
     opcao3 = false;
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.player.medalha1fase4) {
+            self.badgeDoacao.image = [UIImage imageNamed:@"badge-doacao-color"];
+        }
+        if (self.player.medalha2fase4) {
+            self.badgeVoto.image = [UIImage imageNamed:@"badge-eleicao-color"];
+        }
+    });
+    
     path10 = [NSString stringWithFormat:@"%@/12_prefeitura-puzzlecaixa.mp3", [[NSBundle mainBundle] resourcePath]];
 }
 

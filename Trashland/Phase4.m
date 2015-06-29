@@ -38,7 +38,7 @@ NSString* path11;
             self.badgeDoacaoImgView.image = [UIImage imageNamed:@"badge-doacao-color"];
         }
         if (self.player.medalha2fase4) {
-            self.badgeDoacaoImgView.image = [UIImage imageNamed:@"badge-eleicao-color"];
+            self.badgeEleicaoImgView.image = [UIImage imageNamed:@"badge-eleicao-color"];
         }
     });
     

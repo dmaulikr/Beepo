@@ -39,6 +39,7 @@ NSString* path6;
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    [self.view.layer removeAllAnimations]; 
     [phase3Timer invalidate];
 }
 
@@ -118,7 +119,10 @@ NSString* path6;
         self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
     }
     else{
-        [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkBadges) userInfo:nil repeats:NO];
+        if (phase3Timer) {
+            [phase3Timer invalidate];
+        }
+        phase3Timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkBadges) userInfo:nil repeats:NO];
     }
 }
 
@@ -145,9 +149,15 @@ NSString* path6;
         [popUp showInView:self.view animated:YES];
         self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
         //self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
+        if (phase3Timer) {
+            [phase3Timer invalidate];
+        }
         phase3Timer = [NSTimer scheduledTimerWithTimeInterval:2.5f target:self selector:@selector(startSecondPart) userInfo:nil repeats:NO];
     }
     else{
+        if (phase3Timer) {
+            [phase3Timer invalidate];
+        }
         phase3Timer = [NSTimer scheduledTimerWithTimeInterval:0.2f target:self selector:@selector(watchThisBitch) userInfo:nil repeats:NO];
     }
 }
