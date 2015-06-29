@@ -12,13 +12,14 @@
 #import <AVFoundation/AVFoundation.h>
 #import "Fim.h"
 
-@interface Phase4 ()
+@interface Phase4 (){
+    AVAudioPlayer* _audioPlayer12;
+    NSString* path11;
+}
 
 @end
 
 @implementation Phase4
-AVAudioPlayer* _audioPlayer12;
-NSString* path11;
 
 -(void)dealloc{
     NSLog(@"desalocou phase4");
@@ -38,7 +39,7 @@ NSString* path11;
             self.badgeDoacaoImgView.image = [UIImage imageNamed:@"badge-doacao-color"];
         }
         if (self.player.medalha2fase4) {
-            self.badgeEleicaoImgView.image = [UIImage imageNamed:@"badge-eleicao-color"];
+            self.badgeEleicaoImgView    .image = [UIImage imageNamed:@"badge-eleicao-color"];
         }
     });
     

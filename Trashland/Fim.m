@@ -9,17 +9,21 @@
 #import "Fim.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface Fim ()
-
+@interface Fim (){
+    
+    NSString* path200;
+    AVAudioPlayer* _audioPlayer100;
+}
 @end
 
 @implementation Fim
-AVAudioPlayer* _audioPlayer100;
-NSString* path200;
-
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    _audioPlayer100 = nil;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    path200 = [NSString stringWithFormat:@"%@/14_fim_jogo", [[NSBundle mainBundle] resourcePath]];
+    path200 = [NSString stringWithFormat:@"%@/14_fim_jogo.mp3", [[NSBundle mainBundle] resourcePath]];
     // Do any additional setup after loading the view.
      dispatch_async(dispatch_get_main_queue(), ^{
         if ([self.player.nomeEscolhido isEqualToString:@"Felizópolis"]) {

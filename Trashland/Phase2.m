@@ -17,6 +17,8 @@
     UIGravityBehavior* _gravity;
     UICollisionBehavior* _collision;
     SystemSoundID sound1;
+    AVAudioPlayer *_audioPlayer5;
+    NSString *path4;
     
     int treesCounter;
     int trashLeft;
@@ -29,9 +31,6 @@
 
 @implementation Phase2
 float deslocIni;
-AVAudioPlayer *_audioPlayer5;
-NSString *path4;
-
 -(void)dealloc{
     
     NSLog(@"desalocou Phase2");

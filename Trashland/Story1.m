@@ -12,9 +12,14 @@
 #import <AVFoundation/AVFoundation.h>
 #import "UIView+Animation2.h"
 
+@interface Story1(){
+    AVAudioPlayer *_audioPlayer2;
+    NSString *path;
+}
+
+@end
+
 @implementation Story1
-AVAudioPlayer *_audioPlayer2;
-NSString *path;
 
 -(void) viewDidLoad{
     [super viewDidLoad];

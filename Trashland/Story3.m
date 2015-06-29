@@ -10,9 +10,15 @@
 #import "Phase3.h"
 #import <AVFoundation/AVFoundation.h>
 
+@interface Story3(){
+    AVAudioPlayer* _audioPlayer6;
+    NSString* path5;
+}
+
+@end
+
 @implementation Story3
-AVAudioPlayer* _audioPlayer6;
-NSString* path5;
+
 
 -(void)dealloc{
     NSLog(@"desalocou story3");

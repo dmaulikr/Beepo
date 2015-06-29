@@ -15,13 +15,13 @@
     BOOL opcao1;
     BOOL opcao2;
     BOOL opcao3;
+    AVAudioPlayer* _audioPlayer11;
+    NSString* path10;
 }
 
 @end
 
 @implementation Votacao
-AVAudioPlayer* _audioPlayer11;
-NSString* path10;
 
 -(void)dealloc{
     NSLog(@"desalocou votacao");

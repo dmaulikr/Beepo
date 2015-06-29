@@ -15,14 +15,13 @@
 @interface Phase3Parte2 (){
     
     NSTimer *phase3Part2Timer;
+    AVAudioPlayer *_audioPlayer8;
+    NSString* path7;
 }
 
 @end
 
 @implementation Phase3Parte2
-
-AVAudioPlayer *_audioPlayer8;
-NSString* path7;
 
 -(void)dealloc{
     NSLog(@"desalocou phase3parte2");

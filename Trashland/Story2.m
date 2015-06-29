@@ -10,7 +10,10 @@
 #import "Phase2.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface Story2()
+@interface Story2(){
+    AVAudioPlayer *_audioPlayer4;
+    NSString *path3;
+}
 
 @property (nonatomic) CGRect ghostStarterFrame;
 @property (nonatomic) CGRect shadowStarterFrame;
@@ -18,8 +21,6 @@
 @end
 
 @implementation Story2
-AVAudioPlayer *_audioPlayer4;
-NSString *path3;
 
 -(void)dealloc{
     

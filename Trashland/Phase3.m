@@ -15,6 +15,8 @@
 @interface Phase3()  <UICollisionBehaviorDelegate>{
     
     NSTimer *phase3Timer;
+    AVAudioPlayer* _audioPlayer7;
+    NSString* path6;
 }
 
 @end
@@ -22,8 +24,6 @@
 @implementation Phase3
 UIDynamicAnimator* _animator2;
 UICollisionBehavior* _collision2;
-AVAudioPlayer* _audioPlayer7;
-NSString* path6;
 -(void)dealloc{
     NSLog(@"desalocou phase3");
 }

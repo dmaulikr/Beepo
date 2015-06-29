@@ -34,6 +34,15 @@
     BOOL podePassar;
     
     SystemSoundID sound1;
+    
+    
+    AVAudioPlayer *_audioPlayer3;
+    NSString *path2;
+    UIDynamicAnimator* _animator;
+    UIGravityBehavior* _gravity;
+    UICollisionBehavior* _collision;
+    NSTimer* badgeCheck;
+    NSTimer* tvCheck;
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -54,13 +63,6 @@
 @end
 
 @implementation Phase1
-UIDynamicAnimator* _animator;
-UIGravityBehavior* _gravity;
-UICollisionBehavior* _collision;
-NSTimer* badgeCheck;
-NSTimer* tvCheck;
-AVAudioPlayer *_audioPlayer3;
-NSString *path2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
