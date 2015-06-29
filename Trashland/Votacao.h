@@ -39,4 +39,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *btn2SelectedBorder;
 @property (weak, nonatomic) IBOutlet UIImageView *btn3SelectedBorder;
 
+@property (strong, nonatomic) UIViewController *popUpView;
+
 @end

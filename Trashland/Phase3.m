@@ -12,7 +12,10 @@
 #import <AVFoundation/AVFoundation.h>
 
 
-@interface Phase3()  <UICollisionBehaviorDelegate>
+@interface Phase3()  <UICollisionBehaviorDelegate>{
+    
+    NSTimer *phase3Timer;
+}
 
 @end
 
@@ -33,6 +36,12 @@ NSString* path6;
     [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(setGreen) userInfo:nil repeats:NO];
 
 }
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [phase3Timer invalidate];
+}
+
 -(void)setGreen{
     self.sinalVerde.hidden = NO;
 }
@@ -136,10 +145,10 @@ NSString* path6;
         [popUp showInView:self.view animated:YES];
         self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
         //self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
-        [NSTimer scheduledTimerWithTimeInterval:2.5f target:self selector:@selector(startSecondPart) userInfo:nil repeats:NO];
+        phase3Timer = [NSTimer scheduledTimerWithTimeInterval:2.5f target:self selector:@selector(startSecondPart) userInfo:nil repeats:NO];
     }
     else{
-        [NSTimer scheduledTimerWithTimeInterval:0.2f target:self selector:@selector(watchThisBitch) userInfo:nil repeats:NO];
+        phase3Timer = [NSTimer scheduledTimerWithTimeInterval:0.2f target:self selector:@selector(watchThisBitch) userInfo:nil repeats:NO];
     }
 }
 

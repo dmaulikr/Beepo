@@ -10,6 +10,7 @@
 #import "Votacao.h"
 #import "Puzzle4.h"
 #import <AVFoundation/AVFoundation.h>
+#import "Fim.h"
 
 @interface Phase4 ()
 
@@ -27,6 +28,26 @@ NSString* path11;
     [super viewDidLoad];
     path11 = [NSString stringWithFormat:@"%@/11_prefeitura.mp3", [[NSBundle mainBundle] resourcePath]];
     // Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.player.medalha1fase4) {
+            self.badgeDoacaoImgView.image = [UIImage imageNamed:@"badge-doacao-color"];
+        }
+        if (self.player.medalha2fase4) {
+            self.badgeDoacaoImgView.image = [UIImage imageNamed:@"badge-eleicao-color"];
+        }
+    });
+    
+    if (self.player.medalha1fase4 && self.player.medalha2fase4) {
+        Fim *game = [self.storyboard instantiateViewControllerWithIdentifier:@"FimVC"];
+        [game setModalPresentationStyle:UIModalPresentationFullScreen];
+        game.player = self.player;
+        [self presentViewController:game animated:NO completion:nil];
+    }
 }
 
 

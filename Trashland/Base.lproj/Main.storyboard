@@ -1372,12 +1372,22 @@
                                     <action selector="voltarBtnClicked:" destination="9wn-h0-xJT" eventType="touchUpInside" id="p0s-mm-DjP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-doacao2" id="x4G-c4-Epu">
+                                <rect key="frame" x="120" y="30" width="53" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-eleicao2" id="EzW-Lx-hcY">
+                                <rect key="frame" x="180" y="30" width="53" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
+                        <outlet property="badgeDoacaoImgView" destination="x4G-c4-Epu" id="20K-qN-ZjO"/>
+                        <outlet property="badgeEleicaoImgView" destination="EzW-Lx-hcY" id="gCt-71-bAJ"/>
                         <outlet property="botaoDoacao" destination="awd-j5-czW" id="YcF-IN-jEO"/>
                         <outlet property="botaoEleicao" destination="76D-S7-jfv" id="lNY-pC-WpV"/>
                     </connections>
@@ -1845,7 +1855,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="842D5C5D-04AE-4ACD-B977-0AF7677E0000" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="124206A1-6DCC-48E5-9334-847850634AD8" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -2040,10 +2050,7 @@
         <image name="09_Trashcity" width="24" height="62"/>
         <image name="10_Trashcity" width="59" height="51"/>
         <image name="11_Trashcity" width="33" height="46"/>
-        <image name="12_Trashcity" width="27" height="50"/>
-        <image name="13_Trashcity" width="34" height="51"/>
-        <image name="14_Trashcity" width="33" height="60"/>
-        <image name="842D5C5D-04AE-4ACD-B977-0AF7677E0000" width="194" height="90">
+        <image name="124206A1-6DCC-48E5-9334-847850634AD8" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -3260,6 +3267,9 @@ GrAAARq9AAEawgABGsQAARrGAAEaywABGtMAARrWAAEa2wABGuMAARrmAAEa+AABGvsAARsAAAAAAAAA
 BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
 </mutableData>
         </image>
+        <image name="12_Trashcity" width="27" height="50"/>
+        <image name="13_Trashcity" width="34" height="51"/>
+        <image name="14_Trashcity" width="33" height="60"/>
         <image name="Prefeitura" width="2049" height="1537"/>
         <image name="atividades-02" width="1024" height="768"/>
         <image name="atividades-casa" width="203" height="203"/>
@@ -3267,8 +3277,8 @@ BAEAAAAAAAAAQgAAAAAAAAAAAAAAAAABGwI
         <image name="atividades-prefeitura" width="202" height="203"/>
         <image name="atividades-rua" width="203" height="203"/>
         <image name="badge-agua" width="53" height="72"/>
-        <image name="badge-doacao2" width="106" height="145"/>
-        <image name="badge-eleicao2" width="106" height="145"/>
+        <image name="badge-doacao2" width="53" height="72"/>
+        <image name="badge-eleicao2" width="53" height="72"/>
         <image name="badge-idoso" width="52" height="72"/>
         <image name="badge-lixo" width="53" height="72"/>
         <image name="badge-luz" width="53" height="72"/>

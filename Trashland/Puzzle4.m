@@ -53,6 +53,17 @@ NSString* path9;
 
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.player.medalha1fase4) {
+            self.badgeBrinquedo.image = [UIImage imageNamed:@"badge-doacao-color"];
+        }
+        if (self.player.medalha2fase4) {
+            self.badgeVoto.image = [UIImage imageNamed:@"badge-eleicao-color"];
+        }
+    });
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *myTouch = [[touches allObjects] objectAtIndex: 0];
     CGPoint currentPos = [myTouch locationInView: self.fundo];
@@ -79,6 +90,8 @@ NSString* path9;
                                     [popUp setImageNamed: @"pop-up-doacao"];
                                     self.popUpView = popUp;
                                     [popUp showInView:self.view animated:YES];
+                                    
+                                    [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(voltaPrefeitura) userInfo:nil repeats:NO];
                                 }
                             }
                         }
@@ -87,6 +100,10 @@ NSString* path9;
             }
         }
     }
+}
+
+-(void)voltaPrefeitura{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)botaoVoltarClicked:(UIButton *)sender {

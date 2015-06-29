@@ -9,6 +9,7 @@
 #import "Votacao.h"
 #import "Fim.h"
 #import <AVFoundation/AVFoundation.h>
+#import "PopUpViewController.h"
 
 @interface Votacao (){
     BOOL opcao1;
@@ -84,10 +85,22 @@ NSString* path10;
     else{
         self.player.nomeEscolhido = @"Alegrolandia";
     }
-    Fim *game = [self.storyboard instantiateViewControllerWithIdentifier:@"FimVC"];
-    [game setModalPresentationStyle:UIModalPresentationFullScreen];
-    game.player = self.player;
-    [self presentViewController:game animated:NO completion:nil];
+    self.player.medalha2fase4 = YES;
+    self.badgeVoto.image = [UIImage imageNamed:@"badge-eleicao-color"];
+    PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+    [popUp setImageNamed: @"pop-up-cidadania"];
+    self.popUpView = popUp;
+    [popUp showInView:self.view animated:YES];
+    [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(voltaPrefeitura) userInfo:nil repeats:NO];
+//    Fim *game = [self.storyboard instantiateViewControllerWithIdentifier:@"FimVC"];
+//    [game setModalPresentationStyle:UIModalPresentationFullScreen];
+//    game.player = self.player;
+//    [self presentViewController:game animated:NO completion:nil];
+//
+}
+
+-(void)voltaPrefeitura{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)cancelar:(id)sender{
