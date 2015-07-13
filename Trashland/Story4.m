@@ -23,6 +23,9 @@
     NSLog(@"desalocou story4");
 }
 
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self.view addSubview:self.fundo];

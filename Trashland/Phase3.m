@@ -46,7 +46,9 @@ UICollisionBehavior* _collision2;
 -(void)setGreen{
     self.sinalVerde.hidden = NO;
 }
-
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     path6 = [NSString stringWithFormat:@"%@/hospital.mp3", [[NSBundle mainBundle] resourcePath]];

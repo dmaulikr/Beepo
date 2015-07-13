@@ -27,7 +27,9 @@
 -(IBAction)voltar:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 
 -(IBAction)creditos:(id)sender{
         Extras *game = [self.storyboard instantiateViewControllerWithIdentifier:@"ExtrasVC"];

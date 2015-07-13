@@ -576,4 +576,8 @@ float deslocIni;
     [_audioPlayer5 play];
 }
 
+
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 @end

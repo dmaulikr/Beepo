@@ -84,6 +84,10 @@
     self.btn3SelectedBorder.hidden = YES;
 }
 
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
+
 -(IBAction)confirmar:(id)sender{
     if (opcao1) {
         self.player.nomeEscolhido = @"Felizópolis";

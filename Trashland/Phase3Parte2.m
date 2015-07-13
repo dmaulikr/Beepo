@@ -27,6 +27,10 @@
     NSLog(@"desalocou phase3parte2");
 }
 
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

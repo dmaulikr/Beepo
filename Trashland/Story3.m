@@ -64,5 +64,7 @@
     
     [_audioPlayer6 play];
 }
-
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 @end

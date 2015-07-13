@@ -132,5 +132,8 @@ AVAudioPlayer *_audioPlayer;
 -(void)balancarLogo{
     [self.play pulse:NULL];
 }
+-(void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 
 @end

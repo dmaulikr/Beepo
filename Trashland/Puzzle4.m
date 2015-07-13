@@ -28,6 +28,9 @@ NSString* path9;
     NSLog(@"desalocou puzzle4");
 }
 
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     

@@ -25,6 +25,9 @@
     NSLog(@"desalocou phase4");
 }
 
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     path11 = [NSString stringWithFormat:@"%@/11_prefeitura.mp3", [[NSBundle mainBundle] resourcePath]];
@@ -52,10 +55,7 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 - (IBAction)didClickUrna:(id)sender {
     Votacao *game = [self.storyboard instantiateViewControllerWithIdentifier:@"VotacaoVC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];

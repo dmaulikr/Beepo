@@ -275,4 +275,8 @@
     [_audioPlayer2 play];
 }
 
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
+
 @end

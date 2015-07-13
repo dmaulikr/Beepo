@@ -38,7 +38,9 @@
         }
      });
 }
-
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 
 -(IBAction)falaQueEuTeEstupro:(id)sender{
     NSURL *soundUrl = [NSURL fileURLWithPath:path200];

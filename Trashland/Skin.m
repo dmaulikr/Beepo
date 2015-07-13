@@ -171,6 +171,9 @@
 
     }
 }
+-(void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 
 
 

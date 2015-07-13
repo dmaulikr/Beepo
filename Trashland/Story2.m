@@ -89,4 +89,8 @@
     [_audioPlayer4 play];
 }
 
+-(void) didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
+
 @end
