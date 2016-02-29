@@ -1,11 +1,3 @@
-//
-//  DraggableView.m
-//  AnimationTests
-//
-//  Created by Thiago Borges Jordani on 10/06/15.
-//  Copyright (c) 2015 Thiago Borges Jordani. All rights reserved.
-//
-
 #import "DraggableView.h"
 
 @implementation DraggableView

@@ -1,19 +1,3 @@
-//
-//  UIView+Animation.m
-//  Tag man
-//
-//  Created by Bruno Muniz Azevedo Filho on 4/28/15.
-//  Copyright (c) 2015 Matheus_Lins. All rights reserved.
-//
-
-//////////////////////////////////////////////////////////////////////////////////////
-//
-//  UIView+AnimationKit.m
-//
-//  Created by Dalton Cherry on 3/20/14.
-//
-//////////////////////////////////////////////////////////////////////////////////////
-
 #import "UIView+Animation2.h"
 #import <objc/runtime.h>
 

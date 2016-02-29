@@ -1,11 +1,3 @@
-//
-//  Phase4.m
-//  Trashland
-//
-//  Created by Thiago Borges Jordani on 25/06/15.
-//  Copyright (c) 2015 Thiago Borges Jordani. All rights reserved.
-//
-
 #import "Phase4.h"
 #import "Votacao.h"
 #import "Puzzle4.h"

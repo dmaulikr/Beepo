@@ -1,19 +1,3 @@
-//
-//  UIView+Animation.h
-//  Tag man
-//
-//  Created by Bruno Muniz Azevedo Filho on 4/28/15.
-//  Copyright (c) 2015 Matheus_Lins. All rights reserved.
-//
-
-//////////////////////////////////////////////////////////////////////////////////////
-//
-//  UIView+AnimationKit.h
-//
-//  Created by Dalton Cherry on 3/20/14.
-//
-//////////////////////////////////////////////////////////////////////////////////////
-
 #import <UIKit/UIKit.h>
 
 typedef void (^DCAnimationFinished)(void);

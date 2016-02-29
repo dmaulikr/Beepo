@@ -1,11 +1,3 @@
-//
-//  UIView+Blink.m
-//  UIViewBlinking
-//
-//  Created by frowing on 13/06/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
 #import "UIView+Blink2.h"
 
 

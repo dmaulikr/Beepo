@@ -1,11 +1,3 @@
-//
-//  PopUpViewController.m
-//  Trashland
-//
-//  Created by Thiago Borges Jordani on 21/06/15.
-//  Copyright (c) 2015 Thiago Borges Jordani. All rights reserved.
-//
-
 #import "PopUpViewController.h"
 
 @interface PopUpViewController ()

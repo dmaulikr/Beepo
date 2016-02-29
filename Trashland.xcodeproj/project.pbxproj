@@ -570,7 +570,7 @@
 				TargetAttributes = {
 					15C431571B289E500098C994 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 2HSGSR89EM;
+						DevelopmentTeam = YZUJB2SK5Y;
 					};
 					15C431701B289E500098C994 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -838,6 +838,7 @@
 				INFOPLIST_FILE = Trashland/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bmaf.trashland.Beepo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -850,6 +851,7 @@
 				INFOPLIST_FILE = Trashland/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bmaf.trashland.Beepo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

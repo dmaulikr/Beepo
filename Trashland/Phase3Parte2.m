@@ -1,11 +1,3 @@
-//
-//  Phase3Parte2.m
-//  Trashland
-//
-//  Created by Bruno Muniz Azevedo Filho on 6/18/15.
-//  Copyright (c) 2015 Thiago Borges Jordani. All rights reserved.
-//
-
 #import "Phase3Parte2.h"
 #import "DraggableView.h"
 #import "PhasesChoose.h"
