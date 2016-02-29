@@ -50,12 +50,12 @@ NSString* path9;
 
 -(void)viewWillAppear:(BOOL)animated{
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.player.medalha1fase4) {
+    //    if (self.player.medalha1fase4) {
             self.badgeBrinquedo.image = [UIImage imageNamed:@"badge-doacao-color"];
-        }
-        if (self.player.medalha2fase4) {
+    //    }
+    //    if (self.player.medalha2fase4) {
             self.badgeVoto.image = [UIImage imageNamed:@"badge-eleicao-color"];
-        }
+     //   }
     });
 }
 
@@ -76,10 +76,10 @@ NSString* path9;
                         if (self.brinquedo3.center.y < 630 && self.brinquedo3.center.y > 130) {
                             ponto3 = true;
                             if (self.brinquedo4.center.x < 580 && self.brinquedo4.center.x > 75) {
-                                if (self.brinquedo4.center.y < 630 && self.brinquedo4.center.y > 130 &&!self.player.medalha1fase4) {
+            //                    if (self.brinquedo4.center.y < 630 && self.brinquedo4.center.y > 130 &&!self.player.medalha1fase4) {
                                     [badgeCheck invalidate];
                                     ponto4 = true;
-                                    self.player.medalha1fase4 = true;
+              //                      self.player.medalha1fase4 = true;
                                     self.badgeBrinquedo.image = [UIImage imageNamed:@"badge-doacao-color"];
                                     PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
                                     [popUp setImageNamed: @"pop-up-doacao"];
@@ -94,7 +94,7 @@ NSString* path9;
                 }
             }
         }
-    }
+   // }
 }
 
 -(void)voltaPrefeitura{

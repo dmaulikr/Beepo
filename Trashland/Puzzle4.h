@@ -1,11 +1,9 @@
 #import <UIKit/UIKit.h>
-#import "Player.h"
 #import "DraggableImageView.h"
 
 @interface Puzzle4 : UIViewController
 
 @property (nonatomic) IBOutlet UIImageView* fundo;
-@property (nonatomic) Player* player;
 @property (weak, nonatomic) IBOutlet UILabel *txtLabel;
 @property (nonatomic) IBOutlet DraggableImageView* brinquedo1;
 @property (nonatomic) IBOutlet DraggableImageView* brinquedo2;

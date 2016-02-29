@@ -1,7 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "DraggableImageView.h"
 #import "DraggableView.h"
-#import "Player.h"
 
 @interface Phase1 : UIViewController
 @property (weak, nonatomic) IBOutlet UIView* viewFantasminha;
@@ -37,7 +36,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel* contador;
 
-@property (retain, nonatomic) Player* player;
 @property (nonatomic) float deslocIni;
 @property (nonatomic) BOOL lookingBack;
 @property (retain, nonatomic) UIViewController *popUpView;

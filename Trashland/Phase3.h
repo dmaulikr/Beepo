@@ -1,11 +1,8 @@
 #import <UIKit/UIKit.h>
-#import "Player.h"
 #import "DraggableView.h"
 
 @interface Phase3 : UIViewController
 
-
-@property (nonatomic) Player* player;
 @property (nonatomic) IBOutlet UIImageView* fundo;
 @property (nonatomic) IBOutlet UIView* viewBeepo;
 @property (nonatomic) IBOutlet UIImageView* imageBeepo;

@@ -15,14 +15,6 @@
 
 @implementation Phase3Parte2
 
--(void)dealloc{
-    NSLog(@"desalocou phase3parte2");
-}
-
--(void) didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -33,12 +25,12 @@
     _viewCarro2.podeY = YES;
     
     [self checkWayFree];
-    if (self.player.medalha1fase3) {
+   // if (self.player.medalha1fase3) {
         self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
-    }
-    if (self.player.medalha2fase3) {
+   // }
+   // if (self.player.medalha2fase3) {
         self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
-    }
+   // }
     
     [self.fundo addSubview:self.botaoSom];
     [self.fundo addSubview:self.botaoVoltar];
@@ -63,7 +55,7 @@
             [phase3Part2Timer invalidate];
         }
         phase3Part2Timer = [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(showBadgePopUp) userInfo:nil repeats:NO];
-        self.player.medalha2fase3 = true;
+    //    self.player.medalha2fase3 = true;
         self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
     }
     else{
@@ -86,11 +78,11 @@
     phase3Part2Timer = [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(escolhaDeFases) userInfo:nil repeats:NO];
 }
 - (IBAction)btnVoltarClicked:(id)sender {
-    [self.player dismissToPhaseSelect];
+ //   [self.player dismissToPhaseSelect];
 }
 
 -(void)escolhaDeFases{
-    [self.player dismissToPhaseSelect];
+ //   [self.player dismissToPhaseSelect];
 }
 
 -(IBAction)falaQueEuTeEstupro:(id)sender{

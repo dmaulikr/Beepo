@@ -1,7 +1,6 @@
 #import <UIKit/UIKit.h>
-#import "Player.h"
 
-@interface Skin : UIViewController
+@interface CustomizationViewController : UIViewController
 
 @property (nonatomic) IBOutlet UIView* chooseBar;
 
@@ -22,8 +21,5 @@
 
 @property (nonatomic) IBOutlet UIButton* botaoVoltar;
 @property (nonatomic) IBOutlet UIButton* botaoSom;
-
-@property (nonatomic) Player* player;
-
 
 @end

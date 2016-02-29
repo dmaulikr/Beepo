@@ -40,7 +40,7 @@
     {
         Phase3 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.player = self.player;
+      //  game.player = self.player;
         [self presentViewController:game animated:NO completion:nil];
     }
     else if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionRight)

@@ -36,7 +36,7 @@
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
     Phase2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase2VC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
-    game.player = self.player;
+ //   game.player = self.player;
     [self presentViewController:game animated:YES completion:nil];
 }
 

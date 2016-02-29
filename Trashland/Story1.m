@@ -128,12 +128,12 @@
 }
 
 -(void)start{
-    if (self.player.fase1) {
+  //  if (self.player.fase1) {
         Phase1 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase1VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.player = self.player;
+ //       game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
-    }
+ //   }
 }
 
 - (void)moveLeft{

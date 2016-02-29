@@ -23,43 +23,6 @@
 
 @implementation Phase2
 float deslocIni;
--(void)dealloc{
-    
-    NSLog(@"desalocou Phase2");
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self.view.layer removeAllAnimations];
-    _auxView = nil;
-    _player = nil;
-    _phaseScrollView = nil;
-    _phaseBG = nil;
-    _balao = nil;
-    _bolinhaVermelha = nil;
-    _bolinhaVerde = nil;
-    _arvore1 = nil;
-    _arvore2 = nil;
-    _arvore3 = nil;
-    _arvore4 = nil;
-    _arvore5 = nil;
-    _garrafaPet1 = nil;
-    _lata = nil;
-    _garrafaVidro = nil;
-    _papel = nil;
-    _garrafaPet2 = nil;
-    _cascaBanana = nil;
-    _zzzImage = nil;
-    _charImageView = nil;
-    _shadowImageView = nil;
-    _fantasminhaView = nil;
-    _gasperEscolhido = nil;
-    _botaoProximo = nil;
-    _badgeLixo = nil;
-    _badgeNatureza = nil;
-    _popUpView = nil;
-    _lixos = nil;
-}
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -69,15 +32,15 @@ float deslocIni;
     trashLeft = 6;
     self.lixos = [@[@NO,@NO,@NO,@NO,@NO,@NO] mutableCopy];
     
-    if(self.player.medalha1fase2){
+  //  if(self.player.medalha1fase2){
         self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
         self.botaoProximo.enabled = YES;
-    }
+  //  }
     
-    if(self.player.medalha2fase2){
+  //  if(self.player.medalha2fase2){
         self.badgeNatureza.image = [UIImage imageNamed:@"badge-natureza-color"];
         self.botaoProximo.enabled = YES;
-    }
+  //  }
     
     [self beepoCustomizado];
     
@@ -104,16 +67,16 @@ float deslocIni;
 }
 
 -(void)checkObjectives{
-    if (treesCounter == 0 && !self.player.medalha2fase2) {
+  //  if (treesCounter == 0 && !self.player.medalha2fase2) {
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-natureza"];
         self.popUpView = popUp;
         [popUp showInView:self.view animated:YES];
-        self.player.medalha2fase2 = YES;
+    //    self.player.medalha2fase2 = YES;
         self.badgeNatureza.image = [UIImage imageNamed:@"badge-natureza-color"];
         self.botaoProximo.enabled = YES;
-        self.player.fase3 = true;
-    }
+    //    self.player.fase3 = true;
+  //  }
 }
 
 #pragma mark - scrollview delegate
@@ -196,7 +159,7 @@ float deslocIni;
 //    else{
 //        aux = [UIImage imageNamed:@"fantasminha"];
 //    }
-    aux = self.player.gasperEscolhido;
+ //   aux = self.player.gasperEscolhido;
     
     return aux;
 }
@@ -229,7 +192,7 @@ float deslocIni;
 //    else{
 //        self.charImageView.image = [UIImage imageNamed:@"fantasminha"];
 //    }
-    self.charImageView.image = self.player.gasperEscolhido;
+ //   self.charImageView.image = self.player.gasperEscolhido;
 }
 #pragma mark - Gavidade e Colisões
 - (void)prepareForMovement{
@@ -402,8 +365,8 @@ float deslocIni;
                 [popUp setImageNamed: @"pop-up-lixo"];
                 self.popUpView = popUp;
                 [popUp showInView:self.view animated:YES];
-                self.player.medalha1fase2 = YES;
-                self.player.fase3 = true;
+       //         self.player.medalha1fase2 = YES;
+       //         self.player.fase3 = true;
                 self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
                 self.botaoProximo.enabled = YES;
             }
@@ -545,7 +508,7 @@ float deslocIni;
 
 //Controle
 - (IBAction)didClickBackButton:(id)sender {
-    [self.player dismissToPhaseSelect];
+ //   [self.player dismissToPhaseSelect];
 }
 - (IBAction)didClickReadButton:(id)sender {
 }
@@ -556,7 +519,7 @@ float deslocIni;
 //    game.player = self.player;
 //    [self presentViewController:game animated:YES completion:nil];
     
-    [self.player dismissToPhaseSelect];
+ //   [self.player dismissToPhaseSelect];
 }
 
 -(IBAction)falaQueEuTeEstupro:(id)sender{

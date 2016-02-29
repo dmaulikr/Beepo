@@ -47,7 +47,7 @@ UICollisionBehavior* _collision2;
     
     
     [super viewDidAppear:animated];
-    self.imageBeepo.image = self.player.gasperEscolhido;
+ //   self.imageBeepo.image = self.player.gasperEscolhido;
     
     self.viewVelha.userInteractionEnabled = YES;
     self.viewVelha.delegate = self;
@@ -105,19 +105,19 @@ UICollisionBehavior* _collision2;
 }
 
 -(void)checkBadges{
-    if (self.player.medalha2fase3) {
+  //  if (self.player.medalha2fase3) {
         self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
         self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
-    }
-    else if (self.player.medalha1fase3){
+ //   }
+  //  else if (self.player.medalha1fase3){
         self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
-    }
-    else{
+ //   }
+ //   else{
         if (phase3Timer) {
             [phase3Timer invalidate];
         }
         phase3Timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(checkBadges) userInfo:nil repeats:NO];
-    }
+ //   }
 }
 
 - (void)moveBeepo:(UIImageView *)imageView{
@@ -160,13 +160,13 @@ UICollisionBehavior* _collision2;
     
     Phase3Parte2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3Parte2VC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
-    self.player.medalha1fase3 = true;
-    self.player.fase4 = true;
-    game.player = self.player;
+//    self.player.medalha1fase3 = true;
+ //   self.player.fase4 = true;
+ //   game.player = self.player;
     [self presentViewController:game animated:NO completion:nil];
 }
 - (IBAction)didClickVoltarButton:(id)sender {
-    [self.player dismissToPhaseSelect];
+ //   [self.player dismissToPhaseSelect];
 }
 
 -(IBAction)falaQueEuTeEstupro:(id)sender{

@@ -18,16 +18,16 @@
     path200 = [NSString stringWithFormat:@"%@/14_fim_jogo.mp3", [[NSBundle mainBundle] resourcePath]];
     // Do any additional setup after loading the view.
      dispatch_async(dispatch_get_main_queue(), ^{
-        if ([self.player.nomeEscolhido isEqualToString:@"Felizópolis"]) {
+    //    if ([self.player.nomeEscolhido isEqualToString:@"Felizópolis"]) {
             self.flagImageView.image = [UIImage imageNamed:@"prefeitura-11"];
             self.cityNameLabel.image = [UIImage imageNamed:@"prefeitura-16"];
-        }else if([self.player.nomeEscolhido isEqualToString:@"Maravilandia"]){
+    //    }else if([self.player.nomeEscolhido isEqualToString:@"Maravilandia"]){
             self.flagImageView.image = [UIImage imageNamed:@"prefeitura-12"];
             self.cityNameLabel.image = [UIImage imageNamed:@"prefeitura-19"];
-        }else{
+      //  }else{
             self.flagImageView.image = [UIImage imageNamed:@"prefeitura-10"];
             self.cityNameLabel.image = [UIImage imageNamed:@"prefeitura-17"];
-        }
+      //  }
      });
 }
 -(void) didReceiveMemoryWarning{

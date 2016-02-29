@@ -15,26 +15,23 @@
 
 @implementation Votacao
 
--(void)dealloc{
-    NSLog(@"desalocou votacao");
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if (!self.player) {
-        self.player = [[Player alloc]init];
-    }
+  //  if (!self.player) {
+  //      self.player = [[Player alloc]init];
+  //  }
     opcao1 = false;
     opcao2 = false;
     opcao3 = false;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.player.medalha1fase4) {
+   //     if (self.player.medalha1fase4) {
             self.badgeDoacao.image = [UIImage imageNamed:@"badge-doacao-color"];
-        }
-        if (self.player.medalha2fase4) {
+   //     }
+   //     if (self.player.medalha2fase4) {
             self.badgeVoto.image = [UIImage imageNamed:@"badge-eleicao-color"];
-        }
+   //     }
     });
     
     path10 = [NSString stringWithFormat:@"%@/12_prefeitura-puzzlecaixa.mp3", [[NSBundle mainBundle] resourcePath]];
@@ -82,15 +79,15 @@
 
 -(IBAction)confirmar:(id)sender{
     if (opcao1) {
-        self.player.nomeEscolhido = @"Felizópolis";
+   //     self.player.nomeEscolhido = @"Felizópolis";
     }
     else if (opcao2){
-        self.player.nomeEscolhido = @"Maravilandia";
+ //       self.player.nomeEscolhido = @"Maravilandia";
     }
     else{
-        self.player.nomeEscolhido = @"Alegrolandia";
+ //       self.player.nomeEscolhido = @"Alegrolandia";
     }
-    self.player.medalha2fase4 = YES;
+  //  self.player.medalha2fase4 = YES;
     self.badgeVoto.image = [UIImage imageNamed:@"badge-eleicao-color"];
     PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
     [popUp setImageNamed: @"pop-up-cidadania"];

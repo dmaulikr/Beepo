@@ -1,7 +1,7 @@
 #import "Phase1.h"
 #import "DraggableImageView.h"
 #import <AudioToolbox/AudioToolbox.h>
-#import "Start.h"
+#import "HomeViewController.h"
 #import "AppDelegate.h"
 #import "PhasesChoose.h"
 #import "PopUpViewController.h"
@@ -64,17 +64,17 @@
     
     self.botaoProx.alpha = 0.5f;
     
-    self.charImgView.image = self.player.gasperEscolhido;
+  //  self.charImgView.image = self.player.gasperEscolhido;
     
-    if(self.player.medalha1fase1){
+ //   if(self.player.medalha1fase1){
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
         self.botaoProx.enabled = YES;
-    }
+  //  }
     
-    if(self.player.medalha2fase1){
+ //   if(self.player.medalha2fase1){
         self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
         self.botaoProx.enabled = YES;
-    }
+ //   }
     
     pontoLuz1 = false;
     pontoLuz2 = false;
@@ -106,80 +106,6 @@
     //tvCheck = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkTV) userInfo:nil repeats:YES];
     badgeCheck = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(checkBadges) userInfo:nil repeats:YES];
     
-}
-
--(void)dealloc{
-    
-    
-    NSLog(@"desalocou Phase1");
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self.view.layer removeAllAnimations]; 
-    [tvCheck invalidate];
-    tvCheck = nil;
-    [badgeCheck invalidate];
-    badgeCheck = nil;
-    [_collision removeAllBoundaries];
-    [_animator removeAllBehaviors];
-    [_books removeFromSuperview];
-    [_flower removeFromSuperview];
-    [_plate removeFromSuperview];
-    [_vase2 removeFromSuperview];
-    [_books morre];
-    [_flower morre];
-    [_plate morre];
-    [_vase2 morre];
-    [_soap morre];
-    [_rubberDuck morre];
-    [_redWhiteVase morre];
-    [_weirdVase morre];
-    [_toiletStuff morre];
-    [_pinkishVase morre];
-    [_purpleVase morre];
-    [_fantasmaView morre];
-    _tvGIF.image = nil;
-    _collision=nil;
-    _animator=nil;
-    _popUpView = nil;
-    _books = nil;
-    _flower = nil;
-    _vase2 = nil;
-    _plate = nil;
-    _scrollView = nil;
-    _contentBG = nil;
-    _birdImageView = nil;
-    _shadowImgView = nil;
-    _grav = nil;
-    _showerGIF = nil;
-    _torneiraGIF = nil;
-    _tvGIF = nil;
-    _nuvem1Acesa = nil;
-    _nuvem2Acesa = nil;
-    _auxView = nil;
-    _viewFantasminha = nil;
-    _phase1 = nil;
-    _luz3 = nil;
-    _luz4 = nil;
-    _charImgView = nil;
-    _soap = nil;
-    _rubberDuck = nil;
-    _redWhiteVase = nil;
-    _weirdVase = nil;
-    _toiletStuff = nil;
-    _pinkishVase = nil;
-    _purpleVase = nil;
-    _fantasmaView = nil;
-    _medalha1fase1 = nil;
-    _medalha2fase1 = nil;
-    _bird = nil;
-    _botaoVoltar = nil;
-    _botaoPlay = nil;
-    _botaoProx = nil;
-    _contador = nil;
-    _popUpView = nil;
-    _player = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -493,15 +419,15 @@
 }
 
 -(IBAction)proxima:(id)sender{
-    if (self.player.medalha1fase1 || self.player.medalha2fase1) {
-        [self.player dismissToPhaseSelect];
-    }
+//    if (self.player.medalha1fase1 || self.player.medalha2fase1) {
+//        [self.player dismissToPhaseSelect];
+//    }
 }
 
 -(IBAction)voltar:(id)sender{
     
-    [self.player dismissToPhaseSelect];
-    _player = nil;
+ //   [self.player dismissToPhaseSelect];
+//    _player = nil;
 }
 
 -(void)tocaTV{
@@ -522,27 +448,27 @@
 }
 
 -(void)checkBadges{
-    if (!self.player.medalha1fase1 && pontoAgua1 && pontoAgua2) {
+  //  if (!self.player.medalha1fase1 && pontoAgua1 && pontoAgua2) {
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-agua"];
         self.popUpView = popUp;
-        self.player.fase2 = true;
+   //     self.player.fase2 = true;
         [popUp showInView:self.view animated:YES];
         self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
-        self.player.medalha1fase1 = true;
+  //      self.player.medalha1fase1 = true;
         self.botaoProx.alpha = 1.0f;
         
-    }
-    if (!self.player.medalha2fase1 && pontoLuz1 && pontoLuz2 && pontoLuz3 && pontoLuz4 && pontoTV) {
-        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+ //   }
+ //   if (!self.player.medalha2fase1 && pontoLuz1 && pontoLuz2 && pontoLuz3 && pontoLuz4 && pontoTV) {
+  //      PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-energia"];
         self.popUpView = popUp;
-        self.player.fase2 = true;
+  //      self.player.fase2 = true;
         [popUp showInView:self.view animated:YES];
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
-        self.player.medalha2fase1 = true;
+  //      self.player.medalha2fase1 = true;
         self.botaoProx.alpha = 1.0f;
-    }
+  //  }
 }
 
 #pragma mark - scrollview delegate
@@ -552,19 +478,19 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [[_fantasmaView superview]bringSubviewToFront:_fantasmaView];
-    UIImage *beepoImage = self.player.gasperEscolhido;
+ //   UIImage *beepoImage = self.player.gasperEscolhido;
     float diff =scrollView.contentOffset.x - _deslocIni;
     if (diff > 0 && _lookingBack) {
-        self.charImgView.image = beepoImage;
+ //       self.charImgView.image = beepoImage;
         _lookingBack = NO;
     } else if (diff < 0 && _lookingBack){
         
     } else if (diff > 0 && !_lookingBack){
         
     } else{
-        self.charImgView.image = [UIImage imageWithCGImage:beepoImage.CGImage
-                                                       scale:beepoImage.scale
-                                                 orientation:UIImageOrientationUpMirrored];
+ //       self.charImgView.image = [UIImage imageWithCGImage:beepoImage.CGImage
+    //                                                   scale:beepoImage.scale
+      //                                           orientation:UIImageOrientationUpMirrored];
         _lookingBack = YES;
     }
     

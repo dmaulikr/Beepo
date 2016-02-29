@@ -1,12 +1,9 @@
 #import <UIKit/UIKit.h>
-#import "Player.h"
 #import "DraggableImageView.h"
 #import "DraggableView.h"
 
 @interface Phase2 : UIViewController
 
-
-@property (retain,nonatomic) Player* player;
 @property (weak, nonatomic) IBOutlet UIScrollView *phaseScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *phaseBG;
 

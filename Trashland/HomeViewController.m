@@ -1,23 +1,23 @@
-#import "Start.h"
+#import "HomeViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "UIView+Animation2.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface Start ()
+@interface HomeViewController ()
 
 @property (nonatomic, weak) IBOutlet UIImageView* predios;
 @property (nonatomic, weak) IBOutlet UIButton* play;
 
 @end
 
-@implementation Start
+@implementation HomeViewController
 SystemSoundID sound2;
 AVAudioPlayer *_audioPlayer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [NSTimer scheduledTimerWithTimeInterval:1.8f target:self selector:@selector(balancarLogo) userInfo:nil repeats:YES];
+    //[NSTimer scheduledTimerWithTimeInterval:1.8f target:self selector:@selector(balancarLogo) userInfo:nil repeats:YES];
     [self.play tada:NULL];
     
     // Construct URL to sound file
@@ -31,15 +31,15 @@ AVAudioPlayer *_audioPlayer;
     [_audioPlayer setVolume:0.2];
     _audioPlayer.numberOfLoops = -1;
     
-    [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(trocarPredio) userInfo:nil repeats:YES];
+    //[NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(trocarPredio) userInfo:nil repeats:YES];
 }
 
 - (IBAction)didTappedPlayButton:(id)sender{
-    [self performSegueWithIdentifier:@"" sender:self];
+    [self performSegueWithIdentifier:@"playSegue" sender:self];
 }
 
 - (IBAction)didTappedInfoButton:(id)sender{
-    [self performSegueWithIdentifier:@"" sender:self];
+    [self performSegueWithIdentifier:@"infoSegue" sender:self];
 }
 
 -(void)trocarPredio{

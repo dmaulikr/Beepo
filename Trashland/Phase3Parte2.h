@@ -1,10 +1,8 @@
 #import <UIKit/UIKit.h>
-#import "Player.h"
 #import "DraggableView.h"
 
 @interface Phase3Parte2 : UIViewController
 
-@property (nonatomic) Player* player;
 @property (nonatomic) IBOutlet UIImageView* fundo;
 @property (nonatomic) IBOutlet UIImageView* imageViewPuzzle;
 @property (nonatomic) IBOutlet DraggableView* viewCarro1;

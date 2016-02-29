@@ -1,21 +1,17 @@
-#import "Skin.h"
+#import "CustomizationViewController.h"
 #import "PhasesChoose.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 
-@implementation Skin{
+@implementation CustomizationViewController{
     BOOL primeira;
-}
-
--(void)dealloc{
-    NSLog(@"desalocou customskins");
 }
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     primeira = true;
-    self.player = [[Player alloc]init];
-    self.player.gasperEscolhido = [UIImage imageNamed:@"fantasminha"];
+  //  self.player = [[Player alloc]init];
+  //  self.player.gasperEscolhido = [UIImage imageNamed:@"fantasminha"];
     [[self.item1 layer] setBorderWidth:2.0f];
     [[self.item2 layer] setBorderWidth:2.0f];
     [[self.item3 layer] setBorderWidth:2.0f];
@@ -41,7 +37,7 @@
 -(IBAction)start:(id)sender{
         PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.player = self.player;
+  //      game.player = self.player;
         [self presentViewController:game animated:YES completion:nil];
 }
 
@@ -84,12 +80,12 @@
 
 -(IBAction)choosedFirst:(id)sender{
     if (primeira == true) {
-        self.player.gasperEscolhido = [UIImage imageNamed:@"custom15"];
+   //     self.player.gasperEscolhido = [UIImage imageNamed:@"custom15"];
         self.gasper.image = [UIImage imageNamed:@"custom15"];
         
     }
     else{
-        self.player.gasperEscolhido = [UIImage imageNamed:@"custom18"];
+ //       self.player.gasperEscolhido = [UIImage imageNamed:@"custom18"];
         self.gasper.image = [UIImage imageNamed:@"custom18"];
         
     }
@@ -97,13 +93,13 @@
 
 -(IBAction)choosedSecond:(id)sender{
     if (primeira == true) {
-        self.player.gasperEscolhido = [UIImage imageNamed:@"custom16"];
+ //       self.player.gasperEscolhido = [UIImage imageNamed:@"custom16"];
         self.gasper.image = [UIImage imageNamed:@"custom16"];
         
     }
     else{
         
-        self.player.gasperEscolhido = [UIImage imageNamed:@"custom19"];
+//        self.player.gasperEscolhido = [UIImage imageNamed:@"custom19"];
         self.gasper.image = [UIImage imageNamed:@"custom19"];
         
     }
@@ -112,18 +108,16 @@
 -(IBAction)choosedThird:(id)sender{
     if (primeira == true) {
         self.gasper.image = [UIImage imageNamed:@"custom17"];
-        self.player.gasperEscolhido = [UIImage imageNamed:@"custom17"];
+//        self.player.gasperEscolhido = [UIImage imageNamed:@"custom17"];
     }
     else{
-        self.player.gasperEscolhido = [UIImage imageNamed:@"custom20"];
+ //       self.player.gasperEscolhido = [UIImage imageNamed:@"custom20"];
         self.gasper.image = [UIImage imageNamed:@"custom20"];
         
     
     }
     
 }
-
-    
 
 -(IBAction)voltar:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -163,10 +157,5 @@
 
     }
 }
--(void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-}
-
-
 
 @end

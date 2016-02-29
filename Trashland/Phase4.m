@@ -13,37 +13,29 @@
 
 @implementation Phase4
 
--(void)dealloc{
-    NSLog(@"desalocou phase4");
-}
-
--(void) didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     path11 = [NSString stringWithFormat:@"%@/11_prefeitura.mp3", [[NSBundle mainBundle] resourcePath]];
-    // Do any additional setup after loading the view.
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.player.medalha1fase4) {
+     //   if (self.player.medalha1fase4) {
             self.badgeDoacaoImgView.image = [UIImage imageNamed:@"badge-doacao-color"];
-        }
-        if (self.player.medalha2fase4) {
+     //   }
+     //   if (self.player.medalha2fase4) {
             self.badgeEleicaoImgView    .image = [UIImage imageNamed:@"badge-eleicao-color"];
-        }
+     //   }
     });
     
-    if (self.player.medalha1fase4 && self.player.medalha2fase4) {
+   // if (self.player.medalha1fase4 && self.player.medalha2fase4) {
         Fim *game = [self.storyboard instantiateViewControllerWithIdentifier:@"FimVC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
-        game.player = self.player;
+     //   game.player = self.player;
         [self presentViewController:game animated:NO completion:nil];
-    }
+   // }
 }
 
 
@@ -51,18 +43,18 @@
 - (IBAction)didClickUrna:(id)sender {
     Votacao *game = [self.storyboard instantiateViewControllerWithIdentifier:@"VotacaoVC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
-    game.player = self.player;
+  //  game.player = self.player;
     [self presentViewController:game animated:NO completion:nil];
 }
 
 - (IBAction)didClickBox:(id)sender {
     Puzzle4 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Puzzle4VC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
-    game.player = self.player;
+  //  game.player = self.player;
     [self presentViewController:game animated:NO completion:nil];
 }
 - (IBAction)voltarBtnClicked:(id)sender {
-    [self.player dismissToPhaseSelect];
+  //  [self.player dismissToPhaseSelect];
 }
 
 -(IBAction)falaQueEuTeEstupro:(id)sender{
