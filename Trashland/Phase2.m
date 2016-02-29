@@ -1,8 +1,6 @@
 #import "Phase2.h"
-#import <AudioToolbox/AudioToolbox.h>
 #import "PhasesChoose.h"
 #import "PopUpViewController.h"
-#import <AVFoundation/AVFoundation.h>
 #import "DraggableImageView.h"
 #import "DraggableView.h"
 
@@ -11,8 +9,6 @@
     UIDynamicAnimator* _animator;
     UIGravityBehavior* _gravity;
     UICollisionBehavior* _collision;
-    SystemSoundID sound1;
-    AVAudioPlayer *_audioPlayer5;
     NSString *path4;
     
     int treesCounter;
@@ -330,10 +326,10 @@ float deslocIni;
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
-                AudioServicesDisposeSystemSoundID (sound1);
+         //       AudioServicesDisposeSystemSoundID (sound1);
                 NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-                AudioServicesPlaySystemSound(sound1);
+         //       AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+         //       AudioServicesPlaySystemSound(sound1);
                 
                 
                 trashLeft = trashLeft - 1;
@@ -345,10 +341,10 @@ float deslocIni;
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
-                AudioServicesDisposeSystemSoundID (sound1);
+        //        AudioServicesDisposeSystemSoundID (sound1);
                 NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-                AudioServicesPlaySystemSound(sound1);
+        //        AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+        //        AudioServicesPlaySystemSound(sound1);
                 
                 
                 trashLeft = trashLeft - 1;
@@ -360,10 +356,10 @@ float deslocIni;
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
-                AudioServicesDisposeSystemSoundID (sound1);
+      //          AudioServicesDisposeSystemSoundID (sound1);
                 NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-                AudioServicesPlaySystemSound(sound1);
+     //           AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+     //           AudioServicesPlaySystemSound(sound1);
                 
                 
                 trashLeft = trashLeft - 1;
@@ -375,10 +371,10 @@ float deslocIni;
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
-                AudioServicesDisposeSystemSoundID (sound1);
+     //           AudioServicesDisposeSystemSoundID (sound1);
                 NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-                AudioServicesPlaySystemSound(sound1);
+   //             AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+   //             AudioServicesPlaySystemSound(sound1);
                 
                 
                 trashLeft = trashLeft - 1;
@@ -390,10 +386,10 @@ float deslocIni;
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 
-                AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-                AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-                AudioServicesPlaySystemSound(sound1);
+     //           AudioServicesDisposeSystemSoundID (sound1);
+       //         NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
+      //          AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+      //          AudioServicesPlaySystemSound(sound1);
                 
                 
                 trashLeft = trashLeft - 1;
@@ -419,10 +415,10 @@ float deslocIni;
 - (IBAction)didClickTree1:(UIButton *)sender {
     
     treesCounter = treesCounter - 1;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+//    AudioServicesDisposeSystemSoundID (sound1);
+//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+//    AudioServicesPlaySystemSound(sound1);
     
     
     
@@ -442,10 +438,10 @@ float deslocIni;
 - (IBAction)didClickTree2:(UIButton *)sender {
     
     treesCounter = treesCounter - 1;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+//    AudioServicesDisposeSystemSoundID (sound1);
+//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+//    AudioServicesPlaySystemSound(sound1);
     
     
     _arvore2.image = [UIImage imageNamed:@"parque-04"];
@@ -463,10 +459,10 @@ float deslocIni;
 - (IBAction)didClickTree3:(UIButton *)sender {
     
     treesCounter = treesCounter - 1;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+//    AudioServicesDisposeSystemSoundID (sound1);
+//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+//    AudioServicesPlaySystemSound(sound1);
     
     
     _arvore3.image = [UIImage imageNamed:@"parque-05"];
@@ -484,10 +480,10 @@ float deslocIni;
 - (IBAction)didClickTree4:(UIButton *)sender {
     
     treesCounter = treesCounter - 1;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+//    AudioServicesDisposeSystemSoundID (sound1);
+//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+//    AudioServicesPlaySystemSound(sound1);
     
     
     _arvore4.image = [UIImage imageNamed:@"parque-06"];
@@ -508,10 +504,10 @@ float deslocIni;
 - (IBAction)didClickTree5:(UIButton *)sender {
     
     treesCounter = treesCounter - 1;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+//    AudioServicesDisposeSystemSoundID (sound1);
+//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
+//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
+//    AudioServicesPlaySystemSound(sound1);
     
     _arvore5.image = [UIImage imageNamed:@"parque-07"];
     float yInicial = _arvore5.frame.origin.y;
@@ -567,13 +563,9 @@ float deslocIni;
     NSURL *soundUrl = [NSURL fileURLWithPath:path4];
     
     // Create audio player object and initialize with URL to sound
-    _audioPlayer5 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+   // _audioPlayer5 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     
-    [_audioPlayer5 play];
+   // [_audioPlayer5 play];
 }
 
-
--(void) didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-}
 @end

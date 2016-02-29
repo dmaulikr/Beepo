@@ -1,19 +1,17 @@
 #import "Story1.h"
-#import <AVFoundation/AVFoundation.h>
 #import "UIView+Animation2.h"
 #import "Phase1.h"
+#import "MiscellaneousAudio.h"
 
-@interface Story1() <Phase1Delegate> {
-    AVAudioPlayer *_audioPlayer2;
-    NSString *path;
-}
+@interface Story1() <Phase1Delegate>
 
 @property (weak, nonatomic) IBOutlet UIPageControl* controle;
 @property (weak, nonatomic) IBOutlet UIImageView *gifDedo;
 @property (weak, nonatomic) IBOutlet UIImageView *telaUm;
 @property (weak, nonatomic) IBOutlet UIImageView *telaDois;
 @property (weak, nonatomic) IBOutlet UIImageView *telaTres;
-@property (nonatomic) IBOutlet UIButton *buttonNarrar;
+@property (weak, nonatomic) IBOutlet UIButton *buttonNarrar;
+@property (strong, nonatomic) NSString *path;
 
 @end
 
@@ -21,15 +19,14 @@
 
 -(void) viewDidLoad{
     [super viewDidLoad];
-     path = [NSString stringWithFormat:@"%@/1_pre-sala01.mp3", [[NSBundle mainBundle] resourcePath]];
+    
+    _path = [NSString stringWithFormat:@"%@/1_pre-sala01.mp3", [[NSBundle mainBundle] resourcePath]];
     
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    
     swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:swipeLeft];
     
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeRight];
 }
@@ -43,7 +40,6 @@
         self.telaTres.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"historinha-03@2x" ofType:@"png"]];
     });
     
-    
     self.gifDedo.image = [UIImage animatedImageNamed:@"maoesq-" duration:1.f];
     self.gifDedo.alpha = 0.7;
     [self.view bringSubviewToFront:self.gifDedo];
@@ -53,14 +49,14 @@
     if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionLeft){
         switch (self.controle.currentPage) {
             case 0:
-                path = [NSString stringWithFormat:@"%@/2_pre-sala02.mp3", [[NSBundle mainBundle] resourcePath]];
+                _path = [NSString stringWithFormat:@"%@/2_pre-sala02.mp3", [[NSBundle mainBundle] resourcePath]];
                 [self.buttonNarrar tada:NULL];
                 [self moveLeft];
                 self.controle.currentPage +=1;
                 self.gifDedo.hidden = YES;
                 break;
             case 1:
-                 path = [NSString stringWithFormat:@"%@/3_pre-sala03.mp3", [[NSBundle mainBundle] resourcePath]];
+                 _path = [NSString stringWithFormat:@"%@/3_pre-sala03.mp3", [[NSBundle mainBundle] resourcePath]];
                 [self.buttonNarrar tada:NULL];
                 [self moveLeft];
                 self.controle.currentPage +=1;
@@ -75,13 +71,13 @@
     else if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionRight){
         switch (self.controle.currentPage) {
             case 2:
-                 path = [NSString stringWithFormat:@"%@/2_pre-sala02.mp3", [[NSBundle mainBundle] resourcePath]];
+                 _path = [NSString stringWithFormat:@"%@/2_pre-sala02.mp3", [[NSBundle mainBundle] resourcePath]];
                 [self.buttonNarrar tada:NULL];
                 [self moveRight];
                 self.controle.currentPage -=1;
                 break;
             case 1:
-                  path = [NSString stringWithFormat:@"%@/1_pre-sala01.mp3", [[NSBundle mainBundle] resourcePath]];
+                  _path = [NSString stringWithFormat:@"%@/1_pre-sala01.mp3", [[NSBundle mainBundle] resourcePath]];
                 [self.buttonNarrar tada:NULL];
                 [self moveRight];
                 self.controle.currentPage -=1;
@@ -146,17 +142,18 @@
     [UIView commitAnimations];
 }
 
--(IBAction)voltar:(id)sender{
+-(IBAction)didTappedBackButton:(id)sender{
+    _path = nil;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(IBAction)falaQueEuTeEstupro:(id)sender{
-    NSURL *soundUrl = [NSURL fileURLWithPath:path];
-    _audioPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    [_audioPlayer2 play];
+-(IBAction)didTappedForVoiceStory:(id)sender{
+    MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
+    [miscAudio playSongFromPath:_path];
 }
 
 - (void) askedToDismiss{
+    _path = nil;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -1,12 +1,13 @@
 #import "Phase1.h"
-#import <AVFoundation/AVFoundation.h>
-#import "PopUpViewController.h"
-#import "DraggableImageView.h"
+#import "Player.h"
 #import "DraggableView.h"
 #import "UIView+Animation2.h"
-#import "Player.h"
+#import "DraggableImageView.h"
+#import "MiscellaneousAudio.h"
+#import "SystemSoundIDAudio.h"
+#import "PopUpViewController.h"
 
-@interface Phase1 () <UIScrollViewDelegate> {
+@interface Phase1 () <UIScrollViewDelegate>{
     int tempo;
     BOOL pontoLuz1;
     BOOL pontoLuz2;
@@ -17,32 +18,32 @@
     BOOL pontoAgua2;
     BOOL TVLigada;
     BOOL podePassar;
-    SystemSoundID sound1;
-    AVAudioPlayer *_audioPlayer3;
-    NSString *path2;
     UIDynamicAnimator* _animator;
     UIGravityBehavior* _gravity;
     UICollisionBehavior* _collision;
-    NSTimer* badgeCheck;
-    NSTimer* tvCheck;
 }
 
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIImageView *contentBG;
 @property (weak, nonatomic) IBOutlet DraggableImageView *birdImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowImgView;
 @property (retain, nonatomic) UIGravityBehavior *grav;
+
 @property (weak, nonatomic) IBOutlet UIImageView *showerGIF;
 @property (weak, nonatomic) IBOutlet UIImageView *torneiraGIF;
 @property (weak, nonatomic) IBOutlet UIImageView *tvGIF;
+
 @property (weak, nonatomic) IBOutlet UIImageView *nuvem1Acesa;
 @property (weak, nonatomic) IBOutlet UIImageView *nuvem2Acesa;
+
 @property (weak, nonatomic) IBOutlet UIView *auxView;
 @property (weak, nonatomic) IBOutlet UIView* viewFantasminha;
-@property (weak, nonatomic) IBOutlet UIImageView* phase1;
+
 @property (weak, nonatomic) IBOutlet UIImageView* luz3;
 @property (weak, nonatomic) IBOutlet UIImageView* luz4;
+
 @property (weak, nonatomic) IBOutlet UIImageView *charImgView;
+
 @property (retain, nonatomic)  DraggableImageView* books;
 @property (retain, nonatomic)  DraggableImageView* flower;
 @property (retain, nonatomic)  DraggableImageView* plate;
@@ -55,15 +56,13 @@
 @property (weak, nonatomic) IBOutlet DraggableImageView *pinkishVase;
 @property (weak, nonatomic) IBOutlet DraggableImageView *purpleVase;
 @property (weak, nonatomic) IBOutlet DraggableView *fantasmaView;
+
 @property (weak, nonatomic) IBOutlet UIImageView* medalha1fase1;
 @property (weak, nonatomic) IBOutlet UIImageView* medalha2fase1;
-@property (weak, nonatomic) IBOutlet UIButton* bird;
 @property (weak, nonatomic) IBOutlet UIButton* botaoVoltar;
 @property (weak, nonatomic) IBOutlet UIButton* botaoPlay;
 @property (weak, nonatomic) IBOutlet UIButton* botaoProx;
-@property (weak, nonatomic) IBOutlet UILabel* contador;
 @property (nonatomic) float deslocIni;
-@property (nonatomic) BOOL lookingBack;
 @property (retain, nonatomic) UIViewController *popUpView;
 
 @end
@@ -74,11 +73,6 @@
     [super viewDidAppear:animated];
     
     Player *player = [Player sharedManager];
-    
-    path2 = [NSString stringWithFormat:@"%@/4_sala.mp3", [[NSBundle mainBundle] resourcePath]];
-    [self.botaoPlay tada:NULL];
-    self.botaoProx.alpha = 0.5f;
-    
     if(player.firstMedal){
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
         self.botaoProx.enabled = YES;
@@ -88,9 +82,13 @@
         self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
         self.botaoProx.enabled = YES;
     }
+    
+    [self.botaoPlay tada:NULL];
+    self.botaoProx.alpha = 0.5f;
+    
     TVLigada = true;
     
-    _scrollView.contentSize = CGSizeMake(_contentBG.frame.size.width, _contentBG.frame.size.height);
+    _scrollView.contentSize = CGSizeMake(1024, 768);
     _scrollView.delegate = self;
     [self montarTela];
     
@@ -100,8 +98,6 @@
     _showerGIF.image = [UIImage animatedImageNamed:@"chuveiro_Trashcity-2-" duration:0.5f];
     _torneiraGIF.image = [UIImage animatedImageNamed:@"aguatorneira_Trashcity-" duration:0.8f];
     _tvGIF.image = [UIImage animatedImageNamed:@"chuvisco_tv-" duration:0.8f];
-    
-    self.fantasmaView.podeX = YES;
     
     CGRect charFrame = self.charImgView.frame;
     charFrame.origin.y = charFrame.origin.y - 45.0;
@@ -125,25 +121,29 @@
 
 - (void)montarTela{
     self.books = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"books"]];
+    self.flower = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"plant"]];
+    self.plate = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"plate"]];
+    self.vase2 = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"greenVase"]];
+    
     self.books.frame = CGRectMake(580, 100, 129, 81);
     self.books.userInteractionEnabled = YES;
     self.books.delegate = self;
     [self.auxView addSubview:self.books];
     
-    self.flower = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"plant"]];
+    
+    
     self.flower.frame = CGRectMake(70, 550, 78, 117);
     self.flower.userInteractionEnabled = YES;
     self.flower.delegate = self;
     [self.auxView addSubview:self.flower];
-    
-    self.plate = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"plate"]];
     
     self.plate.frame = CGRectMake(695, 500, 70, 36);
     self.plate.userInteractionEnabled = YES;
     self.plate.delegate = self;
     [self.auxView addSubview:self.plate];
     
-    self.vase2 = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"greenVase"]];
+    
+    
     self.vase2.frame = CGRectMake(730, 100, 59, 70);
     self.vase2.userInteractionEnabled = YES;
     self.vase2.delegate = self;
@@ -151,28 +151,28 @@
     
     self.soap.delegate=self;
     self.rubberDuck.delegate=self;
-    self.redWhiteVase.delegate=self;
-    self.weirdVase.delegate=self;
-    self.toiletStuff.delegate=self;
-    self.pinkishVase.delegate=self;
-    self.purpleVase.delegate=self;
+        self.redWhiteVase.delegate=self;
+        self.weirdVase.delegate=self;
+        self.toiletStuff.delegate=self;
+        self.pinkishVase.delegate=self;
+        self.purpleVase.delegate=self;
     
-    [self.auxView bringSubviewToFront:self.tvGIF];
-    [self.auxView bringSubviewToFront:self.torneiraGIF];
-    [self.auxView bringSubviewToFront:self.showerGIF];
+        [self.auxView bringSubviewToFront:self.tvGIF];
+        [self.auxView bringSubviewToFront:self.torneiraGIF];
+        [self.auxView bringSubviewToFront:self.showerGIF];
     
-    [self.auxView bringSubviewToFront:self.nuvem1Acesa];
-    [self.auxView bringSubviewToFront:self.nuvem2Acesa];
-    [self.auxView bringSubviewToFront:self.luz3];
-    [self.auxView bringSubviewToFront:self.luz4];
-    [self.auxView bringSubviewToFront:self.bird];
+        [self.auxView bringSubviewToFront:self.nuvem1Acesa];
+        [self.auxView bringSubviewToFront:self.nuvem2Acesa];
+        [self.auxView bringSubviewToFront:self.luz3];
+        [self.auxView bringSubviewToFront:self.luz4];
+    //    [self.auxView bringSubviewToFront:self.bird];
     
     [self.view bringSubviewToFront:self.botaoVoltar];
-    [self.view bringSubviewToFront:self.botaoPlay];
-    [self.view bringSubviewToFront:self.botaoProx];
-    [self.view bringSubviewToFront:self.medalha1fase1];
-    [self.view bringSubviewToFront:self.medalha2fase1];
-    [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];
+        [self.view bringSubviewToFront:self.botaoPlay];
+        [self.view bringSubviewToFront:self.botaoProx];
+        [self.view bringSubviewToFront:self.medalha1fase1];
+        [self.view bringSubviewToFront:self.medalha2fase1];
+        [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];
     
     self.books.podeY = YES;
     self.vase2.podeY = YES;
@@ -197,6 +197,7 @@
     self.rubberDuck.podeX = YES;
     self.soap.podeX = YES;
     self.toiletStuff.podeX = YES;
+    
 }
 
 - (void)dealWithMovement{
@@ -223,9 +224,9 @@
                                   toPoint:rightEdge2];
     
     
-    //(chao)
-    UIView* barrier3 = [[UIView alloc] initWithFrame:CGRectMake(0, 742, _contentBG.frame.size.width, 10)];
-   // barrier3.backgroundColor = [UIColor redColor];
+   // (chao)
+    UIView* barrier3 = [[UIView alloc] initWithFrame:CGRectMake(0, 742, 2486, 10)];
+    barrier3.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier3];
     
     CGPoint rightEdge3 = CGPointMake(barrier3.frame.origin.x +
@@ -315,22 +316,16 @@
 - (IBAction)didClickShower {
     _showerGIF.hidden = !_showerGIF.hidden;
     pontoAgua2 = !pontoAgua2;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"closeTap" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
- //   AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+    [systemSoundIdAudio requestedForSystemSound:@"closeTap" :@"wav"];
     [self checkBadges];
 }
 
 - (IBAction)didClickTap {
     _torneiraGIF.hidden = !_torneiraGIF.hidden;
     pontoAgua1 = !pontoAgua1;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"closeTap" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
-  //  AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+    [systemSoundIdAudio requestedForSystemSound:@"closeTap" :@"wav"];
     [self checkBadges];
 }
 
@@ -338,60 +333,47 @@
     _tvGIF.hidden = !_tvGIF.hidden;
     pontoTV = !pontoTV;
     TVLigada = !TVLigada;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"tvfinal" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+    [systemSoundIdAudio requestedForSystemSound:@"tvfinal" :@"wav"];
     [self checkBadges];
 }
 
 - (IBAction)didClickFirstCloud {
     _nuvem1Acesa.hidden = !_nuvem1Acesa.hidden;
     pontoLuz1 = !pontoLuz1;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
-   // AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+    [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
     [self checkBadges];
 }
 
 - (IBAction)didClickSecondCloud {
     _nuvem2Acesa.hidden = !_nuvem2Acesa.hidden;
     pontoLuz2 = !pontoLuz2;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
-   // AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+    [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
     [self checkBadges];
 }
 
 -(IBAction)didClickFirstBathLamp:(id)sender{
     self.luz3.hidden = !self.luz3.hidden;
     pontoLuz3 = !pontoLuz3;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+    [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
     [self checkBadges];
 }
 
 -(IBAction)didClickSecondBathLamp:(id)sender{
     self.luz4.hidden = !self.luz4.hidden;
     pontoLuz4 = !pontoLuz4;
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"clickcut" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+    
+    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+    [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
     [self checkBadges];
 }
 
 -(IBAction)didClickBird:(id)sender{
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"birdcut" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
+    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+    [systemSoundIdAudio requestedForSystemSound:@"birdcut" :@"wav"];
 }
 
 -(IBAction)proxima:(id)sender{
@@ -410,11 +392,8 @@
 }
 
 -(void)tocaTV{
-    AudioServicesDisposeSystemSoundID (sound1);
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"tv1s" withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-    AudioServicesPlaySystemSound(sound1);
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+    [systemSoundIdAudio requestedForSystemSound:@"tv1s" :@"wav"];
 }
 
 -(void)checkTV{
@@ -422,7 +401,8 @@
         [self tocaTV];
     }
     else{
-        AudioServicesDisposeSystemSoundID(sound1);
+        SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
+        [systemSoundIdAudio requestedDisposal];
     }
 }
 
@@ -458,19 +438,19 @@
     [[_fantasmaView superview]bringSubviewToFront:_fantasmaView];
     UIImage *beepoImage = player.gasperEscolhido;
     float diff =scrollView.contentOffset.x - _deslocIni;
-    if (diff > 0 && _lookingBack) {
-        self.charImgView.image = beepoImage;
-        _lookingBack = NO;
-    } else if (diff < 0 && _lookingBack){
-        
-    } else if (diff > 0 && !_lookingBack){
-        
-    } else{
-        self.charImgView.image = [UIImage imageWithCGImage:beepoImage.CGImage
-                                                       scale:beepoImage.scale
-                                                 orientation:UIImageOrientationUpMirrored];
-        _lookingBack = YES;
-    }
+//    if (diff > 0 && _lookingBack) {
+//        self.charImgView.image = beepoImage;
+//        _lookingBack = NO;
+//    } else if (diff < 0 && _lookingBack){
+//        
+//    } else if (diff > 0 && !_lookingBack){
+//        
+//    } else{
+//        self.charImgView.image = [UIImage imageWithCGImage:beepoImage.CGImage
+//                                                       scale:beepoImage.scale
+//                                                 orientation:UIImageOrientationUpMirrored];
+//        _lookingBack = YES;
+//    }
     
     CGRect oldframe = self.fantasmaView.frame;
     oldframe.origin.x = oldframe.origin.x + diff;
@@ -478,10 +458,11 @@
     self.fantasmaView.frame = oldframe;
 }
 
--(IBAction)falaQueEuTeEstupro:(id)sender{
-    NSURL *soundUrl = [NSURL fileURLWithPath:path2];
-    _audioPlayer3 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    [_audioPlayer3 play];
+-(IBAction)didTappedForVoiceStory:(id)sender{
+    MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
+    [miscAudio playSongFromPath:[NSString stringWithFormat:@"%@/4_sala.mp3", [[NSBundle mainBundle] resourcePath]]];
 }
+
+
 
 @end

@@ -1,6 +1,5 @@
 #import "Puzzle4.h"
 #import "PopUpViewController.h"
-#import <AVFoundation/AVFoundation.h>
 #import "DraggableImageView.h"
 
 @interface Puzzle4 (){
@@ -27,7 +26,6 @@
 @end
 
 @implementation Puzzle4
-AVAudioPlayer* _audioPlayer10;
 NSString* path9;
 
 -(void)dealloc{
@@ -123,9 +121,9 @@ NSString* path9;
     NSURL *soundUrl = [NSURL fileURLWithPath:path9];
     
     // Create audio player object and initialize with URL to sound
-    _audioPlayer10 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+ //   _audioPlayer10 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     
-    [_audioPlayer10 play];
+   // [_audioPlayer10 play];
 }
 
 @end

@@ -1,9 +1,7 @@
 #import "Story3.h"
 #import "Phase3.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface Story3(){
-    AVAudioPlayer* _audioPlayer6;
     NSString* path5;
 }
 
@@ -12,11 +10,6 @@
 @end
 
 @implementation Story3
-
-
--(void)dealloc{
-    NSLog(@"desalocou story3");
-}
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -54,11 +47,9 @@
     NSURL *soundUrl = [NSURL fileURLWithPath:path5];
     
     // Create audio player object and initialize with URL to sound
-    _audioPlayer6 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+ //   _audioPlayer6 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     
-    [_audioPlayer6 play];
+ //   [_audioPlayer6 play];
 }
--(void) didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-}
+
 @end

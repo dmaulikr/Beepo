@@ -41,6 +41,9 @@
 		024153831B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153761B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 */; };
 		024153841B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153771B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 */; };
 		025AA05A1C846DBC0054CEAE /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 025AA0591C846DBC0054CEAE /* Player.m */; };
+		025AA05E1C84CD770054CEAE /* BackgroundSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 025AA05D1C84CD770054CEAE /* BackgroundSong.m */; };
+		025AA0621C84D13A0054CEAE /* MiscellaneousAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 025AA0611C84D13A0054CEAE /* MiscellaneousAudio.m */; };
+		025AA0661C84D3190054CEAE /* SystemSoundIDAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 025AA0651C84D3190054CEAE /* SystemSoundIDAudio.m */; };
 		0264DE651B2F155F007A18A7 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE641B2F155F007A18A7 /* click.wav */; };
 		0264DE6A1B2F1573007A18A7 /* shower.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE661B2F1573007A18A7 /* shower.mp3 */; };
 		0264DE6B1B2F1573007A18A7 /* TV.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE671B2F1573007A18A7 /* TV.aiff */; };
@@ -140,6 +143,12 @@
 		024153771B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "13_prefeitura-puzzleeleicao.mp3"; sourceTree = "<group>"; };
 		025AA0581C846DBC0054CEAE /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		025AA0591C846DBC0054CEAE /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		025AA05C1C84CD770054CEAE /* BackgroundSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundSong.h; sourceTree = "<group>"; };
+		025AA05D1C84CD770054CEAE /* BackgroundSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundSong.m; sourceTree = "<group>"; };
+		025AA0601C84D13A0054CEAE /* MiscellaneousAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscellaneousAudio.h; sourceTree = "<group>"; };
+		025AA0611C84D13A0054CEAE /* MiscellaneousAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscellaneousAudio.m; sourceTree = "<group>"; };
+		025AA0641C84D3190054CEAE /* SystemSoundIDAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSoundIDAudio.h; sourceTree = "<group>"; };
+		025AA0651C84D3190054CEAE /* SystemSoundIDAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSoundIDAudio.m; sourceTree = "<group>"; };
 		0264DE641B2F155F007A18A7 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		0264DE661B2F1573007A18A7 /* shower.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shower.mp3; sourceTree = "<group>"; };
 		0264DE671B2F1573007A18A7 /* TV.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = TV.aiff; sourceTree = "<group>"; };
@@ -289,6 +298,33 @@
 			name = Player;
 			sourceTree = "<group>";
 		};
+		025AA05F1C84CD7B0054CEAE /* BackgroundAudio */ = {
+			isa = PBXGroup;
+			children = (
+				025AA05C1C84CD770054CEAE /* BackgroundSong.h */,
+				025AA05D1C84CD770054CEAE /* BackgroundSong.m */,
+			);
+			name = BackgroundAudio;
+			sourceTree = "<group>";
+		};
+		025AA0631C84D13F0054CEAE /* MiscellaneousAudio */ = {
+			isa = PBXGroup;
+			children = (
+				025AA0601C84D13A0054CEAE /* MiscellaneousAudio.h */,
+				025AA0611C84D13A0054CEAE /* MiscellaneousAudio.m */,
+			);
+			name = MiscellaneousAudio;
+			sourceTree = "<group>";
+		};
+		025AA0671C84D31C0054CEAE /* SystemSoundIDAudio */ = {
+			isa = PBXGroup;
+			children = (
+				025AA0641C84D3190054CEAE /* SystemSoundIDAudio.h */,
+				025AA0651C84D3190054CEAE /* SystemSoundIDAudio.m */,
+			);
+			name = SystemSoundIDAudio;
+			sourceTree = "<group>";
+		};
 		0264DE611B2F14FE007A18A7 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,10 +357,10 @@
 				02DC31251C83FC12001B317E /* InfoViewController */,
 				02DC31291C8401EC001B317E /* ParentsViewController */,
 				02B3B5461B30B6F900143CC1 /* CustomizationViewController */,
-				15C431901B29FA850098C994 /* Draggable */,
-				15B467ED1B36CCE90059427C /* Popup */,
 				02B3B5451B30B6E300143CC1 /* PhaseChoose */,
 				021F561F1B2F1E95007886D6 /* Phase1 */,
+				15C431901B29FA850098C994 /* Draggable */,
+				15B467ED1B36CCE90059427C /* Popup */,
 				021F56201B2F1E9C007886D6 /* Phase2 */,
 				021F56211B2F1EBF007886D6 /* Phase3 */,
 				02B3B54E1B30D38500143CC1 /* Phase4 */,
@@ -394,6 +430,9 @@
 				02BC4D621C83F9CA00A37D03 /* Util */,
 				02BC4D601C83F91800A37D03 /* AppDelegate */,
 				025AA05B1C846DBF0054CEAE /* Player */,
+				025AA05F1C84CD7B0054CEAE /* BackgroundAudio */,
+				025AA0631C84D13F0054CEAE /* MiscellaneousAudio */,
+				025AA0671C84D31C0054CEAE /* SystemSoundIDAudio */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -691,6 +730,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025AA0661C84D3190054CEAE /* SystemSoundIDAudio.m in Sources */,
+				025AA05E1C84CD770054CEAE /* BackgroundSong.m in Sources */,
 				021F561B1B2F1E4F007886D6 /* PhasesChoose.m in Sources */,
 				02DC31241C83FC0E001B317E /* InfoViewController.m in Sources */,
 				021F56311B2F2119007886D6 /* Phase3.m in Sources */,
@@ -703,6 +744,7 @@
 				0264DE841B2F16CE007A18A7 /* UIView+Blink2.m in Sources */,
 				027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */,
 				023D17BB1B37BE0A0004DE32 /* Fim.m in Sources */,
+				025AA0621C84D13A0054CEAE /* MiscellaneousAudio.m in Sources */,
 				021F562E1B2F210E007886D6 /* Story3.m in Sources */,
 				02DC312C1C8401FB001B317E /* ExtrasViewController.m in Sources */,
 				1541A1311B3C37A200D348B9 /* Phase4.m in Sources */,

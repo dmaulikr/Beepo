@@ -1,13 +1,11 @@
 #import "Votacao.h"
 #import "Fim.h"
-#import <AVFoundation/AVFoundation.h>
 #import "PopUpViewController.h"
 
 @interface Votacao (){
     BOOL opcao1;
     BOOL opcao2;
     BOOL opcao3;
-    AVAudioPlayer* _audioPlayer11;
     NSString* path10;
 }
 
@@ -132,9 +130,9 @@
     NSURL *soundUrl = [NSURL fileURLWithPath:path10];
     
     // Create audio player object and initialize with URL to sound
-    _audioPlayer11 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+  //  _audioPlayer11 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     
-    [_audioPlayer11 play];
+  //  [_audioPlayer11 play];
 }
 
 @end

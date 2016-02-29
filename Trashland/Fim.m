@@ -1,10 +1,8 @@
 #import "Fim.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface Fim (){
     
     NSString* path200;
-    AVAudioPlayer* _audioPlayer100;
 }
 
 
@@ -17,7 +15,7 @@
 @implementation Fim
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    _audioPlayer100 = nil;
+ //   _audioPlayer100 = nil;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,9 +42,9 @@
     NSURL *soundUrl = [NSURL fileURLWithPath:path200];
     
     // Create audio player object and initialize with URL to sound
-    _audioPlayer100 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+  //  _audioPlayer100 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     
-    [_audioPlayer100 play];
+  //  [_audioPlayer100 play];
 }
 
 @end

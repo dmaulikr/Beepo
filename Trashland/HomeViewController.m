@@ -1,7 +1,6 @@
 #import "HomeViewController.h"
-#import <AudioToolbox/AudioToolbox.h>
 #import "UIView+Animation2.h"
-#import <AVFoundation/AVFoundation.h>
+#import "BackgroundSong.h"
 
 @interface HomeViewController ()
 
@@ -11,22 +10,15 @@
 @end
 
 @implementation HomeViewController
-SystemSoundID sound2;
-AVAudioPlayer *_audioPlayer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    BackgroundSong *backgroundSong = [BackgroundSong sharedManager];
+    [backgroundSong playSongFromPath:[NSString stringWithFormat:@"%@/carefree.mp3", [[NSBundle mainBundle] resourcePath]]];
+    
     [NSTimer scheduledTimerWithTimeInterval:1.8f target:self selector:@selector(balancarLogo) userInfo:nil repeats:YES];
     [self.play tada:NULL];
-    
-    NSString *path = [NSString stringWithFormat:@"%@/carefree.mp3", [[NSBundle mainBundle] resourcePath]];
-    NSURL *soundUrl = [NSURL fileURLWithPath:path];
-        
-    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    [_audioPlayer play];
-    [_audioPlayer setVolume:0.2];
-    _audioPlayer.numberOfLoops = -1;
     
     [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(trocarPredio) userInfo:nil repeats:YES];
 }

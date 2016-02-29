@@ -1,11 +1,9 @@
 #import "Phase4.h"
 #import "Votacao.h"
 #import "Puzzle4.h"
-#import <AVFoundation/AVFoundation.h>
 #import "Fim.h"
 
 @interface Phase4 (){
-    AVAudioPlayer* _audioPlayer12;
     NSString* path11;
 }
 
@@ -67,8 +65,8 @@
     NSURL *soundUrl = [NSURL fileURLWithPath:path11];
     
     // Create audio player object and initialize with URL to sound
-    _audioPlayer12 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+//    _audioPlayer12 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     
-    [_audioPlayer12 play];
+  //  [_audioPlayer12 play];
 }
 @end

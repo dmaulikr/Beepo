@@ -2,13 +2,11 @@
 #import "Phase3Parte2.h"
 #import "PopUpViewController.h"
 #import "DraggableView.h"
-#import <AVFoundation/AVFoundation.h>
 
 
 @interface Phase3()  <UICollisionBehaviorDelegate>{
     
     NSTimer *phase3Timer;
-    AVAudioPlayer* _audioPlayer7;
     NSString* path6;
 }
 
@@ -55,9 +53,6 @@ UICollisionBehavior* _collision2;
 
 -(void)setGreen{
     self.sinalVerde.hidden = NO;
-}
--(void) didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -191,8 +186,8 @@ UICollisionBehavior* _collision2;
     NSURL *soundUrl = [NSURL fileURLWithPath:path6];
     
     // Create audio player object and initialize with URL to sound
-    _audioPlayer7 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+  //  _audioPlayer7 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     
-    [_audioPlayer7 play];
+  //  [_audioPlayer7 play];
 }
 @end

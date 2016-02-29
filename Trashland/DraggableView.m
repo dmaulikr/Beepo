@@ -3,16 +3,6 @@
 @implementation DraggableView
 
 CGPoint startLocation;
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
--(void)dealloc{
-    NSLog(@"removeu dragView");
-}
 
 -(void)morre{
     _charImgView = nil;
@@ -29,20 +19,8 @@ CGPoint startLocation;
     }
 }
 - (void) touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event {
-    // Move relative to the original touch point
-    
     CGPoint pt = [[touches anyObject] locationInView:self];
     
-//    if (pt.x - startLocation.x > 0) {
-//        if ([self.delegate respondsToSelector:@selector(setLookingBackTo:)]) {
-//            [self.delegate performSelector:@selector(setLookingBackTo:)withObject:NO];
-//        }
-//        self.charImgView.image
-//    }else{
-//        if ([self.delegate respondsToSelector:@selector(setLookingBackTo:)]) {
-//            [self.delegate performSelector:@selector(setLookingBackTo:)withObject:YES];
-//        }
-//    }
     CGRect frame = [self frame];
     if (self.podeX) {
         frame.origin.x += pt.x - startLocation.x;

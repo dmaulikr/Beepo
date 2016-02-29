@@ -22,8 +22,8 @@
 
 @implementation PhasesChoose
 
-- (void) viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:YES];
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
     Player *player = [Player sharedManager];
     
     [self.fase1 setBackgroundImage:[UIImage imageNamed:@"atividades-casa-color"] forState:UIControlStateNormal];

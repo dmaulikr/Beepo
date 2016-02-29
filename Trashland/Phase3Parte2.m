@@ -3,12 +3,10 @@
 #import "PhasesChoose.h"
 #import "DraggableView.h"
 #import "PopUpViewController.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface Phase3Parte2 (){
     
     NSTimer *phase3Part2Timer;
-    AVAudioPlayer *_audioPlayer8;
     NSString* path7;
 }
 @property (nonatomic) IBOutlet UIImageView* fundo;
@@ -100,9 +98,9 @@
     NSURL *soundUrl = [NSURL fileURLWithPath:path7];
     
     // Create audio player object and initialize with URL to sound
-    _audioPlayer8 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+  //  _audioPlayer8 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     
-    [_audioPlayer8 play];
+  //  [_audioPlayer8 play];
 }
 
 
