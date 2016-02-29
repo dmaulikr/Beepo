@@ -1,6 +1,7 @@
 #import "Phase3Parte2.h"
 #import "DraggableView.h"
 #import "PhasesChoose.h"
+#import "DraggableView.h"
 #import "PopUpViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
@@ -10,6 +11,16 @@
     AVAudioPlayer *_audioPlayer8;
     NSString* path7;
 }
+@property (nonatomic) IBOutlet UIImageView* fundo;
+@property (nonatomic) IBOutlet UIImageView* imageViewPuzzle;
+@property (nonatomic) IBOutlet DraggableView* viewCarro1;
+@property (nonatomic) IBOutlet DraggableView* viewCarro2;
+@property (nonatomic) IBOutlet UIImageView* ambulancia;
+@property (nonatomic) IBOutlet UIImageView* badgeTransito;
+@property (nonatomic) IBOutlet UIImageView* badgeIdoso;
+@property (nonatomic) IBOutlet UIButton* botaoVoltar;
+@property (nonatomic) IBOutlet UIButton* botaoSom;
+@property (strong, nonatomic) UIViewController *popUpView;
 
 @end
 

@@ -1,7 +1,5 @@
 #import "CustomizationViewController.h"
-#import "PhasesChoose.h"
 #import <QuartzCore/QuartzCore.h>
-#import "AppDelegate.h"
 
 @implementation CustomizationViewController{
     BOOL primeira;
@@ -34,11 +32,8 @@
     
 }
 
--(IBAction)start:(id)sender{
-        PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
-        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-  //      game.player = self.player;
-        [self presentViewController:game animated:YES completion:nil];
+-(IBAction)didTappedStartButton:(id)sender{
+    [self performSegueWithIdentifier:@"playSegue" sender:self];
 }
 
 -(IBAction)change:(id)sender{

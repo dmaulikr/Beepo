@@ -39,7 +39,7 @@
         <!--Phases Choose-->
         <scene sceneID="bWp-Bc-xXA">
             <objects>
-                <viewController storyboardIdentifier="PhasesChooseVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lvN-mZ-9Y3" customClass="PhasesChoose" sceneMemberID="viewController">
+                <viewController id="lvN-mZ-9Y3" customClass="PhasesChoose" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fSW-f4-uva"/>
                         <viewControllerLayoutGuide type="bottom" id="pik-Od-mlE"/>
@@ -54,7 +54,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clicouCasa:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="gNG-Mi-Oqy"/>
+                                    <action selector="didTappedFirstPhase:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="19T-CJ-pk7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1w-ah-I3A" userLabel="fase parque">
@@ -63,7 +63,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clicouParque:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="9d2-9q-JVv"/>
+                                    <action selector="didTappedSecondPhase:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="jkA-5S-zIm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqU-HV-xsr" userLabel="fase rua">
@@ -72,7 +72,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clicouHospital:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="xDB-bc-sAc"/>
+                                    <action selector="didTappedThirdPhase:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="2L1-fs-i5S"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57M-VS-qQj" userLabel="fase prefeitura">
@@ -81,7 +81,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clicouPrefeitura:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="uWg-Ka-RPg"/>
+                                    <action selector="didTappedFourthPhase:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="BLb-TD-2Fz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oau-oD-LtJ" userLabel="voltar">
@@ -156,10 +156,6 @@
                         <outlet property="fase3" destination="CqU-HV-xsr" id="plS-g6-nWL"/>
                         <outlet property="fase4" destination="57M-VS-qQj" id="frr-m7-dsv"/>
                         <outlet property="fundo" destination="lXO-bW-B4Q" id="25i-Es-gkk"/>
-                        <outlet property="labelCasa" destination="Vio-yU-en6" id="jQa-wd-IML"/>
-                        <outlet property="labelHospital" destination="cf3-Ph-XDv" id="qMa-Id-TQm"/>
-                        <outlet property="labelParque" destination="3WX-5M-RTB" id="ASR-yN-VXc"/>
-                        <outlet property="labelPrefeitura" destination="nmT-BB-pzd" id="8YF-8Y-Jz5"/>
                         <outlet property="medalha1fase1" destination="2uR-Lg-bIf" id="SgN-fC-zDW"/>
                         <outlet property="medalha1fase2" destination="E2p-qm-9Iy" id="Yno-vD-d8D"/>
                         <outlet property="medalha1fase3" destination="mcv-iS-SrP" id="cLx-Yj-IAy"/>
@@ -168,11 +164,15 @@
                         <outlet property="medalha2fase2" destination="CUR-l6-vDr" id="PJ1-gg-O2X"/>
                         <outlet property="medalha2fase3" destination="W7d-lC-1Dt" id="z8C-MH-2bW"/>
                         <outlet property="medalha2fase4" destination="sEs-qe-AYS" id="YFh-Y6-aeO"/>
+                        <segue destination="4p4-wJ-H5U" kind="modal" identifier="houseSegue" id="Wgs-qD-H4g"/>
+                        <segue destination="H6L-7N-37k" kind="modal" identifier="parkSegue" id="PqG-c0-rW5"/>
+                        <segue destination="QL4-qb-Rpi" kind="modal" identifier="streetSegue" id="Z1U-Oh-5bB"/>
+                        <segue destination="rBt-75-mUn" kind="modal" identifier="cityHallSegue" id="CnN-lI-ID2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3g-v5-2FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16" y="7033"/>
+            <point key="canvasLocation" x="-1252" y="6323"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="JTd-PV-Qyf">
@@ -262,12 +262,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDb-I6-jaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16" y="5344"/>
+            <point key="canvasLocation" x="-2055" y="4424"/>
         </scene>
         <!--Story3-->
         <scene sceneID="YU4-Pq-E5U">
             <objects>
-                <viewController storyboardIdentifier="Story3VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QL4-qb-Rpi" customClass="Story3" sceneMemberID="viewController">
+                <viewController id="QL4-qb-Rpi" customClass="Story3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U7Z-Eo-ylV"/>
                         <viewControllerLayoutGuide type="bottom" id="eLT-K4-oBg"/>
@@ -308,16 +308,17 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="fundo" destination="1Wz-ft-s4O" id="nUI-hL-caG"/>
+                        <segue destination="R9V-nN-E2m" kind="modal" id="L8t-np-Q8j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPw-HS-dSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="2874"/>
+            <point key="canvasLocation" x="-752" y="7405"/>
         </scene>
         <!--Customization View Controller-->
         <scene sceneID="39e-je-EeJ">
             <objects>
-                <viewController storyboardIdentifier="SkinVC" id="HMU-LK-3EX" customClass="CustomizationViewController" sceneMemberID="viewController">
+                <viewController id="HMU-LK-3EX" customClass="CustomizationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uym-RA-Prk"/>
                         <viewControllerLayoutGuide type="bottom" id="9ox-f7-hOV"/>
@@ -415,7 +416,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="start:" destination="HMU-LK-3EX" eventType="touchUpInside" id="P6r-Jl-6VL"/>
+                                    <action selector="didTappedStartButton:" destination="HMU-LK-3EX" eventType="touchUpInside" id="Pn0-Op-tkd"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="custom-bg" translatesAutoresizingMaskIntoConstraints="NO" id="jXt-cc-lz8">
@@ -440,16 +441,17 @@
                         <outlet property="sombra" destination="RAy-yE-SHv" id="z66-9l-A7C"/>
                         <outlet property="thirdChoice" destination="pg8-pJ-06W" id="3mV-9b-RWY"/>
                         <outlet property="viewGasper" destination="uLs-7o-UBu" id="2GG-i2-1n3"/>
+                        <segue destination="lvN-mZ-9Y3" kind="modal" identifier="playSegue" id="iaK-LR-Z7H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcO-QT-6DB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16" y="6311"/>
+            <point key="canvasLocation" x="-1252" y="5358"/>
         </scene>
         <!--Phase2-->
         <scene sceneID="a9j-6D-qAZ">
             <objects>
-                <viewController storyboardIdentifier="Phase2VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2hj-BG-SHn" customClass="Phase2" sceneMemberID="viewController">
+                <viewController id="2hj-BG-SHn" customClass="Phase2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BX1-PP-4eU"/>
                         <viewControllerLayoutGuide type="bottom" id="g1T-da-ybb"/>
@@ -696,7 +698,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6J-Y3-2kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-701" y="3675"/>
+            <point key="canvasLocation" x="-1800" y="8300"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="m5H-Pz-f3l">
@@ -734,12 +736,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgA-Lo-Gpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-701" y="4475"/>
+            <point key="canvasLocation" x="-2405" y="9347"/>
         </scene>
         <!--Story2-->
         <scene sceneID="Fjp-ID-4Ky">
             <objects>
-                <viewController storyboardIdentifier="Story2VC" id="H6L-7N-37k" customClass="Story2" sceneMemberID="viewController">
+                <viewController id="H6L-7N-37k" customClass="Story2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LbC-mI-WkZ"/>
                         <viewControllerLayoutGuide type="bottom" id="u1N-Ks-lJt"/>
@@ -794,16 +796,17 @@
                         <outlet property="imgFantasminha" destination="7Is-OY-wTX" id="rFv-YX-C41"/>
                         <outlet property="imgSombra" destination="qCP-Bi-b6T" id="pFR-f4-3jc"/>
                         <outlet property="moveBeepoView" destination="KGj-bm-fXF" id="SGw-ga-wqK"/>
+                        <segue destination="2hj-BG-SHn" kind="modal" id="YZb-6G-1ip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fL0-yK-Gvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-701" y="2874"/>
+            <point key="canvasLocation" x="-1800" y="7410"/>
         </scene>
         <!--Phase3-->
         <scene sceneID="gUy-tt-cug">
             <objects>
-                <viewController storyboardIdentifier="Phase3VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R9V-nN-E2m" customClass="Phase3" sceneMemberID="viewController">
+                <viewController id="R9V-nN-E2m" customClass="Phase3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Dh-ca-jvw"/>
                         <viewControllerLayoutGuide type="bottom" id="gT1-I3-ADW"/>
@@ -905,7 +908,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4H-pg-h7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="3675"/>
+            <point key="canvasLocation" x="-752" y="8300"/>
         </scene>
         <!--Puzzle4-->
         <scene sceneID="acQ-N4-PmO">
@@ -984,7 +987,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiW-Yd-ybD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="4475"/>
+            <point key="canvasLocation" x="-353" y="9347"/>
         </scene>
         <!--Votacao-->
         <scene sceneID="jUS-eM-peW">
@@ -1110,7 +1113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtu-gS-0dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="5277"/>
+            <point key="canvasLocation" x="-1353" y="10269"/>
         </scene>
         <!--Fim-->
         <scene sceneID="E9D-0D-xel">
@@ -1174,12 +1177,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09o-JM-rAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="6075"/>
+            <point key="canvasLocation" x="-1353" y="11067"/>
         </scene>
         <!--Story4-->
         <scene sceneID="dth-A6-Ga2">
             <objects>
-                <viewController storyboardIdentifier="Story4VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rBt-75-mUn" customClass="Story4" sceneMemberID="viewController">
+                <viewController id="rBt-75-mUn" customClass="Story4" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8a3-dy-n9u"/>
                         <viewControllerLayoutGuide type="bottom" id="8Ap-Xa-5lx"/>
@@ -1219,16 +1222,17 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="fundo" destination="ewe-BZ-LdC" id="Kk7-n9-A4T"/>
+                        <segue destination="9wn-h0-xJT" kind="modal" identifier="phase4Segue" id="ioY-Vy-ycB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Np-jm-hoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="2874"/>
+            <point key="canvasLocation" x="299" y="7405"/>
         </scene>
         <!--Phase4-->
         <scene sceneID="l02-Z6-c7k">
             <objects>
-                <viewController storyboardIdentifier="Phase4VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9wn-h0-xJT" customClass="Phase4" sceneMemberID="viewController">
+                <viewController id="9wn-h0-xJT" customClass="Phase4" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U7G-BD-TPA"/>
                         <viewControllerLayoutGuide type="bottom" id="w6C-Gm-NbN"/>
@@ -1296,7 +1300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWm-Rs-t42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="3675"/>
+            <point key="canvasLocation" x="299" y="8300"/>
         </scene>
         <!--Phase3 Parte2-->
         <scene sceneID="Qm8-cj-Rlh">
@@ -1386,7 +1390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfy-Zc-tmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="4475"/>
+            <point key="canvasLocation" x="-1379" y="9347"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="fGo-GX-C4D">
@@ -1459,7 +1463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yha-KQ-r75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1285" y="5418"/>
+            <point key="canvasLocation" x="-2851" y="5358"/>
         </scene>
         <!--Extras View Controller-->
         <scene sceneID="XbT-2Y-i9G">
@@ -1548,7 +1552,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jF-0E-FvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1285" y="6343"/>
+            <point key="canvasLocation" x="-2325" y="6323"/>
         </scene>
         <!--Parents View Controller-->
         <scene sceneID="SoI-ru-WYS">
@@ -1612,12 +1616,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pa-dU-RhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2337" y="6343"/>
+            <point key="canvasLocation" x="-3377" y="6323"/>
         </scene>
         <!--Story1-->
         <scene sceneID="8CA-TY-44F">
             <objects>
-                <viewController storyboardIdentifier="Story1VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4p4-wJ-H5U" customClass="Story1" sceneMemberID="viewController">
+                <viewController id="4p4-wJ-H5U" customClass="Story1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YW2-gQ-a2Z"/>
                         <viewControllerLayoutGuide type="bottom" id="1rc-B9-KxC"/>
@@ -1665,16 +1669,17 @@
                         <outlet property="telaDois" destination="skG-V1-4M8" id="0gC-X3-ekH"/>
                         <outlet property="telaTres" destination="8ba-Sp-ihQ" id="y2C-2g-eUO"/>
                         <outlet property="telaUm" destination="3Qw-gW-TBX" id="6nl-Bc-fgs"/>
+                        <segue destination="EN8-Ni-7aZ" kind="modal" identifier="phase1Segue" id="2sG-P1-bgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNM-Ib-lal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1726" y="2874"/>
+            <point key="canvasLocation" x="-2842" y="7410"/>
         </scene>
         <!--Phase1-->
         <scene sceneID="3O1-ND-yRu">
             <objects>
-                <viewController storyboardIdentifier="Phase1VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EN8-Ni-7aZ" customClass="Phase1" sceneMemberID="viewController">
+                <viewController id="EN8-Ni-7aZ" customClass="Phase1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fux-Gk-jrR"/>
                         <viewControllerLayoutGuide type="bottom" id="Ngi-XF-FXP"/>
@@ -1731,7 +1736,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CEB9CD2A-DDD6-4589-8EAF-8D1B0D9D597E" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="E183836C-E8B3-456E-B44E-6CD6BEE985BF" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OrZ-cS-ZQz">
@@ -1893,7 +1898,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEr-UK-xnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1728.5" y="3675"/>
+            <point key="canvasLocation" x="-2841.5" y="8300"/>
         </scene>
     </scenes>
     <resources>
@@ -1904,7 +1909,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="CEB9CD2A-DDD6-4589-8EAF-8D1B0D9D597E" width="194" height="90">
+        <image name="E183836C-E8B3-456E-B44E-6CD6BEE985BF" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

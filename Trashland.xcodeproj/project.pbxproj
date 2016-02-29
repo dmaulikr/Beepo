@@ -40,6 +40,7 @@
 		024153821B3F601300A02CE9 /* 11_prefeitura.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153751B3F601300A02CE9 /* 11_prefeitura.mp3 */; };
 		024153831B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153761B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 */; };
 		024153841B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 024153771B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 */; };
+		025AA05A1C846DBC0054CEAE /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 025AA0591C846DBC0054CEAE /* Player.m */; };
 		0264DE651B2F155F007A18A7 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE641B2F155F007A18A7 /* click.wav */; };
 		0264DE6A1B2F1573007A18A7 /* shower.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE661B2F1573007A18A7 /* shower.mp3 */; };
 		0264DE6B1B2F1573007A18A7 /* TV.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 0264DE671B2F1573007A18A7 /* TV.aiff */; };
@@ -137,6 +138,8 @@
 		024153751B3F601300A02CE9 /* 11_prefeitura.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 11_prefeitura.mp3; sourceTree = "<group>"; };
 		024153761B3F601300A02CE9 /* 12_prefeitura-puzzlecaixa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "12_prefeitura-puzzlecaixa.mp3"; sourceTree = "<group>"; };
 		024153771B3F601300A02CE9 /* 13_prefeitura-puzzleeleicao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "13_prefeitura-puzzleeleicao.mp3"; sourceTree = "<group>"; };
+		025AA0581C846DBC0054CEAE /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		025AA0591C846DBC0054CEAE /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		0264DE641B2F155F007A18A7 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		0264DE661B2F1573007A18A7 /* shower.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shower.mp3; sourceTree = "<group>"; };
 		0264DE671B2F1573007A18A7 /* TV.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = TV.aiff; sourceTree = "<group>"; };
@@ -277,6 +280,15 @@
 			name = Stories;
 			sourceTree = "<group>";
 		};
+		025AA05B1C846DBF0054CEAE /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				025AA0581C846DBC0054CEAE /* Player.h */,
+				025AA0591C846DBC0054CEAE /* Player.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
 		0264DE611B2F14FE007A18A7 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,17 +317,17 @@
 		0264DE631B2F1511007A18A7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				02B3B5441B30B6DA00143CC1 /* HomeViewController */,
+				02DC31251C83FC12001B317E /* InfoViewController */,
+				02DC31291C8401EC001B317E /* ParentsViewController */,
+				02B3B5461B30B6F900143CC1 /* CustomizationViewController */,
 				15C431901B29FA850098C994 /* Draggable */,
 				15B467ED1B36CCE90059427C /* Popup */,
-				02B3B5441B30B6DA00143CC1 /* HomeViewController */,
-				02B3B5461B30B6F900143CC1 /* CustomizationViewController */,
 				02B3B5451B30B6E300143CC1 /* PhaseChoose */,
 				021F561F1B2F1E95007886D6 /* Phase1 */,
 				021F56201B2F1E9C007886D6 /* Phase2 */,
 				021F56211B2F1EBF007886D6 /* Phase3 */,
 				02B3B54E1B30D38500143CC1 /* Phase4 */,
-				02DC31251C83FC12001B317E /* InfoViewController */,
-				02DC31291C8401EC001B317E /* ParentsViewController */,
 				02DC312D1C8401FD001B317E /* ExtrasViewController */,
 			);
 			name = ViewControllers;
@@ -381,6 +393,7 @@
 				02BC4D631C83F9F100A37D03 /* Resources */,
 				02BC4D621C83F9CA00A37D03 /* Util */,
 				02BC4D601C83F91800A37D03 /* AppDelegate */,
+				025AA05B1C846DBF0054CEAE /* Player */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -694,6 +707,7 @@
 				02DC312C1C8401FB001B317E /* ExtrasViewController.m in Sources */,
 				1541A1311B3C37A200D348B9 /* Phase4.m in Sources */,
 				15C431831B28A79A0098C994 /* Phase1.m in Sources */,
+				025AA05A1C846DBC0054CEAE /* Player.m in Sources */,
 				023D17B51B3731CB0004DE32 /* Puzzle4.m in Sources */,
 				021F56281B2F20FA007886D6 /* Story2.m in Sources */,
 				0264DE831B2F16CE007A18A7 /* UIView+Animation2.m in Sources */,

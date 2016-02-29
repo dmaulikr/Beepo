@@ -9,6 +9,9 @@
 
 @property (nonatomic) CGRect ghostStarterFrame;
 @property (nonatomic) CGRect shadowStarterFrame;
+@property (weak, nonatomic) IBOutlet UIImageView *imgFantasminha;
+@property (weak, nonatomic) IBOutlet UIImageView *imgSombra;
+@property (weak, nonatomic) IBOutlet UIView *moveBeepoView;
 
 @end
 

@@ -7,6 +7,8 @@
     NSString* path8;
 }
 
+@property (nonatomic) IBOutlet UIImageView* fundo;
+
 @end
 
 @implementation Story4

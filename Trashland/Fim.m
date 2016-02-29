@@ -6,6 +6,12 @@
     NSString* path200;
     AVAudioPlayer* _audioPlayer100;
 }
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *flagImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *cityNameLabel;
+@property (nonatomic) IBOutlet UIImageView* fundo;
+
 @end
 
 @implementation Fim
