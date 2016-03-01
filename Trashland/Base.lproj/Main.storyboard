@@ -1685,6 +1685,9 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6FL-f6-VTa">
                                         <rect key="frame" x="0.0" y="0.0" width="2486" height="768"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ultimacasa" translatesAutoresizingMaskIntoConstraints="NO" id="zIj-zB-0Yx">
+                                                <rect key="frame" x="0.0" y="0.0" width="2486" height="768"/>
+                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgX-7P-Lfv">
                                                 <rect key="frame" x="2360" y="328" width="102" height="252"/>
                                                 <state key="normal">
@@ -1694,7 +1697,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AEFB7D90-F3B6-4B93-BCE3-A692C1F3C843" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="88F50703-D68F-4CCE-B3F9-565FC2D83567" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OrZ-cS-ZQz">
@@ -1728,8 +1731,8 @@
                                                 <rect key="frame" x="509" y="193" width="397" height="548"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="him-c6-6CW">
-                                                <rect key="frame" x="112" y="252" width="48" height="48"/>
-                                                <state key="normal" backgroundImage="bird">
+                                                <rect key="frame" x="106" y="248" width="61" height="56"/>
+                                                <state key="normal" image="01_Trashcity">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -1755,8 +1758,8 @@
                                                     <action selector="didClickSecondCloud" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="Fja-bB-ZRm"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ultimacasa" translatesAutoresizingMaskIntoConstraints="NO" id="zIj-zB-0Yx">
-                                                <rect key="frame" x="0.0" y="0.0" width="2486" height="768"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plate" translatesAutoresizingMaskIntoConstraints="NO" id="anx-SB-ry1" customClass="DraggableImageView">
+                                                <rect key="frame" x="695" y="507" width="70" height="36"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="luz-banheiro-acesa" translatesAutoresizingMaskIntoConstraints="NO" id="x0S-Aj-XiN">
                                                 <rect key="frame" x="1362" y="0.0" width="741" height="741"/>
@@ -1815,8 +1818,14 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pGJ-jr-XEG">
-                                                <rect key="frame" x="120" y="225" width="54" height="75"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="books" translatesAutoresizingMaskIntoConstraints="NO" id="T6r-7U-hH8" customClass="DraggableImageView">
+                                                <rect key="frame" x="580" y="100" width="129" height="81"/>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenVase" translatesAutoresizingMaskIntoConstraints="NO" id="zIH-wX-jax" customClass="DraggableImageView">
+                                                <rect key="frame" x="730" y="110" width="59" height="70"/>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plant" translatesAutoresizingMaskIntoConstraints="NO" id="TSA-xt-JoD" customClass="DraggableImageView">
+                                                <rect key="frame" x="81" y="512" width="78" height="117"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1873,11 +1882,13 @@
                     <size key="freeformSize" width="2486" height="768"/>
                     <connections>
                         <outlet property="auxView" destination="6FL-f6-VTa" id="crW-tF-vao"/>
+                        <outlet property="books" destination="T6r-7U-hH8" id="loW-FE-EXg"/>
                         <outlet property="botaoPlay" destination="oYm-DP-27o" id="oQP-hM-Dl1"/>
                         <outlet property="botaoProx" destination="3xp-ms-gup" id="5yY-1h-i9U"/>
                         <outlet property="botaoVoltar" destination="ctS-Iy-bUQ" id="L9l-mm-kLC"/>
                         <outlet property="charImgView" destination="nwV-pO-aBS" id="DSD-u3-DZS"/>
                         <outlet property="fantasmaView" destination="BUh-JP-Wlf" id="A8A-83-sKY"/>
+                        <outlet property="flower" destination="TSA-xt-JoD" id="dfY-h7-SWI"/>
                         <outlet property="luz3" destination="x0S-Aj-XiN" id="9JB-K0-46Y"/>
                         <outlet property="luz4" destination="IUq-ER-1ds" id="dXB-2Y-gF9"/>
                         <outlet property="medalha1fase1" destination="DNE-un-zea" id="EoY-Mc-xYi"/>
@@ -1885,6 +1896,7 @@
                         <outlet property="nuvem1Acesa" destination="YZL-XN-Zhg" id="t5Z-Wx-cFm"/>
                         <outlet property="nuvem2Acesa" destination="1iQ-ds-cZZ" id="Tk1-5c-Aju"/>
                         <outlet property="pinkishVase" destination="EGg-LA-m0r" id="RVE-Wh-KSv"/>
+                        <outlet property="plate" destination="anx-SB-ry1" id="goV-6M-08l"/>
                         <outlet property="purpleVase" destination="57J-Ug-Rtq" id="aZ3-6m-102"/>
                         <outlet property="redWhiteVase" destination="WM0-lL-D1i" id="sfI-8b-4nu"/>
                         <outlet property="rubberDuck" destination="It6-ui-7yM" id="U9c-4J-poI"/>
@@ -1895,6 +1907,8 @@
                         <outlet property="toiletStuff" destination="LD8-QG-LXe" id="op1-XU-5xv"/>
                         <outlet property="torneiraGIF" destination="OrZ-cS-ZQz" id="dfz-uN-hGx"/>
                         <outlet property="tvGIF" destination="3Tl-Pg-ZWP" id="q8Y-gr-75V"/>
+                        <outlet property="vase2" destination="zIH-wX-jax" id="Atd-2a-Bh0"/>
+                        <outlet property="viewFantasminha" destination="nwV-pO-aBS" id="Fxq-yX-9wE"/>
                         <outlet property="weirdVase" destination="AgA-ml-JGO" id="Yak-hI-yqz"/>
                     </connections>
                 </viewController>
@@ -1904,6 +1918,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="01_Trashcity" width="61" height="56"/>
         <image name="08_Trashcity" width="47" height="56"/>
         <image name="09_Trashcity" width="24" height="62"/>
         <image name="10_Trashcity" width="59" height="51"/>
@@ -1911,7 +1926,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="AEFB7D90-F3B6-4B93-BCE3-A692C1F3C843" width="194" height="90">
+        <image name="88F50703-D68F-4CCE-B3F9-565FC2D83567" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -3143,7 +3158,7 @@ ARrvA
         <image name="badge-natureza" width="53" height="72"/>
         <image name="badge-transito" width="52" height="72"/>
         <image name="beepo" width="925" height="311"/>
-        <image name="bird" width="61" height="56"/>
+        <image name="books" width="129" height="81"/>
         <image name="botao-continuar" width="125" height="114"/>
         <image name="botao-fechar" width="45" height="45"/>
         <image name="botao-info" width="55" height="55"/>
@@ -3169,6 +3184,7 @@ ARrvA
         <image name="extra-bg" width="1024" height="768"/>
         <image name="fantasma-triste" width="480" height="460"/>
         <image name="fantasminha" width="255" height="300"/>
+        <image name="greenVase" width="59" height="70"/>
         <image name="historia-hospital" width="1024" height="768"/>
         <image name="historia-parque" width="1024" height="768"/>
         <image name="historia-prefeitura" width="1024" height="768"/>
@@ -3199,6 +3215,8 @@ ARrvA
         <image name="parque-30" width="75" height="53"/>
         <image name="parque-32" width="458" height="121"/>
         <image name="parque-33" width="116" height="116"/>
+        <image name="plant" width="78" height="117"/>
+        <image name="plate" width="70" height="36"/>
         <image name="play" width="108" height="108"/>
         <image name="pop-up-agua" width="395" height="422"/>
         <image name="predio" width="616" height="338"/>

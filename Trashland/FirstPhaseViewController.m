@@ -7,12 +7,7 @@
 #import "SystemSoundIDAudio.h"
 #import "PopUpViewController.h"
 
-@interface FirstPhaseViewController () <UIScrollViewDelegate, DraggableImageViewDelegate> {
-    int tempo;
-    UIDynamicAnimator *_animator;
-    UIGravityBehavior *_gravity;
-    UICollisionBehavior *_collision;
-}
+@interface FirstPhaseViewController () <UIScrollViewDelegate, DraggableImageViewDelegate>
 
 @property (nonatomic, assign) BOOL pontoLuz1;
 @property (nonatomic, assign) BOOL pontoLuz2;
@@ -24,10 +19,12 @@
 @property (nonatomic, assign) BOOL TVLigada;
 @property (nonatomic, assign) BOOL podePassar;
 
+@property (retain, nonatomic) UIDynamicAnimator *animator;
+@property (retain, nonatomic) UIGravityBehavior *gravity;
+@property (retain, nonatomic) UICollisionBehavior *collision;
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet DraggableImageView *birdImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowImgView;
-@property (retain, nonatomic) UIGravityBehavior *grav;
 @property (weak, nonatomic) IBOutlet UIImageView *showerGIF;
 @property (weak, nonatomic) IBOutlet UIImageView *torneiraGIF;
 @property (weak, nonatomic) IBOutlet UIImageView *tvGIF;
@@ -38,10 +35,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView* luz3;
 @property (weak, nonatomic) IBOutlet UIImageView* luz4;
 @property (weak, nonatomic) IBOutlet UIImageView *charImgView;
-@property (retain, nonatomic)  DraggableImageView* books;
-@property (retain, nonatomic)  DraggableImageView* flower;
-@property (retain, nonatomic)  DraggableImageView* plate;
-@property (retain, nonatomic)  DraggableImageView* vase2;
+
+@property (weak, nonatomic) IBOutlet DraggableImageView* books;
+@property (weak, nonatomic) IBOutlet DraggableImageView* flower;
+@property (weak, nonatomic) IBOutlet DraggableImageView* plate;
+@property (weak, nonatomic) IBOutlet DraggableImageView* vase2;
 @property (weak, nonatomic) IBOutlet DraggableImageView *soap;
 @property (weak, nonatomic) IBOutlet DraggableImageView *rubberDuck;
 @property (weak, nonatomic) IBOutlet DraggableImageView *redWhiteVase;
@@ -50,6 +48,7 @@
 @property (weak, nonatomic) IBOutlet DraggableImageView *pinkishVase;
 @property (weak, nonatomic) IBOutlet DraggableImageView *purpleVase;
 @property (weak, nonatomic) IBOutlet DraggableView *fantasmaView;
+
 @property (weak, nonatomic) IBOutlet UIImageView* medalha1fase1;
 @property (weak, nonatomic) IBOutlet UIImageView* medalha2fase1;
 @property (weak, nonatomic) IBOutlet UIButton* botaoVoltar;
@@ -66,6 +65,7 @@
     [super viewDidAppear:animated];
     
     Player *player = [Player sharedManager];
+    _charImgView.image = player.gasperEscolhido;
     if(player.firstMedal){
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
         self.botaoProx.enabled = YES;
@@ -83,7 +83,18 @@
     
     _scrollView.delegate = self;
     _scrollView.contentSize = CGSizeMake(_auxView.frame.size.width, _auxView.frame.size.height);
-    [self montarTela];
+    
+    _books.delegate = self;
+    _flower.delegate = self;
+    _vase2.delegate = self;
+    _plate.delegate = self;
+    _soap.delegate = self;
+    _rubberDuck.delegate = self;
+    _redWhiteVase.delegate = self;
+    _weirdVase.delegate = self;
+    _toiletStuff.delegate = self;
+    _pinkishVase.delegate = self;
+    _purpleVase.delegate = self;
     
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.auxView];
     [self applyPhisicsConcepts];
@@ -112,61 +123,10 @@
     [UIView commitAnimations];
 }
 
-- (void)montarTela{
-    self.books = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"books"]];
-    self.flower = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"plant"]];
-    self.plate = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"plate"]];
-    self.vase2 = [[DraggableImageView alloc] initWithImage:[UIImage imageNamed:@"greenVase"]];
-    
-    self.books.frame = CGRectMake(580, 100, 129, 81);
-    self.books.userInteractionEnabled = YES;
-    [self.auxView addSubview:self.books];
-    
-    self.flower.frame = CGRectMake(70, 550, 78, 117);
-    self.flower.userInteractionEnabled = YES;
-    self.flower.delegate = self;
-    [self.auxView addSubview:self.flower];
-    
-    self.plate.frame = CGRectMake(695, 500, 70, 36);
-    self.plate.userInteractionEnabled = YES;
-    [self.auxView addSubview:self.plate];
-
-    self.vase2.frame = CGRectMake(730, 100, 59, 70);
-    self.vase2.userInteractionEnabled = YES;
-    [self.auxView addSubview:self.vase2];
-
-    self.plate.delegate = self;
-    self.vase2.delegate = self;
-    self.books.delegate = self;
-    self.soap.delegate = self;
-    self.rubberDuck.delegate = self;
-    self.redWhiteVase.delegate = self;
-    self.weirdVase.delegate = self;
-    self.toiletStuff.delegate = self;
-    self.pinkishVase.delegate = self;
-    self.purpleVase.delegate = self;
-    
-    [self.auxView bringSubviewToFront:self.tvGIF];
-    [self.auxView bringSubviewToFront:self.torneiraGIF];
-    [self.auxView bringSubviewToFront:self.showerGIF];
-    [self.auxView bringSubviewToFront:self.nuvem1Acesa];
-    [self.auxView bringSubviewToFront:self.nuvem2Acesa];
-    [self.auxView bringSubviewToFront:self.luz3];
-    [self.auxView bringSubviewToFront:self.luz4];
-    //[self.auxView bringSubviewToFront:self.bird];
-    
-    [self.view bringSubviewToFront:self.botaoVoltar];
-    [self.view bringSubviewToFront:self.botaoPlay];
-    [self.view bringSubviewToFront:self.botaoProx];
-    [self.view bringSubviewToFront:self.medalha1fase1];
-    [self.view bringSubviewToFront:self.medalha2fase1];
-    [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];    
-}
-
 - (void)applyPhisicsConcepts{
     [_collision removeAllBoundaries];
     [_animator removeAllBehaviors];
-
+    
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.auxView];
     _gravity = [[UIGravityBehavior alloc] initWithItems:@[self.books, self.flower, self.vase2, self.plate, self.soap, self.rubberDuck, self.redWhiteVase, self.weirdVase, self.toiletStuff, self.pinkishVase, self.purpleVase]];
     [_animator addBehavior:_gravity];
@@ -330,34 +290,33 @@
 -(IBAction)didTappedToContinue:(id)sender{
     Player *player = [Player sharedManager];
     if (player.firstMedal || player.secondMedal) {
-        [self dismissViewControllerAnimated:YES completion:^(void){
-            if ([_delegate respondsToSelector:@selector(askedToDismiss)]) {
-                [_delegate askedToDismiss];
-            }
-        }];
+        if ([_delegate respondsToSelector:@selector(askedToDismiss)]) {
+            [_delegate askedToDismiss];
+        }
     }
 }
 
 -(void)needCheckBadges{
     Player *player = [Player sharedManager];
-    if (!player.firstMedal && _pontoAgua1 && _pontoAgua2) {
-        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
-        [popUp setImageNamed: @"pop-up-agua"];
-        self.popUpView = popUp;
-        [popUp showInView:self.view animated:YES];
-        self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
-        player.firstMedal = true;
-        self.botaoProx.alpha = 1.0f;
-        
-    }
-    if (!player.secondMedal && _pontoLuz1 && _pontoLuz2 && _pontoLuz3 && _pontoLuz4 && _pontoTV) {
+    if (!player.firstMedal && _pontoLuz1 && _pontoLuz2 && _pontoLuz3 && _pontoLuz4 && _pontoTV) {
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-energia"];
         self.popUpView = popUp;
         [popUp showInView:self.view animated:YES];
         self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
+        player.firstMedal = true;
+        self.botaoProx.alpha = 1.0f;
+    }
+    
+    if (!player.secondMedal && _pontoAgua1 && _pontoAgua2) {
+        PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+        [popUp setImageNamed: @"pop-up-agua"];
+        self.popUpView = popUp;
+        [popUp showInView:self.view animated:YES];
+        self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
         player.secondMedal = true;
         self.botaoProx.alpha = 1.0f;
+        
     }
 }
 
