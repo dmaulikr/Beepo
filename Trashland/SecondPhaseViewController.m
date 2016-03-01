@@ -4,7 +4,6 @@
 #import "DraggableImageView.h"
 #import "DraggableView.h"
 
-
 @interface SecondPhaseViewController()<UICollisionBehaviorDelegate, UIScrollViewDelegate>{
     UIDynamicAnimator* _animator;
     UIGravityBehavior* _gravity;

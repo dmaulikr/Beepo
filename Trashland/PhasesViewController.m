@@ -5,7 +5,7 @@
 #import "ThirdStoryViewController.h"
 #import "FourthStoryViewController.h"
 
-@interface PhasesViewController () <FirstStoryViewControllerDelegate>
+@interface PhasesViewController () <FirstStoryViewControllerDelegate, SecondStoryViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton* fase1;
 @property (nonatomic, weak) IBOutlet UIImageView* medalha1fase1;
@@ -21,6 +21,9 @@
 @property (nonatomic, weak) IBOutlet UIImageView* medalha2fase4;
 
 @property (nonatomic, weak) FirstStoryViewController *firstStoryViewController;
+@property (nonatomic, weak) SecondStoryViewController *secondStoryViewController;
+@property (nonatomic, weak) ThirdStoryViewController *thirdStoryViewController;
+@property (nonatomic, weak) FourthStoryViewController *fourthStoryViewController;
 
 @end
 
@@ -80,11 +83,21 @@
     if ([segue.identifier isEqualToString:@"houseSegue"]) {
         _firstStoryViewController = segue.destinationViewController;
         _firstStoryViewController.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"parkSegue"]){
+        _secondStoryViewController = segue.destinationViewController;
+        _secondStoryViewController.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"streetSegue"]){
+        _thirdStoryViewController = segue.destinationViewController;
+    } else if ([segue.identifier isEqualToString:@"cityHallSegue"]){
+        _fourthStoryViewController = segue.destinationViewController;
     }
 }
 
 - (void) askedToDismissFirstStory{
     [_firstStoryViewController dismissViewControllerAnimated:YES completion:nil];
+}
+- (void) askedToDismissSecondStory{
+    [_secondStoryViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

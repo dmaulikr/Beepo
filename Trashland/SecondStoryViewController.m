@@ -1,15 +1,17 @@
 #import "SecondStoryViewController.h"
 #import "SecondPhaseViewController.h"
+#import "MiscellaneousAudio.h"
 
-@interface SecondStoryViewController(){
-    NSString *path3;
-}
+@interface SecondStoryViewController () <SecondPhaseViewControllerDelegate>
 
 @property (nonatomic) CGRect ghostStarterFrame;
 @property (nonatomic) CGRect shadowStarterFrame;
 @property (weak, nonatomic) IBOutlet UIImageView *imgFantasminha;
 @property (weak, nonatomic) IBOutlet UIImageView *imgSombra;
 @property (weak, nonatomic) IBOutlet UIView *moveBeepoView;
+@property (strong, nonatomic) NSString *path;
+
+@property (weak, nonatomic) SecondPhaseViewController *secondPhaseViewController;
 
 @end
 
@@ -17,23 +19,18 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    path3 = [NSString stringWithFormat:@"%@/5_pre-parque.mp3", [[NSBundle mainBundle] resourcePath]];
-    
+    _path = [NSString stringWithFormat:@"%@/5_pre-parque.mp3", [[NSBundle mainBundle] resourcePath]];
     
     [self moveBeepo:self.moveBeepoView];
     _ghostStarterFrame = self.imgFantasminha.frame;
     _shadowStarterFrame = self.imgSombra.frame;
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     
-    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipped:)];
     [self.view addGestureRecognizer:swipeLeft];
 }
 
--(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
-    SecondPhaseViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase2VC"];
-    [game setModalPresentationStyle:UIModalPresentationFullScreen];
- //   game.player = self.player;
-    [self presentViewController:game animated:YES completion:nil];
+-(void)didSwipped:(UISwipeGestureRecognizer *)swipeRecogniser{
+    [self performSegueWithIdentifier:@"phase2Segue" sender:self];
 }
 
 - (void)moveBeepo:(UIView *)imageView{
@@ -63,22 +60,27 @@
     
     self.imgFantasminha.frame = charFrame;
     self.imgSombra.frame = shadowFrame;
-    
-    
     [UIView commitAnimations];
 }
 
--(IBAction)falaQueEuTeEstupro:(id)sender{
-    NSURL *soundUrl = [NSURL fileURLWithPath:path3];
-    
-    // Create audio player object and initialize with URL to sound
- //   _audioPlayer4 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    
- //   [_audioPlayer4 play];
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"phase2Segue"]) {
+        _secondPhaseViewController = segue.destinationViewController;
+        _secondPhaseViewController.delegate = self;
+    }
 }
 
--(void) didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
+-(IBAction)didTappedVoiceStoryButton:(id)sender{
+    MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
+    [miscAudio playSongFromPath:_path];
+}
+
+- (void) askedToDismissSecondPhase{
+    [_secondPhaseViewController dismissViewControllerAnimated:YES completion:^void{
+        if ([_delegate respondsToSelector:@selector(askedToDismissSecondStory)]) {
+            [_delegate askedToDismissSecondStory];
+        }
+    }];
 }
 
 @end
