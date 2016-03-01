@@ -1,9 +1,9 @@
-#import "Story1.h"
+#import "FirstStoryViewController.h"
+#import "FirstPhaseViewController.h"
 #import "UIView+Animation2.h"
-#import "Phase1.h"
 #import "MiscellaneousAudio.h"
 
-@interface Story1() <Phase1Delegate>
+@interface FirstStoryViewController() <FirstPhaseViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPageControl* controle;
 @property (weak, nonatomic) IBOutlet UIImageView *gifDedo;
@@ -13,27 +13,25 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonNarrar;
 @property (strong, nonatomic) NSString *path;
 
+@property (nonatomic, weak) FirstPhaseViewController *firstPhaseViewController;
+
 @end
 
-@implementation Story1
+@implementation FirstStoryViewController
 
 -(void) viewDidLoad{
     [super viewDidLoad];
     
     _path = [NSString stringWithFormat:@"%@/1_pre-sala01.mp3", [[NSBundle mainBundle] resourcePath]];
     
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipped:)];
     swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:swipeLeft];
     
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipped:)];
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeRight];
-}
-
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         self.telaUm.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"historinha-01@2x" ofType:@"png"]];
         self.telaDois.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"historinha-02@2x" ofType:@"png"]];
@@ -45,7 +43,7 @@
     [self.view bringSubviewToFront:self.gifDedo];
 }
 
--(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
+-(void)didSwipped:(UISwipeGestureRecognizer *)swipeRecogniser{
     if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionLeft){
         switch (self.controle.currentPage) {
             case 0:
@@ -62,7 +60,7 @@
                 self.controle.currentPage +=1;
                 break;
             case 2:
-                [self start];
+                [self requestedPhaseStart];
                 break;
             default:
                 break;
@@ -98,15 +96,8 @@
     [UIView commitAnimations];
 }
 
--(void)start{
+-(void)requestedPhaseStart{
     [self performSegueWithIdentifier:@"phase1Segue" sender:self];
-}
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"phase1Segue"]) {
-        Phase1 *vc = segue.destinationViewController;
-        vc.delegate = self;
-    }
 }
 
 - (void)moveLeft{
@@ -121,8 +112,6 @@
                                      , 0.0, self.telaDois.frame.size.width, self.telaDois.frame.size.height);
     self.telaTres.frame = CGRectMake(self.telaTres.frame.origin.x -  self.telaUm.frame.size.width
                                      , 0.0, self.telaTres.frame.size.width, self.telaTres.frame.size.height);
-    
-    
     [UIView commitAnimations];
 }
 
@@ -142,19 +131,25 @@
     [UIView commitAnimations];
 }
 
--(IBAction)didTappedBackButton:(id)sender{
-    _path = nil;
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 -(IBAction)didTappedForVoiceStory:(id)sender{
     MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
     [miscAudio playSongFromPath:_path];
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"phase1Segue"]) {
+        _firstPhaseViewController = segue.destinationViewController;
+        _firstPhaseViewController.delegate = self;
+    }
+}
+
 - (void) askedToDismiss{
-    _path = nil;
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [_firstPhaseViewController dismissViewControllerAnimated:YES completion:^void{
+        _path = nil;
+        if ([_delegate respondsToSelector:@selector(askedToDismissFirstStory)]) {
+            [_delegate askedToDismissFirstStory];
+        }
+    }];
 }
 
 @end

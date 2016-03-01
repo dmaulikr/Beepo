@@ -1,5 +1,13 @@
 #import "CustomizationViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "PhasesViewController.h"
+#import "Player.h"
+
+@interface CustomizationViewController () <PhasesViewControllerDelegate>
+
+@property (nonatomic, weak) PhasesViewController *phasesViewContoller;
+
+@end
 
 @implementation CustomizationViewController{
     BOOL primeira;
@@ -8,8 +16,8 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     primeira = true;
-  //  self.player = [[Player alloc]init];
-  //  self.player.gasperEscolhido = [UIImage imageNamed:@"fantasminha"];
+    Player *player = [Player sharedManager];
+    player.gasperEscolhido = [UIImage imageNamed:@"fantasminha"];
     [[self.item1 layer] setBorderWidth:2.0f];
     [[self.item2 layer] setBorderWidth:2.0f];
     [[self.item3 layer] setBorderWidth:2.0f];
@@ -20,35 +28,12 @@
     [[self.item2 layer] setCornerRadius:5.0f];
     [[self.item3 layer] setCornerRadius:5.0f];
     
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    
-    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipeLeft];
-    
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swipeRight];
-    
+    UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipped:)];
+    [self.view addGestureRecognizer:swipeRecognizer];
 }
 
--(IBAction)didTappedStartButton:(id)sender{
-    [self performSegueWithIdentifier:@"playSegue" sender:self];
-}
-
--(IBAction)change:(id)sender{
-    if (primeira == true) {
-        primeira = false;
-        self.item1.image = [UIImage imageNamed:@"custom05"];
-        self.item2.image = [UIImage imageNamed:@"custom06"];
-        self.item3.image = [UIImage imageNamed:@"custom04"];
-    }
-    else{
-        primeira = true;
-        self.item1.image = [UIImage imageNamed:@"custom01"];
-        self.item2.image = [UIImage imageNamed:@"custom02"];
-        self.item3.image = [UIImage imageNamed:@"custom03"];
-    }
+-(IBAction)didTappedChangeArrow:(id)sender{
+    [self requestedCustomChange];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -73,84 +58,78 @@
     [UIView commitAnimations];
 }
 
--(IBAction)choosedFirst:(id)sender{
+-(IBAction)didTappedFirstOption:(id)sender{
+    Player *player = [Player sharedManager];
     if (primeira == true) {
-   //     self.player.gasperEscolhido = [UIImage imageNamed:@"custom15"];
+        player.gasperEscolhido = [UIImage imageNamed:@"custom15"];
         self.gasper.image = [UIImage imageNamed:@"custom15"];
         
-    }
-    else{
- //       self.player.gasperEscolhido = [UIImage imageNamed:@"custom18"];
+    } else{
+        player.gasperEscolhido = [UIImage imageNamed:@"custom18"];
         self.gasper.image = [UIImage imageNamed:@"custom18"];
-        
     }
 }
 
--(IBAction)choosedSecond:(id)sender{
+-(IBAction)didTappedSecondOption:(id)sender{
+    Player *player = [Player sharedManager];
     if (primeira == true) {
- //       self.player.gasperEscolhido = [UIImage imageNamed:@"custom16"];
+        player.gasperEscolhido = [UIImage imageNamed:@"custom16"];
         self.gasper.image = [UIImage imageNamed:@"custom16"];
         
-    }
-    else{
-        
-//        self.player.gasperEscolhido = [UIImage imageNamed:@"custom19"];
+    } else{
+        player.gasperEscolhido = [UIImage imageNamed:@"custom19"];
         self.gasper.image = [UIImage imageNamed:@"custom19"];
-        
     }
 }
 
--(IBAction)choosedThird:(id)sender{
+-(IBAction)didTappedThirdOption:(id)sender{
+    Player *player = [Player sharedManager];
     if (primeira == true) {
         self.gasper.image = [UIImage imageNamed:@"custom17"];
-//        self.player.gasperEscolhido = [UIImage imageNamed:@"custom17"];
-    }
-    else{
- //       self.player.gasperEscolhido = [UIImage imageNamed:@"custom20"];
+        player.gasperEscolhido = [UIImage imageNamed:@"custom17"];
+    } else{
+        player.gasperEscolhido = [UIImage imageNamed:@"custom20"];
         self.gasper.image = [UIImage imageNamed:@"custom20"];
-        
-    
     }
-    
 }
 
--(IBAction)voltar:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
+-(void)didSwipped:(UISwipeGestureRecognizer *)swipeRecogniser{
+    [self requestedCustomChange];
 }
 
--(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
-    if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionLeft)
-    {
-        if (primeira == true) {
-            primeira = false;
-            self.item1.image = [UIImage imageNamed:@"custom05"];
-            self.item2.image = [UIImage imageNamed:@"custom06"];
-            self.item3.image = [UIImage imageNamed:@"custom04"];
-        }
-        else{
-            primeira = true;
-            self.item1.image = [UIImage imageNamed:@"custom01"];
-            self.item2.image = [UIImage imageNamed:@"custom02"];
-            self.item3.image = [UIImage imageNamed:@"custom03"];
-        }
+-(IBAction)didTappedStartButton:(id)sender{
+    [self performSegueWithIdentifier:@"playSegue" sender:self];
+}
 
+-(IBAction)didTappedBackButton:(id)sender{
+    if ([_delegate respondsToSelector:@selector(askedToDismissCustomization)]) {
+        [_delegate askedToDismissCustomization];
     }
-    else if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionRight)
-    {
-        if (primeira == true) {
-            primeira = false;
-            self.item1.image = [UIImage imageNamed:@"custom05"];
-            self.item2.image = [UIImage imageNamed:@"custom06"];
-            self.item3.image = [UIImage imageNamed:@"custom04"];
-        }
-        else{
-            primeira = true;
-            self.item1.image = [UIImage imageNamed:@"custom01"];
-            self.item2.image = [UIImage imageNamed:@"custom02"];
-            self.item3.image = [UIImage imageNamed:@"custom03"];
-        }
+}
 
+- (void) requestedCustomChange{
+    if (primeira == true) {
+        primeira = false;
+        self.item1.image = [UIImage imageNamed:@"custom05"];
+        self.item2.image = [UIImage imageNamed:@"custom06"];
+        self.item3.image = [UIImage imageNamed:@"custom04"];
+    } else{
+        primeira = true;
+        self.item1.image = [UIImage imageNamed:@"custom01"];
+        self.item2.image = [UIImage imageNamed:@"custom02"];
+        self.item3.image = [UIImage imageNamed:@"custom03"];
     }
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"playSegue"]) {
+        _phasesViewContoller = segue.destinationViewController;
+        _phasesViewContoller.delegate = self;
+    }
+}
+
+- (void) askedToDismissPhases{
+    [_phasesViewContoller dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

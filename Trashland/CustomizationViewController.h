@@ -1,6 +1,14 @@
 #import <UIKit/UIKit.h>
 
+@protocol CustomizationViewControllerDelegate <NSObject>
+
+- (void) askedToDismissCustomization;
+
+@end
+
 @interface CustomizationViewController : UIViewController
+
+@property (nonatomic, assign) id <CustomizationViewControllerDelegate> delegate;
 
 @property (nonatomic) IBOutlet UIView* chooseBar;
 

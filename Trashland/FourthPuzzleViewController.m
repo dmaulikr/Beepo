@@ -1,8 +1,8 @@
-#import "Puzzle4.h"
+#import "FourthPuzzleViewController.h"
 #import "PopUpViewController.h"
 #import "DraggableImageView.h"
 
-@interface Puzzle4 (){
+@interface FourthPuzzleViewController (){
     BOOL ponto1;
     BOOL ponto2;
     BOOL ponto3;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation Puzzle4
+@implementation FourthPuzzleViewController
 NSString* path9;
 
 -(void)dealloc{

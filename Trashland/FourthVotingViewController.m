@@ -1,8 +1,8 @@
-#import "Votacao.h"
-#import "Fim.h"
+#import "FourthVotingViewController.h"
+#import "FourthEndViewController.h"
 #import "PopUpViewController.h"
 
-@interface Votacao (){
+@interface FourthVotingViewController (){
     BOOL opcao1;
     BOOL opcao2;
     BOOL opcao3;
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation Votacao
+@implementation FourthVotingViewController
 
 
 - (void)viewDidLoad {

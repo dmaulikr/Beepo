@@ -1,26 +1,30 @@
-#import "PhasesChoose.h"
+#import "PhasesViewController.h"
 #import "Player.h"
+#import "FirstStoryViewController.h"
+#import "SecondStoryViewController.h"
+#import "ThirdStoryViewController.h"
+#import "FourthStoryViewController.h"
 
-@interface PhasesChoose ()
+@interface PhasesViewController () <FirstStoryViewControllerDelegate>
 
-@property (nonatomic) IBOutlet UIImageView* fundo;
-@property (nonatomic) IBOutlet UIButton* fase1;
-@property (nonatomic) IBOutlet UIImageView* medalha1fase1;
-@property (nonatomic) IBOutlet UIImageView* medalha2fase1;
-@property (nonatomic) IBOutlet UIButton* fase2;
-@property (nonatomic) IBOutlet UIImageView* medalha1fase2;
-@property (nonatomic) IBOutlet UIImageView* medalha2fase2;
-@property (nonatomic) IBOutlet UIButton* fase3;
-@property (nonatomic) IBOutlet UIImageView* medalha1fase3;
-@property (nonatomic) IBOutlet UIImageView* medalha2fase3;
-@property (nonatomic) IBOutlet UIButton* fase4;
-@property (nonatomic) IBOutlet UIImageView* medalha1fase4;
-@property (nonatomic) IBOutlet UIImageView* medalha2fase4;
-@property (nonatomic) IBOutlet UIButton* backButton;
+@property (nonatomic, weak) IBOutlet UIButton* fase1;
+@property (nonatomic, weak) IBOutlet UIImageView* medalha1fase1;
+@property (nonatomic, weak) IBOutlet UIImageView* medalha2fase1;
+@property (nonatomic, weak) IBOutlet UIButton* fase2;
+@property (nonatomic, weak) IBOutlet UIImageView* medalha1fase2;
+@property (nonatomic, weak) IBOutlet UIImageView* medalha2fase2;
+@property (nonatomic, weak) IBOutlet UIButton* fase3;
+@property (nonatomic, weak) IBOutlet UIImageView* medalha1fase3;
+@property (nonatomic, weak) IBOutlet UIImageView* medalha2fase3;
+@property (nonatomic, weak) IBOutlet UIButton* fase4;
+@property (nonatomic, weak) IBOutlet UIImageView* medalha1fase4;
+@property (nonatomic, weak) IBOutlet UIImageView* medalha2fase4;
+
+@property (nonatomic, weak) FirstStoryViewController *firstStoryViewController;
 
 @end
 
-@implementation PhasesChoose
+@implementation PhasesViewController
 
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
@@ -41,8 +45,10 @@
     if (player.eigthMedal) self.medalha2fase4.image = [UIImage imageNamed:@"badge-casa-color"];
 }
 
--(IBAction)voltar:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
+-(IBAction)didTappedBackButton:(id)sender{
+    if ([_delegate respondsToSelector:@selector(askedToDismissPhases)]) {
+        [_delegate askedToDismissPhases];
+    }
 }
 
 - (IBAction)didTappedFirstPhase:(id)sender{
@@ -68,6 +74,17 @@
     if (player.fifthMedal && player.sixthMedal) {
         [self performSegueWithIdentifier:@"cityHallSegue" sender:self];
     }
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"houseSegue"]) {
+        _firstStoryViewController = segue.destinationViewController;
+        _firstStoryViewController.delegate = self;
+    }
+}
+
+- (void) askedToDismissFirstStory{
+    [_firstStoryViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

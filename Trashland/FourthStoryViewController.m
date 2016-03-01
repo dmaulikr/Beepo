@@ -1,7 +1,7 @@
-#import "Story4.h"
-#import "Phase4.h"
+#import "FourthStoryViewController.h"
+#import "FourthPhaseViewController.h"
 
-@interface Story4 (){
+@interface FourthStoryViewController (){
     NSString* path8;
 }
 
@@ -9,7 +9,7 @@
 
 @end
 
-@implementation Story4
+@implementation FourthStoryViewController
 
 
 - (void)viewDidLoad {
@@ -25,7 +25,7 @@
 
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
     if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionLeft){
-        Phase4 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase4VC"];
+        FourthPhaseViewController*game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase4VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
     //    game.player = self.player;
         [self presentViewController:game animated:NO completion:nil];

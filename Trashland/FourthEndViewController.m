@@ -1,6 +1,6 @@
-#import "Fim.h"
+#import "FourthEndViewController.h"
 
-@interface Fim (){
+@interface FourthEndViewController () {
     
     NSString* path200;
 }
@@ -12,7 +12,7 @@
 
 @end
 
-@implementation Fim
+@implementation FourthEndViewController
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
  //   _audioPlayer100 = nil;

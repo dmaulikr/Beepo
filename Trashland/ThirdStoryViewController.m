@@ -1,7 +1,7 @@
-#import "Story3.h"
-#import "Phase3.h"
+#import "ThirdStoryViewController.h"
+#import "ThirdPhaseViewController.h"
 
-@interface Story3(){
+@interface ThirdStoryViewController(){
     NSString* path5;
 }
 
@@ -9,7 +9,7 @@
 
 @end
 
-@implementation Story3
+@implementation ThirdStoryViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -33,7 +33,7 @@
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
     if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionLeft)
     {
-        Phase3 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3VC"];
+        ThirdPhaseViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3VC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
       //  game.player = self.player;
         [self presentViewController:game animated:NO completion:nil];

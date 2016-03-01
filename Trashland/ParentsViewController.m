@@ -11,8 +11,8 @@
 }
 
 - (IBAction)didTappedBackButton:(id)sender{
-    if ([_delegate respondsToSelector:@selector(askedToDismiss)]) {
-        [_delegate askedToDismiss];
+    if ([_delegate respondsToSelector:@selector(askedToDismissParents)]) {
+        [_delegate askedToDismissParents];
     }
 }
 

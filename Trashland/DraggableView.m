@@ -4,13 +4,16 @@
 
 CGPoint startLocation;
 
--(void)morre{
-    _charImgView = nil;
-    _delegate = nil;
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        self.allowHorizontalAxisMovement = true;
+        self.allowVerticalAxisMovement = true;
+    }
+    return self;
 }
 
 - (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
-    // Retrieve the touch point
     CGPoint pt = [[touches anyObject] locationInView:self];
     startLocation = pt;
     [[self superview] bringSubviewToFront:self];
@@ -22,10 +25,10 @@ CGPoint startLocation;
     CGPoint pt = [[touches anyObject] locationInView:self];
     
     CGRect frame = [self frame];
-    if (self.podeX) {
+    if (self.allowHorizontalAxisMovement) {
         frame.origin.x += pt.x - startLocation.x;
     }
-    if (self.podeY) {
+    if (self.allowVerticalAxisMovement) {
         frame.origin.y += pt.y - startLocation.y;
     }
     [self setFrame:frame];

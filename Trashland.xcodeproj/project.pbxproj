@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021F561B1B2F1E4F007886D6 /* PhasesChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F561A1B2F1E4F007886D6 /* PhasesChoose.m */; };
-		021F561E1B2F1E81007886D6 /* Story1.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F561D1B2F1E81007886D6 /* Story1.m */; };
+		021F561B1B2F1E4F007886D6 /* PhasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F561A1B2F1E4F007886D6 /* PhasesViewController.m */; };
+		021F561E1B2F1E81007886D6 /* FirstStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F561D1B2F1E81007886D6 /* FirstStoryViewController.m */; };
 		021F56231B2F1EFC007886D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021F56221B2F1EFC007886D6 /* AudioToolbox.framework */; };
 		021F56251B2F1F03007886D6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021F56241B2F1F03007886D6 /* AVFoundation.framework */; };
-		021F56281B2F20FA007886D6 /* Story2.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F56271B2F20FA007886D6 /* Story2.m */; };
-		021F562B1B2F2104007886D6 /* Phase2.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F562A1B2F2104007886D6 /* Phase2.m */; };
-		021F562E1B2F210E007886D6 /* Story3.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F562D1B2F210E007886D6 /* Story3.m */; };
-		021F56311B2F2119007886D6 /* Phase3.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F56301B2F2119007886D6 /* Phase3.m */; };
+		021F56281B2F20FA007886D6 /* SecondStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F56271B2F20FA007886D6 /* SecondStoryViewController.m */; };
+		021F562B1B2F2104007886D6 /* SecondPhaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F562A1B2F2104007886D6 /* SecondPhaseViewController.m */; };
+		021F562E1B2F210E007886D6 /* ThirdStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F562D1B2F210E007886D6 /* ThirdStoryViewController.m */; };
+		021F56311B2F2119007886D6 /* ThirdPhaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F56301B2F2119007886D6 /* ThirdPhaseViewController.m */; };
 		021F56341B2F24B0007886D6 /* CustomizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F56331B2F24B0007886D6 /* CustomizationViewController.m */; };
 		02278E491B31D38700064B9A /* closeTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02278E481B31D38700064B9A /* closeTap.wav */; };
 		02278E4B1B31D63900064B9A /* tv1s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02278E4A1B31D63900064B9A /* tv1s.wav */; };
@@ -22,9 +22,9 @@
 		023556501B3F20640085AC4F /* clickcut.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0235564F1B3F20640085AC4F /* clickcut.wav */; };
 		023D17B11B3731020004DE32 /* maodir.gif in Resources */ = {isa = PBXBuildFile; fileRef = 023D17AF1B3731020004DE32 /* maodir.gif */; };
 		023D17B21B3731020004DE32 /* maoesq.gif in Resources */ = {isa = PBXBuildFile; fileRef = 023D17B01B3731020004DE32 /* maoesq.gif */; };
-		023D17B51B3731CB0004DE32 /* Puzzle4.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17B41B3731CB0004DE32 /* Puzzle4.m */; };
-		023D17B81B37B5E00004DE32 /* Votacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17B71B37B5E00004DE32 /* Votacao.m */; };
-		023D17BB1B37BE0A0004DE32 /* Fim.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17BA1B37BE0A0004DE32 /* Fim.m */; };
+		023D17B51B3731CB0004DE32 /* FourthPuzzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17B41B3731CB0004DE32 /* FourthPuzzleViewController.m */; };
+		023D17B81B37B5E00004DE32 /* FourthVotingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17B71B37B5E00004DE32 /* FourthVotingViewController.m */; };
+		023D17BB1B37BE0A0004DE32 /* FourthEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D17BA1B37BE0A0004DE32 /* FourthEndViewController.m */; };
 		024153671B3F5ADA00A02CE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024153661B3F5ADA00A02CE9 /* UIKit.framework */; };
 		024153691B3F5ADF00A02CE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024153681B3F5ADF00A02CE9 /* Foundation.framework */; };
 		024153781B3F601300A02CE9 /* 1_pre-sala01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0241536B1B3F601300A02CE9 /* 1_pre-sala01.mp3 */; };
@@ -58,7 +58,7 @@
 		02795C391B4084AF001E08B9 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02795C381B4084AF001E08B9 /* coin.wav */; };
 		02795C3B1B40982D001E08B9 /* hospital.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02795C3A1B40982D001E08B9 /* hospital.mp3 */; };
 		02795C3D1B409C26001E08B9 /* 14_fim_jogo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02795C3C1B409C26001E08B9 /* 14_fim_jogo.mp3 */; };
-		027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */ = {isa = PBXBuildFile; fileRef = 027C73781B334F2A00599E32 /* Phase3Parte2.m */; };
+		027C73791B334F2A00599E32 /* ThirdPhasePlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 027C73781B334F2A00599E32 /* ThirdPhasePlusViewController.m */; };
 		02B3B5421B309E5C00143CC1 /* carefree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5401B309E5C00143CC1 /* carefree.mp3 */; };
 		02B3B5431B309E5C00143CC1 /* hackbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B5411B309E5C00143CC1 /* hackbeat.mp3 */; };
 		02B3B5501B30DB1B00143CC1 /* carefreewav.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02B3B54F1B30DB1B00143CC1 /* carefreewav.wav */; };
@@ -66,11 +66,11 @@
 		02DC31241C83FC0E001B317E /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DC31231C83FC0E001B317E /* InfoViewController.m */; };
 		02DC31281C8401E8001B317E /* ParentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DC31271C8401E8001B317E /* ParentsViewController.m */; };
 		02DC312C1C8401FB001B317E /* ExtrasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DC312B1C8401FB001B317E /* ExtrasViewController.m */; };
-		02FCFC8C1B345AD000E762B8 /* Story4.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCFC8B1B345AD000E762B8 /* Story4.m */; };
+		02FCFC8C1B345AD000E762B8 /* FourthStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCFC8B1B345AD000E762B8 /* FourthStoryViewController.m */; };
 		150309331B33357C0056346D /* arvore_nascendo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 150309321B33357C0056346D /* arvore_nascendo.wav */; };
 		150309351B333A1F0056346D /* lixo.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 150309341B333A1F0056346D /* lixo.WAV */; };
 		15246F491B2F137A00EF006A /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15246F481B2F137A00EF006A /* DraggableView.m */; };
-		1541A1311B3C37A200D348B9 /* Phase4.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541A1301B3C37A200D348B9 /* Phase4.m */; };
+		1541A1311B3C37A200D348B9 /* FourthPhaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541A1301B3C37A200D348B9 /* FourthPhaseViewController.m */; };
 		15B467F01B36CF120059427C /* PopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B467EF1B36CF120059427C /* PopUpViewController.m */; };
 		15C4315E1B289E500098C994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C4315D1B289E500098C994 /* main.m */; };
 		15C431611B289E500098C994 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431601B289E500098C994 /* AppDelegate.m */; };
@@ -79,7 +79,7 @@
 		15C431691B289E500098C994 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C431681B289E500098C994 /* Images.xcassets */; };
 		15C4316C1B289E500098C994 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C4316A1B289E500098C994 /* LaunchScreen.xib */; };
 		15C431781B289E500098C994 /* TrashlandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431771B289E500098C994 /* TrashlandTests.m */; };
-		15C431831B28A79A0098C994 /* Phase1.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431821B28A79A0098C994 /* Phase1.m */; };
+		15C431831B28A79A0098C994 /* FirstPhaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431821B28A79A0098C994 /* FirstPhaseViewController.m */; };
 		15C431861B28A9650098C994 /* DraggableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431851B28A9650098C994 /* DraggableImageView.m */; };
 		15C431921B2A0A980098C994 /* chuveiro_Trashcity-2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 15C431911B2A0A980098C994 /* chuveiro_Trashcity-2.gif */; };
 		15E450A01B3DC92700B715C8 /* historinha-01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E4509F1B3DC92700B715C8 /* historinha-01@2x.png */; };
@@ -98,20 +98,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		021F56191B2F1E4F007886D6 /* PhasesChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhasesChoose.h; sourceTree = "<group>"; };
-		021F561A1B2F1E4F007886D6 /* PhasesChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhasesChoose.m; sourceTree = "<group>"; };
-		021F561C1B2F1E81007886D6 /* Story1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story1.h; sourceTree = "<group>"; };
-		021F561D1B2F1E81007886D6 /* Story1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story1.m; sourceTree = "<group>"; };
+		021F56191B2F1E4F007886D6 /* PhasesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhasesViewController.h; sourceTree = "<group>"; };
+		021F561A1B2F1E4F007886D6 /* PhasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhasesViewController.m; sourceTree = "<group>"; };
+		021F561C1B2F1E81007886D6 /* FirstStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstStoryViewController.h; sourceTree = "<group>"; };
+		021F561D1B2F1E81007886D6 /* FirstStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstStoryViewController.m; sourceTree = "<group>"; };
 		021F56221B2F1EFC007886D6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		021F56241B2F1F03007886D6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		021F56261B2F20FA007886D6 /* Story2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story2.h; sourceTree = "<group>"; };
-		021F56271B2F20FA007886D6 /* Story2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story2.m; sourceTree = "<group>"; };
-		021F56291B2F2104007886D6 /* Phase2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase2.h; sourceTree = "<group>"; };
-		021F562A1B2F2104007886D6 /* Phase2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase2.m; sourceTree = "<group>"; };
-		021F562C1B2F210E007886D6 /* Story3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story3.h; sourceTree = "<group>"; };
-		021F562D1B2F210E007886D6 /* Story3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story3.m; sourceTree = "<group>"; };
-		021F562F1B2F2119007886D6 /* Phase3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase3.h; sourceTree = "<group>"; };
-		021F56301B2F2119007886D6 /* Phase3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase3.m; sourceTree = "<group>"; };
+		021F56261B2F20FA007886D6 /* SecondStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondStoryViewController.h; sourceTree = "<group>"; };
+		021F56271B2F20FA007886D6 /* SecondStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondStoryViewController.m; sourceTree = "<group>"; };
+		021F56291B2F2104007886D6 /* SecondPhaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondPhaseViewController.h; sourceTree = "<group>"; };
+		021F562A1B2F2104007886D6 /* SecondPhaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondPhaseViewController.m; sourceTree = "<group>"; };
+		021F562C1B2F210E007886D6 /* ThirdStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdStoryViewController.h; sourceTree = "<group>"; };
+		021F562D1B2F210E007886D6 /* ThirdStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdStoryViewController.m; sourceTree = "<group>"; };
+		021F562F1B2F2119007886D6 /* ThirdPhaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPhaseViewController.h; sourceTree = "<group>"; };
+		021F56301B2F2119007886D6 /* ThirdPhaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPhaseViewController.m; sourceTree = "<group>"; };
 		021F56321B2F24B0007886D6 /* CustomizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizationViewController.h; sourceTree = "<group>"; };
 		021F56331B2F24B0007886D6 /* CustomizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizationViewController.m; sourceTree = "<group>"; };
 		02278E481B31D38700064B9A /* closeTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = closeTap.wav; sourceTree = "<group>"; };
@@ -120,12 +120,12 @@
 		0235564F1B3F20640085AC4F /* clickcut.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickcut.wav; sourceTree = "<group>"; };
 		023D17AF1B3731020004DE32 /* maodir.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = maodir.gif; sourceTree = "<group>"; };
 		023D17B01B3731020004DE32 /* maoesq.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = maoesq.gif; sourceTree = "<group>"; };
-		023D17B31B3731CB0004DE32 /* Puzzle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Puzzle4.h; sourceTree = "<group>"; };
-		023D17B41B3731CB0004DE32 /* Puzzle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Puzzle4.m; sourceTree = "<group>"; };
-		023D17B61B37B5E00004DE32 /* Votacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Votacao.h; sourceTree = "<group>"; };
-		023D17B71B37B5E00004DE32 /* Votacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Votacao.m; sourceTree = "<group>"; };
-		023D17B91B37BE0A0004DE32 /* Fim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fim.h; sourceTree = "<group>"; };
-		023D17BA1B37BE0A0004DE32 /* Fim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fim.m; sourceTree = "<group>"; };
+		023D17B31B3731CB0004DE32 /* FourthPuzzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthPuzzleViewController.h; sourceTree = "<group>"; };
+		023D17B41B3731CB0004DE32 /* FourthPuzzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthPuzzleViewController.m; sourceTree = "<group>"; };
+		023D17B61B37B5E00004DE32 /* FourthVotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthVotingViewController.h; sourceTree = "<group>"; };
+		023D17B71B37B5E00004DE32 /* FourthVotingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthVotingViewController.m; sourceTree = "<group>"; };
+		023D17B91B37BE0A0004DE32 /* FourthEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthEndViewController.h; sourceTree = "<group>"; };
+		023D17BA1B37BE0A0004DE32 /* FourthEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthEndViewController.m; sourceTree = "<group>"; };
 		024153661B3F5ADA00A02CE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		024153681B3F5ADF00A02CE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0241536B1B3F601300A02CE9 /* 1_pre-sala01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1_pre-sala01.mp3"; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 		02795C381B4084AF001E08B9 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin.wav; sourceTree = "<group>"; };
 		02795C3A1B40982D001E08B9 /* hospital.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hospital.mp3; sourceTree = "<group>"; };
 		02795C3C1B409C26001E08B9 /* 14_fim_jogo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 14_fim_jogo.mp3; sourceTree = "<group>"; };
-		027C73771B334F2A00599E32 /* Phase3Parte2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase3Parte2.h; sourceTree = "<group>"; };
-		027C73781B334F2A00599E32 /* Phase3Parte2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase3Parte2.m; sourceTree = "<group>"; };
+		027C73771B334F2A00599E32 /* ThirdPhasePlusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPhasePlusViewController.h; sourceTree = "<group>"; };
+		027C73781B334F2A00599E32 /* ThirdPhasePlusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPhasePlusViewController.m; sourceTree = "<group>"; };
 		02B3B5401B309E5C00143CC1 /* carefree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carefree.mp3; sourceTree = "<group>"; };
 		02B3B5411B309E5C00143CC1 /* hackbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hackbeat.mp3; sourceTree = "<group>"; };
 		02B3B54F1B30DB1B00143CC1 /* carefreewav.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = carefreewav.wav; sourceTree = "<group>"; };
@@ -177,14 +177,14 @@
 		02DC31271C8401E8001B317E /* ParentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentsViewController.m; sourceTree = "<group>"; };
 		02DC312A1C8401FB001B317E /* ExtrasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtrasViewController.h; sourceTree = "<group>"; };
 		02DC312B1C8401FB001B317E /* ExtrasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtrasViewController.m; sourceTree = "<group>"; };
-		02FCFC8A1B345AD000E762B8 /* Story4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story4.h; sourceTree = "<group>"; };
-		02FCFC8B1B345AD000E762B8 /* Story4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story4.m; sourceTree = "<group>"; };
+		02FCFC8A1B345AD000E762B8 /* FourthStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthStoryViewController.h; sourceTree = "<group>"; };
+		02FCFC8B1B345AD000E762B8 /* FourthStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthStoryViewController.m; sourceTree = "<group>"; };
 		150309321B33357C0056346D /* arvore_nascendo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = arvore_nascendo.wav; sourceTree = "<group>"; };
 		150309341B333A1F0056346D /* lixo.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lixo.WAV; sourceTree = "<group>"; };
 		15246F471B2F137A00EF006A /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
 		15246F481B2F137A00EF006A /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
-		1541A12F1B3C37A200D348B9 /* Phase4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase4.h; sourceTree = "<group>"; };
-		1541A1301B3C37A200D348B9 /* Phase4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase4.m; sourceTree = "<group>"; };
+		1541A12F1B3C37A200D348B9 /* FourthPhaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthPhaseViewController.h; sourceTree = "<group>"; };
+		1541A1301B3C37A200D348B9 /* FourthPhaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthPhaseViewController.m; sourceTree = "<group>"; };
 		15B467EE1B36CF120059427C /* PopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopUpViewController.h; path = PopVC/PopUpViewController.h; sourceTree = "<group>"; };
 		15B467EF1B36CF120059427C /* PopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopUpViewController.m; path = PopVC/PopUpViewController.m; sourceTree = "<group>"; };
 		15C431581B289E500098C994 /* Trashland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trashland.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,8 +200,8 @@
 		15C431711B289E500098C994 /* TrashlandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrashlandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C431761B289E500098C994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C431771B289E500098C994 /* TrashlandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrashlandTests.m; sourceTree = "<group>"; };
-		15C431811B28A79A0098C994 /* Phase1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phase1.h; sourceTree = "<group>"; };
-		15C431821B28A79A0098C994 /* Phase1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phase1.m; sourceTree = "<group>"; };
+		15C431811B28A79A0098C994 /* FirstPhaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPhaseViewController.h; sourceTree = "<group>"; };
+		15C431821B28A79A0098C994 /* FirstPhaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPhaseViewController.m; sourceTree = "<group>"; };
 		15C431841B28A9650098C994 /* DraggableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableImageView.h; sourceTree = "<group>"; };
 		15C431851B28A9650098C994 /* DraggableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableImageView.m; sourceTree = "<group>"; };
 		15C431911B2A0A980098C994 /* chuveiro_Trashcity-2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "chuveiro_Trashcity-2.gif"; sourceTree = "<group>"; };
@@ -232,39 +232,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		021F561F1B2F1E95007886D6 /* Phase1 */ = {
+		021F561F1B2F1E95007886D6 /* FirstPhaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				021F561C1B2F1E81007886D6 /* Story1.h */,
-				021F561D1B2F1E81007886D6 /* Story1.m */,
-				15C431811B28A79A0098C994 /* Phase1.h */,
-				15C431821B28A79A0098C994 /* Phase1.m */,
+				021F561C1B2F1E81007886D6 /* FirstStoryViewController.h */,
+				021F561D1B2F1E81007886D6 /* FirstStoryViewController.m */,
+				15C431811B28A79A0098C994 /* FirstPhaseViewController.h */,
+				15C431821B28A79A0098C994 /* FirstPhaseViewController.m */,
 			);
-			name = Phase1;
+			name = FirstPhaseViewController;
 			sourceTree = "<group>";
 		};
-		021F56201B2F1E9C007886D6 /* Phase2 */ = {
+		021F56201B2F1E9C007886D6 /* SecondPhaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				021F56261B2F20FA007886D6 /* Story2.h */,
-				021F56271B2F20FA007886D6 /* Story2.m */,
-				021F56291B2F2104007886D6 /* Phase2.h */,
-				021F562A1B2F2104007886D6 /* Phase2.m */,
+				021F56261B2F20FA007886D6 /* SecondStoryViewController.h */,
+				021F56271B2F20FA007886D6 /* SecondStoryViewController.m */,
+				021F56291B2F2104007886D6 /* SecondPhaseViewController.h */,
+				021F562A1B2F2104007886D6 /* SecondPhaseViewController.m */,
 			);
-			name = Phase2;
+			name = SecondPhaseViewController;
 			sourceTree = "<group>";
 		};
-		021F56211B2F1EBF007886D6 /* Phase3 */ = {
+		021F56211B2F1EBF007886D6 /* ThirdPhaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				021F562C1B2F210E007886D6 /* Story3.h */,
-				021F562D1B2F210E007886D6 /* Story3.m */,
-				021F562F1B2F2119007886D6 /* Phase3.h */,
-				021F56301B2F2119007886D6 /* Phase3.m */,
-				027C73771B334F2A00599E32 /* Phase3Parte2.h */,
-				027C73781B334F2A00599E32 /* Phase3Parte2.m */,
+				021F562C1B2F210E007886D6 /* ThirdStoryViewController.h */,
+				021F562D1B2F210E007886D6 /* ThirdStoryViewController.m */,
+				021F562F1B2F2119007886D6 /* ThirdPhaseViewController.h */,
+				021F56301B2F2119007886D6 /* ThirdPhaseViewController.m */,
+				027C73771B334F2A00599E32 /* ThirdPhasePlusViewController.h */,
+				027C73781B334F2A00599E32 /* ThirdPhasePlusViewController.m */,
 			);
-			name = Phase3;
+			name = ThirdPhaseViewController;
 			sourceTree = "<group>";
 		};
 		0241536A1B3F5FE000A02CE9 /* Stories */ = {
@@ -356,15 +356,15 @@
 				02B3B5441B30B6DA00143CC1 /* HomeViewController */,
 				02DC31251C83FC12001B317E /* InfoViewController */,
 				02DC31291C8401EC001B317E /* ParentsViewController */,
-				02B3B5461B30B6F900143CC1 /* CustomizationViewController */,
-				02B3B5451B30B6E300143CC1 /* PhaseChoose */,
-				021F561F1B2F1E95007886D6 /* Phase1 */,
-				15C431901B29FA850098C994 /* Draggable */,
-				15B467ED1B36CCE90059427C /* Popup */,
-				021F56201B2F1E9C007886D6 /* Phase2 */,
-				021F56211B2F1EBF007886D6 /* Phase3 */,
-				02B3B54E1B30D38500143CC1 /* Phase4 */,
 				02DC312D1C8401FD001B317E /* ExtrasViewController */,
+				02B3B5461B30B6F900143CC1 /* CustomizationViewController */,
+				02B3B5451B30B6E300143CC1 /* PhasesViewController */,
+				021F561F1B2F1E95007886D6 /* FirstPhaseViewController */,
+				021F56201B2F1E9C007886D6 /* SecondPhaseViewController */,
+				021F56211B2F1EBF007886D6 /* ThirdPhaseViewController */,
+				02B3B54E1B30D38500143CC1 /* FourthPhaseViewController */,
+				15C431901B29FA850098C994 /* DraggableImageView */,
+				15B467ED1B36CCE90059427C /* PopupViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -388,13 +388,13 @@
 			name = HomeViewController;
 			sourceTree = "<group>";
 		};
-		02B3B5451B30B6E300143CC1 /* PhaseChoose */ = {
+		02B3B5451B30B6E300143CC1 /* PhasesViewController */ = {
 			isa = PBXGroup;
 			children = (
-				021F56191B2F1E4F007886D6 /* PhasesChoose.h */,
-				021F561A1B2F1E4F007886D6 /* PhasesChoose.m */,
+				021F56191B2F1E4F007886D6 /* PhasesViewController.h */,
+				021F561A1B2F1E4F007886D6 /* PhasesViewController.m */,
 			);
-			name = PhaseChoose;
+			name = PhasesViewController;
 			sourceTree = "<group>";
 		};
 		02B3B5461B30B6F900143CC1 /* CustomizationViewController */ = {
@@ -406,21 +406,21 @@
 			name = CustomizationViewController;
 			sourceTree = "<group>";
 		};
-		02B3B54E1B30D38500143CC1 /* Phase4 */ = {
+		02B3B54E1B30D38500143CC1 /* FourthPhaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				02FCFC8A1B345AD000E762B8 /* Story4.h */,
-				02FCFC8B1B345AD000E762B8 /* Story4.m */,
-				023D17B31B3731CB0004DE32 /* Puzzle4.h */,
-				023D17B41B3731CB0004DE32 /* Puzzle4.m */,
-				023D17B61B37B5E00004DE32 /* Votacao.h */,
-				023D17B71B37B5E00004DE32 /* Votacao.m */,
-				023D17B91B37BE0A0004DE32 /* Fim.h */,
-				023D17BA1B37BE0A0004DE32 /* Fim.m */,
-				1541A12F1B3C37A200D348B9 /* Phase4.h */,
-				1541A1301B3C37A200D348B9 /* Phase4.m */,
+				02FCFC8A1B345AD000E762B8 /* FourthStoryViewController.h */,
+				02FCFC8B1B345AD000E762B8 /* FourthStoryViewController.m */,
+				023D17B31B3731CB0004DE32 /* FourthPuzzleViewController.h */,
+				023D17B41B3731CB0004DE32 /* FourthPuzzleViewController.m */,
+				023D17B61B37B5E00004DE32 /* FourthVotingViewController.h */,
+				023D17B71B37B5E00004DE32 /* FourthVotingViewController.m */,
+				023D17B91B37BE0A0004DE32 /* FourthEndViewController.h */,
+				023D17BA1B37BE0A0004DE32 /* FourthEndViewController.m */,
+				1541A12F1B3C37A200D348B9 /* FourthPhaseViewController.h */,
+				1541A1301B3C37A200D348B9 /* FourthPhaseViewController.m */,
 			);
-			name = Phase4;
+			name = FourthPhaseViewController;
 			sourceTree = "<group>";
 		};
 		02BC4D5F1C83F90C00A37D03 /* Models */ = {
@@ -460,6 +460,7 @@
 		02BC4D631C83F9F100A37D03 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				15E4509E1B3DC8FD00B715C8 /* Images */,
 				0264DE6E1B2F15E1007A18A7 /* Fonts */,
 				0264DE611B2F14FE007A18A7 /* Audio */,
 			);
@@ -493,13 +494,13 @@
 			name = ExtrasViewController;
 			sourceTree = "<group>";
 		};
-		15B467ED1B36CCE90059427C /* Popup */ = {
+		15B467ED1B36CCE90059427C /* PopupViewController */ = {
 			isa = PBXGroup;
 			children = (
 				15B467EE1B36CF120059427C /* PopUpViewController.h */,
 				15B467EF1B36CF120059427C /* PopUpViewController.m */,
 			);
-			name = Popup;
+			name = PopupViewController;
 			sourceTree = "<group>";
 		};
 		15C4314F1B289E500098C994 = {
@@ -529,7 +530,6 @@
 			children = (
 				02BC4D5F1C83F90C00A37D03 /* Models */,
 				0264DE631B2F1511007A18A7 /* ViewControllers */,
-				15E4509E1B3DC8FD00B715C8 /* Images */,
 				15C4316A1B289E500098C994 /* LaunchScreen.xib */,
 				15C431651B289E500098C994 /* Main.storyboard */,
 				15C431681B289E500098C994 /* Images.xcassets */,
@@ -564,7 +564,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		15C431901B29FA850098C994 /* Draggable */ = {
+		15C431901B29FA850098C994 /* DraggableImageView */ = {
 			isa = PBXGroup;
 			children = (
 				15246F471B2F137A00EF006A /* DraggableView.h */,
@@ -572,7 +572,7 @@
 				15C431841B28A9650098C994 /* DraggableImageView.h */,
 				15C431851B28A9650098C994 /* DraggableImageView.m */,
 			);
-			name = Draggable;
+			name = DraggableImageView;
 			sourceTree = "<group>";
 		};
 		15E4509E1B3DC8FD00B715C8 /* Images */ = {
@@ -732,33 +732,33 @@
 			files = (
 				025AA0661C84D3190054CEAE /* SystemSoundIDAudio.m in Sources */,
 				025AA05E1C84CD770054CEAE /* BackgroundSong.m in Sources */,
-				021F561B1B2F1E4F007886D6 /* PhasesChoose.m in Sources */,
+				021F561B1B2F1E4F007886D6 /* PhasesViewController.m in Sources */,
 				02DC31241C83FC0E001B317E /* InfoViewController.m in Sources */,
-				021F56311B2F2119007886D6 /* Phase3.m in Sources */,
+				021F56311B2F2119007886D6 /* ThirdPhaseViewController.m in Sources */,
 				15B467F01B36CF120059427C /* PopUpViewController.m in Sources */,
 				15246F491B2F137A00EF006A /* DraggableView.m in Sources */,
-				021F562B1B2F2104007886D6 /* Phase2.m in Sources */,
+				021F562B1B2F2104007886D6 /* SecondPhaseViewController.m in Sources */,
 				02DC31281C8401E8001B317E /* ParentsViewController.m in Sources */,
 				15C431641B289E500098C994 /* HomeViewController.m in Sources */,
-				023D17B81B37B5E00004DE32 /* Votacao.m in Sources */,
+				023D17B81B37B5E00004DE32 /* FourthVotingViewController.m in Sources */,
 				0264DE841B2F16CE007A18A7 /* UIView+Blink2.m in Sources */,
-				027C73791B334F2A00599E32 /* Phase3Parte2.m in Sources */,
-				023D17BB1B37BE0A0004DE32 /* Fim.m in Sources */,
+				027C73791B334F2A00599E32 /* ThirdPhasePlusViewController.m in Sources */,
+				023D17BB1B37BE0A0004DE32 /* FourthEndViewController.m in Sources */,
 				025AA0621C84D13A0054CEAE /* MiscellaneousAudio.m in Sources */,
-				021F562E1B2F210E007886D6 /* Story3.m in Sources */,
+				021F562E1B2F210E007886D6 /* ThirdStoryViewController.m in Sources */,
 				02DC312C1C8401FB001B317E /* ExtrasViewController.m in Sources */,
-				1541A1311B3C37A200D348B9 /* Phase4.m in Sources */,
-				15C431831B28A79A0098C994 /* Phase1.m in Sources */,
+				1541A1311B3C37A200D348B9 /* FourthPhaseViewController.m in Sources */,
+				15C431831B28A79A0098C994 /* FirstPhaseViewController.m in Sources */,
 				025AA05A1C846DBC0054CEAE /* Player.m in Sources */,
-				023D17B51B3731CB0004DE32 /* Puzzle4.m in Sources */,
-				021F56281B2F20FA007886D6 /* Story2.m in Sources */,
+				023D17B51B3731CB0004DE32 /* FourthPuzzleViewController.m in Sources */,
+				021F56281B2F20FA007886D6 /* SecondStoryViewController.m in Sources */,
 				0264DE831B2F16CE007A18A7 /* UIView+Animation2.m in Sources */,
-				02FCFC8C1B345AD000E762B8 /* Story4.m in Sources */,
+				02FCFC8C1B345AD000E762B8 /* FourthStoryViewController.m in Sources */,
 				021F56341B2F24B0007886D6 /* CustomizationViewController.m in Sources */,
 				15C431611B289E500098C994 /* AppDelegate.m in Sources */,
 				15C4315E1B289E500098C994 /* main.m in Sources */,
 				15C431861B28A9650098C994 /* DraggableImageView.m in Sources */,
-				021F561E1B2F1E81007886D6 /* Story1.m in Sources */,
+				021F561E1B2F1E81007886D6 /* FirstStoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

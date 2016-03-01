@@ -7,6 +7,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView;
 
 - (void)showInView:(UIView *)aView animated:(BOOL)animated;
+
 - (void)setImageNamed:(NSString *)imageName;
 
 @end

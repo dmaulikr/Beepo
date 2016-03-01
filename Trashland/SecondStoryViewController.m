@@ -1,7 +1,7 @@
-#import "Story2.h"
-#import "Phase2.h"
+#import "SecondStoryViewController.h"
+#import "SecondPhaseViewController.h"
 
-@interface Story2(){
+@interface SecondStoryViewController(){
     NSString *path3;
 }
 
@@ -13,7 +13,7 @@
 
 @end
 
-@implementation Story2
+@implementation SecondStoryViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -30,7 +30,7 @@
 }
 
 -(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
-    Phase2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase2VC"];
+    SecondPhaseViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase2VC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
  //   game.player = self.player;
     [self presentViewController:game animated:YES completion:nil];

@@ -1,9 +1,13 @@
 #import <UIKit/UIKit.h>
 
+@protocol DraggableImageViewDelegate <NSObject>
+
+- (void) applyPhisicsConcepts;
+
+@end
+
 @interface DraggableImageView : UIImageView <UIDynamicItem>
 
-@property   (weak,nonatomic) UIViewController* delegate;
-@property (nonatomic) BOOL podeX;
-@property (nonatomic) BOOL podeY;
--(void) morre;
+@property (nonatomic, assign) id <DraggableImageViewDelegate> delegate;
+
 @end

@@ -1,9 +1,9 @@
-#import "Phase4.h"
-#import "Votacao.h"
-#import "Puzzle4.h"
-#import "Fim.h"
+#import "FourthPhaseViewController.h"
+#import "FourthVotingViewController.h"
+#import "FourthPuzzleViewController.h"
+#import "FourthEndViewController.h"
 
-@interface Phase4 (){
+@interface FourthPhaseViewController (){
     NSString* path11;
 }
 
@@ -15,7 +15,7 @@
 
 @end
 
-@implementation Phase4
+@implementation FourthPhaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,7 +35,7 @@
     });
     
    // if (self.player.medalha1fase4 && self.player.medalha2fase4) {
-        Fim *game = [self.storyboard instantiateViewControllerWithIdentifier:@"FimVC"];
+        FourthEndViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"FimVC"];
         [game setModalPresentationStyle:UIModalPresentationFullScreen];
      //   game.player = self.player;
         [self presentViewController:game animated:NO completion:nil];
@@ -45,14 +45,14 @@
 
 
 - (IBAction)didClickUrna:(id)sender {
-    Votacao *game = [self.storyboard instantiateViewControllerWithIdentifier:@"VotacaoVC"];
+    FourthVotingViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"VotacaoVC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
   //  game.player = self.player;
     [self presentViewController:game animated:NO completion:nil];
 }
 
 - (IBAction)didClickBox:(id)sender {
-    Puzzle4 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Puzzle4VC"];
+    FourthPuzzleViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Puzzle4VC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
   //  game.player = self.player;
     [self presentViewController:game animated:NO completion:nil];

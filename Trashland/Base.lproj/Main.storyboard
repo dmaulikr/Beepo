@@ -32,14 +32,13 @@
             <string>VenturaEdding-Medium</string>
             <string>VenturaEdding-Medium</string>
             <string>VenturaEdding-Medium</string>
-            <string>VenturaEdding-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Phases Choose-->
+        <!--Phases View Controller-->
         <scene sceneID="bWp-Bc-xXA">
             <objects>
-                <viewController id="lvN-mZ-9Y3" customClass="PhasesChoose" sceneMemberID="viewController">
+                <viewController id="lvN-mZ-9Y3" customClass="PhasesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fSW-f4-uva"/>
                         <viewControllerLayoutGuide type="bottom" id="pik-Od-mlE"/>
@@ -90,7 +89,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="voltar:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="D32-ON-47v"/>
+                                    <action selector="didTappedBackButton:" destination="lvN-mZ-9Y3" eventType="touchUpInside" id="hgj-73-U7n"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge-luz" translatesAutoresizingMaskIntoConstraints="NO" id="2uR-Lg-bIf">
@@ -150,12 +149,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
-                        <outlet property="backButton" destination="Oau-oD-LtJ" id="tmd-eM-TJC"/>
                         <outlet property="fase1" destination="I9u-R9-CC8" id="baY-El-tgX"/>
                         <outlet property="fase2" destination="P1w-ah-I3A" id="Lc1-OO-xy0"/>
                         <outlet property="fase3" destination="CqU-HV-xsr" id="plS-g6-nWL"/>
                         <outlet property="fase4" destination="57M-VS-qQj" id="frr-m7-dsv"/>
-                        <outlet property="fundo" destination="lXO-bW-B4Q" id="25i-Es-gkk"/>
                         <outlet property="medalha1fase1" destination="2uR-Lg-bIf" id="SgN-fC-zDW"/>
                         <outlet property="medalha1fase2" destination="E2p-qm-9Iy" id="Yno-vD-d8D"/>
                         <outlet property="medalha1fase3" destination="mcv-iS-SrP" id="cLx-Yj-IAy"/>
@@ -264,10 +261,10 @@
             </objects>
             <point key="canvasLocation" x="-2055" y="4424"/>
         </scene>
-        <!--Story3-->
+        <!--Third Story View Controller-->
         <scene sceneID="YU4-Pq-E5U">
             <objects>
-                <viewController id="QL4-qb-Rpi" customClass="Story3" sceneMemberID="viewController">
+                <viewController id="QL4-qb-Rpi" customClass="ThirdStoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U7Z-Eo-ylV"/>
                         <viewControllerLayoutGuide type="bottom" id="eLT-K4-oBg"/>
@@ -345,7 +342,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="change:" destination="HMU-LK-3EX" eventType="touchUpInside" id="W5B-3G-z8K"/>
+                                    <action selector="didTappedChangeArrow:" destination="HMU-LK-3EX" eventType="touchUpInside" id="Pq6-p0-LEX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WU-CK-nU0" userLabel="menos">
@@ -354,7 +351,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="change:" destination="HMU-LK-3EX" eventType="touchUpInside" id="4NV-Xo-GHy"/>
+                                    <action selector="didTappedChangeArrow:" destination="HMU-LK-3EX" eventType="touchUpInside" id="gbN-nc-WS3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kb-Zh-YKr" userLabel="customizacao">
@@ -368,7 +365,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="choosedFirst:" destination="HMU-LK-3EX" eventType="touchUpInside" id="MMX-Pq-ttP"/>
+                                    <action selector="didTappedFirstOption:" destination="HMU-LK-3EX" eventType="touchUpInside" id="oxm-xm-bK6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uc5-U2-lZW" userLabel="customizacao">
@@ -377,7 +374,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="choosedSecond:" destination="HMU-LK-3EX" eventType="touchUpInside" id="bYb-uN-2i5"/>
+                                    <action selector="didTappedSecondOption:" destination="HMU-LK-3EX" eventType="touchUpInside" id="QNI-d3-n8c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg8-pJ-06W" userLabel="customizacao">
@@ -386,7 +383,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="choosedThird:" destination="HMU-LK-3EX" eventType="touchUpInside" id="aZ4-H4-jhV"/>
+                                    <action selector="didTappedThirdOption:" destination="HMU-LK-3EX" eventType="touchUpInside" id="UV8-jg-1qW"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLs-7o-UBu">
@@ -407,7 +404,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="voltar:" destination="HMU-LK-3EX" eventType="touchUpInside" id="Lur-YY-R4B"/>
+                                    <action selector="didTappedBackButton:" destination="HMU-LK-3EX" eventType="touchUpInside" id="rKy-4l-Yee"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nek-fb-khK" userLabel="iniciar">
@@ -448,10 +445,10 @@
             </objects>
             <point key="canvasLocation" x="-1252" y="5358"/>
         </scene>
-        <!--Phase2-->
+        <!--Second Phase View Controller-->
         <scene sceneID="a9j-6D-qAZ">
             <objects>
-                <viewController id="2hj-BG-SHn" customClass="Phase2" sceneMemberID="viewController">
+                <viewController id="2hj-BG-SHn" customClass="SecondPhaseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BX1-PP-4eU"/>
                         <viewControllerLayoutGuide type="bottom" id="g1T-da-ybb"/>
@@ -738,10 +735,10 @@
             </objects>
             <point key="canvasLocation" x="-2405" y="9347"/>
         </scene>
-        <!--Story2-->
+        <!--Second Story View Controller-->
         <scene sceneID="Fjp-ID-4Ky">
             <objects>
-                <viewController id="H6L-7N-37k" customClass="Story2" sceneMemberID="viewController">
+                <viewController id="H6L-7N-37k" customClass="SecondStoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LbC-mI-WkZ"/>
                         <viewControllerLayoutGuide type="bottom" id="u1N-Ks-lJt"/>
@@ -803,10 +800,10 @@
             </objects>
             <point key="canvasLocation" x="-1800" y="7410"/>
         </scene>
-        <!--Phase3-->
+        <!--Third Phase View Controller-->
         <scene sceneID="gUy-tt-cug">
             <objects>
-                <viewController id="R9V-nN-E2m" customClass="Phase3" sceneMemberID="viewController">
+                <viewController id="R9V-nN-E2m" customClass="ThirdPhaseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Dh-ca-jvw"/>
                         <viewControllerLayoutGuide type="bottom" id="gT1-I3-ADW"/>
@@ -910,10 +907,10 @@
             </objects>
             <point key="canvasLocation" x="-752" y="8300"/>
         </scene>
-        <!--Puzzle4-->
+        <!--Fourth Puzzle View Controller-->
         <scene sceneID="acQ-N4-PmO">
             <objects>
-                <viewController storyboardIdentifier="Puzzle4VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fW6-E7-8pZ" customClass="Puzzle4" sceneMemberID="viewController">
+                <viewController id="fW6-E7-8pZ" customClass="FourthPuzzleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8pz-cy-awx"/>
                         <viewControllerLayoutGuide type="bottom" id="pUQ-Ho-ffx"/>
@@ -989,10 +986,10 @@
             </objects>
             <point key="canvasLocation" x="-353" y="9347"/>
         </scene>
-        <!--Votacao-->
+        <!--Fourth Voting View Controller-->
         <scene sceneID="jUS-eM-peW">
             <objects>
-                <viewController storyboardIdentifier="VotacaoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tEz-Tn-Gzt" customClass="Votacao" sceneMemberID="viewController">
+                <viewController id="tEz-Tn-Gzt" customClass="FourthVotingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZCa-xM-Z93"/>
                         <viewControllerLayoutGuide type="bottom" id="gZh-ft-I36"/>
@@ -1115,10 +1112,10 @@
             </objects>
             <point key="canvasLocation" x="-1353" y="10269"/>
         </scene>
-        <!--Fim-->
+        <!--Fourth End View Controller-->
         <scene sceneID="E9D-0D-xel">
             <objects>
-                <viewController storyboardIdentifier="FimVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N1a-mV-8XE" customClass="Fim" sceneMemberID="viewController">
+                <viewController id="N1a-mV-8XE" customClass="FourthEndViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="606-hz-yla"/>
                         <viewControllerLayoutGuide type="bottom" id="Eik-mh-MBh"/>
@@ -1179,10 +1176,10 @@
             </objects>
             <point key="canvasLocation" x="-1353" y="11067"/>
         </scene>
-        <!--Story4-->
+        <!--Fourth Story View Controller-->
         <scene sceneID="dth-A6-Ga2">
             <objects>
-                <viewController id="rBt-75-mUn" customClass="Story4" sceneMemberID="viewController">
+                <viewController id="rBt-75-mUn" customClass="FourthStoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8a3-dy-n9u"/>
                         <viewControllerLayoutGuide type="bottom" id="8Ap-Xa-5lx"/>
@@ -1229,10 +1226,10 @@
             </objects>
             <point key="canvasLocation" x="299" y="7405"/>
         </scene>
-        <!--Phase4-->
+        <!--Fourth Phase View Controller-->
         <scene sceneID="l02-Z6-c7k">
             <objects>
-                <viewController id="9wn-h0-xJT" customClass="Phase4" sceneMemberID="viewController">
+                <viewController id="9wn-h0-xJT" customClass="FourthPhaseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U7G-BD-TPA"/>
                         <viewControllerLayoutGuide type="bottom" id="w6C-Gm-NbN"/>
@@ -1302,10 +1299,10 @@
             </objects>
             <point key="canvasLocation" x="299" y="8300"/>
         </scene>
-        <!--Phase3 Parte2-->
+        <!--Third Phase Plus View Controller-->
         <scene sceneID="Qm8-cj-Rlh">
             <objects>
-                <viewController storyboardIdentifier="Phase3Parte2VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Ca-f3-yki" customClass="Phase3Parte2" sceneMemberID="viewController">
+                <viewController id="7Ca-f3-yki" customClass="ThirdPhasePlusViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LNQ-gn-1zE"/>
                         <viewControllerLayoutGuide type="bottom" id="Y92-k8-pGs"/>
@@ -1481,37 +1478,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BRUNO MUNIZ - PROGRAMADOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRv-Zs-zwG">
-                                <rect key="frame" x="329" y="182" width="336" height="38"/>
+                                <rect key="frame" x="329" y="184" width="336" height="38"/>
                                 <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="26"/>
                                 <color key="textColor" red="0.4039215686" green="0.36470588240000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thiago Jordani - Programador" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-Mq-ObS">
-                                <rect key="frame" x="327" y="248" width="360" height="36"/>
-                                <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="26"/>
-                                <color key="textColor" red="0.4039215686" green="0.36470588240000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pedro campos - programador" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvp-YY-Eg3">
-                                <rect key="frame" x="329" y="219" width="350" height="30"/>
+                                <rect key="frame" x="327" y="220" width="360" height="36"/>
                                 <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="26"/>
                                 <color key="textColor" red="0.4039215686" green="0.36470588240000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LETICIA REGERT - DESIGNER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehm-Uo-6dy">
-                                <rect key="frame" x="329" y="296" width="282" height="32"/>
+                                <rect key="frame" x="329" y="278" width="282" height="32"/>
                                 <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="26"/>
                                 <color key="textColor" red="0.4039215686" green="0.36470588240000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vIVIANE BARROS - DESIGNER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cJ-NM-2AX">
-                                <rect key="frame" x="329" y="359" width="282" height="32"/>
+                                <rect key="frame" x="329" y="348" width="282" height="32"/>
                                 <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="26"/>
                                 <color key="textColor" red="0.4039215686" green="0.36470588240000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RENATA MOTTA - DESIGNER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPF-Ag-Iay">
-                                <rect key="frame" x="329" y="329" width="264" height="30"/>
+                                <rect key="frame" x="329" y="314" width="264" height="30"/>
                                 <fontDescription key="fontDescription" name="VenturaEdding-Medium" family="Ventura Edding" pointSize="26"/>
                                 <color key="textColor" red="0.4039215686" green="0.36470588240000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1618,10 +1609,10 @@
             </objects>
             <point key="canvasLocation" x="-3377" y="6323"/>
         </scene>
-        <!--Story1-->
+        <!--First Story View Controller-->
         <scene sceneID="8CA-TY-44F">
             <objects>
-                <viewController id="4p4-wJ-H5U" customClass="Story1" sceneMemberID="viewController">
+                <viewController id="4p4-wJ-H5U" customClass="FirstStoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YW2-gQ-a2Z"/>
                         <viewControllerLayoutGuide type="bottom" id="1rc-B9-KxC"/>
@@ -1676,10 +1667,10 @@
             </objects>
             <point key="canvasLocation" x="-3810" y="7466"/>
         </scene>
-        <!--Phase1-->
+        <!--First Phase View Controller-->
         <scene sceneID="3O1-ND-yRu">
             <objects>
-                <viewController id="EN8-Ni-7aZ" customClass="Phase1" sceneMemberID="viewController">
+                <viewController id="EN8-Ni-7aZ" customClass="FirstPhaseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fux-Gk-jrR"/>
                         <viewControllerLayoutGuide type="bottom" id="Ngi-XF-FXP"/>
@@ -1703,7 +1694,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="E0048CFB-6ECE-4E62-B0CC-0DFCAE80373E" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1D0FD3A5-0F88-49B6-87CD-A4CF12B92B27" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OrZ-cS-ZQz">
@@ -1838,7 +1829,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="voltar:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="69r-GM-Pbr"/>
+                                    <action selector="didTappedBackButton:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="cqR-n6-jEe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYm-DP-27o" userLabel="narrar">
@@ -1860,7 +1851,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="proxima:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="eOI-B1-QsZ"/>
+                                    <action selector="didTappedToContinue:" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="5II-8h-UYi"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge-luz" translatesAutoresizingMaskIntoConstraints="NO" id="DNE-un-zea">
@@ -1918,7 +1909,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="E0048CFB-6ECE-4E62-B0CC-0DFCAE80373E" width="194" height="90">
+        <image name="1D0FD3A5-0F88-49B6-87CD-A4CF12B92B27" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

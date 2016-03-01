@@ -2,10 +2,6 @@
 
 @implementation DraggableImageView
 
--(void)morre{
-    _delegate = nil;
-}
-
 - (void)touchesMoved:(NSSet *)set withEvent:(UIEvent *)event {
     CGPoint p = [[set anyObject] locationInView:self.superview];
     self.center = p;
@@ -21,8 +17,8 @@
     if ([self.superview.superview isKindOfClass:[UIScrollView class]]) {
         ((UIScrollView *)self.superview.superview).scrollEnabled = true;
     }
-    if ([self.delegate respondsToSelector:@selector(dealWithMovement)]) {
-        [self.delegate performSelector:@selector(dealWithMovement)];
+    if ([_delegate respondsToSelector:@selector(applyPhisicsConcepts)]) {
+        [_delegate applyPhisicsConcepts];
     }
 }
 @end

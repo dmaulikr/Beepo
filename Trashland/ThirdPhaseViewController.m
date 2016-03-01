@@ -1,10 +1,10 @@
-#import "Phase3.h"
-#import "Phase3Parte2.h"
+#import "ThirdPhaseViewController.h"
+#import "ThirdPhasePlusViewController.h"
 #import "PopUpViewController.h"
 #import "DraggableView.h"
 
 
-@interface Phase3()  <UICollisionBehaviorDelegate>{
+@interface ThirdPhaseViewController()  <UICollisionBehaviorDelegate>{
     
     NSTimer *phase3Timer;
     NSString* path6;
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation Phase3
+@implementation ThirdPhaseViewController
 UIDynamicAnimator* _animator2;
 UICollisionBehavior* _collision2;
 -(void)dealloc{
@@ -65,7 +65,7 @@ UICollisionBehavior* _collision2;
     self.viewVelha.userInteractionEnabled = YES;
     self.viewVelha.delegate = self;
     self.viewVelha.charImgView = self.imageVelha;
-    _viewVelha.podeY = YES;
+    _viewVelha.allowVerticalAxisMovement = YES;
     [self moveBeepo:self.viewBeepo];
     [self moveCar1:self.carro1];
     [self moveCar2:self.carro2];
@@ -171,7 +171,7 @@ UICollisionBehavior* _collision2;
 
 - (void)startSecondPart{
     
-    Phase3Parte2 *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3Parte2VC"];
+    ThirdPhasePlusViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3Parte2VC"];
     [game setModalPresentationStyle:UIModalPresentationFullScreen];
 //    self.player.medalha1fase3 = true;
  //   self.player.fase4 = true;

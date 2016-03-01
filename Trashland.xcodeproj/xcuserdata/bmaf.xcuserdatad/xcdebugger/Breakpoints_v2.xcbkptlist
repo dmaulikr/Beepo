@@ -89,13 +89,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Trashland/InfoViewController.m"
-            timestampString = "478414324.333531"
+            filePath = "Trashland/FirstPhaseViewController.m"
+            timestampString = "478492104.772509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-prepareForSegue:sender:"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "-montarTela"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

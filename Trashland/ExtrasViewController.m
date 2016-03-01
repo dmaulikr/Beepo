@@ -11,7 +11,9 @@
 }
 
 - (IBAction)didTappedBackButton:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([_delegate respondsToSelector:@selector(askedToDismissExtra)]) {
+        [_delegate askedToDismissExtra];
+    }
 }
 
 @end

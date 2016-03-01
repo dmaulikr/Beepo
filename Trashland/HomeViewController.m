@@ -1,11 +1,16 @@
 #import "HomeViewController.h"
 #import "UIView+Animation2.h"
 #import "BackgroundSong.h"
+#import "InfoViewController.h"
+#import "CustomizationViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController () <InfoViewControllerDelegate, CustomizationViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIImageView* predios;
 @property (nonatomic, weak) IBOutlet UIButton* play;
+
+@property (nonatomic, weak) InfoViewController *infoViewController;
+@property (nonatomic, weak) CustomizationViewController *customizationViewController;
 
 @end
 
@@ -14,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    BackgroundSong *backgroundSong = [BackgroundSong sharedManager];
-    [backgroundSong playSongFromPath:[NSString stringWithFormat:@"%@/carefree.mp3", [[NSBundle mainBundle] resourcePath]]];
+    //BackgroundSong *backgroundSong = [BackgroundSong sharedManager];
+    //[backgroundSong playSongFromPath:[NSString stringWithFormat:@"%@/carefree.mp3", [[NSBundle mainBundle] resourcePath]]];
     
     [NSTimer scheduledTimerWithTimeInterval:1.8f target:self selector:@selector(balancarLogo) userInfo:nil repeats:YES];
     [self.play tada:NULL];
@@ -37,6 +42,24 @@
 
 -(void)balancarLogo{
     [self.play pulse:NULL];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"infoSegue"]) {
+        _infoViewController = segue.destinationViewController;
+        _infoViewController.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"playSegue"]){
+        _customizationViewController =  segue.destinationViewController;
+        _customizationViewController.delegate = self;
+    }
+}
+
+- (void) askedToDismissInfo{
+    [_infoViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) askedToDismissCustomization{
+    [_customizationViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

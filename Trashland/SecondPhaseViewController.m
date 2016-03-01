@@ -1,11 +1,11 @@
-#import "Phase2.h"
-#import "PhasesChoose.h"
+#import "SecondPhaseViewController.h"
+#import "PhasesViewController.h"
 #import "PopUpViewController.h"
 #import "DraggableImageView.h"
 #import "DraggableView.h"
 
 
-@interface Phase2()<UICollisionBehaviorDelegate, UIScrollViewDelegate>{
+@interface SecondPhaseViewController()<UICollisionBehaviorDelegate, UIScrollViewDelegate>{
     UIDynamicAnimator* _animator;
     UIGravityBehavior* _gravity;
     UICollisionBehavior* _collision;
@@ -58,7 +58,7 @@
 
 @end
 
-@implementation Phase2
+@implementation SecondPhaseViewController
 float deslocIni;
 
 -(void)viewDidLoad{
@@ -93,7 +93,7 @@ float deslocIni;
     
     _lookingBack = NO;
     _fantasminhaView.charImgView  = _charImageView;
-    _fantasminhaView.podeX=YES;
+    _fantasminhaView.allowHorizontalAxisMovement=YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -233,12 +233,12 @@ float deslocIni;
 }
 #pragma mark - Gavidade e Colisões
 - (void)prepareForMovement{
-    self.garrafaPet1.delegate = self;
-    self.garrafaPet2.delegate = self;
-    self.garrafaVidro.delegate = self;
-    self.lata.delegate = self;
-    self.papel.delegate = self;
-    self.cascaBanana.delegate = self;
+//    self.garrafaPet1.delegate = self;
+//    self.garrafaPet2.delegate = self;
+//    self.garrafaVidro.delegate = self;
+//    self.lata.delegate = self;
+//    self.papel.delegate = self;
+//    self.cascaBanana.delegate = self;
 }
 
 - (void)dealWithMovement{

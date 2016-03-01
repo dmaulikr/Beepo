@@ -1,17 +1,15 @@
 #import "InfoViewController.h"
 #import "ParentsViewController.h"
+#import "ExtrasViewController.h"
 
-@interface InfoViewController () <ParentsViewControllerDelegate>
+@interface InfoViewController () <ParentsViewControllerDelegate, ExtrasViewControllerDelegate>
 
-@property (nonatomic, weak) ParentsViewController *vc;
+@property (nonatomic, weak) ParentsViewController *parentsViewController;
+@property (nonatomic, weak) ExtrasViewController *extraViewController;
 
 @end
 
 @implementation InfoViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
 
 - (IBAction)didTappedBackButton:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -27,13 +25,26 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"parentsSegue"]) {
-        self.vc = segue.destinationViewController;
-        self.vc.delegate = self;
+        _parentsViewController = segue.destinationViewController;
+        _parentsViewController.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"extrasSegue"]){
+        _extraViewController = segue.destinationViewController;
+        _extraViewController.delegate = self;
     }
 }
 
-- (void) askedToDismiss{
-    [self.vc dismissViewControllerAnimated:YES completion:nil];
+- (void) askedToDismissExtra{
+    [_extraViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) askedToDismissParents{
+    [_parentsViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) askedToDismissInfo{
+    if ([_delegate respondsToSelector:@selector(askedToDismissInfo)]) {
+        [_delegate askedToDismissInfo];
+    }
 }
 
 @end

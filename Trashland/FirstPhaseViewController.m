@@ -1,4 +1,4 @@
-#import "Phase1.h"
+#import "FirstPhaseViewController.h"
 #import "Player.h"
 #import "DraggableView.h"
 #import "UIView+Animation2.h"
@@ -7,7 +7,7 @@
 #import "SystemSoundIDAudio.h"
 #import "PopUpViewController.h"
 
-@interface Phase1 () <UIScrollViewDelegate>{
+@interface FirstPhaseViewController () <UIScrollViewDelegate, DraggableImageViewDelegate> {
     int tempo;
     BOOL pontoLuz1;
     BOOL pontoLuz2;
@@ -23,27 +23,20 @@
     UICollisionBehavior* _collision;
 }
 
-
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet DraggableImageView *birdImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowImgView;
 @property (retain, nonatomic) UIGravityBehavior *grav;
-
 @property (weak, nonatomic) IBOutlet UIImageView *showerGIF;
 @property (weak, nonatomic) IBOutlet UIImageView *torneiraGIF;
 @property (weak, nonatomic) IBOutlet UIImageView *tvGIF;
-
 @property (weak, nonatomic) IBOutlet UIImageView *nuvem1Acesa;
 @property (weak, nonatomic) IBOutlet UIImageView *nuvem2Acesa;
-
 @property (weak, nonatomic) IBOutlet UIView *auxView;
 @property (weak, nonatomic) IBOutlet UIView* viewFantasminha;
-
 @property (weak, nonatomic) IBOutlet UIImageView* luz3;
 @property (weak, nonatomic) IBOutlet UIImageView* luz4;
-
 @property (weak, nonatomic) IBOutlet UIImageView *charImgView;
-
 @property (retain, nonatomic)  DraggableImageView* books;
 @property (retain, nonatomic)  DraggableImageView* flower;
 @property (retain, nonatomic)  DraggableImageView* plate;
@@ -56,7 +49,6 @@
 @property (weak, nonatomic) IBOutlet DraggableImageView *pinkishVase;
 @property (weak, nonatomic) IBOutlet DraggableImageView *purpleVase;
 @property (weak, nonatomic) IBOutlet DraggableView *fantasmaView;
-
 @property (weak, nonatomic) IBOutlet UIImageView* medalha1fase1;
 @property (weak, nonatomic) IBOutlet UIImageView* medalha2fase1;
 @property (weak, nonatomic) IBOutlet UIButton* botaoVoltar;
@@ -67,7 +59,7 @@
 
 @end
 
-@implementation Phase1
+@implementation FirstPhaseViewController
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -93,7 +85,7 @@
     [self montarTela];
     
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.auxView];
-    [self dealWithMovement];
+    [self applyPhisicsConcepts];
     
     _showerGIF.image = [UIImage animatedImageNamed:@"chuveiro_Trashcity-2-" duration:0.5f];
     _torneiraGIF.image = [UIImage animatedImageNamed:@"aguatorneira_Trashcity-" duration:0.8f];
@@ -127,10 +119,7 @@
     
     self.books.frame = CGRectMake(580, 100, 129, 81);
     self.books.userInteractionEnabled = YES;
-    self.books.delegate = self;
     [self.auxView addSubview:self.books];
-    
-    
     
     self.flower.frame = CGRectMake(70, 550, 78, 117);
     self.flower.userInteractionEnabled = YES;
@@ -139,68 +128,41 @@
     
     self.plate.frame = CGRectMake(695, 500, 70, 36);
     self.plate.userInteractionEnabled = YES;
-    self.plate.delegate = self;
     [self.auxView addSubview:self.plate];
-    
-    
-    
+
     self.vase2.frame = CGRectMake(730, 100, 59, 70);
     self.vase2.userInteractionEnabled = YES;
-    self.vase2.delegate = self;
     [self.auxView addSubview:self.vase2];
+
+    self.plate.delegate = self;
+    self.vase2.delegate = self;
+    self.books.delegate = self;
+    self.soap.delegate = self;
+    self.rubberDuck.delegate = self;
+    self.redWhiteVase.delegate = self;
+    self.weirdVase.delegate = self;
+    self.toiletStuff.delegate = self;
+    self.pinkishVase.delegate = self;
+    self.purpleVase.delegate = self;
     
-    self.soap.delegate=self;
-    self.rubberDuck.delegate=self;
-        self.redWhiteVase.delegate=self;
-        self.weirdVase.delegate=self;
-        self.toiletStuff.delegate=self;
-        self.pinkishVase.delegate=self;
-        self.purpleVase.delegate=self;
-    
-        [self.auxView bringSubviewToFront:self.tvGIF];
-        [self.auxView bringSubviewToFront:self.torneiraGIF];
-        [self.auxView bringSubviewToFront:self.showerGIF];
-    
-        [self.auxView bringSubviewToFront:self.nuvem1Acesa];
-        [self.auxView bringSubviewToFront:self.nuvem2Acesa];
-        [self.auxView bringSubviewToFront:self.luz3];
-        [self.auxView bringSubviewToFront:self.luz4];
-    //    [self.auxView bringSubviewToFront:self.bird];
+    [self.auxView bringSubviewToFront:self.tvGIF];
+    [self.auxView bringSubviewToFront:self.torneiraGIF];
+    [self.auxView bringSubviewToFront:self.showerGIF];
+    [self.auxView bringSubviewToFront:self.nuvem1Acesa];
+    [self.auxView bringSubviewToFront:self.nuvem2Acesa];
+    [self.auxView bringSubviewToFront:self.luz3];
+    [self.auxView bringSubviewToFront:self.luz4];
+    //[self.auxView bringSubviewToFront:self.bird];
     
     [self.view bringSubviewToFront:self.botaoVoltar];
-        [self.view bringSubviewToFront:self.botaoPlay];
-        [self.view bringSubviewToFront:self.botaoProx];
-        [self.view bringSubviewToFront:self.medalha1fase1];
-        [self.view bringSubviewToFront:self.medalha2fase1];
-        [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];
-    
-    self.books.podeY = YES;
-    self.vase2.podeY = YES;
-    self.weirdVase.podeY = YES;
-    self.flower.podeY = YES;
-    self.pinkishVase.podeY = YES;
-    self.plate.podeY = YES;
-    self.purpleVase.podeY = YES;
-    self.redWhiteVase.podeY = YES;
-    self.rubberDuck.podeY = YES;
-    self.soap.podeY = YES;
-    self.toiletStuff.podeY = YES;
-    
-    self.books.podeX = YES;
-    self.vase2.podeX = YES;
-    self.weirdVase.podeX = YES;
-    self.flower.podeX = YES;
-    self.pinkishVase.podeX = YES;
-    self.plate.podeX = YES;
-    self.purpleVase.podeX = YES;
-    self.redWhiteVase.podeX = YES;
-    self.rubberDuck.podeX = YES;
-    self.soap.podeX = YES;
-    self.toiletStuff.podeX = YES;
-    
+    [self.view bringSubviewToFront:self.botaoPlay];
+    [self.view bringSubviewToFront:self.botaoProx];
+    [self.view bringSubviewToFront:self.medalha1fase1];
+    [self.view bringSubviewToFront:self.medalha2fase1];
+    [self.viewFantasminha.superview bringSubviewToFront: self.viewFantasminha];    
 }
 
-- (void)dealWithMovement{
+- (void)applyPhisicsConcepts{
     [_collision removeAllBoundaries];
     [_animator removeAllBehaviors];
 
@@ -226,7 +188,7 @@
     
    // (chao)
     UIView* barrier3 = [[UIView alloc] initWithFrame:CGRectMake(0, 742, 2486, 10)];
-    barrier3.backgroundColor = [UIColor redColor];
+   // barrier3.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier3];
     
     CGPoint rightEdge3 = CGPointMake(barrier3.frame.origin.x +
@@ -308,17 +270,14 @@
     [_collision addBoundaryWithIdentifier:@"barrier10"
                                 fromPoint:barrier10.frame.origin
                                   toPoint:rightEdgeAux];
-    
-    
 }
 
-#pragma mark - Button Action
 - (IBAction)didClickShower {
     _showerGIF.hidden = !_showerGIF.hidden;
     pontoAgua2 = !pontoAgua2;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"closeTap" :@"wav"];
-    [self checkBadges];
+    [self needCheckBadges];
 }
 
 - (IBAction)didClickTap {
@@ -326,7 +285,7 @@
     pontoAgua1 = !pontoAgua1;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"closeTap" :@"wav"];
-    [self checkBadges];
+    [self needCheckBadges];
 }
 
 - (IBAction)didClickTv {
@@ -335,7 +294,7 @@
     TVLigada = !TVLigada;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"tvfinal" :@"wav"];
-    [self checkBadges];
+    [self needCheckBadges];
 }
 
 - (IBAction)didClickFirstCloud {
@@ -343,7 +302,7 @@
     pontoLuz1 = !pontoLuz1;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
-    [self checkBadges];
+    [self needCheckBadges];
 }
 
 - (IBAction)didClickSecondCloud {
@@ -351,7 +310,7 @@
     pontoLuz2 = !pontoLuz2;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
-    [self checkBadges];
+    [self needCheckBadges];
 }
 
 -(IBAction)didClickFirstBathLamp:(id)sender{
@@ -359,7 +318,7 @@
     pontoLuz3 = !pontoLuz3;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
-    [self checkBadges];
+    [self needCheckBadges];
 }
 
 -(IBAction)didClickSecondBathLamp:(id)sender{
@@ -368,7 +327,7 @@
     
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
-    [self checkBadges];
+    [self needCheckBadges];
 }
 
 -(IBAction)didClickBird:(id)sender{
@@ -376,7 +335,7 @@
     [systemSoundIdAudio requestedForSystemSound:@"birdcut" :@"wav"];
 }
 
--(IBAction)proxima:(id)sender{
+-(IBAction)didTappedToContinue:(id)sender{
     Player *player = [Player sharedManager];
     if (player.firstMedal || player.secondMedal) {
         [self dismissViewControllerAnimated:YES completion:^(void){
@@ -387,26 +346,7 @@
     }
 }
 
--(IBAction)voltar:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void)tocaTV{
-    SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
-    [systemSoundIdAudio requestedForSystemSound:@"tv1s" :@"wav"];
-}
-
--(void)checkTV{
-    if (TVLigada) {
-        [self tocaTV];
-    }
-    else{
-        SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
-        [systemSoundIdAudio requestedDisposal];
-    }
-}
-
--(void)checkBadges{
+-(void)needCheckBadges{
     Player *player = [Player sharedManager];
     if (!player.firstMedal && pontoAgua1 && pontoAgua2) {
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
@@ -463,6 +403,10 @@
     [miscAudio playSongFromPath:[NSString stringWithFormat:@"%@/4_sala.mp3", [[NSBundle mainBundle] resourcePath]]];
 }
 
-
+-(IBAction)didTappedBackButton:(id)sender{
+    if ([_delegate respondsToSelector:@selector(askedToDismiss)]) {
+        [_delegate askedToDismiss];
+    }
+}
 
 @end

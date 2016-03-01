@@ -1,10 +1,10 @@
-#import "Phase3Parte2.h"
+#import "ThirdPhasePlusViewController.h"
 #import "DraggableView.h"
-#import "PhasesChoose.h"
+#import "PhasesViewController.h"
 #import "DraggableView.h"
 #import "PopUpViewController.h"
 
-@interface Phase3Parte2 (){
+@interface ThirdPhasePlusViewController (){
     
     NSTimer *phase3Part2Timer;
     NSString* path7;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation Phase3Parte2
+@implementation ThirdPhasePlusViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,8 +30,8 @@
     path7 = [NSString stringWithFormat:@"%@/8_rua.mp3", [[NSBundle mainBundle] resourcePath]];
 
     
-    _viewCarro1.podeY = YES;
-    _viewCarro2.podeY = YES;
+    _viewCarro1.allowVerticalAxisMovement = YES;
+    _viewCarro2.allowVerticalAxisMovement = YES;
     
     [self checkWayFree];
    // if (self.player.medalha1fase3) {
@@ -52,10 +52,10 @@
 
 -(void)checkWayFree{
     if (self.viewCarro1.center.y < 240) {
-        self.viewCarro1.podeY = false;
+        self.viewCarro1.allowVerticalAxisMovement = false;
     }
     if (self.viewCarro2.center.y > 540) {
-        self.viewCarro2.podeY = false;
+        self.viewCarro2.allowVerticalAxisMovement = false;
     }
     if (self.viewCarro1.center.y < 260 && self.viewCarro2.center.y > 540) {
         [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
