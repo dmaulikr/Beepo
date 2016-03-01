@@ -121,13 +121,9 @@
     [UIView setAnimationDelay:0.02];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
     [UIView setAnimationRepeatAutoreverses:NO];
-    self.telaUm.frame = CGRectMake(self.telaUm.frame.origin.x +  self.telaUm.frame.size.width
-                                   , 0.0, self.telaUm.frame.size.width, self.telaUm.frame.size.height);
-    self.telaDois.frame = CGRectMake(self.telaDois.frame.origin.x +  self.telaUm.frame.size.width
-                                     , 0.0, self.telaDois.frame.size.width, self.telaDois.frame.size.height);
-    self.telaTres.frame = CGRectMake(self.telaTres.frame.origin.x +  self.telaUm.frame.size.width
-                                     , 0.0, self.telaTres.frame.size.width, self.telaTres.frame.size.height);
-    
+    self.telaUm.frame = CGRectMake(self.telaUm.frame.origin.x +  self.telaUm.frame.size.width, 0.0, self.telaUm.frame.size.width, self.telaUm.frame.size.height);
+    self.telaDois.frame = CGRectMake(self.telaDois.frame.origin.x +  self.telaUm.frame.size.width, 0.0, self.telaDois.frame.size.width, self.telaDois.frame.size.height);
+    self.telaTres.frame = CGRectMake(self.telaTres.frame.origin.x +  self.telaUm.frame.size.width, 0.0, self.telaTres.frame.size.width, self.telaTres.frame.size.height);
     [UIView commitAnimations];
 }
 

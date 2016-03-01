@@ -77,7 +77,6 @@
 		15C431641B289E500098C994 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431631B289E500098C994 /* HomeViewController.m */; };
 		15C431671B289E500098C994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C431651B289E500098C994 /* Main.storyboard */; };
 		15C431691B289E500098C994 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C431681B289E500098C994 /* Images.xcassets */; };
-		15C4316C1B289E500098C994 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C4316A1B289E500098C994 /* LaunchScreen.xib */; };
 		15C431781B289E500098C994 /* TrashlandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431771B289E500098C994 /* TrashlandTests.m */; };
 		15C431831B28A79A0098C994 /* FirstPhaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431821B28A79A0098C994 /* FirstPhaseViewController.m */; };
 		15C431861B28A9650098C994 /* DraggableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C431851B28A9650098C994 /* DraggableImageView.m */; };
@@ -196,7 +195,6 @@
 		15C431631B289E500098C994 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		15C431661B289E500098C994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15C431681B289E500098C994 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		15C4316B1B289E500098C994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		15C431711B289E500098C994 /* TrashlandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrashlandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C431761B289E500098C994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C431771B289E500098C994 /* TrashlandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrashlandTests.m; sourceTree = "<group>"; };
@@ -359,10 +357,6 @@
 				02DC312D1C8401FD001B317E /* ExtrasViewController */,
 				02B3B5461B30B6F900143CC1 /* CustomizationViewController */,
 				02B3B5451B30B6E300143CC1 /* PhasesViewController */,
-				021F561F1B2F1E95007886D6 /* FirstPhaseViewController */,
-				021F56201B2F1E9C007886D6 /* SecondPhaseViewController */,
-				021F56211B2F1EBF007886D6 /* ThirdPhaseViewController */,
-				02B3B54E1B30D38500143CC1 /* FourthPhaseViewController */,
 				15C431901B29FA850098C994 /* DraggableImageView */,
 				15B467ED1B36CCE90059427C /* PopupViewController */,
 			);
@@ -393,6 +387,10 @@
 			children = (
 				021F56191B2F1E4F007886D6 /* PhasesViewController.h */,
 				021F561A1B2F1E4F007886D6 /* PhasesViewController.m */,
+				021F561F1B2F1E95007886D6 /* FirstPhaseViewController */,
+				021F56201B2F1E9C007886D6 /* SecondPhaseViewController */,
+				021F56211B2F1EBF007886D6 /* ThirdPhaseViewController */,
+				02B3B54E1B30D38500143CC1 /* FourthPhaseViewController */,
 			);
 			name = PhasesViewController;
 			sourceTree = "<group>";
@@ -530,7 +528,6 @@
 			children = (
 				02BC4D5F1C83F90C00A37D03 /* Models */,
 				0264DE631B2F1511007A18A7 /* ViewControllers */,
-				15C4316A1B289E500098C994 /* LaunchScreen.xib */,
 				15C431651B289E500098C994 /* Main.storyboard */,
 				15C431681B289E500098C994 /* Images.xcassets */,
 				15C4315B1B289E500098C994 /* Supporting Files */,
@@ -698,7 +695,6 @@
 				024153801B3F601300A02CE9 /* 9_ruapuzzle.mp3 in Resources */,
 				150309351B333A1F0056346D /* lixo.WAV in Resources */,
 				15E450A41B3DC93500B715C8 /* historinha-03@2x.png in Resources */,
-				15C4316C1B289E500098C994 /* LaunchScreen.xib in Resources */,
 				0264DE6B1B2F1573007A18A7 /* TV.aiff in Resources */,
 				0264DE651B2F155F007A18A7 /* click.wav in Resources */,
 				02795C3B1B40982D001E08B9 /* hospital.mp3 in Resources */,
@@ -787,14 +783,6 @@
 				15C431661B289E500098C994 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		15C4316A1B289E500098C994 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15C4316B1B289E500098C994 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

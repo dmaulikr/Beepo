@@ -9,19 +9,20 @@
 
 @interface FirstPhaseViewController () <UIScrollViewDelegate, DraggableImageViewDelegate> {
     int tempo;
-    BOOL pontoLuz1;
-    BOOL pontoLuz2;
-    BOOL pontoLuz3;
-    BOOL pontoLuz4;
-    BOOL pontoTV;
-    BOOL pontoAgua1;
-    BOOL pontoAgua2;
-    BOOL TVLigada;
-    BOOL podePassar;
-    UIDynamicAnimator* _animator;
-    UIGravityBehavior* _gravity;
-    UICollisionBehavior* _collision;
+    UIDynamicAnimator *_animator;
+    UIGravityBehavior *_gravity;
+    UICollisionBehavior *_collision;
 }
+
+@property (nonatomic, assign) BOOL pontoLuz1;
+@property (nonatomic, assign) BOOL pontoLuz2;
+@property (nonatomic, assign) BOOL pontoLuz3;
+@property (nonatomic, assign) BOOL pontoLuz4;
+@property (nonatomic, assign) BOOL pontoTV;
+@property (nonatomic, assign) BOOL pontoAgua1;
+@property (nonatomic, assign) BOOL pontoAgua2;
+@property (nonatomic, assign) BOOL TVLigada;
+@property (nonatomic, assign) BOOL podePassar;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet DraggableImageView *birdImageView;
@@ -78,10 +79,10 @@
     [self.botaoPlay tada:NULL];
     self.botaoProx.alpha = 0.5f;
     
-    TVLigada = true;
+    _TVLigada = true;
     
-    _scrollView.contentSize = CGSizeMake(1024, 768);
     _scrollView.delegate = self;
+    _scrollView.contentSize = CGSizeMake(_auxView.frame.size.width, _auxView.frame.size.height);
     [self montarTela];
     
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.auxView];
@@ -176,7 +177,6 @@
     
     //(Prateleira meio)
     UIView* barrier2 = [[UIView alloc] initWithFrame:CGRectMake(580, 180, 260, 10)];
-   // barrier2.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier2];
     
     CGPoint rightEdge2 = CGPointMake(barrier2.frame.origin.x +
@@ -188,7 +188,6 @@
     
    // (chao)
     UIView* barrier3 = [[UIView alloc] initWithFrame:CGRectMake(0, 742, 2486, 10)];
-   // barrier3.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier3];
     
     CGPoint rightEdge3 = CGPointMake(barrier3.frame.origin.x +
@@ -199,7 +198,6 @@
     
     //(Mesa esquerda sofá)
     UIView* barrier4 = [[UIView alloc] initWithFrame:CGRectMake(70, 626, 100, 10)];
-    //barrier4.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier4];
     
     CGPoint rightEdge4 = CGPointMake(barrier4.frame.origin.x +
@@ -211,7 +209,6 @@
     
     //(Mesa TV)
     UIView* barrier5 = [[UIView alloc] initWithFrame:CGRectMake(670, 544, 320, 10)];
-    //barrier5.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier5];
     
     CGPoint rightEdge5 = CGPointMake(barrier5.frame.origin.x +
@@ -222,7 +219,6 @@
     
     //(Estante banheiro)
     UIView* barrier6 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50+ 6, 405, 179, 10)];
-//    barrier6.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier6];
     
     CGPoint rightEdgeAux = CGPointMake(barrier6.frame.origin.x +
@@ -232,7 +228,6 @@
                                   toPoint:rightEdgeAux];
     
     UIView* barrier7 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50+ 6, 486, 179, 10)];
-//    barrier7.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier7];
     
     rightEdgeAux = CGPointMake(barrier7.frame.origin.x +
@@ -242,7 +237,6 @@
                                   toPoint:rightEdgeAux];
    
     UIView* barrier8 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50+ 6, 435 + 51 + 81, 179, 10)];
-//    barrier8.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier8];
     
     rightEdgeAux = CGPointMake(barrier8.frame.origin.x +
@@ -252,7 +246,6 @@
                                   toPoint:rightEdgeAux];
     
     UIView* barrier9 = [[UIView alloc] initWithFrame:CGRectMake(1407 - 50 + 6, 435 + 51 + 81 + 81, 179, 10)];
-//    barrier9.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier9];
     
     rightEdgeAux = CGPointMake(barrier9.frame.origin.x +
@@ -262,7 +255,6 @@
                                   toPoint:rightEdgeAux];
     //(Mesa TV)
     UIView* barrier10 = [[UIView alloc] initWithFrame:CGRectMake(1820 , 479 + 46, 145, 10)];
-//    barrier10.backgroundColor = [UIColor redColor];
     [self.auxView addSubview:barrier10];
     
     rightEdgeAux = CGPointMake(barrier10.frame.origin.x +
@@ -274,7 +266,7 @@
 
 - (IBAction)didClickShower {
     _showerGIF.hidden = !_showerGIF.hidden;
-    pontoAgua2 = !pontoAgua2;
+    _pontoAgua2 = !_pontoAgua2;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"closeTap" :@"wav"];
     [self needCheckBadges];
@@ -282,7 +274,7 @@
 
 - (IBAction)didClickTap {
     _torneiraGIF.hidden = !_torneiraGIF.hidden;
-    pontoAgua1 = !pontoAgua1;
+    _pontoAgua1 = !_pontoAgua1;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"closeTap" :@"wav"];
     [self needCheckBadges];
@@ -290,8 +282,8 @@
 
 - (IBAction)didClickTv {
     _tvGIF.hidden = !_tvGIF.hidden;
-    pontoTV = !pontoTV;
-    TVLigada = !TVLigada;
+    _pontoTV = !_pontoTV;
+    _TVLigada = !_TVLigada;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"tvfinal" :@"wav"];
     [self needCheckBadges];
@@ -299,7 +291,7 @@
 
 - (IBAction)didClickFirstCloud {
     _nuvem1Acesa.hidden = !_nuvem1Acesa.hidden;
-    pontoLuz1 = !pontoLuz1;
+    _pontoLuz1 = !_pontoLuz1;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
     [self needCheckBadges];
@@ -307,7 +299,7 @@
 
 - (IBAction)didClickSecondCloud {
     _nuvem2Acesa.hidden = !_nuvem2Acesa.hidden;
-    pontoLuz2 = !pontoLuz2;
+    _pontoLuz2 = !_pontoLuz2;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
     [self needCheckBadges];
@@ -315,7 +307,7 @@
 
 -(IBAction)didClickFirstBathLamp:(id)sender{
     self.luz3.hidden = !self.luz3.hidden;
-    pontoLuz3 = !pontoLuz3;
+    _pontoLuz3 = !_pontoLuz3;
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
     [self needCheckBadges];
@@ -323,7 +315,7 @@
 
 -(IBAction)didClickSecondBathLamp:(id)sender{
     self.luz4.hidden = !self.luz4.hidden;
-    pontoLuz4 = !pontoLuz4;
+    _pontoLuz4 = !_pontoLuz4;
     
     SystemSoundIDAudio *systemSoundIdAudio = [SystemSoundIDAudio sharedManager];
     [systemSoundIdAudio requestedForSystemSound:@"clickcut" :@"wav"];
@@ -348,7 +340,7 @@
 
 -(void)needCheckBadges{
     Player *player = [Player sharedManager];
-    if (!player.firstMedal && pontoAgua1 && pontoAgua2) {
+    if (!player.firstMedal && _pontoAgua1 && _pontoAgua2) {
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-agua"];
         self.popUpView = popUp;
@@ -358,7 +350,7 @@
         self.botaoProx.alpha = 1.0f;
         
     }
-    if (!player.secondMedal && pontoLuz1 && pontoLuz2 && pontoLuz3 && pontoLuz4 && pontoTV) {
+    if (!player.secondMedal && _pontoLuz1 && _pontoLuz2 && _pontoLuz3 && _pontoLuz4 && _pontoTV) {
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-energia"];
         self.popUpView = popUp;
