@@ -66,11 +66,6 @@
 }
 
 - (void) askedToDismissSecondPhase{
-    [_secondPhaseViewController dismissViewControllerAnimated:YES completion:^void{
-        if ([_delegate respondsToSelector:@selector(askedToDismissSecondStory)]) {
-            [_delegate askedToDismissSecondStory];
-        }
-    }];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
-
 @end

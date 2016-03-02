@@ -43,7 +43,9 @@
 }
 
 - (IBAction)didTappedBackButton:(id)sender {
-
+    if ([_delegate respondsToSelector:@selector(askedToDismiss)]) {
+        [_delegate askedToDismiss];
+    }
 }
 
 -(IBAction)didTappedVoiceStory:(id)sender{
@@ -82,5 +84,11 @@
             [self performSegueWithIdentifier:@"endSegue" sender:self];
         }
     }];
+}
+
+- (void) askedToDismissEnd{
+    if ([_delegate respondsToSelector:@selector(askedToDismiss)]) {
+        [_delegate askedToDismiss];
+    }
 }
 @end

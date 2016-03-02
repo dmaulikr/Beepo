@@ -37,11 +37,19 @@
     [miscAudio playSongFromPath:_path];
 }
 
+- (IBAction)didTappedBackButton:(id)sender{
+    [self askedToDismiss];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"phase4Segue"]) {
         _fourthPhaseViewController = segue.destinationViewController;
         _fourthPhaseViewController.delegate = self;
     }
+}
+
+- (void) askedToDismiss{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

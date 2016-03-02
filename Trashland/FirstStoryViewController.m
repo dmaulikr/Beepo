@@ -120,12 +120,8 @@
 }
 
 - (void) askedToDismiss{
-    [_firstPhaseViewController dismissViewControllerAnimated:YES completion:^void{
-        _path = nil;
-        if ([_delegate respondsToSelector:@selector(askedToDismissFirstStory)]) {
-            [_delegate askedToDismissFirstStory];
-        }
-    }];
+    _path = nil;
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

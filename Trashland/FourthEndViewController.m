@@ -15,6 +15,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(askedToDismissEnd)];
+    [self.view addGestureRecognizer:swipe];
+    
     Player *player = [Player sharedManager];
     _path = [NSString stringWithFormat:@"%@/14_fim_jogo.mp3", [[NSBundle mainBundle] resourcePath]];
     if ([player.nomeEscolhido isEqualToString:@"Felizópolis"]) {
@@ -32,6 +36,12 @@
 -(IBAction)didTappedVoiceStory:(id)sender{
     MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
     [miscAudio playSongFromPath:_path];
+}
+
+- (void) askedToDismissEnd{
+    if ([_delegate respondsToSelector:@selector(askedToDismissEnd)]) {
+        [_delegate askedToDismissEnd];
+    }
 }
 
 @end

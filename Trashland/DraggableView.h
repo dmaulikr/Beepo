@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
 
-
 @protocol DraggableViewDelegate <NSObject>
 
 - (void) checkPositions;

@@ -107,11 +107,9 @@ UICollisionBehavior* _collision2;
     [miscAudio playSongFromPath:_path];
 }
 - (void) askedToDismissThirdPhasePlus{
-    [_thirdPhasePlusViewController dismissViewControllerAnimated:YES completion:^(void){
-        if ([_delegate respondsToSelector:@selector(askedToDismissThirdPhase)]) {
-            [_delegate askedToDismissThirdPhase];
-        }
-    }];
+    if ([_delegate respondsToSelector:@selector(askedToDismissThirdPhase)]) {
+        [_delegate askedToDismissThirdPhase];
+    }
 }
 
 - (void) checkPositions{

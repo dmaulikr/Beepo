@@ -46,7 +46,6 @@
     [self.fundo addSubview:self.badgeTransito];
     
     self.ambulancia.image = [UIImage animatedImageNamed:@"ambulancia-" duration:.5f];
-//    [self.fundo addSubview:self.ambulancia];
 }
 
 - (void)showBadgePopUp{

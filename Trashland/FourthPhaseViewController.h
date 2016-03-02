@@ -2,6 +2,8 @@
 
 @protocol FourthPhaseViewControllerDelegate <NSObject>
 
+- (void) askedToDismiss;
+
 @end
 
 @interface FourthPhaseViewController : UIViewController

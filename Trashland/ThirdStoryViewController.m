@@ -16,6 +16,7 @@
     
     _path = [NSString stringWithFormat:@"%@/7_pre-rua.mp3", [[NSBundle mainBundle] resourcePath]];
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipped:)];
+    [swipe setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.view addGestureRecognizer:swipe];
 }
 
@@ -36,11 +37,7 @@
 }
 
 - (void) askedToDismissThirdPhase{
-   [_thirdPhaseViewController dismissViewControllerAnimated:YES completion:^void{
-       if ([_delegate respondsToSelector:@selector(askedToDismissThirdStory)]) {
-           [_delegate askedToDismissThirdStory];
-       }
-   }];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -2,6 +2,8 @@
 
 @protocol FourthEndViewControllerDelegate <NSObject>
 
+- (void) askedToDismissEnd;
+
 @end
 
 @interface FourthEndViewController : UIViewController

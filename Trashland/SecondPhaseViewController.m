@@ -134,11 +134,6 @@ float deslocIni;
                                                  orientation:UIImageOrientationUpMirrored];
         _lookingBack = YES;
     }
-    
-//    CGRect oldframe = self.fantasminhaView.frame;
-//    oldframe.origin.x = oldframe.origin.x + diff;
-//    deslocIni = scrollView.contentOffset.x;
-//    self.fantasminhaView.frame = oldframe;
 }
 
 - (void)beepoAnimado{
@@ -196,48 +191,42 @@ float deslocIni;
         if ([self.lixos[((UIImageView *)item).tag] isEqual:@0]) {
             if ((((UIImageView *)item).tag == 0 || ((UIImageView *)item).tag == 4) && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPlastico"]) {
                 self.lixos[((UIImageView *)item).tag] = @YES;
-                NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
-                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+                //((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
             } else if (((UIImageView *)item).tag == 3 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPapel"]) {
                 
                 self.lixos[((UIImageView *)item).tag] = @YES;
-                NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
-                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+                //((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
             } else if (((UIImageView *)item).tag == 2 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoVidro"]) {
                 
                 self.lixos[((UIImageView *)item).tag] = @YES;
-                NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
-                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+               // ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
             } else if (((UIImageView *)item).tag == 1 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoMetal"]) {
                 
                 self.lixos[((UIImageView *)item).tag] = @YES;
-                NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
-                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+               // ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
             } else if (((UIImageView *)item).tag == 5 && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoOrganico"]) {
-                
                 self.lixos[((UIImageView *)item).tag] = @YES;
-                NSLog(@"%ld", (long)((UIImageView *)item).tag);
                 [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
-                ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
+               // ((UIImageView *)item).frame = CGRectMake(-50, -50, 1, 1);
             }
             if (trashLeft == 0) {
                 PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
