@@ -1,14 +1,17 @@
 #import "SecondPhaseViewController.h"
-#import "PhasesViewController.h"
 #import "PopUpViewController.h"
 #import "DraggableImageView.h"
+#import "Player.h"
+#import "SystemSoundIDAudio.h"
+#import "MiscellaneousAudio.h"
 #import "DraggableView.h"
 
-@interface SecondPhaseViewController()<UICollisionBehaviorDelegate, UIScrollViewDelegate>{
+@interface SecondPhaseViewController()<UICollisionBehaviorDelegate, UIScrollViewDelegate, DraggableImageViewDelegate>{
     UIDynamicAnimator* _animator;
     UIGravityBehavior* _gravity;
     UICollisionBehavior* _collision;
     NSString *path4;
+    CGPoint rightEdge;
     
     int treesCounter;
     int trashLeft;
@@ -17,42 +20,37 @@
 @property (weak, nonatomic) IBOutlet UIView *auxView;
 @property (weak, nonatomic) IBOutlet UIScrollView *phaseScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *phaseBG;
-
-//gifs
 @property (weak, nonatomic) IBOutlet UIImageView *balao;
 @property (weak, nonatomic) IBOutlet UIImageView *bolinhaVermelha;
 @property (weak, nonatomic) IBOutlet UIImageView *bolinhaVerde;
-
-//Arvores
-@property (weak, nonatomic) IBOutlet UIImageView *arvore1;
-@property (weak, nonatomic) IBOutlet UIImageView *arvore2;
-@property (weak, nonatomic) IBOutlet UIImageView *arvore3;
-@property (weak, nonatomic) IBOutlet UIImageView *arvore4;
-@property (weak, nonatomic) IBOutlet UIImageView *arvore5;
-
-//lixo
-@property (weak, nonatomic) IBOutlet DraggableImageView *garrafaPet1;
-@property (weak, nonatomic) IBOutlet DraggableImageView *lata;
-@property (weak, nonatomic) IBOutlet DraggableImageView *garrafaVidro;
-@property (weak, nonatomic) IBOutlet DraggableImageView *papel;
-@property (weak, nonatomic) IBOutlet DraggableImageView *garrafaPet2;
-@property (weak, nonatomic) IBOutlet DraggableImageView *cascaBanana;
-
-//outros
+@property (retain, nonatomic) IBOutlet UIImageView *arvore1;
+@property (retain, nonatomic) IBOutlet UIImageView *arvore2;
+@property (retain, nonatomic) IBOutlet UIImageView *arvore3;
+@property (retain, nonatomic) IBOutlet UIImageView *arvore4;
+@property (retain, nonatomic) IBOutlet UIImageView *arvore5;
+@property (retain, nonatomic) IBOutlet DraggableImageView *garrafaPet1;
+@property (retain, nonatomic) IBOutlet DraggableImageView *lata;
+@property (retain, nonatomic) IBOutlet DraggableImageView *garrafaVidro;
+@property (retain, nonatomic) IBOutlet DraggableImageView *papel;
+@property (retain, nonatomic) IBOutlet DraggableImageView *garrafaPet2;
+@property (retain, nonatomic) IBOutlet DraggableImageView *cascaBanana;
 @property (weak, nonatomic) IBOutlet UIImageView *zzzImage;
 @property (weak, nonatomic) IBOutlet UIImageView *charImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowImageView;
-@property (weak, nonatomic) IBOutlet DraggableView *fantasminhaView;
-@property (retain,nonatomic) NSString* gasperEscolhido;
+@property (weak, nonatomic) IBOutlet UIView *fantasminhaView;
 @property (nonatomic) BOOL lookingBack;
-
 @property (weak, nonatomic) IBOutlet UIButton *botaoProximo;
-
 @property (weak, nonatomic) IBOutlet UIImageView *badgeLixo;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeNatureza;
-
 @property (retain,nonatomic) UIViewController *popUpView;
 @property (retain,nonatomic) NSMutableArray *lixos;
+
+@property (weak, nonatomic) IBOutlet UIView *barrier1;
+@property (weak, nonatomic) IBOutlet UIView *barrier2;
+@property (weak, nonatomic) IBOutlet UIView *barrier3;
+@property (weak, nonatomic) IBOutlet UIView *barrier4;
+@property (weak, nonatomic) IBOutlet UIView *barrier5;
+@property (weak, nonatomic) IBOutlet UIView *barrier6;
 
 
 @end
@@ -62,26 +60,29 @@ float deslocIni;
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    Player *player = [Player sharedManager];
     _phaseScrollView.contentSize = CGSizeMake(_phaseBG.frame.size.width, _phaseBG.frame.size.height);
     _phaseScrollView.delegate = self;
     treesCounter = 5;
     trashLeft = 6;
     self.lixos = [@[@NO,@NO,@NO,@NO,@NO,@NO] mutableCopy];
     
-  //  if(self.player.medalha1fase2){
+    if(player.thirdMedal){
         self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
         self.botaoProximo.enabled = YES;
-  //  }
+    }
     
-  //  if(self.player.medalha2fase2){
+    if(player.fourthMedal){
         self.badgeNatureza.image = [UIImage imageNamed:@"badge-natureza-color"];
         self.botaoProximo.enabled = YES;
-  //  }
+    }
     
-    [self beepoCustomizado];
-    
-    [self prepareForMovement];
-    [self dealWithMovement];
+    self.garrafaPet1.delegate = self;
+    self.garrafaPet2.delegate = self;
+    self.garrafaVidro.delegate = self;
+    self.lata.delegate = self;
+    self.papel.delegate = self;
+    self.cascaBanana.delegate = self;
     
     self.balao.image = [UIImage animatedImageNamed:@"balao-" duration:1.2f];
     self.bolinhaVermelha.image = [UIImage animatedImageNamed:@"bolinhavermelha_piscando-" duration:1.6f];//bolinhaverde_piscando-
@@ -91,8 +92,6 @@ float deslocIni;
     
     
     _lookingBack = NO;
-    _fantasminhaView.charImgView  = _charImageView;
-    _fantasminhaView.allowHorizontalAxisMovement=YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -103,16 +102,16 @@ float deslocIni;
 }
 
 -(void)checkObjectives{
-  //  if (treesCounter == 0 && !self.player.medalha2fase2) {
+    Player *player = [Player sharedManager];
+    if (treesCounter == 0 && !player.fourthMedal) {
         PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
         [popUp setImageNamed: @"pop-up-natureza"];
         self.popUpView = popUp;
         [popUp showInView:self.view animated:YES];
-    //    self.player.medalha2fase2 = YES;
+        player.fourthMedal = YES;
         self.badgeNatureza.image = [UIImage imageNamed:@"badge-natureza-color"];
         self.botaoProximo.enabled = YES;
-    //    self.player.fase3 = true;
-  //  }
+    }
 }
 
 #pragma mark - scrollview delegate
@@ -121,29 +120,28 @@ float deslocIni;
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    UIImage *beepoImage = [self getBeepoImage];
+    Player *player = [Player sharedManager];
     float diff =scrollView.contentOffset.x - deslocIni;
     if (diff > 0 && _lookingBack) {
-        self.charImageView.image = beepoImage;
+        self.charImageView.image = player.gasperEscolhido;
         _lookingBack = NO;
     } else if (diff < 0 && _lookingBack){
         
     } else if (diff > 0 && !_lookingBack){
         
     } else{
-        self.charImageView.image = [UIImage imageWithCGImage:beepoImage.CGImage
-                                                       scale:beepoImage.scale
+        self.charImageView.image = [UIImage imageWithCGImage:player.gasperEscolhido.CGImage
+                                                       scale:player.gasperEscolhido.scale
                                                  orientation:UIImageOrientationUpMirrored];
         _lookingBack = YES;
     }
     
-    CGRect oldframe = self.fantasminhaView.frame;
-    oldframe.origin.x = oldframe.origin.x + diff;
-    deslocIni = scrollView.contentOffset.x;
-    self.fantasminhaView.frame = oldframe;
+//    CGRect oldframe = self.fantasminhaView.frame;
+//    oldframe.origin.x = oldframe.origin.x + diff;
+//    deslocIni = scrollView.contentOffset.x;
+//    self.fantasminhaView.frame = oldframe;
 }
 
-#pragma mark - customização e animação de Beepo
 - (void)beepoAnimado{
     CGRect charFrame = self.charImageView.frame;
     charFrame.origin.y = charFrame.origin.y - 45.0;
@@ -166,85 +164,10 @@ float deslocIni;
     [UIView commitAnimations];
 }
 
-- (UIImage*)getBeepoImage{
-    UIImage *aux;
-//    if ([self.player.gasperEscolhido isEqualToString:@"gravata"]) {
-//        
-//        aux = [UIImage imageNamed:@"custom15"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
-//        
-//        aux = [UIImage imageNamed:@"custom19"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
-//        
-//        aux = [UIImage imageNamed:@"custom16"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
-//        
-//        aux = [UIImage imageNamed:@"custom18"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
-//        
-//        aux = [UIImage imageNamed:@"custom20"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
-//        
-//        aux = [UIImage imageNamed:@"custom17"];
-//    }
-//    else{
-//        aux = [UIImage imageNamed:@"fantasminha"];
-//    }
- //   aux = self.player.gasperEscolhido;
-    
-    return aux;
-}
-
-- (void)beepoCustomizado{
-//    if ([self.gasperEscolhido isEqualToString:@"gravata"]) {
-//        
-//        self.charImageView.image = [UIImage imageNamed:@"custom15"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"bolsa"]){
-//        
-//        self.charImageView.image = [UIImage imageNamed:@"custom19"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"oculos"]){
-//        
-//        self.charImageView.image = [UIImage imageNamed:@"custom16"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"chapeu"]){
-//        
-//        self.charImageView.image = [UIImage imageNamed:@"custom18"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"vibe"]){
-//        
-//        self.charImageView.image = [UIImage imageNamed:@"custom20"];
-//    }
-//    else if ([self.gasperEscolhido isEqualToString:@"tapaolho"]){
-//        
-//        self.charImageView.image = [UIImage imageNamed:@"custom17"];
-//    }
-//    else{
-//        self.charImageView.image = [UIImage imageNamed:@"fantasminha"];
-//    }
- //   self.charImageView.image = self.player.gasperEscolhido;
-}
-#pragma mark - Gavidade e Colisões
-- (void)prepareForMovement{
-//    self.garrafaPet1.delegate = self;
-//    self.garrafaPet2.delegate = self;
-//    self.garrafaVidro.delegate = self;
-//    self.lata.delegate = self;
-//    self.papel.delegate = self;
-//    self.cascaBanana.delegate = self;
-}
-
-- (void)dealWithMovement{
+- (void)applyPhisicsConcepts{
     [_collision removeAllBoundaries];
     [_animator removeAllBehaviors];
     
-    //UIDynamics
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.auxView];
     _gravity = [[UIGravityBehavior alloc] initWithItems:@[self.garrafaPet1, self.garrafaPet2, self.garrafaVidro, self.lata, self.papel, self.cascaBanana]];
     [_animator addBehavior:_gravity];
@@ -253,84 +176,32 @@ float deslocIni;
     _collision.translatesReferenceBoundsIntoBoundary = YES;
     [_animator addBehavior:_collision];
     _collision.collisionDelegate = self;
-    //UIDynamics (Barreiras)
     
-    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(1977, 636, 120, 10)];
-//    barrier.backgroundColor = [UIColor redColor];
-    [self.auxView addSubview:barrier];
+    rightEdge = CGPointMake(_barrier1.frame.origin.x + _barrier1.frame.size.width, _barrier1.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoPapel" fromPoint:_barrier1.frame.origin toPoint:rightEdge];
     
-    CGPoint rightEdge = CGPointMake(barrier.frame.origin.x +
-                                    barrier.frame.size.width, barrier.frame.origin.y);
-    [_collision addBoundaryWithIdentifier:@"lixoPapel"
-                                fromPoint:barrier.frame.origin
-                                  toPoint:rightEdge];
-    
-    barrier = [[UIView alloc] initWithFrame:CGRectMake(2100, 636, 120, 10)];
-//    barrier.backgroundColor = [UIColor redColor];
-    [self.auxView addSubview:barrier];
-    
-    rightEdge = CGPointMake(barrier.frame.origin.x +
-                                    barrier.frame.size.width, barrier.frame.origin.y);
-    [_collision addBoundaryWithIdentifier:@"lixoPlastico"
-                                fromPoint:barrier.frame.origin
-                                  toPoint:rightEdge];
+    rightEdge = CGPointMake(_barrier2.frame.origin.x + _barrier2.frame.size.width, _barrier2.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoPlastico" fromPoint:_barrier2.frame.origin toPoint:rightEdge];
 
-    barrier = [[UIView alloc] initWithFrame:CGRectMake(2223, 636, 120, 10)];
-//    barrier.backgroundColor = [UIColor redColor];
-    [self.auxView addSubview:barrier];
+    rightEdge = CGPointMake(_barrier3.frame.origin.x + _barrier3.frame.size.width, _barrier3.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoMetal" fromPoint:_barrier3.frame.origin toPoint:rightEdge];
     
-    rightEdge = CGPointMake(barrier.frame.origin.x +
-                                    barrier.frame.size.width, barrier.frame.origin.y);
-    [_collision addBoundaryWithIdentifier:@"lixoMetal"
-                                fromPoint:barrier.frame.origin
-                                  toPoint:rightEdge];
+    rightEdge = CGPointMake(_barrier4.frame.origin.x + _barrier4.frame.size.width, _barrier4.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoVidro" fromPoint:_barrier4.frame.origin toPoint:rightEdge];
     
-    barrier = [[UIView alloc] initWithFrame:CGRectMake(2346, 636, 120, 10)];
-//    barrier.backgroundColor = [UIColor redColor];
-    [self.auxView addSubview:barrier];
-    
-    rightEdge = CGPointMake(barrier.frame.origin.x +
-                                    barrier.frame.size.width, barrier.frame.origin.y);
-    [_collision addBoundaryWithIdentifier:@"lixoVidro"
-                                fromPoint:barrier.frame.origin
-                                  toPoint:rightEdge];
-    
-    barrier = [[UIView alloc] initWithFrame:CGRectMake(2469, 636, 120, 10)];
-//    barrier.backgroundColor = [UIColor redColor];
-    [self.auxView addSubview:barrier];
-    
-    rightEdge = CGPointMake(barrier.frame.origin.x +
-                                    barrier.frame.size.width, barrier.frame.origin.y);
-    [_collision addBoundaryWithIdentifier:@"lixoOrganico"
-                                fromPoint:barrier.frame.origin
-                                  toPoint:rightEdge];
-    
-    barrier = [[UIView alloc] initWithFrame:CGRectMake(0, self.auxView.frame.size.height - 26.0, self.auxView.frame.size.width, 10)];
-//    barrier.backgroundColor = [UIColor redColor];
-    [self.auxView addSubview:barrier];
-    
-    rightEdge = CGPointMake(barrier.frame.origin.x +
-                            barrier.frame.size.width, barrier.frame.origin.y);
-    [_collision addBoundaryWithIdentifier:@"piso"
-                                fromPoint:barrier.frame.origin
-                                  toPoint:rightEdge];
-    
+    rightEdge = CGPointMake(_barrier5.frame.origin.x + _barrier5.frame.size.width, _barrier5.frame.origin.y);
+    [_collision addBoundaryWithIdentifier:@"lixoOrganico" fromPoint:_barrier5.frame.origin toPoint:rightEdge];
 }
 
 -(void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier atPoint:(CGPoint)p{
+    Player *player = [Player sharedManager];
+    SystemSoundIDAudio *sysAudio = [SystemSoundIDAudio sharedManager];
     if (identifier &&  ![[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"piso"]) {
         if ([self.lixos[((UIImageView *)item).tag] isEqual:@0]) {
             if ((((UIImageView *)item).tag == 0 || ((UIImageView *)item).tag == 4) && [[NSString stringWithFormat:@"%@",identifier]isEqualToString:@"lixoPlastico"]) {
-                
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
-                
-         //       AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-         //       AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-         //       AudioServicesPlaySystemSound(sound1);
-                
-                
+                [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
@@ -339,13 +210,7 @@ float deslocIni;
                 
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
-                
-        //        AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-        //        AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-        //        AudioServicesPlaySystemSound(sound1);
-                
-                
+                [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
@@ -354,13 +219,7 @@ float deslocIni;
                 
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
-                
-      //          AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-     //           AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-     //           AudioServicesPlaySystemSound(sound1);
-                
-                
+                [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
@@ -369,13 +228,7 @@ float deslocIni;
                 
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
-                
-     //           AudioServicesDisposeSystemSoundID (sound1);
-                NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-   //             AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-   //             AudioServicesPlaySystemSound(sound1);
-                
-                
+                [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
@@ -384,13 +237,7 @@ float deslocIni;
                 
                 self.lixos[((UIImageView *)item).tag] = @YES;
                 NSLog(@"%ld", (long)((UIImageView *)item).tag);
-                
-     //           AudioServicesDisposeSystemSoundID (sound1);
-       //         NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"coin" withExtension:@"wav"];
-      //          AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-      //          AudioServicesPlaySystemSound(sound1);
-                
-                
+                [sysAudio requestedForSystemSound:@"coin" :@"wav"];
                 trashLeft = trashLeft - 1;
                 ((UIImageView *)item).userInteractionEnabled = NO;
                 ((UIImageView *)item).hidden = YES;
@@ -401,8 +248,7 @@ float deslocIni;
                 [popUp setImageNamed: @"pop-up-lixo"];
                 self.popUpView = popUp;
                 [popUp showInView:self.view animated:YES];
-       //         self.player.medalha1fase2 = YES;
-       //         self.player.fase3 = true;
+                player.thirdMedal = YES;
                 self.badgeLixo.image = [UIImage imageNamed:@"badge-lixo-color"];
                 self.botaoProximo.enabled = YES;
             }
@@ -410,118 +256,102 @@ float deslocIni;
     }
 }
 #pragma mark - Button Actions
-//Trees
 - (IBAction)didClickTree1:(UIButton *)sender {
-    
-    treesCounter = treesCounter - 1;
-//    AudioServicesDisposeSystemSoundID (sound1);
-//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-//    AudioServicesPlaySystemSound(sound1);
-    
-    
-    
-    _arvore1.image = [UIImage imageNamed:@"parque-03"];
-    float yInicial = _arvore1.frame.origin.y;
-    float hInicial = _arvore1.frame.size.height;
-    float yFinal = yInicial - (1070/2 - hInicial);
-    float xInicial = _arvore1.frame.origin.x;
-    float wInicial = _arvore1.frame.size.width;
-    float xFinal = xInicial - (888/2 - wInicial)/2;
-    _arvore1.frame = CGRectMake(xFinal-9, yFinal, 888/2
-                                , 1070/2);
-    sender.userInteractionEnabled = NO;
-    
-    [self checkObjectives];
+    if (![_arvore1.image isEqual:[UIImage imageNamed:@"parque-03"]]) {
+        treesCounter = treesCounter - 1;
+        SystemSoundIDAudio *sysAudio = [SystemSoundIDAudio sharedManager];
+        [sysAudio requestedForSystemSound:@"arvore_nascendo" :@"wav"];
+        _arvore1.image = [UIImage imageNamed:@"parque-03"];
+        float yInicial = _arvore1.frame.origin.y;
+        float hInicial = _arvore1.frame.size.height;
+        float yFinal = yInicial - (1070/2 - hInicial);
+        float xInicial = _arvore1.frame.origin.x;
+        float wInicial = _arvore1.frame.size.width;
+        float xFinal = xInicial - (888/2 - wInicial)/2;
+        _arvore1.frame = CGRectMake(xFinal-9, yFinal, 888/2
+                                    , 1070/2);
+        sender.userInteractionEnabled = NO;
+        
+        [self checkObjectives];
+    }
 }
 - (IBAction)didClickTree2:(UIButton *)sender {
-    
-    treesCounter = treesCounter - 1;
-//    AudioServicesDisposeSystemSoundID (sound1);
-//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-//    AudioServicesPlaySystemSound(sound1);
-    
-    
-    _arvore2.image = [UIImage imageNamed:@"parque-04"];
-    float yInicial = _arvore2.frame.origin.y;
-    float hInicial = _arvore2.frame.size.height;
-    float yFinal = yInicial - (1298/2 - hInicial);
-    float xInicial = _arvore2.frame.origin.x;
-    float wInicial = _arvore2.frame.size.width;
-    float xFinal = xInicial - (1064/2 - wInicial)/2;
-    _arvore2.frame = CGRectMake(xFinal-9, yFinal, 1064/2
-                                , 1298/2);
-    sender.userInteractionEnabled = NO;
-    [self checkObjectives];
+    if (![_arvore2.image isEqual:[UIImage imageNamed:@"parque-04"]]) {
+        treesCounter = treesCounter - 1;
+        SystemSoundIDAudio *sysAudio = [SystemSoundIDAudio sharedManager];
+        [sysAudio requestedForSystemSound:@"arvore_nascendo" :@"wav"];
+        _arvore2.image = [UIImage imageNamed:@"parque-04"];
+        float yInicial = _arvore2.frame.origin.y;
+        float hInicial = _arvore2.frame.size.height;
+        float yFinal = yInicial - (1298/2 - hInicial);
+        float xInicial = _arvore2.frame.origin.x;
+        float wInicial = _arvore2.frame.size.width;
+        float xFinal = xInicial - (1064/2 - wInicial)/2;
+        _arvore2.frame = CGRectMake(xFinal-9, yFinal, 1064/2
+                                    , 1298/2);
+        sender.userInteractionEnabled = NO;
+        [self checkObjectives];
+    }
 }
 - (IBAction)didClickTree3:(UIButton *)sender {
-    
-    treesCounter = treesCounter - 1;
-//    AudioServicesDisposeSystemSoundID (sound1);
-//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-//    AudioServicesPlaySystemSound(sound1);
-    
-    
-    _arvore3.image = [UIImage imageNamed:@"parque-05"];
-    float yInicial = _arvore3.frame.origin.y;
-    float hInicial = _arvore3.frame.size.height;
-    float yFinal = yInicial - (1300/2 - hInicial);
-    float xInicial = _arvore3.frame.origin.x;
-    float wInicial = _arvore3.frame.size.width;
-    float xFinal = xInicial - (1080/2 - wInicial)/2;
-    _arvore3.frame = CGRectMake(xFinal-11, yFinal, 1080/2
-                                , 1300/2);
-    sender.userInteractionEnabled = NO;
-    [self checkObjectives];
+    if (![_arvore3.image isEqual:[UIImage imageNamed:@"parque-05"]]) {
+        treesCounter = treesCounter - 1;
+        SystemSoundIDAudio *sysAudio = [SystemSoundIDAudio sharedManager];
+        [sysAudio requestedForSystemSound:@"arvore_nascendo" :@"wav"];
+        _arvore3.image = [UIImage imageNamed:@"parque-05"];
+        float yInicial = _arvore3.frame.origin.y;
+        float hInicial = _arvore3.frame.size.height;
+        float yFinal = yInicial - (1300/2 - hInicial);
+        float xInicial = _arvore3.frame.origin.x;
+        float wInicial = _arvore3.frame.size.width;
+        float xFinal = xInicial - (1080/2 - wInicial)/2;
+        _arvore3.frame = CGRectMake(xFinal-11, yFinal, 1080/2
+                                    , 1300/2);
+        sender.userInteractionEnabled = NO;
+        [self checkObjectives];
+    }
 }
 - (IBAction)didClickTree4:(UIButton *)sender {
-    
-    treesCounter = treesCounter - 1;
-//    AudioServicesDisposeSystemSoundID (sound1);
-//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-//    AudioServicesPlaySystemSound(sound1);
-    
-    
-    _arvore4.image = [UIImage imageNamed:@"parque-06"];
-    float yInicial = _arvore4.frame.origin.y;
-    float hInicial = _arvore4.frame.size.height;
-    float yFinal = yInicial - (1068/2 - hInicial);
-    float xInicial = _arvore4.frame.origin.x;
-    float wInicial = _arvore4.frame.size.width;
-    float xFinal = xInicial - (874/2 - wInicial)/2;
-    _arvore4.frame = CGRectMake(xFinal-8, yFinal, 874/2
-                                , 1068/2);
-    NSLog(@"%f %f",xFinal-11,yFinal);
-    sender.userInteractionEnabled = NO;
-    self.bolinhaVermelha.hidden = NO;
-    self.bolinhaVerde.hidden = NO;
-    [self checkObjectives];
+    if (![_arvore4.image isEqual:[UIImage imageNamed:@"parque-07"]]) {
+        treesCounter = treesCounter - 1;
+        SystemSoundIDAudio *sysAudio = [SystemSoundIDAudio sharedManager];
+        [sysAudio requestedForSystemSound:@"arvore_nascendo" :@"wav"];
+        _arvore4.image = [UIImage imageNamed:@"parque-06"];
+        float yInicial = _arvore4.frame.origin.y;
+        float hInicial = _arvore4.frame.size.height;
+        float yFinal = yInicial - (1068/2 - hInicial);
+        float xInicial = _arvore4.frame.origin.x;
+        float wInicial = _arvore4.frame.size.width;
+        float xFinal = xInicial - (874/2 - wInicial)/2;
+        _arvore4.frame = CGRectMake(xFinal-8, yFinal, 874/2
+                                    , 1068/2);
+        NSLog(@"%f %f",xFinal-11,yFinal);
+        sender.userInteractionEnabled = NO;
+        self.bolinhaVermelha.hidden = NO;
+        self.bolinhaVerde.hidden = NO;
+        [self checkObjectives];
+        
+    }
 }
 - (IBAction)didClickTree5:(UIButton *)sender {
-    
-    treesCounter = treesCounter - 1;
-//    AudioServicesDisposeSystemSoundID (sound1);
-//    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"arvore_nascendo" withExtension:@"wav"];
-//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
-//    AudioServicesPlaySystemSound(sound1);
-    
-    _arvore5.image = [UIImage imageNamed:@"parque-07"];
-    float yInicial = _arvore5.frame.origin.y;
-    float hInicial = _arvore5.frame.size.height;
-    float yFinal = yInicial - (1298/2 - hInicial);
-    float xInicial = _arvore5.frame.origin.x;
-    float wInicial = _arvore5.frame.size.width;
-    float xFinal = xInicial - (1064/2 - wInicial)/2;
-    _arvore5.frame = CGRectMake(xFinal-9, yFinal, 1064/2
-                                , 1298/2);
-    sender.userInteractionEnabled = NO;
-    [self checkObjectives];
+    if (![_arvore5.image isEqual:[UIImage imageNamed:@"parque-07"]]) {
+        treesCounter = treesCounter - 1;
+        SystemSoundIDAudio *sysAudio = [SystemSoundIDAudio sharedManager];
+        [sysAudio requestedForSystemSound:@"arvore_nascendo" :@"wav"];
+        _arvore5.image = [UIImage imageNamed:@"parque-07"];
+        float yInicial = _arvore5.frame.origin.y;
+        float hInicial = _arvore5.frame.size.height;
+        float yFinal = yInicial - (1298/2 - hInicial);
+        float xInicial = _arvore5.frame.origin.x;
+        float wInicial = _arvore5.frame.size.width;
+        float xFinal = xInicial - (1064/2 - wInicial)/2;
+        _arvore5.frame = CGRectMake(xFinal-9, yFinal, 1064/2
+                                    , 1298/2);
+        sender.userInteractionEnabled = NO;
+        [self checkObjectives];
+    }
 }
 
-//Bolotas
 - (IBAction)didClickDormidor:(UIButton *)sender {
     [CATransaction begin];
     self.zzzImage.hidden = NO;
@@ -539,32 +369,22 @@ float deslocIni;
     [[self.zzzImage layer] addAnimation:anim forKey:@"iconShake"];
     [CATransaction commit];
 }
-- (IBAction)didClickPolice:(UIButton *)sender {
-}
 
-//Controle
 - (IBAction)didClickBackButton:(id)sender {
- //   [self.player dismissToPhaseSelect];
-}
-- (IBAction)didClickReadButton:(id)sender {
-}
-- (IBAction)didClickNextButton:(id)sender {
-//    PhasesChoose *game = [self.storyboard instantiateViewControllerWithIdentifier:@"PhasesChooseVC"];
-//    [game setModalPresentationStyle:UIModalPresentationFullScreen];
-//    self.player.fase3 = true;
-//    game.player = self.player;
-//    [self presentViewController:game animated:YES completion:nil];
-    
- //   [self.player dismissToPhaseSelect];
+    if([_delegate respondsToSelector:@selector(askedToDismissSecondPhase)]){
+        [_delegate askedToDismissSecondPhase];
+    }
 }
 
--(IBAction)falaQueEuTeEstupro:(id)sender{
-    NSURL *soundUrl = [NSURL fileURLWithPath:path4];
-    
-    // Create audio player object and initialize with URL to sound
-   // _audioPlayer5 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    
-   // [_audioPlayer5 play];
+- (IBAction)didClickNextButton:(id)sender {
+    if([_delegate respondsToSelector:@selector(askedToDismissSecondPhase)]){
+        [_delegate askedToDismissSecondPhase];
+    }
+}
+
+-(IBAction)didTappedForVoiceStory:(id)sender{
+    MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
+    [miscAudio playSongFromPath:path4];
 }
 
 @end

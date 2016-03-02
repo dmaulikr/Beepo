@@ -17,32 +17,10 @@
 
 @implementation SecondStoryViewController
 
--(void)viewDidLoad{
-    [super viewDidLoad];
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
     _path = [NSString stringWithFormat:@"%@/5_pre-parque.mp3", [[NSBundle mainBundle] resourcePath]];
     
-    [self moveBeepo:self.moveBeepoView];
-    _ghostStarterFrame = self.imgFantasminha.frame;
-    _shadowStarterFrame = self.imgSombra.frame;
-    
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipped:)];
-    [self.view addGestureRecognizer:swipeLeft];
-}
-
--(void)didSwipped:(UISwipeGestureRecognizer *)swipeRecogniser{
-    [self performSegueWithIdentifier:@"phase2Segue" sender:self];
-}
-
-- (void)moveBeepo:(UIView *)imageView{
-    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        imageView.frame = CGRectMake(337.f, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.imgFantasminha.frame = _ghostStarterFrame;
-    self.imgSombra.frame = _shadowStarterFrame;
-    [super viewDidAppear:animated];
     CGRect charFrame = self.imgFantasminha.frame;
     charFrame.origin.y = charFrame.origin.y - 25.0;
     charFrame.size.height = charFrame.size.height + 15.0;
@@ -61,6 +39,22 @@
     self.imgFantasminha.frame = charFrame;
     self.imgSombra.frame = shadowFrame;
     [UIView commitAnimations];
+    
+    [self moveBeepo:self.moveBeepoView];
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipped:)];
+    [swipe setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:swipe];
+    
+}
+
+-(void)didSwipped:(UISwipeGestureRecognizer *)swipeRecogniser{
+    [self performSegueWithIdentifier:@"phase2Segue" sender:self];
+}
+
+- (void)moveBeepo:(UIView *)imageView{
+    [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        imageView.frame = CGRectMake(337.f, imageView.frame.origin.y, imageView.frame.size.width, imageView.frame.size.height); } completion:nil];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

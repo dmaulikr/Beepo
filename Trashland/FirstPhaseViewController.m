@@ -61,8 +61,8 @@
 
 @implementation FirstPhaseViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
     
     Player *player = [Player sharedManager];
     _charImgView.image = player.gasperEscolhido;
@@ -121,6 +121,7 @@
     self.charImgView.frame = charFrame;
     self.shadowImgView.frame = shadowFrame;
     [UIView commitAnimations];
+
 }
 
 - (void)applyPhisicsConcepts{

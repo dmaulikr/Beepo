@@ -15,7 +15,7 @@
 @property (nonatomic, assign) BOOL seventhMedal;
 @property (nonatomic, assign) BOOL eigthMedal;
 
-@property (nonatomic, weak) UIImage *gasperEscolhido;
+@property (nonatomic, strong) UIImage *gasperEscolhido;
 
 + (id)sharedManager;
 

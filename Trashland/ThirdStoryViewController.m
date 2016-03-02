@@ -1,11 +1,11 @@
 #import "ThirdStoryViewController.h"
 #import "ThirdPhaseViewController.h"
+#import "MiscellaneousAudio.h"
 
-@interface ThirdStoryViewController(){
-    NSString* path5;
-}
+@interface ThirdStoryViewController () <ThirdPhaseViewControllerDelegate>
 
-@property (nonatomic) IBOutlet UIImageView* fundo;
+@property (nonatomic, weak) NSString *path;
+@property (nonatomic, weak) ThirdPhaseViewController *thirdPhaseViewController;
 
 @end
 
@@ -14,42 +14,33 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    path5 = [NSString stringWithFormat:@"%@/7_pre-rua.mp3", [[NSBundle mainBundle] resourcePath]];
-    
-//    [self.view addSubview:self.fundo];
-    
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    
-    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipeLeft];
-    
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swipeRight];
-
+    _path = [NSString stringWithFormat:@"%@/7_pre-rua.mp3", [[NSBundle mainBundle] resourcePath]];
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipped:)];
+    [self.view addGestureRecognizer:swipe];
 }
 
--(void)swipe:(UISwipeGestureRecognizer *)swipeRecogniser{
-    if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionLeft)
-    {
-        ThirdPhaseViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Phase3VC"];
-        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-      //  game.player = self.player;
-        [self presentViewController:game animated:NO completion:nil];
-    }
-    else if ([swipeRecogniser direction] == UISwipeGestureRecognizerDirectionRight)
-    {
-       
+-(void)didSwipped:(UISwipeGestureRecognizer *)swipeRecogniser{
+    [self performSegueWithIdentifier:@"phase3Segue" sender:self];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"phase3Segue"]) {
+        _thirdPhaseViewController = segue.destinationViewController;
+        _thirdPhaseViewController.delegate = self;
     }
 }
--(IBAction)falaQueEuTeEstupro:(id)sender{
-    NSURL *soundUrl = [NSURL fileURLWithPath:path5];
-    
-    // Create audio player object and initialize with URL to sound
- //   _audioPlayer6 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    
- //   [_audioPlayer6 play];
+
+-(IBAction)didTappedVoiceStoryButton:(id)sender{
+    MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
+    [miscAudio playSongFromPath:_path];
+}
+
+- (void) askedToDismissThirdPhase{
+   [_thirdPhaseViewController dismissViewControllerAnimated:YES completion:^void{
+       if ([_delegate respondsToSelector:@selector(askedToDismissThirdStory)]) {
+           [_delegate askedToDismissThirdStory];
+       }
+   }];
 }
 
 @end

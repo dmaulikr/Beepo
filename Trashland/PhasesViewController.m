@@ -5,7 +5,7 @@
 #import "ThirdStoryViewController.h"
 #import "FourthStoryViewController.h"
 
-@interface PhasesViewController () <FirstStoryViewControllerDelegate, SecondStoryViewControllerDelegate>
+@interface PhasesViewController () <FirstStoryViewControllerDelegate, SecondStoryViewControllerDelegate, ThirdStoryViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton* fase1;
 @property (nonatomic, weak) IBOutlet UIImageView* medalha1fase1;
@@ -37,13 +37,13 @@
     
     if (player.firstMedal) self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
     if (player.secondMedal) self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
-    if (player.firstMedal && player.secondMedal) [self.fase2 setBackgroundImage:[UIImage imageNamed:@"atividades-praca-color"] forState:UIControlStateNormal];
+    if (player.firstMedal || player.secondMedal) [self.fase2 setBackgroundImage:[UIImage imageNamed:@"atividades-praca-color"] forState:UIControlStateNormal];
     if (player.thirdMedal) self.medalha1fase2.image = [UIImage imageNamed:@"badge-lixo-color"];
     if (player.fourthMedal) self.medalha2fase2.image = [UIImage imageNamed:@"badge-natureza-color"];
-    if (player.thirdMedal && player.fourthMedal) [self.fase3 setBackgroundImage:[UIImage imageNamed:@"atividades-rua-color"] forState:UIControlStateNormal];
+    if (player.thirdMedal || player.fourthMedal) [self.fase3 setBackgroundImage:[UIImage imageNamed:@"atividades-rua-color"] forState:UIControlStateNormal];
     if (player.fifthMedal) self.medalha1fase3.image = [UIImage imageNamed:@"badge-idoso-color"];
     if (player.sixthMedal) self.medalha2fase3.image = [UIImage imageNamed:@"badge-transito-color"];
-    if (player.fifthMedal && player.sixthMedal) [self.fase4 setBackgroundImage:[UIImage imageNamed:@"atividades-prefeitura-color"] forState:UIControlStateNormal];
+    if (player.fifthMedal || player.sixthMedal) [self.fase4 setBackgroundImage:[UIImage imageNamed:@"atividades-prefeitura-color"] forState:UIControlStateNormal];
     if (player.seventhMedal) self.medalha1fase4.image = [UIImage imageNamed:@"badge-casa-color"];
     if (player.eigthMedal) self.medalha2fase4.image = [UIImage imageNamed:@"badge-casa-color"];
 }
@@ -60,21 +60,21 @@
 
 - (IBAction)didTappedSecondPhase:(id)sender{
     Player *player = [Player sharedManager];
-    if (player.firstMedal && player.secondMedal) {
+    if (player.firstMedal || player.secondMedal) {
         [self performSegueWithIdentifier:@"parkSegue" sender:self];
     }
 }
 
 - (IBAction)didTappedThirdPhase:(id)sender{
     Player *player = [Player sharedManager];
-    if (player.thirdMedal && player.fourthMedal) {
+    if (player.thirdMedal || player.fourthMedal) {
         [self performSegueWithIdentifier:@"streetSegue" sender:self];
     }
 }
 
 - (IBAction)didTappedFourthPhase:(id)sender{
     Player *player = [Player sharedManager];
-    if (player.fifthMedal && player.sixthMedal) {
+    if (player.fifthMedal || player.sixthMedal) {
         [self performSegueWithIdentifier:@"cityHallSegue" sender:self];
     }
 }
@@ -98,6 +98,9 @@
 }
 - (void) askedToDismissSecondStory{
     [_secondStoryViewController dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)askedToDismissThirdStory{
+    [_thirdStoryViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
