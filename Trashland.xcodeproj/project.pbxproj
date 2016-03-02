@@ -409,14 +409,14 @@
 			children = (
 				02FCFC8A1B345AD000E762B8 /* FourthStoryViewController.h */,
 				02FCFC8B1B345AD000E762B8 /* FourthStoryViewController.m */,
+				1541A12F1B3C37A200D348B9 /* FourthPhaseViewController.h */,
+				1541A1301B3C37A200D348B9 /* FourthPhaseViewController.m */,
 				023D17B31B3731CB0004DE32 /* FourthPuzzleViewController.h */,
 				023D17B41B3731CB0004DE32 /* FourthPuzzleViewController.m */,
 				023D17B61B37B5E00004DE32 /* FourthVotingViewController.h */,
 				023D17B71B37B5E00004DE32 /* FourthVotingViewController.m */,
 				023D17B91B37BE0A0004DE32 /* FourthEndViewController.h */,
 				023D17BA1B37BE0A0004DE32 /* FourthEndViewController.m */,
-				1541A12F1B3C37A200D348B9 /* FourthPhaseViewController.h */,
-				1541A1301B3C37A200D348B9 /* FourthPhaseViewController.m */,
 			);
 			name = FourthPhaseViewController;
 			sourceTree = "<group>";

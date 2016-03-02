@@ -2,23 +2,22 @@
 #import "DraggableView.h"
 #import "PhasesViewController.h"
 #import "DraggableView.h"
+#import "Player.h"
+#import "MiscellaneousAudio.h"
 #import "PopUpViewController.h"
 
-@interface ThirdPhasePlusViewController (){
-    
-    NSTimer *phase3Part2Timer;
-    NSString* path7;
-}
-@property (nonatomic) IBOutlet UIImageView* fundo;
-@property (nonatomic) IBOutlet UIImageView* imageViewPuzzle;
-@property (nonatomic) IBOutlet DraggableView* viewCarro1;
-@property (nonatomic) IBOutlet DraggableView* viewCarro2;
-@property (nonatomic) IBOutlet UIImageView* ambulancia;
-@property (nonatomic) IBOutlet UIImageView* badgeTransito;
-@property (nonatomic) IBOutlet UIImageView* badgeIdoso;
-@property (nonatomic) IBOutlet UIButton* botaoVoltar;
-@property (nonatomic) IBOutlet UIButton* botaoSom;
-@property (strong, nonatomic) UIViewController *popUpView;
+@interface ThirdPhasePlusViewController () <DraggableViewDelegate, PopUpViewControllerDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView* fundo;
+@property (nonatomic, weak) IBOutlet UIImageView* imageViewPuzzle;
+@property (nonatomic, weak) IBOutlet DraggableView* viewCarro1;
+@property (nonatomic, weak) IBOutlet DraggableView* viewCarro2;
+@property (nonatomic, weak) IBOutlet UIImageView* ambulancia;
+@property (nonatomic, weak) IBOutlet UIImageView* badgeTransito;
+@property (nonatomic, weak) IBOutlet UIImageView* badgeIdoso;
+@property (nonatomic, weak) IBOutlet UIButton* botaoVoltar;
+@property (nonatomic, weak) IBOutlet UIButton* botaoSom;
+@property (nonatomic, strong) UIViewController *popUpView;
+@property (nonatomic, strong) NSString *path;
 
 @end
 
@@ -26,20 +25,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    path7 = [NSString stringWithFormat:@"%@/8_rua.mp3", [[NSBundle mainBundle] resourcePath]];
-
-    
+    Player *player = [Player sharedManager];
+    _path = [NSString stringWithFormat:@"%@/8_rua.mp3", [[NSBundle mainBundle] resourcePath]];
     _viewCarro1.allowVerticalAxisMovement = YES;
     _viewCarro2.allowVerticalAxisMovement = YES;
     
-    [self checkWayFree];
-   // if (self.player.medalha1fase3) {
+    _viewCarro1.delegate = self;
+    _viewCarro2.delegate = self;
+
+    if (player.fifthMedal) {
         self.badgeIdoso.image = [UIImage imageNamed:@"badge-idoso-color"];
-   // }
-   // if (self.player.medalha2fase3) {
+    }
+    if (player.sixthMedal) {
         self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
-   // }
+    }
     
     [self.fundo addSubview:self.botaoSom];
     [self.fundo addSubview:self.botaoVoltar];
@@ -50,7 +49,28 @@
 //    [self.fundo addSubview:self.ambulancia];
 }
 
--(void)checkWayFree{
+- (void)showBadgePopUp{
+    PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+    [popUp setImageNamed: @"pop-up-transito"];
+    popUp.delegate = self;
+    popUp.badgeImageView.image = [UIImage imageNamed:@"pop-up-transito"];
+    self.popUpView = popUp;
+    Player *player = [Player sharedManager];
+    player.sixthMedal = true;
+    [popUp showInView:self.view animated:YES];
+}
+- (IBAction)didClickVoltarButton:(id)sender {
+    if ([_delegate respondsToSelector:@selector(askedToDismissThirdPhasePlus)]) {
+        [_delegate askedToDismissThirdPhasePlus];
+    }
+}
+
+-(IBAction)didTappedVoiceStory:(id)sender{
+    MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
+    [miscAudio playSongFromPath:_path];
+}
+
+- (void) checkPositions{
     if (self.viewCarro1.center.y < 240) {
         self.viewCarro1.allowVerticalAxisMovement = false;
     }
@@ -58,50 +78,19 @@
         self.viewCarro2.allowVerticalAxisMovement = false;
     }
     if (self.viewCarro1.center.y < 260 && self.viewCarro2.center.y > 540) {
-        [UIView animateWithDuration:4 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            self.ambulancia.frame = CGRectMake(1200, self.ambulancia.frame.origin.y, self.ambulancia.frame.size.width, self.ambulancia.frame.size.height); } completion:nil];
-        if (phase3Part2Timer) {
-            [phase3Part2Timer invalidate];
-        }
-        phase3Part2Timer = [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(showBadgePopUp) userInfo:nil repeats:NO];
-    //    self.player.medalha2fase3 = true;
+        [UIView animateWithDuration:2 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.ambulancia.frame = CGRectMake(1200, self.ambulancia.frame.origin.y, self.ambulancia.frame.size.width, self.ambulancia.frame.size.height);
+        } completion:^(BOOL finished){
+            [self showBadgePopUp];
+        }];
         self.badgeTransito.image = [UIImage imageNamed:@"badge-transito-color"];
     }
-    else{
-        if (phase3Part2Timer) {
-            [phase3Part2Timer invalidate];
-        }
-        phase3Part2Timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(checkWayFree) userInfo:nil repeats:NO];
+}
+
+- (void) askedToDismissPopUp{
+    if ([_delegate respondsToSelector:@selector(askedToDismissThirdPhasePlus)]) {
+        [_delegate askedToDismissThirdPhasePlus];
     }
 }
-
-- (void)showBadgePopUp{
-    PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
-    [popUp setImageNamed: @"pop-up-transito"];
-    popUp.badgeImageView.image = [UIImage imageNamed:@"pop-up-transito"];
-    self.popUpView = popUp;
-    [popUp showInView:self.view animated:YES];
-    if (phase3Part2Timer) {
-        [phase3Part2Timer invalidate];
-    }
-    phase3Part2Timer = [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(escolhaDeFases) userInfo:nil repeats:NO];
-}
-- (IBAction)btnVoltarClicked:(id)sender {
- //   [self.player dismissToPhaseSelect];
-}
-
--(void)escolhaDeFases{
- //   [self.player dismissToPhaseSelect];
-}
-
--(IBAction)falaQueEuTeEstupro:(id)sender{
-    NSURL *soundUrl = [NSURL fileURLWithPath:path7];
-    
-    // Create audio player object and initialize with URL to sound
-  //  _audioPlayer8 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    
-  //  [_audioPlayer8 play];
-}
-
 
 @end

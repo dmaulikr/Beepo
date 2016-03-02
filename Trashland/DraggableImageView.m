@@ -20,5 +20,8 @@
     if ([_delegate respondsToSelector:@selector(applyPhisicsConcepts)]) {
         [_delegate applyPhisicsConcepts];
     }
+    if ([_delegate respondsToSelector:@selector(checkPostions)]) {
+        [_delegate checkPostions];
+    }
 }
 @end

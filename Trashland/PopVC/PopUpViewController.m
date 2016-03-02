@@ -30,6 +30,9 @@
     } completion:^(BOOL finished) {
         if (finished) {
             [self.view removeFromSuperview];
+            if ([_delegate respondsToSelector:@selector(askedToDismissPopUp)]) {
+                [_delegate askedToDismissPopUp];
+            }
         }
     }];
 }

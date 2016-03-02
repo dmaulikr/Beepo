@@ -38,5 +38,8 @@ CGPoint startLocation;
     if ([self.superview.superview isKindOfClass:[UIScrollView class]]) {
         ((UIScrollView *)self.superview.superview).scrollEnabled = true;
     }
+    if ([_delegate respondsToSelector:@selector(checkPositions)]){
+        [_delegate checkPositions];
+    }
 }
 @end

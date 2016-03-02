@@ -5,7 +5,7 @@
 #import "ThirdStoryViewController.h"
 #import "FourthStoryViewController.h"
 
-@interface PhasesViewController () <FirstStoryViewControllerDelegate, SecondStoryViewControllerDelegate, ThirdStoryViewControllerDelegate>
+@interface PhasesViewController () <FirstStoryViewControllerDelegate, SecondStoryViewControllerDelegate, ThirdStoryViewControllerDelegate, FourthStoryViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton* fase1;
 @property (nonatomic, weak) IBOutlet UIImageView* medalha1fase1;
@@ -34,7 +34,6 @@
     Player *player = [Player sharedManager];
     
     [self.fase1 setBackgroundImage:[UIImage imageNamed:@"atividades-casa-color"] forState:UIControlStateNormal];
-    
     if (player.firstMedal) self.medalha1fase1.image = [UIImage imageNamed:@"badge-luz-color"];
     if (player.secondMedal) self.medalha2fase1.image = [UIImage imageNamed:@"badge-agua-color"];
     if (player.firstMedal || player.secondMedal) [self.fase2 setBackgroundImage:[UIImage imageNamed:@"atividades-praca-color"] forState:UIControlStateNormal];
@@ -88,8 +87,10 @@
         _secondStoryViewController.delegate = self;
     } else if ([segue.identifier isEqualToString:@"streetSegue"]){
         _thirdStoryViewController = segue.destinationViewController;
+        _thirdStoryViewController.delegate = self;
     } else if ([segue.identifier isEqualToString:@"cityHallSegue"]){
         _fourthStoryViewController = segue.destinationViewController;
+        _fourthStoryViewController.delegate = self;
     }
 }
 
@@ -101,6 +102,10 @@
 }
 - (void)askedToDismissThirdStory{
     [_thirdStoryViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)askedToDismissFourthStory{
+    [_fourthStoryViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

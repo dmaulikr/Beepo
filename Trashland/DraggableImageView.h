@@ -3,6 +3,7 @@
 @protocol DraggableImageViewDelegate <NSObject>
 
 - (void) applyPhisicsConcepts;
+- (void) checkPostions;
 
 @end
 
