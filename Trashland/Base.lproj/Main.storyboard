@@ -657,11 +657,6 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.027805624139999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <view contentMode="scaleToFill" id="bAh-3h-jYI">
-                                                <rect key="frame" x="232" y="524" width="225" height="62"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="1" green="0.027805624139999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </view>
                                             <view contentMode="scaleToFill" id="YW6-pS-IyC">
                                                 <rect key="frame" x="2469" y="636" width="120" height="10"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -735,7 +730,6 @@
                         <outlet property="barrier3" destination="Vrx-9P-zT7" id="oUS-Zn-vQu"/>
                         <outlet property="barrier4" destination="HYa-J1-P9y" id="PXB-1N-cAH"/>
                         <outlet property="barrier5" destination="YW6-pS-IyC" id="98G-WV-moJ"/>
-                        <outlet property="barrier6" destination="bAh-3h-jYI" id="LWD-2O-P1n"/>
                         <outlet property="bolinhaVerde" destination="RgU-lw-Xbu" id="DhS-ob-rGQ"/>
                         <outlet property="bolinhaVermelha" destination="Kd1-1c-vi8" id="I3E-Bh-dO9"/>
                         <outlet property="botaoProximo" destination="wXb-Bj-SRU" id="Hiy-8w-iRW"/>
@@ -987,6 +981,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura_caixa_doacao" id="fyO-NO-jY0">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caixa_foguete" id="k8e-bu-kv8" customClass="DraggableImageView">
                                 <rect key="frame" x="855" y="250" width="123" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1003,10 +1001,6 @@
                                 <rect key="frame" x="641" y="182" width="162" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura_caixa_doacao" id="fyO-NO-jY0">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jpB-7j-b9D" userLabel="narrar">
                                 <rect key="frame" x="938" y="33" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1014,7 +1008,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="falaQueEuTeEstupro:" destination="fW6-E7-8pZ" eventType="touchUpInside" id="KYf-A7-hbP"/>
+                                    <action selector="didTappedVoiceStory:" destination="fW6-E7-8pZ" eventType="touchUpInside" id="8Os-Rk-7aY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r65-9I-aEm" userLabel="voltar">
@@ -1024,7 +1018,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="botaoVoltarClicked:" destination="fW6-E7-8pZ" eventType="touchUpInside" id="rYb-se-VHN"/>
+                                    <action selector="didTappedBackButton:" destination="fW6-E7-8pZ" eventType="touchUpInside" id="Lp2-de-mnj"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-doacao2" id="qtI-Uk-vYV">
@@ -1062,7 +1056,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiW-Yd-ybD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363" y="9119"/>
+            <point key="canvasLocation" x="1573" y="9253"/>
         </scene>
         <!--Fourth Voting View Controller-->
         <scene sceneID="jUS-eM-peW">
@@ -1087,7 +1081,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="confirmar:" destination="tEz-Tn-Gzt" eventType="touchUpInside" id="0mg-to-1eU"/>
+                                            <action selector="didTappedConfirmButton:" destination="tEz-Tn-Gzt" eventType="touchUpInside" id="AjJ-6o-UD8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZYe-bg-04Y" userLabel="votar felizopolis">
@@ -1131,7 +1125,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="falaQueEuTeEstupro:" destination="tEz-Tn-Gzt" eventType="touchUpInside" id="eiD-zK-8jG"/>
+                                            <action selector="didTappedVoiceStory:" destination="tEz-Tn-Gzt" eventType="touchUpInside" id="2cb-7o-hes"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7HL-XP-Zed" userLabel="voltar">
@@ -1141,7 +1135,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="cancelar:" destination="tEz-Tn-Gzt" eventType="touchUpInside" id="f13-LC-BZW"/>
+                                            <action selector="didTappedBackButton:" destination="tEz-Tn-Gzt" eventType="touchUpInside" id="Qey-nB-jIl"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-doacao2" id="fDw-9k-a4q">
@@ -1198,7 +1192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtu-gS-0dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363" y="9941"/>
+            <point key="canvasLocation" x="-271" y="10124"/>
         </scene>
         <!--Fourth End View Controller-->
         <scene sceneID="E9D-0D-xel">
@@ -1227,8 +1221,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="falaQueEuTeEstupro:" destination="tEz-Tn-Gzt" eventType="touchUpInside" id="hE4-ft-aio"/>
-                                    <action selector="falaQueEuTeEstupro:" destination="N1a-mV-8XE" eventType="touchUpInside" id="oqR-yg-zmH"/>
+                                    <action selector="didTappedVoiceStory:" destination="N1a-mV-8XE" eventType="touchUpInside" id="R6t-dG-waf"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prefeitura-07" id="4xj-4T-9UW">
@@ -1268,7 +1261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09o-JM-rAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363" y="10759"/>
+            <point key="canvasLocation" x="1017" y="10542"/>
         </scene>
         <!--Fourth Story View Controller-->
         <scene sceneID="dth-A6-Ga2">
@@ -1359,7 +1352,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="falaQueEuTeEstupro:" destination="9wn-h0-xJT" eventType="touchUpInside" id="EsT-z9-gsH"/>
+                                    <action selector="didTappedVoiceStory:" destination="9wn-h0-xJT" eventType="touchUpInside" id="g65-vz-uxX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7nf-bT-JDZ">
@@ -1369,7 +1362,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="voltarBtnClicked:" destination="9wn-h0-xJT" eventType="touchUpInside" id="p0s-mm-DjP"/>
+                                    <action selector="didTappedBackButton:" destination="9wn-h0-xJT" eventType="touchUpInside" id="YQL-l8-CX6"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge-doacao2" id="x4G-c4-Epu">
@@ -1390,6 +1383,9 @@
                         <outlet property="badgeEleicaoImgView" destination="EzW-Lx-hcY" id="gCt-71-bAJ"/>
                         <outlet property="botaoDoacao" destination="awd-j5-czW" id="YcF-IN-jEO"/>
                         <outlet property="botaoEleicao" destination="76D-S7-jfv" id="lNY-pC-WpV"/>
+                        <segue destination="tEz-Tn-Gzt" kind="modal" identifier="votingSegue" id="hrY-7d-aK1"/>
+                        <segue destination="fW6-E7-8pZ" kind="modal" identifier="puzzleSegue" id="fEh-pC-G9E"/>
+                        <segue destination="N1a-mV-8XE" kind="modal" identifier="endSegue" id="MD0-6k-EOi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWm-Rs-t42" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1810,7 +1806,7 @@
                                                     <action selector="didClickShower" destination="EN8-Ni-7aZ" eventType="touchUpInside" id="GbD-bx-2w6"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1EA56822-EF0A-4C84-B693-A77E1786FD5B" id="qsX-3z-46L">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="27F3D60D-A129-4045-ADE9-520D69A695E2" id="qsX-3z-46L">
                                                 <rect key="frame" x="2360" y="468" width="42" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -2062,7 +2058,7 @@
         <image name="12_Trashcity" width="27" height="50"/>
         <image name="13_Trashcity" width="34" height="51"/>
         <image name="14_Trashcity" width="33" height="60"/>
-        <image name="1EA56822-EF0A-4C84-B693-A77E1786FD5B" width="194" height="90">
+        <image name="27F3D60D-A129-4045-ADE9-520D69A695E2" width="194" height="90">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

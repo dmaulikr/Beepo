@@ -2,71 +2,85 @@
 #import "FourthVotingViewController.h"
 #import "FourthPuzzleViewController.h"
 #import "FourthEndViewController.h"
+#import "MiscellaneousAudio.h"
+#import "Player.h"
 
-@interface FourthPhaseViewController (){
-    NSString* path11;
-}
+@interface FourthPhaseViewController () <FourthVotingViewControllerDelegate, FourthPuzzleViewControllerDelegate, FourthEndViewControllerDelegate>
 
-
-@property (nonatomic) IBOutlet UIButton* botaoDoacao;
-@property (nonatomic) IBOutlet UIButton* botaoEleicao;
+@property (nonatomic, weak) IBOutlet UIButton* botaoDoacao;
+@property (nonatomic, weak) IBOutlet UIButton* botaoEleicao;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeDoacaoImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeEleicaoImgView;
+@property (nonatomic, strong) NSString *path;
+@property (nonatomic, weak) FourthPuzzleViewController *fourthPuzzleViewController;
+@property (nonatomic, weak) FourthVotingViewController *fourthVotingViewController;
+@property (nonatomic, weak) FourthEndViewController *fourthEndViewController;
 
 @end
 
 @implementation FourthPhaseViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    path11 = [NSString stringWithFormat:@"%@/11_prefeitura.mp3", [[NSBundle mainBundle] resourcePath]];
-}
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    Player *player = [Player sharedManager];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-     //   if (self.player.medalha1fase4) {
-            self.badgeDoacaoImgView.image = [UIImage imageNamed:@"badge-doacao-color"];
-     //   }
-     //   if (self.player.medalha2fase4) {
-            self.badgeEleicaoImgView    .image = [UIImage imageNamed:@"badge-eleicao-color"];
-     //   }
-    });
+    _path = [NSString stringWithFormat:@"%@/11_prefeitura.mp3", [[NSBundle mainBundle] resourcePath]];
     
-   // if (self.player.medalha1fase4 && self.player.medalha2fase4) {
-        FourthEndViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"FimVC"];
-        [game setModalPresentationStyle:UIModalPresentationFullScreen];
-     //   game.player = self.player;
-        [self presentViewController:game animated:NO completion:nil];
-   // }
+    if (player.seventhMedal) {
+        self.badgeDoacaoImgView.image = [UIImage imageNamed:@"badge-doacao-color"];
+    }
+    if (player.eigthMedal) {
+            self.badgeEleicaoImgView.image = [UIImage imageNamed:@"badge-eleicao-color"];
+    }
 }
 
-
-
 - (IBAction)didClickUrna:(id)sender {
-    FourthVotingViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"VotacaoVC"];
-    [game setModalPresentationStyle:UIModalPresentationFullScreen];
-  //  game.player = self.player;
-    [self presentViewController:game animated:NO completion:nil];
+    [self performSegueWithIdentifier:@"votingSegue" sender:self];
 }
 
 - (IBAction)didClickBox:(id)sender {
-    FourthPuzzleViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"Puzzle4VC"];
-    [game setModalPresentationStyle:UIModalPresentationFullScreen];
-  //  game.player = self.player;
-    [self presentViewController:game animated:NO completion:nil];
-}
-- (IBAction)voltarBtnClicked:(id)sender {
-  //  [self.player dismissToPhaseSelect];
+    [self performSegueWithIdentifier:@"puzzleSegue" sender:self];
 }
 
--(IBAction)falaQueEuTeEstupro:(id)sender{
-    NSURL *soundUrl = [NSURL fileURLWithPath:path11];
-    
-    // Create audio player object and initialize with URL to sound
-//    _audioPlayer12 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    
-  //  [_audioPlayer12 play];
+- (IBAction)didTappedBackButton:(id)sender {
+
+}
+
+-(IBAction)didTappedVoiceStory:(id)sender{
+    MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
+    [miscAudio playSongFromPath:_path];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"endSegue"]) {
+        _fourthEndViewController = segue.destinationViewController;
+        _fourthEndViewController.delegate = self;
+    }
+    if ([segue.identifier isEqualToString:@"votingSegue"]) {
+        _fourthVotingViewController = segue.destinationViewController;
+        _fourthVotingViewController.delegate = self;
+    }
+    if ([segue.identifier isEqualToString:@"puzzleSegue"]) {
+        _fourthPuzzleViewController = segue.destinationViewController;
+        _fourthPuzzleViewController.delegate = self;
+    }
+}
+
+- (void) askedToDismissPuzzle{
+    Player *player = [Player sharedManager];
+    [_fourthPuzzleViewController dismissViewControllerAnimated:YES completion:^(void){
+        if (player.seventhMedal && player.eigthMedal) {
+            [self performSegueWithIdentifier:@"endSegue" sender:self];
+        }
+    }];
+}
+
+- (void) askedVotingDismiss{
+    Player *player = [Player sharedManager];
+    [_fourthVotingViewController dismissViewControllerAnimated:YES completion:^(void){
+        if (player.seventhMedal && player.eigthMedal) {
+            [self performSegueWithIdentifier:@"endSegue" sender:self];
+        }
+    }];
 }
 @end

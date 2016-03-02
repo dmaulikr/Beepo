@@ -23,17 +23,17 @@
 @property (weak, nonatomic) IBOutlet UIImageView *balao;
 @property (weak, nonatomic) IBOutlet UIImageView *bolinhaVermelha;
 @property (weak, nonatomic) IBOutlet UIImageView *bolinhaVerde;
-@property (retain, nonatomic) IBOutlet UIImageView *arvore1;
-@property (retain, nonatomic) IBOutlet UIImageView *arvore2;
-@property (retain, nonatomic) IBOutlet UIImageView *arvore3;
-@property (retain, nonatomic) IBOutlet UIImageView *arvore4;
-@property (retain, nonatomic) IBOutlet UIImageView *arvore5;
-@property (retain, nonatomic) IBOutlet DraggableImageView *garrafaPet1;
-@property (retain, nonatomic) IBOutlet DraggableImageView *lata;
-@property (retain, nonatomic) IBOutlet DraggableImageView *garrafaVidro;
-@property (retain, nonatomic) IBOutlet DraggableImageView *papel;
-@property (retain, nonatomic) IBOutlet DraggableImageView *garrafaPet2;
-@property (retain, nonatomic) IBOutlet DraggableImageView *cascaBanana;
+@property (weak, nonatomic) IBOutlet UIImageView *arvore1;
+@property (weak, nonatomic) IBOutlet UIImageView *arvore2;
+@property (weak, nonatomic) IBOutlet UIImageView *arvore3;
+@property (weak, nonatomic) IBOutlet UIImageView *arvore4;
+@property (weak, nonatomic) IBOutlet UIImageView *arvore5;
+@property (weak, nonatomic) IBOutlet DraggableImageView *garrafaPet1;
+@property (weak, nonatomic) IBOutlet DraggableImageView *lata;
+@property (weak, nonatomic) IBOutlet DraggableImageView *garrafaVidro;
+@property (weak, nonatomic) IBOutlet DraggableImageView *papel;
+@property (weak, nonatomic) IBOutlet DraggableImageView *garrafaPet2;
+@property (weak, nonatomic) IBOutlet DraggableImageView *cascaBanana;
 @property (weak, nonatomic) IBOutlet UIImageView *zzzImage;
 @property (weak, nonatomic) IBOutlet UIImageView *charImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowImageView;
@@ -50,7 +50,6 @@
 @property (weak, nonatomic) IBOutlet UIView *barrier3;
 @property (weak, nonatomic) IBOutlet UIView *barrier4;
 @property (weak, nonatomic) IBOutlet UIView *barrier5;
-@property (weak, nonatomic) IBOutlet UIView *barrier6;
 
 
 @end

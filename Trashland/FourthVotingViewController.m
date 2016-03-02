@@ -1,32 +1,28 @@
 #import "FourthVotingViewController.h"
 #import "FourthEndViewController.h"
 #import "PopUpViewController.h"
+#import "MiscellaneousAudio.h"
+#import "Player.h"
 
-@interface FourthVotingViewController (){
-    BOOL opcao1;
-    BOOL opcao2;
-    BOOL opcao3;
-    NSString* path10;
-}
+@interface FourthVotingViewController () <PopUpViewControllerDelegate>
 
-
-@property (nonatomic) IBOutlet UIView* viewFundo;
-@property (weak, nonatomic) IBOutlet UILabel *txtLabel;
-@property (nonatomic) IBOutlet UIImageView* fundo;
-@property (nonatomic) IBOutlet UIButton* opcao1;
-@property (nonatomic) IBOutlet UIButton* opcao2;
-@property (nonatomic) IBOutlet UIButton* opcao3;
-@property (nonatomic) IBOutlet UIButton* confirma;
-@property (nonatomic) IBOutlet UIButton* cancela;
-@property (nonatomic) IBOutlet UIImageView* badgeDoacao;
-@property (nonatomic) IBOutlet UIImageView* badgeVoto;
-@property (nonatomic) IBOutlet UIButton* botaoVoltar;
-@property (nonatomic) IBOutlet UIButton* botaoSom;
-@property (weak, nonatomic) IBOutlet UIImageView *btn1SelectedBorder;
-@property (weak, nonatomic) IBOutlet UIImageView *btn2SelectedBorder;
-@property (weak, nonatomic) IBOutlet UIImageView *btn3SelectedBorder;
-@property (strong, nonatomic) UIViewController *popUpView;
-
+@property (nonatomic, weak) IBOutlet UIView* viewFundo;
+@property (nonatomic, weak) IBOutlet UILabel *txtLabel;
+@property (nonatomic, weak) IBOutlet UIImageView* fundo;
+@property (nonatomic, weak) IBOutlet UIButton* opcao1;
+@property (nonatomic, weak) IBOutlet UIButton* opcao2;
+@property (nonatomic, weak) IBOutlet UIButton* opcao3;
+@property (nonatomic, weak) IBOutlet UIButton* confirma;
+@property (nonatomic, weak) IBOutlet UIButton* cancela;
+@property (nonatomic, weak) IBOutlet UIImageView* badgeDoacao;
+@property (nonatomic, weak) IBOutlet UIImageView* badgeVoto;
+@property (nonatomic, weak) IBOutlet UIButton* botaoVoltar;
+@property (nonatomic, weak) IBOutlet UIButton* botaoSom;
+@property (nonatomic, weak) IBOutlet UIImageView *btn1SelectedBorder;
+@property (nonatomic, weak) IBOutlet UIImageView *btn2SelectedBorder;
+@property (nonatomic, weak) IBOutlet UIImageView *btn3SelectedBorder;
+@property (nonatomic, strong) UIViewController *popUpView;
+@property (nonatomic, strong) NSString *path;
 
 @end
 
@@ -35,29 +31,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  //  if (!self.player) {
-  //      self.player = [[Player alloc]init];
-  //  }
-    opcao1 = false;
-    opcao2 = false;
-    opcao3 = false;
+    Player *player = [Player sharedManager];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-   //     if (self.player.medalha1fase4) {
-            self.badgeDoacao.image = [UIImage imageNamed:@"badge-doacao-color"];
-   //     }
-   //     if (self.player.medalha2fase4) {
-            self.badgeVoto.image = [UIImage imageNamed:@"badge-eleicao-color"];
-   //     }
-    });
+    if (player.seventhMedal) self.badgeDoacao.image = [UIImage imageNamed:@"badge-doacao-color"];
+    if (player.eigthMedal) self.badgeVoto.image = [UIImage imageNamed:@"badge-eleicao-color"];
     
-    path10 = [NSString stringWithFormat:@"%@/12_prefeitura-puzzlecaixa.mp3", [[NSBundle mainBundle] resourcePath]];
+    _path = [NSString stringWithFormat:@"%@/12_prefeitura-puzzlecaixa.mp3", [[NSBundle mainBundle] resourcePath]];
 }
 
 -(IBAction)opcao1:(id)sender{
-    opcao1 = true;
-    opcao2 = false;
-    opcao3 = false;
     self.opcao1.selected = YES;
     self.opcao2.selected = NO;
     self.opcao3.selected = NO;
@@ -67,9 +49,6 @@
 }
 
 -(IBAction)opcao2:(id)sender{
-    opcao1 = false;
-    opcao2 = true;
-    opcao3 = false;
     self.opcao1.selected = NO;
     self.opcao2.selected = YES;
     self.opcao3.selected = NO;
@@ -79,9 +58,6 @@
 }
 
 -(IBAction)opcao3:(id)sender{
-    opcao1 = false;
-    opcao2 = false;
-    opcao3 = true;
     self.opcao1.selected = NO;
     self.opcao2.selected = NO;
     self.opcao3.selected = YES;
@@ -90,49 +66,41 @@
     self.btn3SelectedBorder.hidden = YES;
 }
 
--(void) didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-}
 
--(IBAction)confirmar:(id)sender{
-    if (opcao1) {
-   //     self.player.nomeEscolhido = @"Felizópolis";
+-(IBAction)didTappedConfirmButton:(id)sender{
+    Player *player = [Player sharedManager];
+    if ([self.opcao1 isSelected]) {
+        player.nomeEscolhido = @"Felizópolis";
     }
-    else if (opcao2){
- //       self.player.nomeEscolhido = @"Maravilandia";
+    else if ([self.opcao2 isSelected]){
+        player.nomeEscolhido = @"Maravilandia";
     }
     else{
- //       self.player.nomeEscolhido = @"Alegrolandia";
+        player.nomeEscolhido = @"Alegrolandia";
     }
-  //  self.player.medalha2fase4 = YES;
+    player.eigthMedal = YES;
     self.badgeVoto.image = [UIImage imageNamed:@"badge-eleicao-color"];
     PopUpViewController *popUp = [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpVC"];
+    popUp.delegate = self;
     [popUp setImageNamed: @"pop-up-cidadania"];
     self.popUpView = popUp;
     [popUp showInView:self.view animated:YES];
-    [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(voltaPrefeitura) userInfo:nil repeats:NO];
-//    Fim *game = [self.storyboard instantiateViewControllerWithIdentifier:@"FimVC"];
-//    [game setModalPresentationStyle:UIModalPresentationFullScreen];
-//    game.player = self.player;
-//    [self presentViewController:game animated:NO completion:nil];
-//
 }
 
--(void)voltaPrefeitura{
+-(IBAction)didTappedBackButton:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(IBAction)cancelar:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
+-(IBAction)didTappedVoiceStory:(id)sender{
+    MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
+    [miscAudio playSongFromPath:_path];
 }
 
--(IBAction)falaQueEuTeEstupro:(id)sender{
-    NSURL *soundUrl = [NSURL fileURLWithPath:path10];
-    
-    // Create audio player object and initialize with URL to sound
-  //  _audioPlayer11 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    
-  //  [_audioPlayer11 play];
+- (void)askedToDismissPopUp{
+    if ([_delegate respondsToSelector:@selector(askedVotingDismiss)]) {
+        [_delegate askedVotingDismiss];
+    }
 }
+
 
 @end

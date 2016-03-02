@@ -15,6 +15,8 @@
 @property (nonatomic, assign) BOOL seventhMedal;
 @property (nonatomic, assign) BOOL eigthMedal;
 
+@property (nonatomic, strong) NSString *nomeEscolhido;
+
 @property (nonatomic, strong) UIImage *gasperEscolhido;
 
 + (id)sharedManager;

@@ -1,50 +1,37 @@
 #import "FourthEndViewController.h"
+#import "MiscellaneousAudio.h"
+#import "Player.h"
 
-@interface FourthEndViewController () {
-    
-    NSString* path200;
-}
+@interface FourthEndViewController ()
 
-
-@property (weak, nonatomic) IBOutlet UIImageView *flagImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *cityNameLabel;
-@property (nonatomic) IBOutlet UIImageView* fundo;
+@property (nonatomic, weak) IBOutlet UIImageView *flagImageView;
+@property (nonatomic, weak) IBOutlet UIImageView *cityNameLabel;
+@property (nonatomic, weak) IBOutlet UIImageView* fundo;
+@property (nonatomic, strong) NSString *path;
 
 @end
 
 @implementation FourthEndViewController
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
- //   _audioPlayer100 = nil;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    path200 = [NSString stringWithFormat:@"%@/14_fim_jogo.mp3", [[NSBundle mainBundle] resourcePath]];
-    // Do any additional setup after loading the view.
-     dispatch_async(dispatch_get_main_queue(), ^{
-    //    if ([self.player.nomeEscolhido isEqualToString:@"Felizópolis"]) {
-            self.flagImageView.image = [UIImage imageNamed:@"prefeitura-11"];
-            self.cityNameLabel.image = [UIImage imageNamed:@"prefeitura-16"];
-    //    }else if([self.player.nomeEscolhido isEqualToString:@"Maravilandia"]){
-            self.flagImageView.image = [UIImage imageNamed:@"prefeitura-12"];
-            self.cityNameLabel.image = [UIImage imageNamed:@"prefeitura-19"];
-      //  }else{
-            self.flagImageView.image = [UIImage imageNamed:@"prefeitura-10"];
-            self.cityNameLabel.image = [UIImage imageNamed:@"prefeitura-17"];
-      //  }
-     });
-}
--(void) didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
+    Player *player = [Player sharedManager];
+    _path = [NSString stringWithFormat:@"%@/14_fim_jogo.mp3", [[NSBundle mainBundle] resourcePath]];
+    if ([player.nomeEscolhido isEqualToString:@"Felizópolis"]) {
+        self.flagImageView.image = [UIImage imageNamed:@"prefeitura-11"];
+        self.cityNameLabel.image = [UIImage imageNamed:@"prefeitura-16"];
+    }else if([player.nomeEscolhido isEqualToString:@"Maravilandia"]){
+        self.flagImageView.image = [UIImage imageNamed:@"prefeitura-12"];
+        self.cityNameLabel.image = [UIImage imageNamed:@"prefeitura-19"];
+    }else{
+        self.flagImageView.image = [UIImage imageNamed:@"prefeitura-10"];
+        self.cityNameLabel.image = [UIImage imageNamed:@"prefeitura-17"];
+    }
 }
 
--(IBAction)falaQueEuTeEstupro:(id)sender{
-    NSURL *soundUrl = [NSURL fileURLWithPath:path200];
-    
-    // Create audio player object and initialize with URL to sound
-  //  _audioPlayer100 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    
-  //  [_audioPlayer100 play];
+-(IBAction)didTappedVoiceStory:(id)sender{
+    MiscellaneousAudio *miscAudio = [MiscellaneousAudio sharedManager];
+    [miscAudio playSongFromPath:_path];
 }
 
 @end
