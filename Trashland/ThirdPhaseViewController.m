@@ -44,8 +44,6 @@ UICollisionBehavior* _collision2;
     _viewVelha.allowVerticalAxisMovement = YES;
     [self watchThisBitch];
     
-    
-    [UIView setAnimationsEnabled:YES];
     [UIView animateWithDuration:0.6 delay:0.2 options:UIViewAnimationOptionCurveEaseInOut animations:^(void){
         [UIView setAnimationRepeatCount:NSUIntegerMax];
         [UIView setAnimationRepeatAutoreverses:YES];

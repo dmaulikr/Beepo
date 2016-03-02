@@ -60,7 +60,7 @@
                 self.controle.currentPage +=1;
                 break;
             case 2:
-                [self requestedPhaseStart];
+                [self performSegueWithIdentifier:@"phase1Segue" sender:self];
                 break;
             default:
                 break;
@@ -86,45 +86,25 @@
     }
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.6];//0.05
-    [UIView setAnimationDelay:0.2];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-    [UIView setAnimationRepeatCount:9999.0];
-    [UIView setAnimationRepeatAutoreverses:YES];
-    [UIView commitAnimations];
-}
-
--(void)requestedPhaseStart{
-    [self performSegueWithIdentifier:@"phase1Segue" sender:self];
-}
-
 - (void)moveLeft{
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.6];//0.05
-    [UIView setAnimationDelay:0.02];
-    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    [UIView setAnimationRepeatAutoreverses:NO];
-    self.telaUm.frame = CGRectMake(self.telaUm.frame.origin.x -  self.telaUm.frame.size.width
-                                   , 0.0, self.telaUm.frame.size.width, self.telaUm.frame.size.height);
-    self.telaDois.frame = CGRectMake(self.telaDois.frame.origin.x -  self.telaUm.frame.size.width
-                                     , 0.0, self.telaDois.frame.size.width, self.telaDois.frame.size.height);
-    self.telaTres.frame = CGRectMake(self.telaTres.frame.origin.x -  self.telaUm.frame.size.width
-                                     , 0.0, self.telaTres.frame.size.width, self.telaTres.frame.size.height);
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.6 delay:0.02 options:UIViewAnimationOptionCurveLinear animations:^(void){
+        [UIView setAnimationRepeatAutoreverses:NO];
+        self.telaUm.frame = CGRectMake(self.telaUm.frame.origin.x -  self.telaUm.frame.size.width
+                                       , 0.0, self.telaUm.frame.size.width, self.telaUm.frame.size.height);
+        self.telaDois.frame = CGRectMake(self.telaDois.frame.origin.x -  self.telaUm.frame.size.width
+                                         , 0.0, self.telaDois.frame.size.width, self.telaDois.frame.size.height);
+        self.telaTres.frame = CGRectMake(self.telaTres.frame.origin.x -  self.telaUm.frame.size.width
+                                         , 0.0, self.telaTres.frame.size.width, self.telaTres.frame.size.height);
+        } completion:nil];
 }
 
 - (void)moveRight{
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.6];//0.05
-    [UIView setAnimationDelay:0.02];
-    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    [UIView setAnimationRepeatAutoreverses:NO];
-    self.telaUm.frame = CGRectMake(self.telaUm.frame.origin.x +  self.telaUm.frame.size.width, 0.0, self.telaUm.frame.size.width, self.telaUm.frame.size.height);
-    self.telaDois.frame = CGRectMake(self.telaDois.frame.origin.x +  self.telaUm.frame.size.width, 0.0, self.telaDois.frame.size.width, self.telaDois.frame.size.height);
-    self.telaTres.frame = CGRectMake(self.telaTres.frame.origin.x +  self.telaUm.frame.size.width, 0.0, self.telaTres.frame.size.width, self.telaTres.frame.size.height);
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.6 delay:0.02 options:UIViewAnimationOptionCurveLinear animations:^(void){
+        [UIView setAnimationRepeatAutoreverses:NO];
+        self.telaUm.frame = CGRectMake(self.telaUm.frame.origin.x +  self.telaUm.frame.size.width, 0.0, self.telaUm.frame.size.width, self.telaUm.frame.size.height);
+        self.telaDois.frame = CGRectMake(self.telaDois.frame.origin.x +  self.telaUm.frame.size.width, 0.0, self.telaDois.frame.size.width, self.telaDois.frame.size.height);
+        self.telaTres.frame = CGRectMake(self.telaTres.frame.origin.x +  self.telaUm.frame.size.width, 0.0, self.telaTres.frame.size.width, self.telaTres.frame.size.height);
+    } completion:nil];
 }
 
 -(IBAction)didTappedForVoiceStory:(id)sender{

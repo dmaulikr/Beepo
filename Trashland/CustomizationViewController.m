@@ -38,24 +38,24 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    CGRect charFrame = self.gasper.frame;
-    charFrame.origin.y = charFrame.origin.y - 45.0;
-    charFrame.size.height = charFrame.size.height + 15.0;
     
-    CGRect shadowFrame = self.sombra.frame;
-    shadowFrame.size.width = shadowFrame.size.width/2.0;
-    shadowFrame.origin.x = shadowFrame.origin.x + shadowFrame.size.width/2;
+    [UIView animateWithDuration:0.6 delay:0.2 options:UIViewAnimationOptionCurveEaseIn animations:^(void){
     
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.6];//0.05
-    [UIView setAnimationDelay:0.2];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-    [UIView setAnimationRepeatCount:9999.0];
-    [UIView setAnimationRepeatAutoreverses:YES];
-    
-    self.gasper.frame = charFrame;
-    self.sombra.frame = shadowFrame;
-    [UIView commitAnimations];
+        [UIView setAnimationRepeatCount:9999.0];
+        [UIView setAnimationRepeatAutoreverses:YES];
+       
+        CGRect charFrame = self.gasper.frame;
+        charFrame.origin.y = charFrame.origin.y - 45.0;
+        charFrame.size.height = charFrame.size.height + 15.0;
+        
+        CGRect shadowFrame = self.sombra.frame;
+        shadowFrame.size.width = shadowFrame.size.width/2.0;
+        shadowFrame.origin.x = shadowFrame.origin.x + shadowFrame.size.width/2;
+        
+        self.gasper.frame = charFrame;
+        self.sombra.frame = shadowFrame;
+        
+    } completion:^(BOOL finished){}];
 }
 
 -(IBAction)didTappedFirstOption:(id)sender{

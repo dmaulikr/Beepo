@@ -143,25 +143,22 @@ float deslocIni;
 }
 
 - (void)beepoAnimado{
-    CGRect charFrame = self.charImageView.frame;
-    charFrame.origin.y = charFrame.origin.y - 45.0;
-    charFrame.size.height = charFrame.size.height + 15.0;
     
-    CGRect shadowFrame = self.shadowImageView.frame;
-    shadowFrame.size.width = shadowFrame.size.width/2.0;
-    shadowFrame.origin.x = shadowFrame.origin.x + shadowFrame.size.width/2;
+    [UIView animateWithDuration:0.6 delay:0.2 options:UIViewAnimationOptionCurveEaseInOut animations:^(void){
+        [UIView setAnimationRepeatCount:NSUIntegerMax];
+        [UIView setAnimationRepeatAutoreverses:YES];
+        
+        CGRect charFrame = self.charImageView.frame;
+        charFrame.origin.y = charFrame.origin.y - 45.0;
+        charFrame.size.height = charFrame.size.height + 15.0;
+        
+        CGRect shadowFrame = self.shadowImageView.frame;
+        shadowFrame.size.width = shadowFrame.size.width/2.0;
+        shadowFrame.origin.x = shadowFrame.origin.x + shadowFrame.size.width/2;
     
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.6];//0.05
-    [UIView setAnimationDelay:0.2];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationRepeatCount:NSUIntegerMax];
-    [UIView setAnimationRepeatAutoreverses:YES];
-    
-    self.charImageView.frame = charFrame;
-    self.shadowImageView.frame = shadowFrame;
-    
-    [UIView commitAnimations];
+        self.charImageView.frame = charFrame;
+        self.shadowImageView.frame = shadowFrame;
+    } completion:nil];
 }
 
 - (void)applyPhisicsConcepts{
