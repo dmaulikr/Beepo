@@ -1,4 +1,4 @@
-# Beepo ![Apple Store](https://db.tt/Fsb4RsR1)
+# Beepo <img align="left" alt="appStore" src="http://s10.postimg.org/u1xybghqd/Screen_Shot_2016_03_20_at_5_20_32_PM.png" style="width: 5px;">
 
 <img align="right" alt="Beepo" src="http://s13.postimg.org/9aayfdduv/tela_inicio.png" style="width: 5px;">
 
